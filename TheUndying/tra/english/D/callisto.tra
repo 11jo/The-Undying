@@ -1,0 +1,14 @@
+@0    = ~Well what do we have here? Looks like a band of adventurers, heroes in the making! You may be what I am looking for.~
+@1    = ~What do you want miss?~
+@2    = ~I really don't have time for this.~
+@3    = ~Right to the point aye? My name is Callisto T'sarran and I was wondering if you could use another sword arm in your party. Spending time here is starting to become dull.~
+@4    = ~Greetings, my name is <CHARNAME>. Nice to meet you, Callisto. Sorry to say, we do not need another person in our group at the moment.~
+@5    = ~Greetings, my name is <CHARNAME>. Nice to meet you, Callisto. We could always use a good sword arm for our adventures ahead. We would gladly take you in.~
+@6    = ~Guess you should go to a tavern for entertainment. We don't have room for you. See you around.~
+@7    = ~No time? Very well friend, if you change your mind, I'll be right here.~
+@8    = ~No room for me? Well if you happen to lose anyone, think of me, I'll be right here waiting in case I'm needed.~
+@9    = ~(Callisto smiles at you.) Thank you for letting me join, <CHARNAME>, I won't disappoint you.~
+@10   = ~(Callisto smiles at you.) Perhaps I may do that if this place becomes any more dull than it already is. If you change your mind come find me.~
+@11   = ~Oh I see you've returned my pretty. Reconsidered letting me join your glorious party, hmmmm?~
+@12   = ~You may join us if you wish, Callisto. We welcome you to our fold.~
+@13   = ~Sorry to say, we do not need another person in our group at the moment.~

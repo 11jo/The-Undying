@@ -1,0 +1,41 @@
+IF
+	HPPercentLT(Myself,50)
+	See(NearestEnemyOf(Myself))
+	HPGT(LastSeenBy(Myself),50)
+	Global("CalliEnraged","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("CalliEnraged","LOCALS",1)
+		SpellNoDec(Myself,BARBARIAN_RAGE)
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		EquipMostDamagingMelee()
+		AttackReevaluate(LastAttackerOf(Myself),10)
+END
+
+IF
+	AttackedBy([ANYONE],DEFAULT)
+THEN
+	RESPONSE #100
+		Attack(LastAttackerOf(Myself))
+END
+
+IF
+	HasItem("POTN08",Myself) // Potion of Healing
+	HPPercentLT(Myself,80)
+THEN
+	RESPONSE #100
+		UseItem("POTN08",Myself) // Potion of Healing
+END
+
+IF
+	HasItem("POTN52",Myself) // Potion of Extra Healing
+	HPPercentLT(Myself,50)
+THEN
+	RESPONSE #100
+		UseItem("POTN52",Myself) // Potion of Extra Healing
+END

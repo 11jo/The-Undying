@@ -1,0 +1,25 @@
+IF
+   Global("CmTUStore3Exists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmTUStore3Exists","GLOBAL",1)
+      CreateCreature("CMTUS03",[2717.2024],2)
+END
+
+IF
+	Global("CmMystraPriest","AR0900",0)
+	Global("NinaJoin","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("CMNINAMY",[3725.1610],0) // Priest of Mystra
+		SetGlobal("CmMystraPriest","AR0900",1)
+END
+
+IF
+	Global("DoSSpawn","AR0900",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMDRWP",[3984.3782],1) // Drow Priestess
+		SetGlobal("DoSSpawn","AR0900",1)
+END
+

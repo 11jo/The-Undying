@@ -1,0 +1,15 @@
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+	Global("CmSharFight","GLOBAL",0)
+THEN
+	RESPONSE #100
+		SetGlobal("CmSharFight","GLOBAL",1)
+END
+
+IF
+	Global("CmSharFight","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END

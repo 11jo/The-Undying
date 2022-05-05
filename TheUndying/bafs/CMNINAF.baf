@@ -1,0 +1,293 @@
+IF
+	Global("FoundThievesC","GLOBAL",1)
+	Global("MystraQuest","GLOBAL",0)
+	Dead("cmlillian")
+	PartyHasItem("CMBOOK99") // Tome of Magical Spells
+THEN
+	RESPONSE #100
+		Interact(Player1)
+END
+
+// Tanner warning
+
+IF
+	InParty(Myself)
+	Global("TannerWarning2","AR0502",0)
+THEN
+	RESPONSE #100
+		SetGlobal("TannerWarning2","AR0502",1)
+		StartDialogueNoSet(Player1)
+END
+
+// First friend talk
+
+IF 
+InParty(Myself)
+Global("CM_NinaferTalk","GLOBAL",0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("CM_NinaferTalkTimer","GLOBAL",2000)
+SetGlobal("CM_NinaferTalk","GLOBAL",1)
+END
+
+// Friend talks, sequential
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("CM_NinaferTalkTimer","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(5)
+Global("CM_NinaferTalk","GLOBAL",1)
+Global("CM_NinaferTalk","GLOBAL",3)
+Global("CM_NinaferTalk","GLOBAL",5)
+Global("CM_NinaferTalk","GLOBAL",7)
+Global("CM_NinaferTalk","GLOBAL",9)
+THEN
+RESPONSE #100
+IncrementGlobal("CM_NinaferTalk","GLOBAL",1)
+SetGlobal("CM_NinaferTalkCheck","GLOBAL",1)
+Interact(Player1)
+END
+
+IF
+InParty(Myself)
+Global("CM_NinaferTalkCheck","GLOBAL",1)
+!AreaType(DUNGEON)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(5)
+Global("CM_NinaferTalk","GLOBAL",2)
+Global("CM_NinaferTalk","GLOBAL",4)
+Global("CM_NinaferTalk","GLOBAL",6)
+Global("CM_NinaferTalk","GLOBAL",8)
+Global("CM_NinaferTalk","GLOBAL",10)
+THEN
+RESPONSE #100
+SetGlobalTimer("CM_NinaferTalkTimer","GLOBAL",3600)
+Interact(Player1)
+END
+
+// Anomen and Ninafer scripting
+
+// Anomen is a knight first check
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    Global("AnomenIsKnight","GLOBAL",1)
+    Global("CmT_NinaAnomenKnightTalk","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("CmT_NinaAnomenKnightTalkTimer","GLOBAL",300)
+    SetGlobal("CmT_NinaAnomenKnightTalk","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenKnightTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenKnightTalk","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CmT_NinaAnomenKnightTalk","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenKnightTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenKnightTalk","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject("Anomen")
+    Interact("Anomen")
+END
+
+// Ninafer official flirting
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    Global("CmT_NinaAnomenFlirtTalk","GLOBAL",3)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("CmT_NinaAnomenFlirtTalkTimer","GLOBAL",1000)
+    SetGlobal("CmT_NinaAnomenFlirtTalk","GLOBAL",4)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenFlirtTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenFlirtTalk","GLOBAL",4)
+THEN
+  RESPONSE #100
+    SetGlobal("CmT_NinaAnomenFlirtTalk","GLOBAL",5)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenFlirtTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenFlirtTalk","GLOBAL",5)
+THEN
+  RESPONSE #100
+    MoveToObject("Anomen")
+    Interact("Anomen")
+END
+
+// 2nd Nina flirt
+IF
+
+    InParty(Myself)
+    InParty("Anomen")
+    Global("CmT_NinaAnomenFlirtTalk","GLOBAL",6)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("CmT_NinaAnomenFlirtTalkTimer","GLOBAL",1000)
+    SetGlobal("CmT_NinaAnomenFlirtTalk","GLOBAL",7)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenFlirtTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenFlirtTalk","GLOBAL",7)
+THEN
+  RESPONSE #100
+    SetGlobal("CmT_NinaAnomenFlirtTalk","GLOBAL",8)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenFlirtTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenFlirtTalk","GLOBAL",8)
+THEN
+  RESPONSE #100
+    MoveToObject("Anomen")
+    Interact("Anomen")
+END
+
+// Anomen is not a knight first check. Romance kill
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    Global("AnomenIsNotKnight","GLOBAL",1)
+    Global("CmT_NinaAnomenKnightTalk2","GLOBAL",0)
+THEN
+  RESPONSE #100
+    RealSetGlobalTimer("CmT_NinaAnomenNotKnightTalkTimer","GLOBAL",300)
+    SetGlobal("CmT_NinaAnomenKnightTalk2","GLOBAL",1)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenNotKnightTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenKnightTalk2","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("CmT_NinaAnomenKnightTalk2","GLOBAL",2)
+END
+
+IF
+    InParty(Myself)
+    InParty("Anomen")
+    See("Anomen")
+    !StateCheck(Myself,CD_STATE_NOTVALID)
+    !StateCheck("Anomen",CD_STATE_NOTVALID)
+    CombatCounter(0)
+    !Detect([ENEMY])
+    RealGlobalTimerExpired("CmT_NinaAnomenNotKnightTalkTimer","GLOBAL")
+    Global("CmT_NinaAnomenKnightTalk2","GLOBAL",2)
+THEN
+  RESPONSE #100
+    MoveToObject("Anomen")
+    Interact("Anomen")
+END
+
+// Background information
+
+IF
+ InParty(Myself)
+ AreaCheck("AR2100")
+ Global("NinaBackground","GLOBAL",0)
+THEN
+ RESPONSE #100
+  IncrementGlobal("NinaBackground","GLOBAL",1)
+  Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  RealGlobalTimerExpired("NinaElhanTime","GLOBAL")
+  GLOBAL("NinaKnowsElhan","GLOBAL",1)
+  See(Player1)
+  CombatCounter(0)
+THEN
+ RESPONSE #100
+   Interact(Player1)
+END
+
+IF
+	InParty(Myself)
+	AreaCheck("AR2800")
+	Global("NinaHomeAttack","GLOBAL",0)
+THEN
+	RESPONSE #100
+		Interact(Player1)
+END
+
+IF
+	InParty(Myself)
+	AreaCheck("AR2807")
+	CombatCounter(0)
+	Global("NinaDragon1","GLOBAL",0)
+THEN
+	RESPONSE #100
+		Interact(Player1)
+END
+

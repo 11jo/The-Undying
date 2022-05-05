@@ -1,0 +1,8 @@
+IF
+	Global("DoSSpawn","AR0801",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMMEDUS",[2510.2670],0) // 
+		ActionOverride("Table 1",CreateItem("COMA07",0,0,0)) //
+		SetGlobal("DoSSpawn","AR0801",1)
+END

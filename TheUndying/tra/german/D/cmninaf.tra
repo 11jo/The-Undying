@@ -1,0 +1,12 @@
+@0  = ~Ja? Hm... Ihr kommt mir bekannt vor, nach den Beschreibungen, die ich hörte. Ihr seid <CHARNAME>, nicht wahr?~ [NINA02] 
+@1  = ~Ja, mein Name ist <CHARNAME>, warum fragt Ihr?~
+@2  = ~Ich hörte darüber, wie böse Ihr seid. Wären wir nicht an einem öffentlichen Ort, ich würde Euch auf der Stelle töten. Nun geht mir aus den Augen, Euer übler Gestank ist hier nicht willkommen.~ 
+@3  = ~Ich hörte von Euren heroischen Taten entlang der Schwertküste und in Baldurs Tor. Ich habe auch über Euren Verlust von Imoen an Waukeens Promenade gehört. Ich biete Euch meine Dienste an, um Euch bei dieser Aufgabe behilflich zu sein.~
+@4  = ~Ihr scheint eine Menge über mich zu wissen. Wie kann ich sicher sein, dass Ihr kein Kopfgeldjäger oder schlimmeres seid?~ 
+@5  = ~Es freut mich, zu sehen, dass Ihr nicht wahllos Leute in Eure Gruppe aufnehmt, ohne deren Motive zu kennen. Sehr weise von Euch, <CHARNAME>. Nun, ich bin selbst auf der Suche nach Irenicus. Er ist böse und alles Böse muss erledigt werden, mit allen gesetzlich Mitteln. Irenicus ist außerdem ein mächtiger Magier und eine Bedrohung für alle, wenn man ihn ungehindert gewähren lässt. Ich kann Euch eine große Hilfe sein, <CHARNAME>. Ich bin erfahren in den Kampfkünsten und verstehe mich sehr gut auf das Wirken von Zaubern. Mit vereinten Kräften können wir Irenicus und alles Böse, das uns im Wege steht, töten.~
+@6  = ~Sehr wohl, Ihr dürft Euch uns anschließen. Mit Euren Fähigkeiten in der Gruppe können wir Imoen vielleicht schneller retten.~
+@7  = ~Ihr seid nicht das, was ich gerade brauche. Vielleicht später.~ 
+@8  = ~Dann lasst uns losziehen, <CHARNAME>. Ich habe so ein Gefühl, dass sehr viel für unsere Suche nach Irenicus und zur Befreiung Imoens getan werden muss.~
+@9  = ~In Ordnung, lasst uns gehen.~ 
+@10 = ~Euer Schaden, ich werde dennoch hier sein, wenn Ihr Eure Meinung ändert.~
+@11 = ~Ihr seid zurückgekehrt. Habt Ihr Eure Meinung geändert und wollt, dass ich mich Euch anschließe?~

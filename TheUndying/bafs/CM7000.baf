@@ -1,0 +1,8 @@
+IF
+	Global("Cm7000New","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMDUNKIN",[630.567],1)
+		CreateCreature("CMKAT",[758.378],6)
+		SetGlobal("Cm7000New","GLOBAL",1)
+END

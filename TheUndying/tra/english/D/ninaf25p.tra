@@ -1,0 +1,9 @@
+@0    = ~Yes? Oh you wish for us to part company? I would like to stay with you.~ [NINA02]
+@1    = ~No, stay with the party for now.~
+@2    = ~Just wait here awhile, Nina.~
+@3    = ~I'll send you back to the pocket plane...wait there.~
+@4    = ~It shall be as you say.~
+@5    = ~Yes, what did you wish? Shall I return with you?~ [NINA15]
+@6    = ~Let's go.~
+@7    = ~Keep waiting here awhile.~
+@8    = ~Very well, here I shall wait.~

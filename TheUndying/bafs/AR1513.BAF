@@ -1,0 +1,7 @@
+IF
+	Global("DoSSpawn","AR1513",0)
+THEN
+	RESPONSE #100
+		ActionOverride("Table 1",CreateItem("COMA05",0,0,0)) //
+		SetGlobal("DoSSpawn","AR1513",1)
+END

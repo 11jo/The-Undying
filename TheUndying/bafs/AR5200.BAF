@@ -1,0 +1,9 @@
+IF
+	Global("DoSSpawn","AR5200",0)
+THEN
+	RESPONSE #100
+		CreateCreature("YSG2",[2241.1273],12) // 
+		CreateCreature("YSG2",[2015.427],12) // 
+		CreateCreature("YSG2",[1745.479],12) // 
+		SetGlobal("DoSSpawn","AR5200",1)
+END

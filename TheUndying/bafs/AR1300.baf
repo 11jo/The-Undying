@@ -1,0 +1,11 @@
+IF
+	Global("CmDavRevenge","GLOBAL",1)
+        Global("Cm1300New","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CM1TELKA",[2370.3281],6)
+		CreateCreature("CM1ZEELA",[2424.3158],5)
+		CreateCreature("CM1LAMAL",[2333.3387],3)
+		CreateCreature("CM1MANEI",[2287.3240],5)
+		SetGlobal("Cm1300New","GLOBAL",1)
+END

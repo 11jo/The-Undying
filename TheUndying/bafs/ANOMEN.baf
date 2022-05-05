@@ -1,0 +1,44 @@
+IF
+	InParty(Myself)
+	AreaCheck("AR0300")
+	InParty("cmninaf")
+	See("cmninaf")
+	!StateCheck("cmninaf",STATE_SLEEPING)
+	!Dead("cmninaf")
+	CombatCounter(0)
+	Global("AnomenIsKnight","GLOBAL",1)
+	Global("NinaAnomenTalk1","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Interact("cmninaf")
+END
+
+IF
+	InParty(Myself)
+	AreaCheck("AR0300")
+	InParty("cmninaf")
+	See("cmninaf")
+	!StateCheck("cmninaf",STATE_SLEEPING)
+	!Dead("cmninaf")
+	CombatCounter(0)
+	Global("AnomenIsNotKnight","GLOBAL",1)
+	Global("NinaAnomenTalk1b","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Interact("cmninaf")
+END
+
+IF
+	InParty(Myself)
+	AreaCheck("AR0400")
+	InParty("cmninaf")
+	See("cmninaf")
+	!StateCheck("cmninaf",STATE_SLEEPING)
+	!Dead("cmninaf")
+	CombatCounter(0)
+	Global("NinaAnomenFlirt1","GLOBAL",0)
+	Global("NinaAnoMatch","GLOBAL",1)
+THEN
+	RESPONSE #100
+		Interact("cmninaf")
+END

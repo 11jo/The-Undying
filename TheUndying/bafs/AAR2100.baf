@@ -1,0 +1,17 @@
+IF
+    Global("CalliJoined","GLOBAL",1)
+    Global("SolaufeinJob","GLOBAL",0)
+    Global("CmTUDrowPartyExists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      CreateCreature("CMALISKA",[3814.2004],2)
+      CreateCreature("CMNASTOR",[3853.2023],4)
+      CreateCreature("CMALISK1",[3770.2081],6)
+      CreateCreature("CMALISK2",[3815.1971],2)
+      CreateCreature("CMALISK3",[3871.2013],6)
+      CreateCreature("CMALISK4",[3826.2100],4)
+      CreateCreature("CMALISK5",[3740.2100],2)
+      CreateCreature("CMALISK6",[3790.2094],8)
+      CreateCreature("CMALISK7",[3756.2119],2)
+      SetGlobal("CmTUDrowPartyExists","GLOBAL",1)
+END

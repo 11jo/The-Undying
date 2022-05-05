@@ -1,0 +1,10 @@
+IF
+ See("cmninaf")
+ Detect("cmninaf")
+ Global("MoriaFindsNina","GLOBAL",0)
+  CombatCounter(0)
+THEN
+RESPONSE #100
+ SetGlobal("MoriaFindsNina","GLOBAL",1)
+ Dialogue("cmninaf")
+END

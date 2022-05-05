@@ -1,0 +1,169 @@
+IF
+ See(Player1)
+ NumTimesTalkedTo(0)
+THEN
+ RESPONSE #100
+ Dialogue(Player1)
+END
+
+
+// Leaving AR0700
+
+IF
+InParty(Myself)
+!AreaCheck("AR0700")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("CallistoJoinTalk","GLOBAL",0)
+THEN
+RESPONSE #100
+SetGlobal("CallistoJoinTalk","GLOBAL",1)
+END
+
+IF
+InParty(Myself)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+Global("CallistoJoinTalk","GLOBAL",1)
+THEN
+RESPONSE #100
+Interact(Player1)
+END
+
+
+// First friend talk
+IF 
+InParty(Myself)
+Global("CallistoTalk","GLOBAL",0)
+THEN
+RESPONSE #100
+RealSetGlobalTimer("CallistoTalkTimer","GLOBAL",2000)
+SetGlobal("CallistoTalk","GLOBAL",1)
+END
+
+// Friend talks, sequential
+
+IF
+InParty(Myself)
+RealGlobalTimerExpired("CallistoTalkTimer","GLOBAL")
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(9)
+Global("CallistoTalk","GLOBAL",1)
+Global("CallistoTalk","GLOBAL",3)
+Global("CallistoTalk","GLOBAL",5)
+Global("CallistoTalk","GLOBAL",7)
+Global("CallistoTalk","GLOBAL",9)
+Global("CallistoTalk","GLOBAL",11)
+Global("CallistoTalk","GLOBAL",13)
+Global("CallistoTalk","GLOBAL",15)
+Global("CallistoTalk","GLOBAL",17)
+THEN
+RESPONSE #100
+IncrementGlobal("CallistoTalk","GLOBAL",1)
+SetGlobal("CallistoTalkCheck","GLOBAL",1)
+Interact(Player1)
+END
+
+IF
+InParty(Myself)
+Global("CallistoTalkCheck","GLOBAL",1)
+!AreaType(DUNGEON)
+See(Player1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+!StateCheck(Myself,CD_STATE_NOTVALID)
+CombatCounter(0)
+!See([ENEMY])
+OR(9)
+Global("CallistoTalk","GLOBAL",2)
+Global("CallistoTalk","GLOBAL",4)
+Global("CallistoTalk","GLOBAL",6)
+Global("CallistoTalk","GLOBAL",8)
+Global("CallistoTalk","GLOBAL",10)
+Global("CallistoTalk","GLOBAL",12)
+Global("CallistoTalk","GLOBAL",14)
+Global("CallistoTalk","GLOBAL",16)
+Global("CallistoTalk","GLOBAL",18)
+THEN
+RESPONSE #100
+SetGlobalTimer("CallistoTalkTimer","GLOBAL",3600)
+Interact(Player1)
+END
+
+IF
+	InParty(Myself)
+	Global("TannerWarning2","AR0502",0)
+THEN
+	RESPONSE #100
+		SetGlobal("TannerWarning2","AR0502",1)
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	InParty(Myself)
+	AreaCheck("AR1602")
+	InParty("cmninaf")
+	See("cmninaf")
+	!StateCheck("cmninaf",STATE_SLEEPING)
+	!Dead("cmninaf")
+	CombatCounter(0)
+	Global("BCalliNina3","GLOBAL",0)
+THEN
+	RESPONSE #100
+		Interact("cmninaf")
+END
+
+IF
+	AreaCheck("AR2600")
+        InParty(Myself)
+	Global("CmCalliEndGameS","AR2600",0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(Player1)
+END
+
+IF
+	Allegiance(Myself,ENEMY)
+	!InParty(Myself)
+	Global("NPCFight","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("NPCFight","LOCALS",1)
+		ChangeAIScript("callix",SPECIFICS)
+		ChangeAIScript("",GENERAL)
+		ChangeAIScript("",DEFAULT)
+		SetDialog("")
+		Continue()
+END
+
+IF
+	Allegiance(Myself,NEUTRAL)
+	AttackedBy([GOODCUTOFF],DEFAULT)
+THEN
+	RESPONSE #100
+		ChangeAIScript("callix",SPECIFICS)
+		ChangeAIScript("",GENERAL)
+		Enemy()
+		Continue()
+END
+
+IF
+	!Allegiance(Myself,ENEMY)
+	!InParty(Myself)
+	Global("NPCFight","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("NPCFight","LOCALS",0)
+		ChangeAIScript("",GENERAL)
+		ChangeAIScript("",SPECIFICS)
+		Continue()
+END

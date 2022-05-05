@@ -1,0 +1,8 @@
+IF
+   Global("CmEvilOneExists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmEvilOneExists","GLOBAL",1)
+      CreateCreature("CMCALLI",[2390.1523],4)
+END
+

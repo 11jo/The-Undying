@@ -1,0 +1,41 @@
+IF
+   Global("CmFarmersExists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      CreateCreature("CMNIFA01",[4064.1744],3)
+      CreateCreature("CMNIFA02",[4017.1758],4)
+      SetGlobal("CmFarmersExists","GLOBAL",1)
+END
+
+IF
+   Global("CalliJoined","GLOBAL",1)
+   Global("CalliFoundValis","GLOBAL",1)
+   Global("CmCormakPartyExists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmCormakPartyExists","GLOBAL",1)
+      CreateCreature("CMCORMAK",[532.3252],3)
+      CreateCreature("CMCORMA1",[460.3229],4)
+      CreateCreature("CMCORMA2",[518.3309],6)
+      CreateCreature("CMCORMA3",[470.3277],2)
+END
+
+IF
+   Global("CalliJoined","GLOBAL",1)
+   Global("CmAliskaAttack","GLOBAL",1)
+   Global("CmSoranPartyExists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmSoranPartyExists","GLOBAL",1)
+      CreateCreature("CMTUSOR",[2045.3203],8)
+      CreateCreature("CMSORA1",[2128.3192],4)
+      CreateCreature("CMSORA2",[2055.3247],6)
+      CreateCreature("CMSORA3",[2019.3192],2)
+      CreateCreature("CMSORA4",[2133.3206],2)
+      CreateCreature("CMSORA5",[1969.3329],6)
+      CreateCreature("CMSORA1",[1959.3320],4)
+      CreateCreature("CMSORA2",[2239.3136],8)
+      CreateCreature("CMSORA1",[2210.3210],4)
+      CreateCreature("CMSORA2",[2019.3184],6)
+
+END

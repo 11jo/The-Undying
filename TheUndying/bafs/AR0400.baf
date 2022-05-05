@@ -1,0 +1,7 @@
+IF
+	Global("Cm0400New","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CM1TARNE",[1930.2765],5)
+		SetGlobal("Cm0400New","GLOBAL",1)
+END

@@ -1,0 +1,9 @@
+IF
+   Global("CalliJoined","GLOBAL",1)
+   Global("CmValisExists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmValisExists","GLOBAL",1)
+      CreateCreature("CMVALIS",[1419.1202],4)
+END
+

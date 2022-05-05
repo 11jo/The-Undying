@@ -1,0 +1,8 @@
+IF
+	Global("DoSSpawn","AR1401",0)
+THEN
+	RESPONSE #100
+		ActionOverride("Container 3",CreateItem("CMBW02",0,0,0)) //
+		ActionOverride("Container 5",CreateItem("CMAR02",40,0,0)) //
+		SetGlobal("DoSSpawn","AR1401",1)
+END

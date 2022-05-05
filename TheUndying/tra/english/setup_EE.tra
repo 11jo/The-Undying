@@ -1,0 +1,1634 @@
+@127  = ~Chain Mail Armor~
+@128  = ~Chain Mail +4 "Vengeance"~
+@129  = ~A chain mail tunic fashioned from some sort of bright metal. It is always worn over a layer of padded fabric or soft leather to prevent chafing and lessen the impact of blows.
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 40
+Requires: 8 Strength
+~
+@130  = ~This is the personal armor of Callisto. It's history is unknown but from the looks of it the armor is from an ancient time judging by the ruins engraved on it.
+
+STATISTICS:
+
+20% Fire Resistance
+
+Armor Class: 0
+Weight: 18
+Requires: 8 Strength~
+@131  = ~Long Sword~
+@132  = ~Long Sword +4 "Hellfire"~
+@133  = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era. Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+
+STATISTICS:
+
+Damage: 1D8
+Damage type: slashing
+Weight: 4
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type: 1-handed
+Requires: 6 Strength~
+@134  = ~This sword has been made of the metal mithril and the blood of demons which has been bonded to this weapon.
+
+STATISTICS:
+Special Abilities:
+User is immune to level drain when equipped.
+
+THAC0: +4 bonus
+Damage: 1D8 +4
++3 fire damage
+Damage type: slashing
+Weight: 2
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: 1-handed
+Requires: 6 Strength~
+@135  = ~Bastard Sword~
+@136  = ~Rallos Zek~
+@137  = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred. The overall length of the bastard sword ranges between four feet and four feet ten inches.
+
+STATISTICS:
+
+Damage: 2D4
+Damage type: slashing
+Weight: 10
+Speed Factor: 8
+Proficiency Type: Bastard Sword
+Type: 1-handed
+Requires: 11 Strength
+~
+@138  = ~Rallos Zek, The Warlord
+
+"Survival of the strong, Death to the weak." The heat of battle is the only place for this blade and it's weilder. No enlightenment can be gained outside of the battlefield. Weilder's of such believe that the universe was formed by conflict and in conflict it will end. The victors feasting upon the remains of their enemy. No respect or regard is given to the dead, for if they were worthy, their hearts would still pump blood through their veins and not upon the soil of the land.
+
+STATISTICS:
+
+Abilities:
+Grants it's weilder a 25 strength.
++1 extra attack
+
+Penalties:
+-2 Armor Class penalty
+-3 charisma
+-2 intellegence
+-2 wisdom
+
+THACO: +6
+Damage: 2D8 +6, +4 additional slashing, +4 magical
+Damage type: slashing
+Weight: 12
+Speed Factor: 2
+Proficiency Type: Bastard Sword
+Type: 1-handed
+Requires: 15 Strength
+~
+@139  = ~Mithaniel Marr~
+@140  = ~Mithaniel Marr, The Lightbringer
+
+"Valor is what seperates civilized beings from beasts."
+
+STATISTICS:
+Special Abilities (twice per day):
+Sunray
+ Damage: 3D6 (save vs. spells or be blinded for 10 rounds)
+ Undead: an additional 1d6 points of damage per level of caster (save vs. spells or be destroyed)
+ Range: 20 ft
+ Area: 20 ft radius
++1 extra attack
+
+THACO: +6, +8 vs. evil creatures
+Damage: 1D8 +6, +8 vs. evil creatures, does double damage against undead
+Damage type: slashing
+Weight: 2
+Speed Factor: 3
+Proficiency Type: Long sword
+Type: 1-handed
+Requires: 6 Strength
+~
+@141  = ~Two Handed Sword~
+@142  = ~Innoruuk~
+@143  = ~A strange looking Two Handed Sword with undetermined properties.~
+@144  = ~Innoruuk, The Prince of Hate
+
+"Creativity is born of destruction." is written upon the sword's hilt. This blade of pure hatred makes it weilder believe that hate is a creative force. Love and kindness are tools for those too ignorant to know what they want or too cowardly to do what is necessary to obtain it. It is only through the total disdain of your enemies that you can gain true power over them. Pity and mercy have no power when confronted with contempt and viciousness.
+This blade is so foul that is lashes outward in battle, attack others with it's hatred of all. It's material is odd and not of the Prime Material Plane. The embodiment of evil flows from it like a source or force and will allow no one but evil to touch it.
+Little else is truely known about the weapon other than it came from the Nine Hells from one of the Lords below. One might want to be careful if it ever came looking for it's possession.
+
+STATISTICS:
+
+Ability 1: Will lash out with hatred causing magical damage to anyone who harms the weilder.
+Ability 2: +50% magic resistance for the weilder.
+Ability 3: Mental Protection
+
+Penalty 1: -1 charisma
+Penalty 2: -2 wisdom
+
+THACO: +6
+Damage: 1D12 +6
+Damage type: slashing
+Weight: 3
+Speed Factor: 4
+Proficiency Type: Two Handed Sword
+~
+@145  = ~Green Dragon's Sword  +4~
+@146  = ~<No Text>~
+@147  = ~The brutal Green Dragon's favorite sword. He would personally execute his own enemy's, even family, with this sword. This weapon was buried with him along with some other prized magical items.
+
+Statistics:
+1D10 +4
+THAC0 +5
+15% Target will be disintegrated. 
+Does double damage to undead and demonic. 
+Dispel magic cast on each hit
+
+Special:
+Cast: Sunray 2 times a day at 20th level.
+~
+@148  = ~Battle Axe~
+@149  = ~Brell Serilis~
+@150  = ~The most common version of the battle axe is a stout pole about four feet in length with a single-edged, trumpet-shaped blade mounted on one end. Battle axes are also called broad axes.
+
+STATISTICS:
+
+Damage: 1D8
+Damage type: slashing
+Weight: 7
+Speed Factor: 7
+Proficiency Type: Axe
+Type: 1-handed
+Requires: 10 Strength
+~
+@151  = ~Brell Serilis, The Duke of Below
+
+"The surface world is a waste of space." is printed upon the axe's head. It has a strange influence upon it's user. Brell Serilis starts to possess the mind of the holder changing his/her view on things around them. They feel as if they find true happiness in the caves, caverns and tunnels of the world.
+Brell Serilis is constructed out of an abnormal metal not associated with the Prime Material Plane. It almost seems to rip a hole into the fabric of the very air every time it is swung.
+
+STATISTICS:
+
+Ability 1: 30% to slay demons, instantly slays all elementals, 40% to slay undead.
+
+Penalty 1: -2 charisma, -1 dexterity
+Penalty 2:
+
+THAC0: +6
+Damage: 1D8 +6
+Damage type:  slashing
+Weight: 2
+Speed Factor: 1
+Proficiency Type: Axe
+Type: 1-handed
+Requires: 10 Strength
+~
+@152  = ~Club~
+@153  = ~Quellios~
+@154  = ~Most clubs are stout, hardwood sticks, narrow at the grip and wider at the end. This simple weapon has been used since mankind first began using tools. Anyone can find a good stout piece of wood and swing it; hence the club's widespread use.
+
+STATISTICS:
+
+Damage: 1D6
+Damage type: crushing
+Weight: 3
+Speed Factor: 4
+Proficiency Type:Club
+Type: 1-handed
+Requires: 5 Strength
+~
+@155  = ~Quellious, The Tranquil
+
+"Peace is found within" is carved into the butt of the club.
+Those who would weild this club are those who would seek inner peace without becoming strictly pacifists.
+
+STATISTICS:
+
+Abilities:
+Wisdom +4
+Free Action
+
+Penalties:
+Dexterity -1
+Strength -1
+Constitution -1
+
+Armor Class: +3
+THAC0: +6
+Damage: 1D6 +6
+Damage type: crushing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Club
+Type: 1-handed
+Requires: 5 Strength
+~
+@156  = ~Short Bow~
+@157  = ~Erolissi Marr~
+@158  = ~Short bows were the first to be developed, although they were not called such. This is more of a default term that refers to anything which is not a long bow. Short bow staves are about 5 feet long on the average. As the years passed, attempts were made to increase bow ranges. Bows were either given longer staves or flexibility was increased with no change to the length. The former resulted in what is now called the long bow.
+
+STATISTICS:
+
+Weight: 2
+Speed Factor: 6
+Proficiency Type: Short Bow
+Type: 2-handed
+Requires: 3 Strength
+~
+@159  = ~Erolissi Marr, The Queen of Love
+
+"Love conquers all." is carved into the bow's shaft.  
+The bow doesn't make it's user a pacifist, but he/she would like to live  in a world where everyone loves everyone else and violence does not exist. However, the weapon doesn't make then naive to the fact that what they would like the world to be is not a reality. Instead it instills a passionate love of people, places and ideas and they become more willing to fight and die to perserve those things.
+
+STATISTICS:
+
+Abilities: 
+Grants the user an extra 2 attacks.
+Grants the user an extra priest spell for levels 1-3.
++2 wisdom
+
+Penalties: 
+-2 strength
+
+Standard Abilities:
+THAC0: +6
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Bow Weapons
+Type: 2-handed
+Requires: 6 Strength
+~
+@160  = ~Shadow Thief Dagger~
+@161  = ~Bristlebane~
+@162  = ~Shadow Thief Dagger
+This dagger is used by Shadow Thieves.
+
+STATISTICS:
+
+Damage: 1D4
+Damage type: piercing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: 1-handed
+Requires: 3 Strength
+~
+@163  = ~Bristlebane, The King of Theives
+
+"Fun at the expense of others." is etched upon the blade. The weilder of this dagger feels charming, clever, and witty. It also leaves it's owner feeling rather mischievous.
+
+STATISTICS
+
+Ability 1: 50% all attacks are backstabs
+Ability 2: +1 intellengence, wisdom, & charisma
+
+Penalty 1: -2 strength, -1 constitution
+Penalty 2: 15% weilder will change into the opposite sex.
+
+Armor Class: +3
+THAC0: +6
+Off Hand THAC0: +2
+Damage: 1d4+6
+Damage Type: piercing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Dagger
+Type: 1-handed
+Requires: 3 Strength
+~
+@164  = ~Halberd~
+@165  = ~Cazic Thule~
+@166  = ~By far the oldest and most often used pole-arm, the halberd consists of a cleaver-like axe blade mounted on a staff averaging six feet in length. The axe blade is balanced at the rear with a fluke, and surmounted by a sharp spike, usually of quadrangular design. The fluke is sometimes replaced by a hook used to dismount cavalry. A halberd can be best described as a cross between a spear and an axe.
+
+STATISTICS:
+
+Damage: 1D10
+Damage type: piercing
+Weight: 15
+Speed Factor: 9
+Proficiency Type: Halberd
+Type: 2-handed
+Requires: 13 Strength
+~
+@167  = ~Cazic Thule, The Faceless
+
+"Only by causing terror in others will you be sparred."  That is what is burnt into the shaft.
+While holding the weapon he/she strives to suppress all hope. Fear rules their life and through fear they rule the lives of others. Pain, misery, violence, torture, living sacrifice; these are all tools of the one possed by this weapon.
+
+STATISTICS:
+
+Ability 1: 30% Target struck must make a save vs. death at a -5 or lose 2 levels of experience.
+Ability 2: Reflects certain ranged attacks
+Ability 3: 60% Fear with a save vs. spells at a -5, 10% Confusion with no save, 5% Rigid Thinking with no save.
+
+Penalty 1: -3 intellegence, -2 wisdom
+
+THAC0: +6
+Damage: 1D10 +6
+Damage type: piercing
+Weight: 5
+Speed Factor: 3
+Proficiency Type: Halberd
+Type: 2-handed
+Requires: 13 Strength
+~
+@168  = ~Helmet~
+@169  = ~Balduran's Visor~
+@170  = ~This class of decorative helmet, made of reinforced leather or metal, covers the face and head. Eye slits and breathing holes come highly recommended.  
+
+STATISTICS:
+
+Armor Class Bonus: None
+Special: Protects Against Critical Hits
+Weight: 2
+~
+@171  = ~Balduran's Visor is the result of an attempt to improve upon Balduran's Helm.  However it did not turn out as the craftsman expected.
+
+STATISTICS:
+
+Max Hp Bonus +35
+Immune to Charm
+Infravision
+
+Armor Class: +2 bonus
+Special: Protects Against Critical Hits
+Weight: 2
+~
+@172  = ~Golden Circlet~
+@173  = ~Circlet of Astral Union~
+@174  = ~This thin circlet of gold appears too simple and plain to be a crown. Although unadorned with gems, there are arcane and cryptic symbols etched along the surface, hinting at hidden power within the golden circlet.~
+@175  = ~Circlet of Astral Union
+
+This circlet is the product of forging metal with a demon's blood as it was sacrificed to a dark deity. In the process a dweller of the Astral Plane was pulled into the circlet and traped.
+
+STATISTICS:
+
+Ability 1: +1 spell for levels 5-7
+
+Armor Class: +3 bonus
+~
+@176  = ~Mace~
+@177  = ~Rodcet Nife~
+@178  = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with a stone or iron head mounted on the end. The head design varies; some being spiked, others flanged, and still others have pyramidal knobs.
+
+STATISTICS:
+
+Damage: 1D6 +1
+Damage type: crushing
+Weight: 8
+Speed Factor: 7
+Proficiency Type: Mace
+Type: 1-handed
+Requires: 10 Strength
+~
+@179  = ~Rodcet Nife, The Prime Healer
+
+"Be generous and humble" is wrote into the weapon's handgrip.
+The need to fight disease and death until one or the other claims them is strong in the weilder's mind.  
+
+STATISTICS:
+
+Abilities:
+Grants 3 extra priest spells for levels 1-3, 2 extra for levels 4-5, and 1 extra for levels 6-7
++3 charisma
+Instantly slays most undead
+
+THACO: +6
+Damage: 1D6 +7
+Damage type:  crushing
+Weight: 8
+Speed Factor: 5
+Proficiency Type: Mace
+Type: 1-handed
+Requires: 10 Strength
+~
+@180  = ~Short Sword~
+@181  = ~Bertoxxulous~
+@182  = ~The short sword is the first type of sword to come into existence. In the simplest of terms, a short sword can be considered a dagger with a blade so long that it can no longer be called a dagger. The term short sword does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting.
+
+STATISTICS:
+
+Damage: 1D6
+Damage type: piercing
+Weight: 3
+Speed Factor: 3
+Proficiency Type: Short Sword
+Type: 1-handed
+Requires: 5 Strength
+~
+@183  = ~Bertoxxulous, The Plaguebringer
+
+"The only truth is that everyone dies." is printed upon the blade near the hilt in a demonic tongue. While holding this sword the weilder views the decay of flesh as a thing of ultimate beauty. The subtle purples of a fresh bruise, the almost iridescent yellow green of infested pustule, are but a few of the things the weilder begins to relish.
+The sword glows with a black icor when magic is used to reveal it's nature. Necromancy's evil infests every part of the weapon. Those who would use such a foul sword, for them there is nothing more desirable than to be surrounded by beings who, even in unlife, continue to rot and decay.
+Not much else can be learned about this sword other than it's origins come from the Nine Hells.
+
+STATISTICS:
+
+Ability 1: Target struck suffers a -3 to their movement for 60 seconds if a save vs. wands is not made.
+Ability 2: Target struck suffers a -2 to their dexterity for 30 seconds with no saving throw.
+Ability 3: Target struck suffers 5 poison damage over 2 secs unless a save vs. poison/death magic is made.
+
+Penalty 1: -1 Constitution.
+Penalty 2: Cursed.
+
+THAC0: +6
+Damage: 1D6 +6
+Damage type: piercing
+Weight: 2
+Speed Factor: 1
+Proficiency Type: Short Sword
+Type: 1-handed
+~
+@184  = ~Spear~
+@185  = ~Prexus~
+@186  = ~One of man's earliest weapons, dating back to the most primitive of times, the first spears were simply wooden poles or sticks sharpened at one end. When man mastered metals, spearheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of spear heads, thus leading to the development of certain polearm types.
+
+STATISTICS:
+
+Damage: 1D6
+Damage type: piercing
+Weight: 5
+Speed Factor: 6
+Proficiency Type: Spear 
+Type: 2-handed
+Requires: 5 Strength
+~
+@187  = ~Prexus, The Oceanlord
+
+"Power lies in the vast depths" is burnt into the head of spear.
+
+
+STATISTICS
+
+Abilities: 
+Immunity to charm and hold person
++3 to all saves vs. death
+Grants an extra 3 priest spells levels 1-3, an extra 2 for levels 4-5, and 1 extra for levels 6-7
+Weilder is granted an extra 2 attacks.
+
+THAC0: +6
+Damage: 1D6 +6
+Damage type: piercing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Spear
+Type: 2-handed
+Requires: 5 Strength
+~
+@188  = ~Boots~
+@189  = ~Boots of the Frozen North~
+@190  = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+
+STATISTICS:
+
+Weight:  4~
+@191  = ~Boots of the Frozen North:
+These boots are made by the hairs of a frost giant which may be the reason why it gives protection against the cold. It is believed these boots came from the frozen wastes of the north. The history of these boots is lost to time. 
+
+STATISTICS:
+
+Cold resistance: +75%
+Magic resistance +10%
+Weight: 4~
+@192  = ~Gauntlets~
+@193  = ~Mage Gauntlets~
+@194  = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. Magical gauntlets tend to be finer, lighter, and more easily worn than normal varieties.~
+@195  = ~This pair of gauntlets was likely developed in ancient Netheril to aid masters of the magical arts. These gloves enable the mage to cast spells quicker and offer protection.
+
+STATISTICS:
+Spell casting speed lowered by 2
++1 to AC
+Weight: 2
+~
+@196  = ~Mage Gloves~
+@197  = ~These gem-studded leather gloves are enchanted so as to augment the skills of any mage.  
+
+STATISTICS:
+   +1 Bonus to AC
+   Bonus 2nd, 3rd and 4th level spell
+Weight:  1
+~
+@198  = ~Bracers~
+@199  = ~Fighter's Bracers~
+@200  = ~Bracers are thick bands of metal or leather that are strapped, belted, or tied to a character's forearm. 
+~
+@201  = ~Fighter's Bracers are highly sought after by the practitioners of combat.
+
+STATISTICS:
+   +10 to maximum Hit Point total
+   +1 Bonus to AC
+   +1 THAC0
+    Weight: 1 ~
+@202  = ~Short Bow +4 "Arcanum"~
+@203  = ~Through arcane sorcery, the contradictory elements of fire and ice have been combined within this magnificent short bow. It has the ability to fire magic missiles. 
+
+STATISTICS:
+
+Equipped Abilities:
+   5% bonus to Fire and Cold resistance
+  
+THAC0: +4
+Weight: 1
+Speed Factor: 2
+Proficiency Type: Short Bow
+Type: 2-handed
+Requires: 3 Strength
+~
+@204  = ~Elven Chain +2~
+@205  = ~The delicate yet sturdy craftsmanship of the Elven races allows them to design many beautiful yet utilitarian goods. Among these is Elven chain mail, which is so finely wrought that it can be worn under normal clothing without revealing its presence. This and its lightness allows it to be worn by thieves and fighter/mages with few restrictions.
+
+STATISTICS:
+
+Armor Class: 5
+Weight: 7
+Requires: 5 Strength
+~
+@206  = ~This mail feels more akin to cloth than to metal, and may be worn by thieves with few penalties and by fighter-mages without removing their spellcasting ability. This variety of mail is woven by masters in almost exactly the same form by both elves and the Drow; it has changed little since the Drow's elven past and is used for surface forays where Adamantine Drow chain would decay.
+
+The light-coloured Elven variety of this armor has no restrictions other than class-inherent, but the dark Drow variety is magically attuned to its owner, and thus may only be worn by those of evil alignments.
+
+STATISTICS:
+
+Armor Class: 3
+Weight: 8
+Requires: 5 Strength
+~
+@207  = ~Splint Mail~
+@208  = ~Splint Mail +4 "Vengeance"~
+@209  = ~Splint Mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail.  Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle.
+
+STATISTICS:
+
+Armor Class: 4
+Weight: 40
+Requires: 8 Strength
+~
+@210  = ~Mage Robe~
+@211  = ~Arch Magi Robe "Memento Mori"~
+@212  = ~Since the age of Netheril, mages have learned to bestow a wide variety of magical properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightweight, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magical heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes.~
+@213  = ~One of the few powerful Arch Magi Robes from Netheril. This one happens to give the wearer a bonus in spells and protection from magic. 
+
+STATISTICS:
+
+Bonus: Level two spells = 2
+Level three spells = 1
+Armor Class:  3
+Magic Resistance: 15%
+Saving Throw:  +3 bonus
+Weight:  6
+~
+@214  = ~Robe of the Apprentice~
+@215  = ~Robe of the Apprentice
+
+Romor has it that this robe belonged to Melicamp an apprentice to the mage Thalantyr.
+
+STATISTICS
+
+Bonus one level one spell.
+AC: 3
+~
+@216  = ~War Hammer~
+@217  = ~War Hammer +3 "Thunderstrike"~
+@218  = ~Mounted knights cannot effectively use long pole weapons while on horseback, and as a result, many weapons have been fitted with shorter shafts so they may be wielded with just one hand. Maces and flails are two previous examples of this - the war hammer is another. The horseman's war hammer is a descendant of the Lucerne hammer. It is made entirely of steel, with rondels protecting and strengthening the grip. Rondels are small disks of metal, often shaped into decorative designs. The shaft is about 18 inches long.'
+
+STATISTICS:
+
+Damage: 1D4 +1
+Damage type: crushing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type: 1-handed
+Requires: 9 Strength
+~
+@219  = ~The Thunderstrike Hammer has been enchanted to harness the power of the heavens. 
+
+STATISTICS:
+
+Does additional +3 electrical damage.
+20% chance of target being stunned.
+THAC0: +3 bonus
+Damage: 2D4 + 3
+Damage type: crushing
+Weight: 4
+Speed Factor: 1
+Proficiency Type: Warhammer
+Type: 1-handed
+Requires: 18 Strength
+~
+@220  = ~Studded Leather~
+@221  = ~Shadow Armor +4~
+@222  = ~Studded leather armor has little in common with normal leather armor. Instead of a hardened shell, studded leather offers hundreds of metal rivets affixed to a supple backing. The numerous studs form a flexible coat of metal that helps to turn aside slashing and cutting attacks, while the leather is little more than a means of securing the rivets in place.
+
+STATISTICS:
+
+Armor Class: 7
+Weight: 25
+Requires: 6 Strength
+~
+@223  = ~Shadow armor is studded leather armor created for use by the Shadowmasters of Amn. The Shadowmasters are of the highest order within the Shadow Thief hierarchy. It is +4 studded leather armor that melds into shadows.
+
+STATISTICS:
+
+Armor Class: 3
+Special: +15% Hide in Shadows
++15% Pick Pockets
+Weight: 8
+Requires: 6 Strength
+~
+@224  = ~Armor of Locks +4~
+@225  = ~Enchanted ebony rivets adorn the black leather of this armor. Hebron the Black was a well known lock picker and trap expert. There was no trap he could not disable nor any lock he could not pick. Years later it was found out that this armor had a lending hand in his activities. On the collar it is writen in his blood "Bless Mask".
+
+STATISTICS:
+
+Special: +20% Find Traps
++20% Open Locks
+Armor Class: 3
+Weight: 7
+Requires: 6 Strength
+~
+@226  = ~Studded Leather of the Forest +3~
+@227  = ~A gift to those who defend nature in the name of Mielikki. Only druids and rangers can wear this blessed armor.
+
+STATISTICS:
+Thorn Damage - each successful hit on the wearer inflicts 1D4 points of fire damage to the attacker
+
+Bonus level 1 spells = 2
+Armor Class: 3
+Weight: 5
+Requires: 6 Strength
+~
+@228  = ~Mace +2 "Ordo Mundi"~
+@229  = ~The mace is a direct descendant of the basic club, being nothing more than a wooden shaft with an iron head mounted on the end. The shaft of this magical mace seems to guide the wielder, becoming an extension of his hand.
+
+STATISTICS:
+
++2 Electrical damage
+THAC0: +2 bonus
+Damage: 1D6 +3
+Damage type: crushing
+Weight: 7
+Speed Factor: 5
+Proficiency Type: Mace
+Type: 1-handed
+Requires: 10 Strength
+~
+@230  = ~Morning Star~
+@231  = ~Morning Star +3~
+@232  = ~The morning star is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morning stars have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most morning star heads, regardless of design, is a long point for thrusting.
+
+STATISTICS:
+
+Damage: 2D4
+Damage type: crushing
+Weight: 12
+Speed Factor: 7
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 11 Strength
+~
+@233  = ~The morning star is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morning stars have an overall length of about four feet. This particular one is mounted with a golden head that has been magically enhanced so as to improve performance and escape the malleability of gold.  
+
+STATISTICS:
+
+THAC0: +3
+Damage: 2D4 +3
+Damage type: crushing
+Weight:10
+Speed Factor: 6
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 11 Strength
+~
+@234  = ~Plate Mail Armor~
+@235  = ~Callisto's Plate Mail +3~
+@236  = ~Plate mail is a combination of chain armor with metal plates covering the vital areas such as the chest, abdomen and groin. Similar in construction to bronze plate mail, true plate mail comprises of chain and leather.
+
+STATISTICS:
+
+Armor Class: 3
+Weight: 50
+Requires: 12 Strength
+~
+@237  = ~This is Callisto's personal armor. She had it magically enhanced to withstand the effects of fire.
+
+STATISTICS:
+
+Special ability:
+40% Fire resistance
+Cast Fireball 3 times/day
+
+Armor Class: 0
+Weight: 27
+Requires: 12 Strength
+~
+@238  = ~Full Plate Mail~
+@239  = ~Durlag's Full Plate +2~
+@240  = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail.
+
+STATISTICS:
+
+Armor Class: 1
+Weight: 70
+Requires: 15 Strength
+~
+@241  = ~This is the plate armor that belonged to Durlag the famous dwarf who built a tower full of treasure and traps. Some how some body survived those traps since this armor no longer rests in Durlag's Tower.
+
+STATISTICS:
+
++1 to constitution
+Protection from:Confusion/Rigid Thinking/Fear
+Armor Class: -1
+Weight: 50
+Requires: 15 Strength
+~
+@242  = ~Small Shield~
+@243  = ~Waukeen's Defender~
+@244  = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light weight as compared to a medium shield permits the user to carry other items in that hand, although he cannot wield or carry another weapon.
+
+STATISTICS:
+
+Armor Class Bonus: 1
+Special: No Missile Weapon Protection
+Weight: 3
+Requires: 4 Strength
+~
+@245  = ~A number of these shields can be found in Waukeen's temples throughout Faerûn. The Church crafts these shields to sell to enterprising adventurers. In exchange for the powers of the device, the bearer is required to keep the front of the shield uncovered and in its original state. If the owner does not comply, the shield's powers fail. In this way, dozens of adventurers walk the Realms bearing the golden face of Waukeen on their arm.
+
+STATISTICS:
+
+Armor Class Bonus: +3
+Saving Throw Bonus: +2
+Magic Resistance: +10%
+Weight: 4
+~
+@246  = ~Long Sword +2 "Vampire's Revenge"~
+@247  = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the long sword has a single-edged blade. There is no single version of the long sword; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all long swords is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most long swords have a double-edged blade and a sharp point at the tip. Despite the tip, the long sword is designed for slashing, not thrusting.
+
+STATISTICS:
+
+Damage: 1D8
+Damage type: slashing
+Weight: 4
+Speed Factor: 5
+Proficiency Type: Long Sword
+Type: 1-handed
+Requires: 6 Strength
+~
+@248  = ~Vampire's Revenge, Long Sword +3
+This blade belonged to Lilith, a long dead servant of Velshroon. In addition to strengthening the mind against the guile of others, the sword absorbs life energy from an opponent with each successful hit, healing the user. Lilith was formally a paladin of Torm until she was attacked by a group of vampires. Her life was cursed after that day to become one of the hungry undead. Her holy sword became corrupted as well and has become like its master. 
+
+STATISTICS:
+
+Equipped Abilities: Wielder immune to charm and domination spells
+Special Abilities: Each hit heals the wielder of 1 hit-point damage
+THAC0: +3 bonus
+Damage: 1D8 +3
+Damage type: slashing
+Weight: 3
+Speed Factor: 3
+Proficiency Type: Long sword
+Type: 1-handed
+Requires: 6 Strength
+~
+@249  = ~Healed~
+@250  = ~Moonblade~
+@251  = ~This potent weapon was created by the smiths of ancient Myth Drannor. Moonblades are used in the long process of selecting a ruler for the isle of Evermeet. A Moonblade chooses its owner. Only an elf can use this blade; anyone else attempting to unsheath it will find themselves horribly burned, possibly resulting in death. This particular Moonblade gives its user a bonus to his armor class, allows the wielder to use the blade with mastery of the sword proficiency, as well as provides a number of specific resistances to cetain damage types.
+
+STATISTICS:
+
+Damage: 1D10 +4
+Damage type: slashing
+Bonus to hit: +4
+Special:
+ +2 bonus to Armor Class
+ 25% Fire Resistance
+ 25% Cold Resistance
+Weight: 3
+Speed Factor: 4
+Proficiency Type:  Long Sword
+Type:  1-handed
+~
+@252  = ~Snow Maiden's Reaver~
+@253  = ~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.   
+
+STATISTICS:
+
+Damage: 2D4
+Damage type: slashing
+Weight: 10
+Speed Factor: 8
+Proficiency Type: Bastard Sword
+Type: 1-handed
+Requires: 11 Strength
+~
+@254  = ~The only material parts of this icy weapon are the hilt, grip, and pommel, wrought from shining silver and steel. It was created in 1099 DR by the chosen of Auril, Ihanora the Merciful.  Ihanora roamed the north, leading ruthless attacks against all those who attempted to find solace from the cold or fight its effects. She traveled with a motley crew of yetis, polar worms, frost giants, and a white dragon, freezing everything in her wake. Ihanora was defeated in 1108 by the notorious Red Mask Brigade, headed by the ruthless killer known as Bitter Harley.
+
+STATISTICS:
+
+Damage: 2d4 +2
+THAC0: +2
+Special: 2% chance of turning the target to solid ice.
+Damage Type: Cold
+Weight:10
+Speed Factor: 6
+Proficiency Type: Bastard Sword
+Type: One-Handed
+~
+@255  = ~Two-Handed Sword~
+@256  = ~Bonesaw~
+@257  = ~The two-handed sword is a derivative of the long sword. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the long sword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of two-handed swords is cleaving mounted knights and breaking up pike formations.
+
+STATISTICS:
+
+Damage: 1D10
+Damage type: slashing
+Weight: 15
+Speed Factor: 10
+Proficiency Type: Two Handed sword
+Type: 2-handed
+Requires: 14 Strength
+~
+@258  = ~Swords made from bone are a common weapon with orcs. This weapon happens to be magical thanks to an orc shaman who cast a spell on it. This weapon was called Bonesaw because of the jagged edges and the nasty habit of its previous owner who would saw his victims in half.
+
+STATISTICS:
+
+THAC0: +3 bonus
+Damage: 1D10 +3
++3 piercing damage
+Damage type: slashing
+Weight: 15
+Speed Factor: 10
+Proficiency Type: Two Handed sword
+Type: 2-handed
+Requires: 14 Strength
+~
+@259  = ~Light Crossbow~
+@260  = ~Luciferi~
+@261  = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). Light crossbows not only weigh less than their heavy counterparts, they fire faster as well.
+
+STATISTICS:
+
+Weight: 7
+Speed Factor: 5
+Proficiency Type: Crossbow
+Type: 2-handed
+Requires: 8 Strength
+~
+@262  = ~Luciferi was orignally a drow constructed crossbow that later lost it's power in the world of the surface dwellers. Normally drow equipment is destroyed up contact with the sun's rays. However, this crossbow did not for some strange unknown reason. It was found by a black knight in the service of Cyric who reconized it's craftsmanship and brought it to his wizard companion. She then in turn re-enchanted it to a new, more powerful evil. The black knight named it Luciferi.
+
+STATISTICS:
+
+Abilities:
+Grants the owner an extra attack.
+15% chance it will automatically slay a target with fewer than 60hp unless a save vs. death is made at a -2.
+
+Penalties: 
+1% chance the evil will turn on the user and kill him/her unless a save vs. death is made.
+
+THAC0: +5 bonus
+Damage: +5 (missile)
+Weight: 3
+Speed Factor: 1
+Proficiency Type: Crossbow
+Type: 2-handed
+Requires: 8 Strength
+~
+@263  = ~Plate Mail~
+@264  = ~Green Dragon's Plate~
+@265  = ~This armor comes from the Far East that used to belong to an emperor known only as The Green Dragon. He ruled his country with an iron fist until he met his demise at the hands of a female warlord.
+
+Statistics:
+AC -4
+Dex +1
+Negative Plane Protection
+Regeneration of 2 hit Points Per Round
+
+Special:
+Summon 1 Undead Guardian 1 Time Per Day (Bone Golem)
+Cast Regeneration 1 time per day
+Cast Ethereal 1 Time Per Day
+~
+@266  = ~Cloak~
+@267  = ~Balduran's Mantle~
+@268  = ~The cloak can be made in every possible shape with just about every type of fabric. The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.~
+@269  = ~Balduran's Mantle is the improved version of the Cloak of Balduran. A great deal of magic went into enchanting this fabric further and a number of people died as a result.
+
+STATISTICS:
+
+Immunity to backstab & imprisonment
+
+Armor Class: +1 bonus
+Saving Throws: +1 bonus
+Magic Resistance: 30%
+Weight: 1
+~
+@270  = ~Flail~
+@271  = ~Veeshan~
+@272  = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon was originally used as a tool for threshing grain.
+
+STATISTICS:
+
+Damage: 1D6 +1
+Damage type: crushing
+Weight: 15
+Speed Factor: 7
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 13 Strength
+~
+@273  = ~Veeshan, The Wyrmqueen
+
+"Dragonkind are superior to all forms of life" is enlaid into the handle of the weapon.
+The one possessed by Veeshan will often sacrifice themselves or their loved ones to the Mother of Dragons or one of her children. Many humanoids have gained great riches and acient knowledge by serving the spirit inside, but these gifts came with a high price.
+
+STATISTICS:
+
+Abilities:
+30% chance of 2d4 fire damage, save vs. breath
+20% chance of 2d4 cold damage, save vs. breath
+10% chance of 3d3 poison damage, save vs. breath
+5% chance of 2d10 electrical damage, save vs. breath
+5% chance of 1d12 acid damage, save vs. breath
+Immune to wing buffet attack and stun.
++4 bonus to saves vs. breath weapon
+
+Penalties:
+Armor Class penalty of -3
+Veeshan does not care for non-dragonkin so there's a 3% chance it will lash out the own by entraping him/her in a maze spell.
+
+THACO: +6
+Damage: 1D6 +7
+Damage type: crushing
+Weight: 8
+Speed Factor: 3
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 13 Strength
+~
+@274  = ~The Tribunal~
+@275  = ~Mounted knights cannot effectively use long pole weapons while on horseback, and as a result, many weapons have been fitted with shorter shafts so they may be wielded with just one hand.  Maces and flails are two previous examples of this - the war hammer is another.  The horseman's war hammer is a descendant of the Lucerne hammer.  It is made entirely of steel, with rondels protecting and strengthening the grip.  Rondels are small disks of metal, often shaped into decorative designs.  The shaft is about 18 inches long.'
+
+STATISTICS:
+
+Damage: 1D4 +1
+Damage type: crushing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: War Hammer
+Type: 1-handed
+Requires: 9 Strength
+~
+@276  = ~The Tribunal, The Six Hammers
+
+"Justice" is the only word inscribed upon the hammer and it seems as if no runes or other magical writings or on it either. Retribution, vengeance, and punishment are sacred duties burning the heart and mind of the hammer's weilder. He/she believes they are methodical, patient and just.
+The Tribunal, The Six Hammers is duely named for a reason. This is because the forces aligned within it branch inward from 6 elements. Fire, cold, electricity, acid, magical and the physical.
+The Tribunal's reach is such that the guilty is bound it be affected by atleast 1 of the 6 factions withint the weapon.
+
+STATISTICS:
+
+Abilities: 
++1d4 cold damage, save vs. spell
++1d4 fire damage, save vs. breath
++1d4 acid damage, save vs. petrification
+
+Penalties:
+Armor Class -2 penalty
+-3 intelligence
+
+THACO: +6
+Damage: 1D4 +7, +5 electrical, +2 magical
+Damage type: crushing
+Weight: 5
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: 1-handed
+Requires: 9 Strength
+~
+@277  = ~Silver Amulet~
+@278  = ~Broach of Abyssal Doctrines~
+@279  = ~Amulets are usually magical devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magical properties. Only one amulet can be dangled from the neck at a time.~
+@280  = ~Broach of Abyssal Doctrines
+
+It is said among the lower planes that such things need to be purged from the realms. There is a reason for this...
+
+STATISTICS:
+
+Ability 1: Protection from Charm
+Ability 2: Protection from Poison
+Ability 3: Protection from level drain
+Ability 4: THAC0 +1 vs. Lycanthropes
+Ability 5: Armor Class +1 vs. Lycanthropes~
+@281  = ~Long Sword +3 "Vigilance"~
+@282  = ~Long Sword +3 "Vigilance"
+
+This is Nina's personal sword that was given to her by her mother, who was a priestess of Mystra. It was created to destroy evil especially those who would abuse magic for their own personal evil ways.
+
+STATISTICS:
+
+Bonus Damage:
++2 Fire
++2 Electrical
+
+THAC0: +3 bonus, +4 vs. evil creatures
+Damage: 1D8 +3, +4 vs. evil creatures
+Damage type: slashing
+Weight: 2
+Speed Factor: 3
+Proficiency Type: Long sword
+Type: 1-handed
+Requires: 6 Strength
+~
+@283  = ~Nina's Ring~
+@284  = ~This is Nina's personal ring. It was given to her by her mother upon her death. It has magically tightened itself around her finger so it will not come off. Upon her death the ring will destroy itself. Nina does not say much about what the ring is or what it does.~
+@285  = ~Tome of Magical Spells~
+@286  = ~This is a magical book that has writing on the cover in ancient Netherese. A magical lock appears to be on the book since you can not open it up. This is some thing that is beyond your comprehension and better off given back to the Priest of Mystra.~
+@287  = ~Amulet~
+@288  = ~Amulet of the Learned~
+@289  = ~Similar gifts are often bestowed upon apprentice's that have finished or are close to finishing their apprenticeship with a mage.
+
+STATISTICS:
+
+Spells: Adds one 1st, two 2nd, and 3rd level spells
+~
+@290  = ~Karana~
+@291  = ~Karana, The Rainkeeper
+
+"Respect the storm."
+Those who wield this blade feel compelled to worship the life-giving rain and respect the destructive force of a sandstorm or hurricane.
+
+STATISTICS:
+
+Abilities:
++2 extra attacks
++4 Off Hand THAC0
++20% resistance to cold & fire
+
+Armor Class: +2
+THACO: +4
+Damage: 1D8 +4
+Damage type: slashing
+Weight: 1
+Speed Factor: 2
+Proficiency Type: Scimitar/Wakizashi/Ninja-To
+Type: 1-handed
+Requires: 10 Strength
+~
+@292  = ~Vampire Hunter +5~
+@293  = ~Vampire Hunter is a very useful weapon for those who seek out vile vampires and put an end to their existence.
+
+STATISTICS:
+Special Abilities:
++4 damage and +4 thac0 vs vampires
+User is immune to level drain when equipped.
+
+THAC0: +5 bonus
+Damage: 1D8 +5, 1d4 fire damage
+Damage type: slashing
+Weight: 2
+Speed Factor: 0
+Proficiency Type: Long Sword
+Type: 1-handed
+Requires: 6 Strength
+~
+@294  = ~Sword of Valor +5~
+@295  = ~The Sword of Valor is for those pure at heart the paladins. This great sword will help the paladin smite evil that stand in the way of goodness and righteousness.
+
+STATISTICS
+
+Equipped Abilities: 
+    25% Magic Resistance
+Combat Abilities: 
+    Additional +4 damage versus chaotic evil opponents
+    
+THACO: +5 bonus
+Damage: 2D4 +5 +4 cold damage
+Damage type: slashing
+Weight: 6
+Speed Factor: 4
+Proficiency Type: Bastard Sword
+Type: 1-handed
+Requires: 12 Strength
+~
+@296  = ~Troll Bane +2~
+@297  = ~An excellent weapon for those who wish to eradicate the world of evil trolls. Troll Bane gives out fire and acid damage just to make sure the troll does not rise up again.
+
+STATISTICS:
+
+Equipped Abilities: 
+ 20% fire resistance
+ 20% acid resistance
+ Non-detection
++4 fire damage
++4 acid damage
+
+Damage: 2D4 +2 
+THACO: +2 bonus
+Damage type: slashing
+Weight: 7
+Speed Factor: 7
+Proficiency Type: Bastard sword
+Type: 1-handed
+Requires: 11 Strength
+~
+@298  = ~Bastard Sword +3: Incinerator~
+@299  = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Damage: 2D4 +3
+THAC0: +3
+Damage type: Slashing
+Special:
+  50% chance +1D8 fire damage
+  10% chance target is Stunned
+Weight: 10
+Speed Factor: 8
+Proficiency Type: Great Swords
+Type: 1-handed
+~
+@300  = ~Two Handed Sword +4: Backbiter~
+@301  = ~The two-handed sword is a derivative of the long sword. Weapon smiths have always looked for ways to improve existing weapons. In an effort to improve the long sword, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of two-handed swords is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magical properties.
+
+STATISTICS:
+
+Damage: 1D10 +4 (+1D6 piercing)
+THAC0: +4 bonus
+Damage type: Slashing
+Special: 25% chance user takes +1D4 piercing damage
+Weight: 12
+Speed Factor: 9
+Proficiency Type: Great Swords
+Type: 2-handed
+~
+@302  = ~Everhate Vorpal Sword~
+@303  = ~The Everhate Vorpal Sword radiates a dark aura when you examine it, and the blade is so finely sharpened it could likely sever a head in a single blow. Upon getting close to the weapon you can feel the evil aura emanating from it. It repels anyone who is not evil from it.
+
+STATISTICS:
+
+Combat Abilities:
+ 25% chance each hit that target must make a saving throw vs death (-2 penalty) or die.
+
+THAC0: +4 bonus
+Damage: 1D12 +4
+Damage type: slashing
+Weight: 15
+Speed Factor: 6
+Proficiency Type: Two Handed sword
+Type: 2-handed
+Requires: 14 Strength
+~
+@304  = ~Executioner's Blade +4~
+@305  = ~A favorite weapon of half-orcs the Executioner's Blade can be found any where in the realms where orcs and half-orcs dwell.
+
+STATISTICS
+
++5 Electric Damage
+THAC0: +4 bonus
+Damage: 1D12 +4
+Damage type: slashing
+Weight: 11
+Speed Factor: 6
+Proficiency Type: Two handed sword 
+Type: 2-handed
+Requires: 14 Strength
+~
+@306  = ~Ancient Sword~
+@307  = ~This sword is so old that no information is available. Even identity spells fail to uncover its history.~
+@308  = ~Hammer Arrows +2~
+@309  = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Damage: 1D2 (+1D10 crushing)
+THAC0: -5
+Damage type: Missile (piercing)
+Special: 10% chance target is Stunned
+Weight: 0
+Launcher: Bow
+~
+@310  = ~Inferno Arrows +2~
+@311  = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+STATISTICS:
+
+Damage: 1D6 +2 (+ 1D10 fire)
+THAC0: +2
+Damage type: Missile (piercing)
+Weight: 0
+Launcher: Bow
+~
+@312  = ~Axe of the Defender +4~
+@313  = ~A fine weapon the Axe of the Defender has served only a few masters, probably because the fine weapon protected them. It was in the possession of Clan Stonebridge until betrayal from within to a band of Orcs who invaded Clan Stonebridge's Keep. All the dwarves were killed and what happened with this axe has been a mystery.
+
+STATISTICS
+
+Equipped Abilities: 
+  Improves AC by 1
+  CON increase +2
+THAC0: +4 bonus 
+Damage: 1D8 +4
+Damage type: slashing
+Weight: 7
+Speed Factor: 4
+Proficiency Type: Axe
+Type: 1-handed
+Requires: 10 Strength
+~
+@314  = ~Boots of Valor~
+@315  = ~Boots of Valor give the paladin speed and defense against missile weapons.
+
+STATISTICS
+
+Equipped Ability : increases movement rate
+
+Bonus AC vs missile weapons~
+@316  = ~Tunare~
+@317  = ~Tunare, The Mother of All
+
+"Blossom & grow." is carved into the wooden shaft.
+The manner in which this Long Bow influences it's owner is through whispers of the forest. Only an elf would truly understand what force drives them.
+
+STATISTICS:
+
+Abilities: 
+Grants the owner an extra 2 attacks.
++1 dexterity
++1 wisdom
+35% Target struck will be stunned as follows: Targets with 1-29hp are stunned for 4d4 rounds, 30-59hp are stunned for 2d4 rounds, and 60-89hp are stunned for 1d4 rounds.
+
+Penalties:
+-2 strength
+-2 intelligence
+
+THACO: +6
+Weight: 2
+Speed Factor: 2
+Proficiency Type: Long Bow
+Type: 2-handed
+Requires: 6 Strength
+~
+@318  = ~Helm of Valor~
+@319  = ~The Helm of Valor protects those who are the greatest protectors of all the paladins. This helm signifies the virtues and nobleness of the paladin.
+
+STATISTICS:
+
+Armor Class Bonus:  none
+Saving Throws: +1 bonus
+Electrical resistance:  +25%
+Cold resistance: +25%
+Fire resistance: +25%
+Poison resistance +25%
+Special: Protects Against Critical Hits
+Weight: 3
+~
+@320  = ~Golden Mask~
+@321  = ~Vlad's Golden Mask of the Arcane~
+@322  = ~Vlad's Golden Mask of the Arcane
+
+This ornate mask is constructed completely of gold yet it is light as a feather. Fire Opals are set into the eyes and smaller ones set around the edge of the mask. The red from the gems make mask look as if it is reflecting the image of an exploding fireball.
+
+STATISTICS
+
+Unknown.~
+@323  = ~Solusek Ro~
+@324  = ~Solusek Ro, The Burning Prince
+
+"Fire birthed the world and in fire shall it be consumed."
+
+STATISTICS
+
+Abilities: If a fire elemental is hit it must save vs. spells or be destroyed
+Abilities: (one charge)
+Summon an 8 hit dice Fire Elemental
+ Duration: 1 hour
+Fire Shield (Red)
+ A protective shield that surrounds the wielder of the staff as per the 4th level wizard spell Fire Shield (Red).
++2 extra attacks
+Extra spells: 3 1-4, 2 5-7, 1 8-9
+
+Penalties:
+Charisma -3
+Constitution -1
+
+THAC0: +3
+Damage: 1D6 +3
+Damage type: crushing
+Weight: 3
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: 2-handed
+Requires: 5 Strength~
+@325  = ~Black Mass~
+@326  = ~Black Mass was a crossbow used in the attempt to assassinate a high priest of Cyric during a dark ritual. The assassination failed and the assassin was killed when discovered.  
+The bow was left upon the floor while the guards drug the assassin's body off to an undisclosed location. While it sat there during the ritual, unknown to the high priest, magic rubbed off upon it and seeped into the weapon's very material construction.
+
+STATISTICS:
+
+Abilities: 
+Grants the user an extra attack.
+Wielder regenerates 1hp per second.
+Grants the user Clairvoyance
+
+THAC0: +4
+Damage: +4
+Weight: 5
+Speed Factor: 2
+Proficiency Type: Crossbow
+Type: 2-handed
+Requires: 15 Strength
+~
+@327  = ~Sacrifice of Kali~
+@328  = ~Kali was an evil god of an ancient people who believed in blood sacrifices. This armor was worn by a crazy, sadistic priest of Kali who worn it to every sacrifice he performed. High Lord Priest Set'thania was not immune to his crazy religion, he himself was put on the end of a sacrificial dagger.
+
+STATISTICS:
+
+Bonuses: +20% Fire Resistance
+Save vs Death bonus 10%
+Save vs Spell bonus 10%
+Armor Class: -1
+Weight: 30
+Requires: 8 Strength
+~
+@329  = ~Armor of Valor~
+@330  = ~A rare find this armor is. Only the truly blessed of goodness may wear this armor. The valor and true to heart paladin may wear this great armor for his duty of to serve and protect.
+
+STATISTICS:
+
+Immunity to backstab
++1 to Strength
+
+Armor Class: -1
+Weight: 40
+Requires: 12 Strength
+~
+@331  = ~Death Plate +3~
+@332  = ~This armor glows red from the blood of its wearers victims. Speculation that this was Cyric's armor before he became a god. Only he may know for certain. Only evil people may wear this vile armor.
+
+STATISTICS:
+
+Bonus 30% Save vs Death 
+Immune to normal weapon damage
+Armor Class: 0
+Weight: 27
+Requires: 12 Strength
+~
+@333  = ~Legionnaire's Chain +5~
+@334  = ~Favored armor for guards and mercenaries in the Realms the Legionnaire's Chain protects its wearer from all sorts of damage.
+
+STATISTICS:
+
+Armor Class: 0
+Weight: 17
+Requires: 10 Strength
+~
+@335  = ~Cloak of Mask~
+@336  = ~The Cloak of Mask is the perfect item for a thief. Joral should have put an enchantment for backstab. He his no longer breathing air and the cloak has a new owner. Such as life of a thief in a guild.
+
+STATISTICS:
+
+Special:  Non-detectable by magical means such as detect invisibility and scrying.
+
+30% Find traps bonus
+20% Hide in shadows bonus
+20% Set trap bonus
+Weight: 3~
+@337  = ~Cloak of Sune~
+@338  = ~Cloak of Sune is for those charismatic types who want their hearts desire. They believe they will become more desirable and be able to get what they want. You be the judge.
+
+STATISTICS
+
++2 to Charisma~
+@339  = ~Flail of Venom~
+@340  = ~Each head on this flail has been dipped into a magical poison that will never wear off this weapon of destruction. Care should be taken even by the one who holds it as well. The heads of this flail seem to have a mind of their own at times.
+
+STATISTICS
+
+Combat Abilities: Victims must make a saving throw vs. poison or take 10 hit points of poison damage
+
+10% chance of wielder being poison if fail save vs poison.
+
+THACO: +3
+Damage: 2D4 +3
+Damage type: crushing
+Weight: 9
+Speed Factor: 5
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 11 Strength
+~
+@341  = ~Inferno Darts +4~
+@342  = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Tiny silver runes have been carved into the surface to enhance the performance of these darts.
+
+STATISTICS:
+
+Damage: 1D3 +4
+THAC0: +4
+Damage type: Missile (piercing)
+Special: 20% chance +2d6 fire damage
+Weight: 0
+Speed Factor: 2
+Proficiency Type: Missile Weapons
+Type: 1-handed
+~
+@343  = ~Gauntlets of Valor~
+@344  = ~The Gauntlets of Valor was made by a priest of Helm who had a problem of not being able to hit and do damage to his target. Once he put these gloves on he had no trouble in his fighting skills.
+
+STATISTICS:
+
+THACO: +2 bonus
+Damage: +3 bonus
+Weight: 1
+~
+@345  = ~Knee Capper +2~
+@346  = ~Knee Capper is a useful hammer for the little people. Beware tall ones for the little ones will have their revenge.
+
+STATISTICS:
+
+Special Damage vs humanoids 
+
+THACO: +3 bonus
+Damage: 1D4 +3
+Damage type: crushing
+Weight: 5
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: 1-handed
+Requires: 9 Strength ~
+@347  = ~War Hammer +4~
+@348  = ~War Hammer +4, +1 electrical: 'Borok's Fist'
+Borok Thundercracker was a dwarven hero that led several campaigns against giants and other "tall vermin" that had plagued his people in a number of their communities.  This hammer was his blessed weapon, which his elven allies called his "little iron fist", though not to his face.
+
+STATISTICS:
+
+Combat Abilities: +5 electricity damage
++5 acid damage
+THAC0: +4 bonus
+Damage: 1D4 + 3
+Damage type: crushing
+Weight: 5
+Speed Factor: 2
+Proficiency Type: War Hammer
+Type: 1-handed
+Requires: 9 Strength
+~
+@349  = ~Gold Amulet~
+@350  = ~Penta's Amulet of Magic Resistance~
+@351  = ~Penta, the half-elf bard, made this necklace for her lover who was lost in a battle near Neverwinter. The foul orcs that won the battle looted the corpses of any possessions they had. This necklace has not been seen since.
+
+STATISTICS
+
+Magic Resistance: +20%~
+@352  = ~Amulet of the Magister~
+@353  = ~The Amulet of the Magister was created by Nelnfaen Sauntarae, the @only drow magister to date. It is one of the few relics of this great drow magister to exist.
+
+
+STATISTICS:
+
+Special:  Memorize two extra 8 and 9 level spells~
+@354  = ~The One Ring~
+@355  = ~It is known that "The One Ring" came from a far off land from a long time ago. Its origins are a mystery. Some say that a bard named Tolkien made the item while others dispute a warrior named Sauron had made it. We may never know.
+
+STATISTICS:
+
+Non-Detection when worn
+
+Special: Cast Improved Invisibility on the wearer once/day~
+@356  = ~Ring of Protection +4~
+@357  = ~This ring was crafted by the best elven metallurgist on Evermeet. It was to be a gift to a lord of Waterdeep but the ship it was on sunk off the Sword Coast.
+
+STATISTICS:
+
+Armor Class: +4 bonus
+Saving Throws: +4 bonus~
+@358  = ~Menacar's Shield +3~
+@359  = ~Menacar was a very unusual halfling, he liked to adventure, fight battles and work in a forge. With his forging skills he created this shield to help him on an upcoming adventure. Poor foolish Menacar and the companions he bribed him to help them. One does not take on an ancient red dragon and live.
+
+STATISTICS:
+
+Armor Class Bonus: +3
+Weight: 7
+Requires: 12 Strength
+~
+@360  = ~Shield of Valor +3~
+@361  = ~Blessed by a priest of Lathander, this shield will protect its owner from those who would cast mind altering spells for evil.
+
+
+STATISTICS:
+Special: Immune to rigid thinking, fear spells.
+
+Armor Class Bonus: 4
+Weight: 5
+Requires: 12 Strength
+~
+@362  = ~Crystal Helm~
+@363  = ~Crafted from magical crystals from a now abandoned Dwarven Mine. The crystals have a natural resistance to heat and cold.
+
+STATISTICS:
+
+Armor Class Bonus:  +1
+Special:  Protects Against Critical Hits
+          +20% Fire Resistance
+          +20% Cold Resistance
+Weight: 2 ~
+@364  = ~Mace +3~
+@365  = ~Mace +3: "Defiler"
+Personal weapon of Nirel, a powerful cleric, whom little is know about. However, history does record that he was a vile zealot whose hatred for followers of other faiths knew almost no bounds. It is said that he kept the heads of his victims as trophies. He was personally responsible for defiling over one hundred temples of other faiths; thus earning himself, and his mace, the nickname 'Defiler'.
+
+STATISTICS:
+
+Damage: 1D6 +4
+THACO: +3
+Damage type: Crushing
+Weight: 7
+Speed Factor: 6
+Proficiency Type: Blunt Weapons
+Type: 1-handed
+~
+@366  = ~Crystal Plate Mail~
+@367  = ~Forged from magical crystals mined from a now abandoned Dwarven mine. The crystals have a natural resistance to fire and cold.
+
+STATISTICS:
+
+Armor Class: 2
+Special: +20%  Fire Resistance
+         +20%  Cold Resistance
+Weight: 20
+~
+@368  = ~Ring~
+@369  = ~Bard's Ring~
+@370  = ~Ring once belonging to the famous bard Morridin. The Mage King Varashar had this ring made for Morridin after he won a seven year long contest for court bards.
+
+STATISTICS:
+
+Spells:  Grants on extra mage spell each level from 1st through 4th.
+~
+@371  = ~Apprentice's Ring~
+@372  = ~Similar rings are often given to apprentice's that show exceptional skill or merit.
+
+STATISTICS:
+
+Special:  adds two 1st, one 2nd, and one 3rd level spells
+~
+@373  = ~Bag~
+@374  = ~Bag of Illusionary Dust~
+@375  = ~When sprinkled over one's head the magic dust contained in this sack causes the user to appear to others to split and become 2 people where one stood before. This effect last for a short period of time and can be used as long there is dust remaining in the bag.~
+@376  = ~Crystal Sword~
+@377  = ~Crafted from magical crystals from a now abandoned Dwarven Mine. The crystals have a natural resistance to heat and cold. However, due to the forging process the crystals used to make this sword lost their natural resistances. Although it turns out that they hold enchantments quite well.
+
+STATISTICS:
+
+THAC0: +2 bonus
+Damage: 1D10 +2
+Damage type: slashing
+Weight: 10
+Speed Factor: 8
+Proficiency Type: Two-handed sword
+Type: 2-handed
+Requires: 14 Strength
+~
+@378  = ~Creature Item~
+@379  = ~Does lots n' lots of damage!~
+@380  = ~Gauntlets of the Faithful Warrior~
+@381  = ~Through out time, many deities have been know to grant boons to their followers in the way of blessed items. Even though the exact origins of these gauntlets are unknown that must surely be the case with this particular set.
+
+STATISTICS:
+
+THACO: +3 bonus
+Damage: +3 bonus
+Weight: 1
+~
+@382  = ~A Candle~
+@383  = ~Candle of Wisdom~
+@384  = ~This candle once rubbed the right way will grant the person extra wisdom. Unfortunately, this same magic causes the candle to disappear after a single use.
+
+STATISTICS:
+
+Wisdom: Raised by 1 point permanently
+Special: The candle is consumed upon use
+Usage: Place into quick item slot~
+@385  = ~This is a lucky rabbit's foot.~
+@386  = ~Bottle of Aspire Wine~
+@387  = ~Bottle of Aspire Wine:
+This wine has an eerie glow to it. When you drink deeply, memories of lost loves come rushing back and you find your eyes filling with tears.
+~
+@388  = ~Bust of Mystra~
+@389  = ~A small but exquisite bust depicting the goddess, Mystra. ~
+@390  = ~Chicken~
+@391  = ~This is KFC's finest chicken. It has 20 herbs and spices and slow roasted over a warm fire. When wholly consumed, this chicken restores 10 hit points to the person.~
+@392  = ~Grapes~
+@393  = ~A bunch of grapes:
+This fruit glows with a strange inner light.
+Once consumed heals 2 hit points.~
+@394  = ~Amn Fried Steak~
+@395  = ~This one of Amn's best tasting steaks. Flavored with special herbs and a special tasting sauce. When wholly consumed, this steak restores 5 hit points to the person.~
+@396  = ~Blood-filled Goblet~
+@397  = ~Blood of Bodily Health~
+@398  = ~The blood in this goblet is magically enhanced, thereby allowing an individual to raise his or her Constitution by a single point. Unfortunately, the goblet will disappear after a single use.
+
+STATISTICS:
+
+Constitution: Raised by 1 point permanently
+Special: The goblet is destroyed upon use
+Usage: Place into quick item slot
+~
+@399  = ~Raven's Book of Spells~
+@400  = ~The writing in this text is completely indecipherable and resists any such attempts at comprehension through normal magic or any other means. It has little use for you because a powerful mage has put a magical lock on it. ~

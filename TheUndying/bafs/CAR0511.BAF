@@ -1,0 +1,10 @@
+IF
+	Global("AcceptQuestC","GLOBAL",1)
+THEN
+	RESPONSE #100
+		CreateCreature("2CMSHAR1",[1258.452],4) // Lillian Darkblade
+		CreateCreature("2CMSHAR2",[1130.337],14) // Priestess of Shar
+		CreateCreature("2CMSHAR3",[1200.310],6) // Guard
+		CreateCreature("2CMSHAR4",[1238.471],6) // Guard
+		SetGlobal("AcceptQuestC","GLOBAL",2)
+END

@@ -1,0 +1,10 @@
+IF
+   Global("BCalliNina3","GLOBAL",1)
+   InParty("cmninaf")
+   Global("CmCalliGhost","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmCalliGhost","GLOBAL",1)
+      CreateCreature("CMAVAT1",[532.3252],3)
+
+END

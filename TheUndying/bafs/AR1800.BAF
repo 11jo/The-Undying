@@ -1,0 +1,12 @@
+IF
+	Global("DoSSpawn","AR1800",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMGHOST1",[1660.692],0) // 
+		CreateCreature("CMGHOST1",[1411.725],0) // 
+		CreateCreature("CMGHOST1",[1970.1412],0) // 
+		CreateCreature("CMGHOST1",[1817.1265],0) // 
+		ActionOverride("Carcass",CreateItem("COMS01",0,0,0)) //
+		ActionOverride("Carcass",CreateItem("PLAT05",0,0,0)) //
+		SetGlobal("DoSSpawn","AR1800",1)
+END

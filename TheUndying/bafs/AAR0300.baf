@@ -1,0 +1,16 @@
+IF
+   Global("CmTUStore1Exists","GLOBAL",0)
+THEN
+   RESPONSE #100
+      SetGlobal("CmTUStore1Exists","GLOBAL",1)
+      CreateCreature("CMTUS01",[2071.2521],4)
+END
+
+IF
+	Global("CmDavRevenge","GLOBAL",2)
+        Global("Cm0300New","GLOBAL",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CM1NIMBU",[1180.1431],2)
+		SetGlobal("Cm0300New","GLOBAL",1)
+END

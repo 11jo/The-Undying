@@ -1,0 +1,12 @@
+@0    = ~Yes? Hmm you seem familiar to me by descriptions that I have heard about. You are, <CHARNAME>, correct?~ [NINA02]
+@1    = ~Yes my name is, <CHARNAME> why do you ask?~
+@2    = ~I heard about how evil you are. If we were not in a public place I would slay you where you stand. Now get out of my face, your evil stench is most unwelcome.~
+@3    = ~I have heard of your heroic exploits across the Sword Coast and Baldur's Gate. I have also heard about your loss of Imoen at Waukeen's Promenade with Irenicus. I would offer my services and help you out in this quest to rescue her.~
+@4    = ~You sure seem to know a lot about me. How do I know you are not a bounty hunter or worse?~
+@5    = ~I am glad to see you do not blindly let others join your party without getting to know their motives. Very wise of you, <CHARNAME>. Very well, I am looking for Irenicus myself. He is an evil mage and all evil mages should be dealt with accordingly by all that is lawful. I can be a great help to you, <CHARNAME> for I am good in the fighting arts and very competent in the ways of the magical arts. Our forces combined we can bring down Irenicus and any evil that stands in our way.~
+@6    = ~Very well you may join us. With your addition into the party we can save Imoen post haste.~
+@7    = ~You're not really what I need right now. Perhaps at a later time.~
+@8    = ~Let us depart then, <CHARNAME>. I have a feeling there is much to be done in our search for Irenicus and freeing your friend Imoen.~
+@9    = ~Okay, let's go.~
+@10   = ~Your loss then, I will be here if you change your mind though.~
+@11   = ~You have returned. Did you change your mind on having me join up with you?~

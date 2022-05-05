@@ -1,0 +1,8 @@
+IF
+	Global("CalliFoundValis","GLOBAL",0)
+	Detect("callisto")
+	InParty("callisto")
+THEN
+	RESPONSE #100
+		Dialogue("callisto")
+END

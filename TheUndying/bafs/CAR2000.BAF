@@ -1,0 +1,7 @@
+IF
+	Global("CmStoreClerk","AR2000",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMNINAST",[1460.2821],0) // Charlotte
+		SetGlobal("CmStoreClerk","AR2000",1)
+END

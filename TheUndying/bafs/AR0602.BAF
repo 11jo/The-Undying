@@ -1,0 +1,7 @@
+IF
+	Global("MakeWeenug","AR0602",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMWENUG",[3054.3409],0) // Weenug
+		SetGlobal("MakeWeenug","AR0602",1)
+END

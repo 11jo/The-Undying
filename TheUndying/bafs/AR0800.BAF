@@ -1,0 +1,71 @@
+IF
+	Global("DoSSpawn","AR0800",0)
+THEN
+	RESPONSE #100
+		CreateCreature("CMGHOST1",[1334.1314],0) // 
+		CreateCreature("CMGHOST2",[1087.1971],0) // 
+		CreateCreature("CMGHOST3",[1190.541],0) // 
+		SetGlobal("DoSSpawn","AR0800",1)
+END
+
+IF
+  EXISTS("CMGHOST1")
+  TimeGT(DAWN_START)
+  Global("DoSGhost1Bed","AR0800",0)
+THEN
+  RESPONSE #100
+    Deactivate("CMGHOST1")
+    SetGlobal("DoSGhost1Bed","AR0800",1)
+END
+
+IF
+  EXISTS("CMGHOST2")
+  TimeGT(DAWN_START)
+  Global("DoSGhost2Bed","AR0800",0)
+THEN
+  RESPONSE #100
+    Deactivate("CMGHOST2")
+    SetGlobal("DoSGhost2Bed","AR0800",1)
+END
+
+IF
+  EXISTS("CMGHOST3")
+  TimeGT(DAWN_START)
+  Global("DoSGhost3Bed","AR0800",0)
+THEN
+  RESPONSE #100
+    Deactivate("CMGHOST3")
+    SetGlobal("DoSGhost3Bed","AR0800",1)
+END
+
+IF
+  EXISTS("CMGHOST1")
+  TimeGT(DUSK_START)
+  Global("DoSGhost1Bed","AR0800",1)
+THEN
+  RESPONSE #100
+    Activate("CMGHOST1")
+    SetGlobal("DoSGhost1Bed","AR0800",0)
+END
+
+IF
+  EXISTS("CMGHOST2")
+  TimeGT(DUSK_START)
+  Global("DoSGhost2Bed","AR0800",1)
+THEN
+  RESPONSE #100
+    Activate("CMGHOST2")
+    SetGlobal("DoSGhost2Bed","AR0800",0)
+END
+
+IF
+  EXISTS("CMGHOST3")
+  TimeGT(DUSK_START)
+  Global("DoSGhost3Bed","AR0800",1)
+THEN
+  RESPONSE #100
+    Activate("CMGHOST3")
+    SetGlobal("DoSGhost3Bed","AR0800",0)
+END
+
+

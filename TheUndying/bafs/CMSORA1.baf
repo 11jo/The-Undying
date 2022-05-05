@@ -1,0 +1,15 @@
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+THEN
+	RESPONSE #100
+		SetGlobal("CmSoranAttack","GLOBAL",1)
+		Enemy()
+END
+
+IF
+	Global("CmSoranAttack","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END

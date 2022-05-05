@@ -1,0 +1,2193 @@
+BACKUP ~TheUndying/backup~
+AUTHOR ~"http://www.teambg.net"~
+
+AUTO_TRA ~TheUndying/tra/%s/d~
+
+LANGUAGE ~english~
+         ~english~
+         ~TheUndying/tra/english/SETUP.tra~
+
+LANGUAGE ~german~
+         ~german~
+         ~TheUndying/tra/german/SETUP.tra~
+
+BEGIN @0
+
+PRINT @1
+PRINT @2
+PRINT @3
+PRINT @4
+PRINT @5
+PRINT @6
+PRINT @7
+PRINT @8
+PRINT @9
+
+
+// REQUIRE_FILE ~Data/25Dialog.bif~ @10
+
+
+
+APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
+UNLESS ~CD_STATE_NOTVALID~
+
+COPY ~TheUndying\bams~ ~override~
+
+COPY ~TheUndying\areas~ ~override~
+
+COPY ~TheUndying\sounds~ ~override~
+
+COPY ~TheUndying\eff~ ~override~
+
+ACTION_IF GAME_IS ~bg2ee~ BEGIN
+  COPY ~TheUndying/portraitsEE~ ~override~
+END ELSE BEGIN
+COPY ~TheUndying/portraits~ ~override~
+END
+
+/* *********************  Creature Files ****************************** */
+
+COPY ~TheUndying/cre/CMALISK1.CRE~ ~Override~
+  SAY 0x8 @11
+  SAY 0xC @11
+
+COPY ~TheUndying/cre/CMALISK2.CRE~ ~Override~
+  SAY 0x8 @12
+  SAY 0xC @12
+
+COPY ~TheUndying/cre/CMALISK3.CRE~ ~Override~
+  SAY 0x8 @13
+  SAY 0xC @13
+
+COPY ~TheUndying/cre/CMALISK4.CRE~ ~Override~
+  SAY 0x8 @13
+  SAY 0xC @13
+
+COPY ~TheUndying/cre/CMALISK5.CRE~ ~Override~
+  SAY 0x8 @14
+  SAY 0xC @14
+
+COPY ~TheUndying/cre/CMALISK6.CRE~ ~Override~
+  SAY 0x8 @15
+  SAY 0xC @15
+
+COPY ~TheUndying/cre/CMALISK7.CRE~ ~Override~
+  SAY 0x8 @16
+  SAY 0xC @16
+
+COPY ~TheUndying/cre/CMALISKA.CRE~ ~Override~
+  SAY 0x8 @17
+  SAY 0xC @17
+
+COPY ~TheUndying/cre/CMCORMA1.CRE~ ~Override~
+  SAY 0x8 @18
+  SAY 0xC @18
+
+COPY ~TheUndying/cre/CMCORMA2.CRE~ ~Override~
+  SAY 0x8 @18
+  SAY 0xC @18
+
+COPY ~TheUndying/cre/CMCORMA3.CRE~ ~Override~
+  SAY 0x8 @19
+  SAY 0xC @19
+
+COPY ~TheUndying/cre/CMCORMAK.CRE~ ~Override~
+  SAY 0x8 @20
+  SAY 0xC @20
+
+COPY ~TheUndying/cre/CMMARIUS.CRE~ ~Override~
+  SAY 0x8 @21
+  SAY 0xC @21
+
+COPY ~TheUndying/cre/CMNASTOR.CRE~ ~Override~
+  SAY 0x8 @22
+  SAY 0xC @22
+
+COPY ~TheUndying/cre/CMTUS01.CRE~ ~Override~
+  SAY 0x8 @23
+  SAY 0xC @23
+
+COPY ~TheUndying/cre/CMTUS02.CRE~ ~Override~
+  SAY 0x8 @24
+  SAY 0xC @24
+
+COPY ~TheUndying/cre/CMTUS03.CRE~ ~Override~
+  SAY 0x8 @25
+  SAY 0xC @25
+
+COPY ~TheUndying/cre/CMVALIS.CRE~ ~Override~
+  SAY 0x8 @26
+  SAY 0xC @26
+  
+COPY ~TheUndying/cre/CMTUSOR.CRE~ ~Override~
+  SAY 0x8 @27
+  SAY 0xC @27
+  
+COPY ~TheUndying/cre/CMSORA1.CRE~ ~Override~
+  SAY 0x8 @28
+  SAY 0xC @28
+  
+COPY ~TheUndying/cre/CMSORA2.CRE~ ~Override~
+  SAY 0x8 @28
+  SAY 0xC @28
+  
+COPY ~TheUndying/cre/CMSORA3.CRE~ ~Override~
+  SAY 0x8 @29
+  SAY 0xC @29
+  
+COPY ~TheUndying/cre/CMSORA4.CRE~ ~Override~
+  SAY 0x8 @30
+  SAY 0xC @30
+  
+COPY ~TheUndying/cre/CMSORA5.CRE~ ~Override~
+  SAY 0x8 @31
+  SAY 0xC @31
+  
+COPY ~TheUndying/cre/CMAVAT1.CRE~ ~Override~
+  SAY 0x8 @32
+  SAY 0xC @32
+
+COPY ~TheUndying/cre/2CMSHAR4.cre~  ~override~
+  SAY NAME1 @33 
+  SAY NAME2 @33 
+
+COPY ~TheUndying/cre/2CMSHAR1.cre~  ~override~
+  SAY NAME1 @34 
+  SAY NAME2 @34 
+
+COPY ~TheUndying/cre/2CMSHAR2.cre~  ~override~
+  SAY NAME1 @35 
+  SAY NAME2 @35 
+
+COPY ~TheUndying/cre/2CMSHAR3.cre~  ~override~
+  SAY NAME1 @33 
+  SAY NAME2 @33 
+
+COPY ~TheUndying/cre/CMNINAST.cre~  ~override~
+  SAY NAME1 @36 
+  SAY NAME2 @36
+
+COPY ~TheUndying/cre/CMNINAMY.cre~  ~override~
+  SAY NAME1 @37 
+  SAY NAME2 @37 
+  
+COPY ~TheUndying/cre/CMMORIA.cre~  ~override~
+  SAY NAME1 @38
+  SAY NAME2 @38
+  
+  
+COPY ~TheUndying/cre/CMKAT.cre~    ~override~
+  SAY NAME1 @39
+  SAY NAME2 @39
+
+COPY ~TheUndying/cre/CMDUNKIN.cre~  ~override~
+  SAY NAME1 @40
+  SAY NAME2 @40
+  
+COPY ~TheUndying/cre/CMNIFA01.cre~  ~override~
+  SAY NAME1 @41
+  SAY NAME2 @41
+  
+COPY ~TheUndying/cre/CMNIFA02.cre~  ~override~
+  SAY NAME1 @42
+  SAY NAME2 @42
+  
+
+
+/* DoS additions */
+
+
+
+COPY ~TheUndying/cre/CMLORDAS.CRE~ ~override~
+  SAY NAME1 @43 
+  SAY NAME2 @43
+
+COPY ~TheUndying/cre/CMMEDUS.CRE~ ~override~        
+  SAY NAME1 @44
+  SAY NAME2 @44
+
+COPY ~TheUndying/cre/CMNINA1.CRE~ ~override~        
+  SAY NAME1 @45
+  SAY NAME2 @45
+
+COPY ~TheUndying/cre/CMOGREGU.CRE~ ~override~
+  SAY NAME1 @46
+  SAY NAME2 @46
+
+COPY ~TheUndying/cre/CMHAUN02.CRE~ ~override~       
+  SAY NAME1 @47
+  SAY NAME2 @47
+
+COPY ~TheUndying/cre/CMHAM01.CRE~ ~override~        
+  SAY NAME1 @48
+  SAY NAME2 @48
+
+COPY ~TheUndying/cre/CMHAM02.CRE~ ~override~        
+  SAY NAME1 @49
+  SAY NAME2 @49
+
+COPY ~TheUndying/cre/CMHAM03.CRE~ ~override~        
+  SAY NAME1 @50
+  SAY NAME2 @50
+
+COPY ~TheUndying/cre/CMHAUN01.CRE~ ~override~       
+  SAY NAME1 @47
+  SAY NAME2 @47
+
+COPY ~TheUndying/cre/CMWOLF.CRE~ ~override~         
+  SAY NAME1 @51
+  SAY NAME2 @51
+
+COPY ~TheUndying/cre/CMVAMANC.CRE~ ~override~       
+  SAY NAME1 @52
+  SAY NAME2 @52
+
+COPY ~TheUndying/cre/CMVAMPAT.CRE~ ~override~       
+  SAY NAME1 @53
+  SAY NAME2 @53
+
+COPY ~TheUndying/cre/CMWENUG.CRE~ ~override~        
+  SAY NAME1 @54
+  SAY NAME2 @54
+
+COPY ~TheUndying/cre/CMAPOCAL.CRE~ ~override~       
+  SAY NAME1 @55
+  SAY NAME2 @55
+
+COPY ~TheUndying/cre/CMDMERC.CRE~ ~override~        
+  SAY NAME1 @56
+  SAY NAME2 @56
+
+COPY ~TheUndying/cre/CMDRWP.CRE~ ~override~         
+  SAY NAME1 @57
+  SAY NAME2 @57
+
+COPY ~TheUndying/cre/CMSOLA.CRE~ ~override~         
+  SAY NAME1 @58
+  SAY NAME2 @58
+
+COPY ~TheUndying/cre/CMGHOST1.CRE~ ~override~
+  SAY NAME1 @59
+  SAY NAME2 @59
+  
+
+COPY ~TheUndying/cre/CMGHOST2.CRE~ ~override~
+  SAY NAME1 @59
+  SAY NAME2 @59
+
+
+COPY ~TheUndying/cre/CMGHOST3.CRE~ ~override~
+  SAY NAME1 @59
+  SAY NAME2 @59
+
+
+COPY ~TheUndying/cre/CMGABBY.CRE~ ~override~         
+  SAY NAME1 @60
+  SAY NAME2 @60
+
+COPY ~TheUndying/cre/CMKFC01.CRE~ ~override~
+  SAY NAME1 @61
+  SAY NAME2 @61
+
+COPY ~TheUndying/cre/CMCALLI.CRE~ ~Override~
+  SAY 0x8 @62
+  SAY 0xC @62
+  SAY 0xA4 @63
+  SAY 0xAC @64
+  SAY 0xB0 @65
+  SAY 0xB4 @66
+  SAY 0xB8 @67
+  SAY 0xBC @68 
+  SAY 0xC0 @69 
+  SAY 0xC4 @66
+  SAY 0xC8 @70
+  SAY 0xCC @71
+  SAY 0xD0 @72
+  SAY 0xD4 @73
+  SAY 0xD8 @74
+  SAY 0xDC @70
+  SAY 0xE0 @72
+  SAY 0xE4 @73 
+  SAY 0xE8 @75
+  SAY 0xEC @76
+  SAY 0xF0 @77
+  SAY 0xF4 @78
+  SAY 0xF8 @65
+  SAY 0x104 @63
+  SAY 0x108 @79 
+  SAY 0x10C @80
+  SAY 0x110 @81
+  SAY 0x114 @82
+  SAY 0x118 @83
+  SAY 0x11C @63 
+  SAY 0x124 @82
+  SAY 0x128 @84
+  SAY 0x12C @85
+  SAY 0x130 @86
+  SAY 0x134 @87
+  SAY 0x138 @88
+  SAY 0x13C @89
+  SAY 0x140 @90
+  SAY 0x160 @91
+  SAY 0x178 @92
+  SAY 0x180 @93 
+  SAY 0x184 @94
+  SAY 0x198 @71
+  SAY 0x1A0 @95
+  SAY 0x1A4 @91
+  SAY 0x1A8 @96
+  SAY 0x1AC @97
+  SAY 0x1B0 @65
+
+SAY BIO @98
+
+COPY ~TheUndying/cre/CMNINAF9.cre~  ~override~
+  SAY NAME1 @99 
+  SAY NAME2 @99 
+  SAY 0xa4 @100 
+  SAY 0xa8 @101
+  SAY 0xac @101
+  SAY 0xb0 @102
+  SAY 0xb4 @103
+  SAY 0xb8 @104
+  SAY 0xbc @105
+  SAY 0xc0 @106
+  SAY 0xc4 @107
+  SAY 0xc8 @105
+  SAY 0xcc @104
+  SAY 0xec @108
+  SAY 0xf0 @109
+  SAY 0xf4 @110
+  SAY 0xfc @111
+  SAY 0x100 @112
+  SAY 0x10c @113 
+  SAY 0x110 @100 
+  SAY 0x114 @114 
+  SAY 0x124 @115 
+  SAY 0x128 @116
+  SAY 0x12c @117
+  SAY 0x178 @118
+  SAY 0x1a0 @119
+  SAY 0x1a4 @120
+  SAY 0x1a8 @118
+  SAY 0x1ac @121
+  SAY 0x1b0 @121
+  SAY 0x1b4 @122
+  SAY 0x1c0 @123 
+SAY BIO @124
+
+COPY ~TheUndying/cre/CMNINA25.cre~  ~override~
+  SAY NAME1 @99 
+  SAY NAME2 @99
+  SAY 0xa4 @100 
+  SAY 0xa8 @101 
+  SAY 0xac @101 
+  SAY 0xb0 @102 
+  SAY 0xb4 @125 
+  SAY 0xb8 @104 
+  SAY 0xbc @105 
+  SAY 0xc0 @106 
+  SAY 0xc4 @107 
+  SAY 0xc8 @105 
+  SAY 0xcc @104 
+  SAY 0xec @108 
+  SAY 0xf0 @109 
+  SAY 0xf4 @110 
+  SAY 0xfc @111 
+  SAY 0x100 @112 
+  SAY 0x10c @113 
+  SAY 0x110 @100 
+  SAY 0x114 @114 
+  SAY 0x124 @115 
+  SAY 0x128 @116
+  SAY 0x12c @117 
+  SAY 0x178 @118 
+  SAY 0x1a0 @119 
+  SAY 0x1a4 @120 
+  SAY 0x1a8 @118 
+  SAY 0x1ac @121 
+  SAY 0x1b0 @121 
+  SAY 0x1b4 @122 
+  SAY 0x1c0 @123 
+SAY BIO @124
+
+
+
+// Epilogue stuff
+
+COPY ~TheUndying/2da/cmniand1.2da~ ~override\cmniand1.2da~
+  REPLACE ~99999~ @126
+
+
+/*  Items  */
+
+// load up ee-specific tra files on BG2EE
+ACTION_IF GAME_IS BG2EE THEN BEGIN
+  LOAD_TRA ~TheUndying/tra/%LANGUAGE%/setup_ee.tra~
+END
+
+COPY ~TheUndying/Items/CALLAR.itm~ ~Override~
+  SAY 0x8 @127
+  SAY 0xC @128
+  SAY 0x50 @129
+  SAY 0x54 @130
+
+
+COPY ~TheUndying/Items/CALLSW.itm~ ~Override~
+  SAY 0x8 @131
+  SAY 0xC @132
+  SAY 0x50 @133
+  SAY 0x54 @134
+
+COPY ~TheUndying/Items/CM1H06.ITM~ ~Override~
+  SAY 0x8 @135
+  SAY 0xC @136
+  SAY 0x50 @137
+  SAY 0x54 @138
+
+COPY ~TheUndying/Items/CM1H07.ITM~ ~Override~
+  SAY 0x8 @131
+  SAY 0xC @139
+  SAY 0x50 @133
+  SAY 0x54 @140
+
+COPY ~TheUndying/Items/CM2H01.ITM~ ~Override~
+  SAY 0x8 @141
+  SAY 0xC @142
+  SAY 0x50 @143
+  SAY 0x54 @144
+
+COPY ~TheUndying/Items/CM2H07.ITM~ ~Override~
+  SAY 0x8 @141
+  SAY 0xC @145
+  SAY 0x50 @146
+  SAY 0x54 @147
+
+COPY ~TheUndying/Items/CMAX03.ITM~ ~Override~
+  SAY 0x8 @148
+  SAY 0xC @149
+  SAY 0x50 @150
+  SAY 0x54 @151
+
+COPY ~TheUndying/Items/CMBL02.ITM~ ~Override~
+  SAY 0x8 @152
+  SAY 0xC @153
+  SAY 0x50 @154
+  SAY 0x54 @155
+
+COPY ~TheUndying/Items/CMBW01.ITM~ ~Override~
+  SAY 0x8 @156
+  SAY 0xC @157
+  SAY 0x50 @158
+  SAY 0x54 @159
+
+COPY ~TheUndying/Items/CMDA01.ITM~ ~Override~
+  SAY 0x8 @160
+  SAY 0xC @161
+  SAY 0x50 @162
+  SAY 0x54 @163
+
+COPY ~TheUndying/Items/CMHA01.ITM~ ~Override~
+  SAY 0x8 @164
+  SAY 0xC @165
+  SAY 0x50 @166
+  SAY 0x54 @167
+
+COPY ~TheUndying/Items/CMHE03.ITM~ ~Override~
+  SAY 0x8 @168
+  SAY 0xC @169
+  SAY 0x50 @170
+  SAY 0x54 @171
+
+COPY ~TheUndying/Items/CMHE04.ITM~ ~Override~
+  SAY 0x8 @172
+  SAY 0xC @173
+  SAY 0x50 @174
+  SAY 0x54 @175
+
+COPY ~TheUndying/Items/CMMM02.ITM~ ~Override~
+  SAY 0x8 @176
+  SAY 0xC @177
+  SAY 0x50 @178
+  SAY 0x54 @179
+
+COPY ~TheUndying/Items/CMS111.ITM~ ~Override~
+  SAY 0x8 @180
+  SAY 0xC @181
+  SAY 0x50 @182
+  SAY 0x54 @183
+
+COPY ~TheUndying/Items/CMSR01.ITM~ ~Override~
+  SAY 0x8 @184
+  SAY 0xC @185
+  SAY 0x50 @186
+  SAY 0x54 @187
+
+COPY ~TheUndying/Items/CMTUBO01.ITM~ ~Override~
+  SAY 0x8 @188
+  SAY 0xC @189
+  SAY 0x50 @190
+  SAY 0x54 @191
+
+COPY ~TheUndying/Items/CMTUBR01.ITM~ ~Override~
+  SAY 0x8 @192
+  SAY 0xC @193
+  SAY 0x50 @194
+  SAY 0x54 @195
+
+COPY ~TheUndying/Items/CMTUBR02.ITM~ ~Override~
+  SAY 0x8 @192
+  SAY 0xC @196
+  SAY 0x50 @194
+  SAY 0x54 @197
+
+COPY ~TheUndying/Items/CMTUBR03.ITM~ ~Override~
+  SAY 0x8 @198
+  SAY 0xC @199
+  SAY 0x50 @200
+  SAY 0x54 @201
+
+COPY ~TheUndying/Items/CMTUBW01.ITM~ ~Override~
+  SAY 0x8 @156
+  SAY 0xC @202
+  SAY 0x50 @158
+  SAY 0x54 @203
+
+COPY ~TheUndying/Items/CMTUCH01.ITM~ ~Override~
+  SAY 0x8 @127
+  SAY 0xC @204
+  SAY 0x50 @205
+  SAY 0x54 @206
+
+COPY ~TheUndying/Items/CMTUCH02.ITM~ ~Override~
+  SAY 0x8 @207
+  SAY 0xC @208
+  SAY 0x50 @209
+  SAY 0x54 @130
+
+COPY ~TheUndying/Items/CMTUCL01.ITM~ ~Override~
+  SAY 0x8 @210
+  SAY 0xC @211
+  SAY 0x50 @212
+  SAY 0x54 @213
+
+COPY ~TheUndying/Items/CMTUCL02.ITM~ ~Override~
+  SAY 0x8 @210
+  SAY 0xC @214
+  SAY 0x50 @212
+  SAY 0x54 @215
+
+COPY ~TheUndying/Items/CMTUHA01.ITM~ ~Override~
+  SAY 0x8 @216
+  SAY 0xC @217
+  SAY 0x50 @218
+  SAY 0x54 @219
+
+COPY ~TheUndying/Items/CMTULE01.ITM~ ~Override~
+  SAY 0x8 @220
+  SAY 0xC @221
+  SAY 0x50 @222
+  SAY 0x54 @223
+
+COPY ~TheUndying/Items/CMTULE02.ITM~ ~Override~
+  SAY 0x8 @220
+  SAY 0xC @224
+  SAY 0x50 @222
+  SAY 0x54 @225
+
+COPY ~TheUndying/Items/CMTULE03.ITM~ ~Override~
+  SAY 0x8 @220
+  SAY 0xC @226
+  SAY 0x50 @222
+  SAY 0x54 @227
+
+COPY ~TheUndying/Items/CMTUMA01.ITM~ ~Override~
+  SAY 0x8 @176
+  SAY 0xC @228
+  SAY 0x50 @178
+  SAY 0x54 @229
+
+COPY ~TheUndying/Items/CMTUMA02.ITM~ ~Override~
+  SAY 0x8 @230
+  SAY 0xC @231
+  SAY 0x50 @232
+  SAY 0x54 @233
+
+COPY ~TheUndying/Items/CMTUPL01.ITM~ ~Override~
+  SAY 0x8 @234
+  SAY 0xC @235
+  SAY 0x50 @236
+  SAY 0x54 @237
+
+COPY ~TheUndying/Items/CMTUPL02.ITM~ ~Override~
+  SAY 0x8 @238
+  SAY 0xC @239
+  SAY 0x50 @240
+  SAY 0x54 @241
+
+
+COPY ~TheUndying/Items/CMTUSD01.ITM~ ~Override~
+  SAY 0x8 @242
+  SAY 0xC @243
+  SAY 0x50 @244
+  SAY 0x54 @245
+
+COPY ~TheUndying/Items/CMTUSW01.ITM~ ~Override~
+  SAY 0x8 @131
+  SAY 0xC @132
+  SAY 0x50 @133
+  SAY 0x54 @134
+
+COPY ~TheUndying/Items/CMTUSW02.ITM~ ~Override~
+  SAY 0x8 @131
+  SAY 0xC @246
+  SAY 0x50 @247
+  SAY 0x54 @248
+  SAY 0x2BE @249
+
+
+COPY ~TheUndying/Items/CMTUSW03.ITM~ ~Override~
+  SAY 0x8 @250
+  SAY 0xC @250
+  SAY 0x50 @133
+  SAY 0x54 @251
+
+COPY ~TheUndying/Items/CMTUSW04.ITM~ ~Override~
+  SAY 0x8 @135
+  SAY 0xC @252
+  SAY 0x50 @253
+  SAY 0x54 @254
+
+COPY ~TheUndying/Items/CMTUSW05.ITM~ ~Override~
+  SAY 0x8 @255
+  SAY 0xC @256
+  SAY 0x50 @257
+  SAY 0x54 @258
+
+COPY ~TheUndying/Items/CMXB01.ITM~ ~Override~
+  SAY 0x8 @259
+  SAY 0xC @260
+  SAY 0x50 @261
+  SAY 0x54 @262
+
+COPY ~TheUndying/Items/COMA11.ITM~ ~Override~
+  SAY 0x8 @263
+  SAY 0xC @264
+  SAY 0x50 @146
+  SAY 0x54 @265
+
+COPY ~TheUndying/Items/COMC11.ITM~ ~Override~
+  SAY 0x8 @266
+  SAY 0xC @267
+  SAY 0x50 @268
+  SAY 0x54 @269
+
+COPY ~TheUndying/Items/COMF03.ITM~ ~Override~
+  SAY 0x8 @270
+  SAY 0xC @271
+  SAY 0x50 @272
+  SAY 0x54 @273
+
+COPY ~TheUndying/Items/COMH04.ITM~ ~Override~
+  SAY 0x8 @216
+  SAY 0xC @274
+  SAY 0x50 @275
+  SAY 0x54 @276
+
+COPY ~TheUndying/Items/COMN04.ITM~ ~Override~
+  SAY 0x8 @277
+  SAY 0xC @278
+  SAY 0x50 @279
+  SAY 0x54 @280
+  
+/* Nina items */ 
+
+COPY ~TheUndying/Items/CMNINASW.ITM~      ~override/CMNINASW.ITM~
+  SAY NAME2 @281 
+  SAY DESC @282 
+
+COPY ~TheUndying/Items/CMNINARI.ITM~      ~override/CMNINARI.ITM~
+  SAY NAME1 @283 
+  SAY NAME2 @283
+  SAY UNIDENTIFIED_DESC @284
+
+COPY ~TheUndying/Items/CMBOOK99.ITM~      ~override/CMBOOK99.ITM~
+  SAY NAME1 @285 
+  SAY NAME2 @285 
+  SAY UNIDENTIFIED_DESC @286 
+
+
+/* ****************** Former DoS Items ************************************** */
+
+COPY ~TheUndying/Items/amulgr01.itm~       ~override~
+  SAY NAME1 @287
+  SAY NAME2 @288
+  SAY DESC @289
+
+COPY ~TheUndying/Items/CM1H08.ITM~         ~override~         
+  SAY NAME2 @290
+  SAY DESC @291
+
+COPY ~TheUndying/Items/CM1H01.ITM~         ~override~         
+  SAY NAME2 @292
+  SAY DESC @293
+
+COPY ~TheUndying/Items/CM1H02.ITM~         ~override~         
+  SAY NAME2 @294
+  SAY DESC @295
+
+COPY ~TheUndying/Items/CM1H03.ITM~         ~override~         
+  SAY NAME2 @296
+  SAY DESC @297
+
+COPY ~TheUndying/Items/CM1H05.ITM~         ~override~
+  SAY NAME2 @298
+  SAY DESC @299
+
+COPY ~TheUndying/Items/CM2H06.ITM~         ~override~         
+  SAY NAME2 @300
+  SAY DESC @301
+
+COPY ~TheUndying/Items/CM2H02.ITM~         ~override~         
+  SAY NAME1 @255
+  SAY NAME2 @302
+  SAY DESC @303
+
+COPY ~TheUndying/Items/CM2H04.ITM~         ~override~         
+  SAY NAME2 @304
+  SAY DESC @305
+
+COPY ~TheUndying/Items/CM2H05.ITM~         ~override~         
+  SAY NAME2 @306
+  SAY DESC @307
+
+
+COPY ~TheUndying/Items/CMAR02.ITM~         ~override~         
+  SAY NAME2 @308
+  SAY DESC @309
+
+COPY ~TheUndying/Items/CMAR01.ITM~         ~override~         
+  SAY NAME2 @310
+  SAY DESC @311
+
+COPY ~TheUndying/Items/CMAX02.ITM~         ~override~         
+  SAY NAME2 @312
+  SAY DESC @313
+
+COPY ~TheUndying/Items/CMBO01.ITM~         ~override~         
+  SAY NAME2 @314
+  SAY DESC @315
+
+COPY ~TheUndying/Items/CMBW02.ITM~         ~override~         
+  SAY NAME2 @316
+  SAY DESC @317
+
+COPY ~TheUndying/Items/CMHE05.ITM~         ~override~         
+  SAY NAME2 @318
+  SAY DESC @319
+
+COPY ~TheUndying/Items/CMHE02.ITM~         ~override~         
+  SAY NAME1 @320
+  SAY NAME2 @321
+  SAY DESC @322
+
+COPY ~TheUndying/Items/CMST01.ITM~         ~override~         
+  SAY NAME2 @323
+  SAY DESC @324
+
+COPY ~TheUndying/Items/CMXB02.ITM~         ~override~         
+  SAY NAME2 @325
+  SAY DESC @326
+
+COPY ~TheUndying/Items/COMA07.ITM~         ~override~         
+  SAY NAME1 @234
+  SAY NAME2 @327
+  SAY DESC @328
+
+COPY ~TheUndying/Items/COMA04.ITM~         ~override~         
+  SAY NAME2 @329
+  SAY DESC @330
+
+COPY ~TheUndying/Items/COMA05.ITM~         ~override~         
+  SAY NAME2 @331
+  SAY DESC @332
+
+COPY ~TheUndying/Items/COMA06.ITM~         ~override~         
+  SAY NAME2 @333
+  SAY DESC @334
+
+COPY ~TheUndying/Items/COMC03.ITM~         ~override~         
+  SAY NAME2 @335
+  SAY DESC @336
+
+COPY ~TheUndying/Items/COMC02.ITM~         ~override~         
+  SAY NAME2 @337
+  SAY DESC @338
+
+COPY ~TheUndying/Items/COMF01.ITM~         ~override~         
+  SAY NAME2 @339
+  SAY DESC @340
+
+COPY ~TheUndying/Items/COMD01.ITM~         ~override~         
+  SAY NAME2 @341
+  SAY DESC @342
+
+COPY ~TheUndying/Items/COMG01.ITM~         ~override~         
+  SAY NAME2 @343
+  SAY DESC @344
+
+COPY ~TheUndying/Items/COMH02.ITM~         ~override~         
+  SAY NAME2 @345
+  SAY DESC @346
+
+COPY ~TheUndying/Items/COMH01.ITM~         ~override~
+  SAY NAME2 @347
+  SAY DESC @348
+
+COPY ~TheUndying/Items/COMN02.ITM~         ~override~         
+  SAY NAME1 @349
+  SAY NAME2 @350
+  SAY DESC @351
+
+COPY ~TheUndying/Items/COMN01.ITM~         ~override~         
+  SAY NAME2 @352
+  SAY DESC @353
+
+COPY ~TheUndying/Items/COMR03.ITM~         ~override~         
+  SAY NAME2 @354
+  SAY DESC @355
+
+COPY ~TheUndying/Items/COMR01.ITM~         ~override~         
+  SAY NAME2 @356
+  SAY DESC @357
+
+COPY ~TheUndying/Items/COMS02.ITM~         ~override~
+  SAY NAME2 @358
+  SAY DESC @359
+
+COPY ~TheUndying/Items/COMS01.ITM~         ~override~         
+  SAY NAME2 @360
+  SAY DESC @361
+
+COPY ~TheUndying/Items/helmgr01.itm~       ~override~       
+  SAY NAME1 @168
+  SAY NAME2 @362
+  SAY DESC @363
+
+COPY ~TheUndying/Items/macegr01.itm~       ~override~       
+  SAY NAME1 @176
+  SAY NAME2 @364
+  SAY DESC @365
+
+COPY ~TheUndying/Items/PLATGR01.ITM~       ~override~       
+  SAY NAME1 @234
+  SAY NAME2 @366
+  SAY DESC @367
+
+COPY ~TheUndying/Items/ringgr06.itm~       ~override~       
+  SAY NAME1 @368
+  SAY NAME2 @369
+  SAY DESC @370
+
+COPY ~TheUndying/Items/ringgr02.itm~       ~override~       
+  SAY NAME1 @368
+  SAY NAME2 @371
+  SAY DESC @372
+
+COPY ~TheUndying/Items/sackgr04.itm~       ~override~       
+  SAY NAME1 @373
+  SAY NAME2 @374
+  SAY DESC @375
+
+COPY ~TheUndying/Items/sw2hgr01.itm~       ~override~       
+  SAY NAME1 @255
+  SAY NAME2 @376
+  SAY DESC @377
+
+COPY ~TheUndying/Items/COMTHOR.itm~        ~override~        
+  SAY NAME2 @378
+  SAY DESC @379
+
+COPY ~TheUndying/Items/COMHAU.ITM~         ~override~         
+
+COPY ~TheUndying/Items/bracgr01.itm~       ~override~       
+  SAY NAME1 @192
+  SAY NAME2 @380
+  SAY DESC @381
+
+COPY ~TheUndying/Items/CMCAND01.itm~   ~override~       
+  SAY NAME1 @382
+  SAY NAME2 @383
+  SAY DESC @384
+
+COPY ~TheUndying/Items/CMMISC01.itm~   ~override~       
+  SAY DESC @385
+
+COPY ~TheUndying/Items/MISC72.ITM~     ~override~         
+
+COPY ~TheUndying/Items/MISC73.ITM~     ~override~         
+
+COPY ~TheUndying/Items/CMMISC02.itm~   ~override~       
+  SAY NAME2 @386
+  SAY DESC @387
+
+COPY ~TheUndying/Items/CMMISC03.itm~   ~override~       
+  SAY NAME1 @388
+  SAY NAME2 @388
+  SAY DESC @389
+
+COPY ~TheUndying/Items/COMKFC01.ITM~   ~override~       
+  SAY NAME1 @390
+  SAY NAME2 @390
+  SAY DESC @391
+
+
+COPY ~TheUndying/Items/COMKFC02.ITM~   ~override~       
+  SAY NAME2 @392
+  SAY DESC @393
+
+COPY ~TheUndying/Items/COMKFC03.ITM~   ~override~       
+  SAY NAME1 @394
+  SAY NAME2 @394
+  SAY DESC @395
+
+
+COPY ~TheUndying/Items/COMGOB01.ITM~   ~override~       
+  SAY NAME1 @396
+  SAY NAME2 @397
+  SAY DESC @398
+
+COPY ~TheUndying/Items/CMBOOK01.itm~   ~override~
+  SAY NAME2 @399
+  SAY DESC @400
+
+
+/* ********************* Stores ********************************************* */
+
+
+COPY ~TheUndying/stores/CMTUS01.STO~ ~Override~
+  SAY 0xC @401
+
+COPY ~TheUndying/stores/CMTUS02.sto~ ~Override~
+  SAY 0xC @402
+
+COPY ~TheUndying/stores/CMTUS03.sto~ ~Override~
+  SAY 0xC @403
+  
+/* Nina stores */
+
+COPY ~TheUndying/stores/CMNINAST.STO~     ~override\CMNINAST.STO~
+  SAY NAME2 @404 
+
+COPY ~TheUndying/stores/CMNINAMY.sto~     ~override\CMNINAMY.sto~
+  SAY NAME2 @405
+  
+/* DoS Stores */
+  
+COPY ~TheUndying/stores/cmmagin1.sto~     ~override~
+  SAY 0xc @406
+
+COPY ~TheUndying/stores/tempeil.sto~     ~override~
+  SAY 0xc @407
+
+COPY_EXISTING ~TEMHELM.STO~ ~override~
+  ADD_STORE_ITEM ~CMBO01~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~CMHE05~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~COMA04~ #0 #0 #0 ~IDENTIFIED~ #1 
+
+COPY ~TheUndying/stores/cmkfc01.sto~     ~override~
+  SAY 0xc @408
+  
+/* *************** Modify existing areas ************** */
+
+// AR0400 gets new travel region and new entrance for CM7000
+COPY_EXISTING ~AR0400.ARE~ ~override~
+ READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+//adding new trigger ************************************************
+   SET offset = ("%infotrig_offset%"+0xc4*"%infotrig_num%")
+   INSERT_BYTES offset 0xc4
+   WRITE_ASCII offset ~Tran7000~
+   WRITE_SHORT (offset+0x20) 2            //travel trigger
+   WRITE_SHORT (offset+0x22) 1526         //bounding box
+   WRITE_SHORT (offset+0x24) 794          //bounding box
+   WRITE_SHORT (offset+0x26) 1746         //bounding box
+   WRITE_SHORT (offset+0x28) 866          //bounding box
+   WRITE_SHORT (offset+0x2a) 4            //vertices number
+   WRITE_LONG  (offset+0x2c) "%vert_num%" //first vertex index
+   WRITE_LONG  (offset+0x34) 30           //cursor
+   WRITE_ASCII (offset+0x38) ~CM7000~     //destination area
+   WRITE_ASCII (offset+0x40) ~EXIT0400~   //destination area's entrance name
+   WRITE_LONG  (offset+0x60) 0x00000004   //flags - party required
+   WRITE_SHORT (offset+0x70) 1636         //Trap location X
+   WRITE_SHORT (offset+0x72) 830          //Trap location Y
+   SET "infotrig_num"="%infotrig_num%"+1
+   WRITE_SHORT 0x5a  "%infotrig_num%"
+
+   SET "info_ext"=0xc4
+   PATCH_IF ("%actors_offset%">="%infotrig_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%infotrig_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%infotrig_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%infotrig_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%infotrig_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%infotrig_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%infotrig_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%infotrig_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%infotrig_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%infotrig_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%infotrig_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%infotrig_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%infotrig_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%infotrig_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%infotrig_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 4 new vertices for triggers
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*4)
+   WRITE_SHORT  offset      1526
+   WRITE_SHORT  (offset+2)  808
+   WRITE_SHORT  (offset+4)  1741
+   WRITE_SHORT  (offset+6)  793
+   WRITE_SHORT  (offset+8)  1746
+   WRITE_SHORT  (offset+10) 855
+   WRITE_SHORT  (offset+12) 1534
+   WRITE_SHORT  (offset+14) 866
+   SET "vert_num"="%vert_num%"+4
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*4
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+ //adding 1 new entrance
+ SET offset = ("%entrances_offset%"+0x68*"%entrances_num%")
+ INSERT_BYTES offset 0x68
+ WRITE_ASCII  offset      ~Exit7000~
+ WRITE_SHORT  (offset+0x20)  1626     //X
+ WRITE_SHORT  (offset+0x22)  759      //Y
+ WRITE_LONG   (offset+0x24)  "9"      // facing
+ SET "entrances_num"="%entrances_num%"+1
+ WRITE_LONG 0x6c  "%entrances_num%"
+
+ SET "info_ext"=0x68
+ PATCH_IF ("%actors_offset%">="%entrances_offset%") BEGIN
+   "actors_offset"="%actors_offset%"+"%info_ext%"
+   WRITE_LONG  0x54 "%actors_offset%"
+ END
+ PATCH_IF ("%spawns_offset%">="%entrances_offset%") BEGIN
+   "spawns_offset"="%spawns_offset%"+"%info_ext%"
+   WRITE_LONG  0x60  "%spawns_offset%"
+ END
+ PATCH_IF ("%vert_offset%">="%entrances_offset%") BEGIN
+   "vert_offset"="%vert_offset%"+"%info_ext%"
+   WRITE_LONG  0x7c  "%vert_offset%"
+ END
+ PATCH_IF ("%cont_offset%">="%entrances_offset%") BEGIN
+   "cont_offset"="%cont_offset%"+"%info_ext%"
+   WRITE_LONG  0x70  "%cont_offset%"
+ END
+ PATCH_IF ("%items_offset%">="%entrances_offset%") BEGIN
+   "items_offset"="%items_offset%"+"%info_ext%"
+   WRITE_LONG  0x78  "%items_offset%"
+ END
+ PATCH_IF ("%infotrig_offset%">="%entrances_offset%") BEGIN
+   "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+   WRITE_LONG  0x5c  "%infotrig_offset%"
+ END
+ PATCH_IF ("%amb_offset%">="%entrances_offset%") BEGIN
+   "amb_offset"="%amb_offset%"+"%info_ext%"
+   WRITE_LONG  0x84  "%amb_offset%"
+ END
+ PATCH_IF ("%vars_offset%">="%entrances_offset%") BEGIN
+   "vars_offset"="%vars_offset%"+"%info_ext%"
+   WRITE_LONG  0x88  "%vars_offset%"
+ END
+ PATCH_IF ("%expbmp_offset%">="%entrances_offset%") BEGIN
+   "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+   WRITE_LONG  0xa0  "%expbmp_offset%"
+ END
+ PATCH_IF ("%doors_offset%">="%entrances_offset%") BEGIN
+   "doors_offset"="%doors_offset%"+"%info_ext%"
+   WRITE_LONG  0xa8  "%doors_offset%"
+ END
+ PATCH_IF ("%anim_offset%">="%entrances_offset%") BEGIN
+   "anim_offset"="%anim_offset%"+"%info_ext%"
+   WRITE_LONG  0xb0  "%anim_offset%"
+ END
+ PATCH_IF ("%tiled_offset%">="%entrances_offset%") BEGIN
+   "tiled_offset"="%tiled_offset%"+"%info_ext%"
+   WRITE_LONG  0xb8  "%tiled_offset%"
+ END
+ PATCH_IF ("%songs_offset%">="%entrances_offset%") BEGIN
+   "songs_offset"="%songs_offset%"+"%info_ext%"
+   WRITE_LONG  0xbc  "%songs_offset%"
+ END
+ PATCH_IF ("%rest_spawns_offset%">="%entrances_offset%") BEGIN
+   "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+   WRITE_LONG  0xc0  "%rest_spawns_offset%"
+ END
+ PATCH_IF ("%automap_offset%">="%entrances_offset%") BEGIN
+   "automap_offset"="%automap_offset%"+"%info_ext%"
+   WRITE_LONG  0xc4  "%automap_offset%"
+ END
+
+BUT_ONLY_IF_IT_CHANGES  //********************************************************  ~AR0400.are~
+
+
+/* *************************** Other Area modifications *********************** */
+
+// Add new container to AR1800
+COPY_EXISTING ~AR1800.ARE~ ~override~
+ READ_LONG  0x54  "actors_offset"
+ READ_SHORT 0x58  "actors_num"
+ READ_SHORT 0x5a  "infotrig_num"
+ READ_LONG  0x5c  "infotrig_offset"
+ READ_LONG  0x60  "spawns_offset"
+ READ_LONG  0x64  "spawns_num"
+ READ_LONG  0x68  "entrances_offset"
+ READ_LONG  0x6c  "entrances_num"
+ READ_LONG  0x70  "cont_offset"
+ READ_SHORT 0x74  "cont_num"
+ READ_SHORT 0x76  "items_num"
+ READ_LONG  0x78  "items_offset"
+ READ_LONG  0x7c  "vert_offset"
+ READ_SHORT 0x80  "vert_num"
+ READ_SHORT 0x82  "amb_num"
+ READ_LONG  0x84  "amb_offset"
+ READ_LONG  0x88  "vars_offset"
+ READ_LONG  0x8c  "vars_num"
+ READ_LONG  0xa0  "expbmp_offset"
+ READ_LONG  0xa4  "doors_num"
+ READ_LONG  0xa8  "doors_offset"
+ READ_LONG  0xac  "anim_num"
+ READ_LONG  0xb0  "anim_offset"
+ READ_LONG  0xb4  "tiled_num"
+ READ_LONG  0xb8  "tiled_offset"
+ READ_LONG  0xbc  "songs_offset"
+ READ_LONG  0xc0  "rest_spawns_offset"
+ READ_LONG  0xc4  "automap_offset"
+ READ_LONG  0xc8  "automap_num"
+
+ SET info_1=1
+ FOR( cnt=0; cnt<"%cont_num%"; cnt=cnt+1 ) BEGIN  //triggers loop
+   READ_ASCII ("%cont_offset%"+0xc0*cnt)       "cont_name"
+   PATCH_IF (("%cont_name%" STRING_COMPARE_CASE "NTCont01")=0) BEGIN  //if already exists
+     info_1=0
+   END
+ END
+
+ PATCH_IF (info_1=1) BEGIN       
+   SET offset = ("%cont_offset%"+0xc0*"%cont_num%")  //adding 1 new container
+   INSERT_BYTES offset 0xc0
+   WRITE_ASCII offset ~Carcass~
+   WRITE_SHORT (offset+0x20) 1935           //location X
+   WRITE_SHORT (offset+0x22) 1396           //location Y
+   WRITE_SHORT (offset+0x24) 10             //body
+   WRITE_SHORT (offset+0x26) 0              //Lock difficulty
+   WRITE_SHORT (offset+0x28) 0              //Locked
+   WRITE_SHORT (offset+0x38) 1908           //bounding box left
+   WRITE_SHORT (offset+0x3a) 1345           //bounding box top
+   WRITE_SHORT (offset+0x3c) 1962           //bounding box right
+   WRITE_SHORT (offset+0x3e) 1391           //bounding box bottom
+   WRITE_LONG  (offset+0x40) "%items_num%"  //1st item index
+   WRITE_LONG  (offset+0x44) 1              //1 item
+   WRITE_LONG  (offset+0x50) "%vert_num%"   //1st vertex index
+   WRITE_SHORT (offset+0x54) 20             //vertices number
+   SET "cont_num" = "%cont_num%" + 1
+   WRITE_SHORT 0x74  "%cont_num%"
+
+   SET "info_ext"=0xc0
+   PATCH_IF ("%actors_offset%">="%cont_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%cont_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%cont_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%cont_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%cont_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%cont_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%cont_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%cont_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%cont_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%cont_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%cont_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%cont_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%cont_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%cont_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%cont_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 1 item **************************
+   SET offset = ("%items_offset%"+0x14*"%items_num%")
+   INSERT_BYTES offset        0x14
+   WRITE_ASCII  offset        ~COMR01~
+   WRITE_SHORT  (offset+0x0a) 1
+   WRITE_LONG   (offset+0x10) 0x00000001
+   WRITE_SHORT 0x76  "%items_num%"+1       //increment total items count
+
+   SET "info_ext"=0x14                 //we added 1 item
+   PATCH_IF ("%actors_offset%">="%items_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%items_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%items_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%items_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%vert_offset%">="%items_offset%") BEGIN
+     "vert_offset"="%vert_offset%"+"%info_ext%"
+     WRITE_LONG  0x7c  "%vert_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%items_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%items_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%items_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%items_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%items_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%items_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%items_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%items_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%items_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%items_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+  //adding 20 new vertices for container
+   SET offset = ("%vert_offset%"+0x04*"%vert_num%")
+   INSERT_BYTES offset (0x04*20)
+   WRITE_SHORT  offset      1909
+   WRITE_SHORT  (offset+2)  1344
+   WRITE_SHORT  (offset+4)  1908
+   WRITE_SHORT  (offset+6)  1358
+   WRITE_SHORT  (offset+8)  1915
+   WRITE_SHORT  (offset+10) 1368
+   WRITE_SHORT  (offset+12) 1918
+   WRITE_SHORT  (offset+14) 1376
+   WRITE_SHORT  (offset+16) 1927
+   WRITE_SHORT  (offset+18) 1382
+   WRITE_SHORT  (offset+20) 1937
+   WRITE_SHORT  (offset+22) 1391
+   WRITE_SHORT  (offset+24) 1939
+   WRITE_SHORT  (offset+26) 1389
+   WRITE_SHORT  (offset+28) 1927
+   WRITE_SHORT  (offset+30) 1372
+   WRITE_SHORT  (offset+32) 1926
+   WRITE_SHORT  (offset+34) 1368
+   WRITE_SHORT  (offset+36) 1942
+   WRITE_SHORT  (offset+38) 1374
+   WRITE_SHORT  (offset+40) 1955
+   WRITE_SHORT  (offset+42) 1379
+   WRITE_SHORT  (offset+44) 1961
+   WRITE_SHORT  (offset+46) 1375
+   WRITE_SHORT  (offset+48) 1962
+   WRITE_SHORT  (offset+50) 1373
+   WRITE_SHORT  (offset+52) 1959
+   WRITE_SHORT  (offset+54) 1371
+   WRITE_SHORT  (offset+56) 1956
+   WRITE_SHORT  (offset+58) 1374
+   WRITE_SHORT  (offset+60) 1941
+   WRITE_SHORT  (offset+62) 1368
+   WRITE_SHORT  (offset+64) 1930
+   WRITE_SHORT  (offset+66) 1363
+   WRITE_SHORT  (offset+68) 1925
+   WRITE_SHORT  (offset+70) 1363
+   WRITE_SHORT  (offset+72) 1919
+   WRITE_SHORT  (offset+74) 1360
+   WRITE_SHORT  (offset+76) 1915
+   WRITE_SHORT  (offset+78) 1348
+   SET "vert_num"="%vert_num%"+20
+   WRITE_SHORT 0x80  "%vert_num%"
+
+   SET "info_ext"=0x04*20
+   PATCH_IF ("%actors_offset%">="%vert_offset%") BEGIN
+     "actors_offset"="%actors_offset%"+"%info_ext%"
+     WRITE_LONG  0x54 "%actors_offset%"
+   END
+   PATCH_IF ("%spawns_offset%">="%vert_offset%") BEGIN
+     "spawns_offset"="%spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0x60  "%spawns_offset%"
+   END
+   PATCH_IF ("%entrances_offset%">="%vert_offset%") BEGIN
+     "entrances_offset"="%entrances_offset%"+"%info_ext%"
+     WRITE_LONG  0x68  "%entrances_offset%"
+   END
+   PATCH_IF ("%cont_offset%">="%vert_offset%") BEGIN
+     "cont_offset"="%cont_offset%"+"%info_ext%"
+     WRITE_LONG  0x70  "%cont_offset%"
+   END
+   PATCH_IF ("%items_offset%">="%vert_offset%") BEGIN
+     "items_offset"="%items_offset%"+"%info_ext%"
+     WRITE_LONG  0x78  "%items_offset%"
+   END
+   PATCH_IF ("%infotrig_offset%">="%vert_offset%") BEGIN
+     "infotrig_offset"="%infotrig_offset%"+"%info_ext%"
+     WRITE_LONG  0x5c  "%infotrig_offset%"
+   END
+   PATCH_IF ("%amb_offset%">="%vert_offset%") BEGIN
+     "amb_offset"="%amb_offset%"+"%info_ext%"
+     WRITE_LONG  0x84  "%amb_offset%"
+   END
+   PATCH_IF ("%vars_offset%">="%vert_offset%") BEGIN
+     "vars_offset"="%vars_offset%"+"%info_ext%"
+     WRITE_LONG  0x88  "%vars_offset%"
+   END
+   PATCH_IF ("%expbmp_offset%">="%vert_offset%") BEGIN
+     "expbmp_offset"="%expbmp_offset%"+"%info_ext%"
+     WRITE_LONG  0xa0  "%expbmp_offset%"
+   END
+   PATCH_IF ("%doors_offset%">="%vert_offset%") BEGIN
+     "doors_offset"="%doors_offset%"+"%info_ext%"
+     WRITE_LONG  0xa8  "%doors_offset%"
+   END
+   PATCH_IF ("%anim_offset%">="%vert_offset%") BEGIN
+     "anim_offset"="%anim_offset%"+"%info_ext%"
+     WRITE_LONG  0xb0  "%anim_offset%"
+   END
+   PATCH_IF ("%tiled_offset%">="%vert_offset%") BEGIN
+     "tiled_offset"="%tiled_offset%"+"%info_ext%"
+     WRITE_LONG  0xb8  "%tiled_offset%"
+   END
+   PATCH_IF ("%songs_offset%">="%vert_offset%") BEGIN
+     "songs_offset"="%songs_offset%"+"%info_ext%"
+     WRITE_LONG  0xbc  "%songs_offset%"
+   END
+   PATCH_IF ("%rest_spawns_offset%">="%vert_offset%") BEGIN
+     "rest_spawns_offset"="%rest_spawns_offset%"+"%info_ext%"
+     WRITE_LONG  0xc0  "%rest_spawns_offset%"
+   END
+   PATCH_IF ("%automap_offset%">="%vert_offset%") BEGIN
+     "automap_offset"="%automap_offset%"+"%info_ext%"
+     WRITE_LONG  0xc4  "%automap_offset%"
+   END
+
+ END //main info_1
+BUT_ONLY_IF_IT_CHANGES  //********************************************************  ~AR1800.are~
+
+/* ********************* Scripts ********************************************* */
+
+EXTEND_BOTTOM ~AR0300.bcs~ ~TheUndying/bafs/AAR0300.baf~
+
+EXTEND_BOTTOM ~AR0307.bcs~ ~TheUndying/bafs/AAR0307.baf~
+
+EXTEND_BOTTOM ~AR0404.bcs~ ~TheUndying/bafs/AAR0404.baf~
+
+EXTEND_BOTTOM ~AR0511.bcs~ ~TheUndying/bafs/AAR0511.baf~
+
+EXTEND_BOTTOM ~AR0700.bcs~ ~TheUndying/bafs/AAR0700.baf~
+
+EXTEND_BOTTOM ~AR0900.bcs~ ~TheUndying/bafs/AAR0900.baf~
+
+EXTEND_BOTTOM ~AR1100.bcs~ ~TheUndying/bafs/AAR1100.baf~
+
+EXTEND_BOTTOM ~AR2100.bcs~ ~TheUndying/bafs/AAR2100.baf~
+
+COMPILE ~TheUndying/bafs/CALLISTO.baf~
+
+COMPILE ~TheUndying/bafs/CALLIX.baf~
+
+COMPILE ~TheUndying/bafs/CMALISK1.baf~
+
+COMPILE ~TheUndying/bafs/CMCORMA1.baf~
+
+COMPILE ~TheUndying/bafs/CMCORMAK.baf~
+
+COMPILE ~TheUndying/bafs/CMNASTOR.baf~
+
+COMPILE ~TheUndying/bafs/CMVALIS.baf~
+
+COMPILE ~TheUndying/bafs/CMMARIUS.baf~
+
+COMPILE ~TheUndying/bafs/CMSORA1.baf~
+
+// COMPILE ~TheUndying/bafs/CMSORA3.baf~
+
+// COMPILE ~TheUndying/bafs/CMSORA5.baf~
+
+COMPILE ~TheUndying/bafs/CMSORAN.baf~
+
+COMPILE ~TheUndying/bafs/CMAVAT1.baf~
+
+/* Nina additions */
+
+EXTEND_TOP ~ar6200.bcs~ ~TheUndying/bafs/car6200.baf~
+
+EXTEND_TOP ~AR0406.bcs~ ~TheUndying/bafs/CAR0406.BAF~
+
+EXTEND_TOP ~AR0511.bcs~ ~TheUndying/bafs/CAR0511.BAF~
+
+// EXTEND_TOP ~AR0900.bcs~ ~TheUndying/bafs/CAR0900.BAF~
+
+EXTEND_TOP ~AR2000.bcs~ ~TheUndying/bafs/CAR2000.BAF~
+
+EXTEND_TOP ~AR2800.bcs~ ~TheUndying/bafs/CAR2800.BAF~
+
+EXTEND_TOP ~anomen.bcs~ ~TheUndying/bafs/anomen.BAF~
+
+
+COMPILE ~TheUndying/bafs/CMNINAF.BAF~
+	// REPLACE ~99990~ ~Vigilance is mine and can only be held by me.~
+	
+COMPILE ~TheUndying/bafs/CMNINA25.BAF~
+
+COMPILE ~TheUndying/bafs/CMSHAR1.BAF~
+
+COMPILE ~TheUndying/bafs/CMSHAR2.BAF~
+
+COMPILE ~TheUndying/bafs/CMMORIA.BAF~
+
+EXTEND_BOTTOM ~ar0405.bcs~ ~TheUndying/bafs/AR0405.baf~
+EXTEND_BOTTOM ~ar0406.bcs~ ~TheUndying/bafs/AR0406.baf~
+
+COPY_EXISTING ~AR0509.are~ ~override~
+WRITE_ASCII 0x94 ~AR0509~
+EXTEND_BOTTOM ~ar0509.bcs~ ~TheUndying/bafs/AR0509.baf~
+
+EXTEND_BOTTOM ~ar0602.bcs~ ~TheUndying/bafs/AR0602.baf~
+EXTEND_BOTTOM ~ar0701.bcs~ ~TheUndying/bafs/AR0701.baf~
+EXTEND_BOTTOM ~ar0800.bcs~ ~TheUndying/bafs/AR0800.baf~
+EXTEND_BOTTOM ~ar0801.bcs~ ~TheUndying/bafs/AR0801.baf~
+EXTEND_BOTTOM ~ar0802.bcs~ ~TheUndying/bafs/AR0802.baf~
+EXTEND_BOTTOM ~ar0803.bcs~ ~TheUndying/bafs/AR0803.baf~
+
+COPY_EXISTING ~AR0806.are~ ~override~
+WRITE_ASCII 0x94 ~AR0806~
+EXTEND_BOTTOM ~ar0806.bcs~ ~TheUndying/bafs/AR0806.baf~
+
+// EXTEND_BOTTOM ~ar0900.bcs~ ~TheUndying/bafs/AR0900.baf~
+EXTEND_BOTTOM ~ar1202.bcs~ ~TheUndying/bafs/AR1202.baf~
+EXTEND_BOTTOM ~ar1401.bcs~ ~TheUndying/bafs/AR1401.baf~
+EXTEND_BOTTOM ~ar1513.bcs~ ~TheUndying/bafs/AR1513.baf~
+EXTEND_BOTTOM ~ar1700.bcs~ ~TheUndying/bafs/AR1700.baf~
+EXTEND_BOTTOM ~ar1800.bcs~ ~TheUndying/bafs/AR1800.baf~
+EXTEND_BOTTOM ~ar2204.bcs~ ~TheUndying/bafs/AR2204.baf~
+EXTEND_BOTTOM ~ar3016.bcs~ ~TheUndying/bafs/AR3016.baf~
+EXTEND_BOTTOM ~ar5002.bcs~ ~TheUndying/bafs/AR5002.baf~
+EXTEND_BOTTOM ~ar5200.bcs~ ~TheUndying/bafs/AR5200.baf~
+
+COMPILE ~TheUndying/bafs/cm7000.baf~
+
+/* ******************** Dialogs ********************* */
+
+// COMPILE ~TheUndying/dialogs/cmninamy.d~
+
+// COMPILE ~TheUndying/dialogs/cmninast.d~
+
+// COMPILE ~TheUndying/dialogs/cmshar1.d~
+
+COMPILE ~TheUndying/dialogs/bcmninaf.d~
+
+COMPILE ~TheUndying/dialogs/bcmnin25.d~
+
+// COMPILE ~TheUndying/dialogs/cmnin25j.d~  Added to cmavat1
+
+COMPILE ~TheUndying/dialogs/cmnina25.d~
+
+COMPILE ~TheUndying/dialogs/cmninaf.d~
+
+COMPILE ~TheUndying/dialogs/cmninafj.d~
+
+COMPILE ~TheUndying/dialogs/cmninafp.d~
+
+COMPILE ~TheUndying/dialogs/ninaf25p.d~
+  
+COMPILE ~TheUndying/dialogs/cmmoria.d~
+  
+COMPILE ~TheUndying/dialogs/BCMCALLI.d~
+
+COMPILE ~TheUndying/dialogs/CALLISTO.d~
+
+COMPILE ~TheUndying/dialogs/CMCALLIJ.d~
+
+COMPILE ~TheUndying/dialogs/CMCALLIP.d~
+
+// COMPILE ~TheUndying/dialogs/CMTUS01.d~
+
+// COMPILE ~TheUndying/dialogs/CMTUS02.d~
+
+// COMPILE ~TheUndying/dialogs/CMTUS03.d~
+
+COMPILE ~TheUndying/dialogs/QUEST.d~
+
+COMPILE ~TheUndying/dialogs/CMAVAT1.d~
+
+
+  
+// COMPILE ~TheUndying/dialogs/cmdmerc.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmdrwp.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmgorc.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmkfc.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmwolf.d~
+
+
+// COMPILE ~TheUndying/dialogs/hamm1.d~
+
+
+// COMPILE ~TheUndying/dialogs/hamm2.d~
+
+
+// COMPILE ~TheUndying/dialogs/hamm3.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmnina.d~
+
+
+// COMPILE ~TheUndying/dialogs/weenug.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmgabb.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmsola.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmlordas.d~
+
+
+// COMPILE ~TheUndying/dialogs/cmkat.d~
+
+// COMPILE ~TheUndying/dialogs/cmdunkin.d~
+
+// COMPILE ~TheUndying/dialogs/cmfarm.d~
+
+COMPILE ~TheUndying/dialogs/cmttavern.d~
+
+COMPILE ~TheUndying/dialogs/cmtstores.d~
+
+COMPILE ~TheUndying/dialogs/cmtencounters.d~
+
+
+// Add NPC dialog references
+
+
+
+APPEND ~pdialog.2da~ // TOB append
+~CALLISTO         CMCALLIP               CMCALLIJ             CMCALLID        CMCAL25P           CMCAL25J              CMCAL25D              CMCAL25~
+UNLESS ~CALLISTO~ // we are already there, skip it
+
+APPEND ~interdia.2da~ // TOB append
+~CALLISTO         BCMCALLI          BCMCAL25~
+UNLESS ~CALLISTO~ // we are already there, skip it
+
+APPEND ~pdialog.2da~ // TOB append
+~CMNINAF         CMNINAFP               CMNINAFJ             CMNINAFD         CMNIN25P           CMNIN25J                 NINA25D                 CMNINA25~
+UNLESS ~CMNINAF~ 
+
+APPEND ~interdia.2da~ // TOB append
+~CMNINAF         BCMNINAF          BCMNIN25~
+UNLESS ~CMNINAF~
+
+
+// Alternate installations
+
+/* PRINT @409
+BEGIN @410
+
+COPY ~TheUndying/crescripts~ ~override~   */
+
+PRINT @411
+BEGIN @412
+
+COPY_EXISTING ~AR18ARCH.CRE~ ~override~
+WRITE_BYTE 0x53 8												// APR was 7
+REPLACE_CRE_ITEM ~DAGG24~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~		// INV was DAGG01
+REPLACE_CRE_ITEM ~BOW26~  #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~ EQUIP	// INV was BOW05
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~AR18DWAF.CRE~ ~override~
+WRITE_LONG 0x14 10000											// XPVAL was 0
+WRITE_SHORT 0x24 142											// HP1 was 42
+WRITE_SHORT 0x26 142											// HP2 was 42
+WRITE_BYTE 0x52 4												// THAC0 was 18
+WRITE_BYTE 0x53 9												// APR was 1
+WRITE_BYTE 0x23c 17												// DEX was 9
+REPLACE_CRE_ITEM ~CHAN05~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was CHAN04
+REPLACE_CRE_ITEM ~SHLD29~ #0 #0 #0 ~IDENTIFIED~ ~SHIELD~		// INV was SHLD14
+REPLACE_CRE_ITEM ~AX1H16~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was AX1H04
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~AR18FIG.CRE~ ~override~
+WRITE_SHORT 0x46 5												// NATAC was 10
+WRITE_SHORT 0x48 5												// EFFAC was 10
+WRITE_BYTE 0x53 8												// APR was 2
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~AR18MAGE.CRE~ ~override~
+WRITE_BYTE 0x52 6												// THAC0 was 16
+WRITE_BYTE 0x53 2												// APR was 1
+REPLACE_CRE_ITEM ~STAF08~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was STAF01
+REMOVE_KNOWN_SPELL ~SPWI609~
+ADD_KNOWN_SPELL ~SPWI609~ #5 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI506~ #4 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI605~ #5 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI616~ #5 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI813~ #7 ~wizard~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~AR18PRIE.CRE~ ~override~
+WRITE_SHORT 0x46 4												// NATAC was 10
+WRITE_SHORT 0x48 4												// EFFAC was 10
+WRITE_BYTE 0x52 6												// THAC0 was 12
+WRITE_BYTE 0x53 3												// APR was 1
+REPLACE_CRE_ITEM ~BLUN18~ #0 #0 #0 ~IDENTIFIED~ ~SHIELD~		// INV was BLUN05
+REPLACE_CRE_ITEM ~BLUN27~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was BLUN04
+ADD_MEMORIZED_SPELL ~SPPR503~ #4 ~priest~
+ADD_MEMORIZED_SPELL ~SPPR698~ #5 ~priest~
+ADD_MEMORIZED_SPELL ~SPPR720~ #6 ~priest~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~AR18THIF.CRE~ ~override~
+WRITE_SHORT 0x46 4												// NATAC was 10
+WRITE_SHORT 0x48 4												// EFFAC was 10
+WRITE_BYTE 0x52 2												// THAC0 was 14
+WRITE_BYTE 0x53 2												// APR was 1
+REPLACE_CRE_ITEM ~LEAT12~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was LEAT01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~BEAST.CRE~ ~override~
+WRITE_LONG 0x14 4000											// XPVAL was 2000
+WRITE_LONG 0x1c 120												// GOLD was 87
+WRITE_SHORT 0x24 65												// HP1 was 45
+WRITE_SHORT 0x26 65												// HP2 was 45
+WRITE_BYTE 0x52 5												// THAC0 was 15
+WRITE_BYTE 0x53 3												// APR was 1
+REPLACE_CRE_ITEM ~AROW05~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~		// INV was AROW01
+ADD_CRE_ITEM ~CMAR02~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~CAMITIS.CRE~ ~override~
+WRITE_LONG 0x14 3500											// XPVAL was 3000
+WRITE_BYTE 0x53 4												// APR was 2
+REPLACE_CRE_ITEM ~PLAT23~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was PLAT01
+REPLACE_CRE_ITEM ~SHLD04~ #0 #0 #0 ~IDENTIFIED~ ~SHIELD~		// INV was SHLD15
+REPLACE_CRE_ITEM ~AX1H17~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was AX1H01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~BEAST.CRE~ ~override~
+WRITE_LONG 0x14 1650											// XPVAL was 650
+WRITE_SHORT 0x24 52												// HP1 was 42
+WRITE_SHORT 0x26 52												// HP2 was 42
+WRITE_BYTE 0x52 8												// THAC0 was 15
+WRITE_BYTE 0x23c 19												// DEX was 9
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~FIRRAK02.CRE~ ~override~
+WRITE_SHORT 0x24 100											// HP1 was 80
+WRITE_SHORT 0x26 100											// HP2 was 80
+ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~ ( 2 )
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~GUARD1.CRE~ ~override~
+WRITE_LONG 0x14 250												// XPVAL was 15
+WRITE_LONG 0x1c 40												// GOLD was 0
+WRITE_SHORT 0x24 36												// HP1 was 16
+WRITE_SHORT 0x26 36												// HP2 was 16
+WRITE_BYTE 0x52 9												// THAC0 was 19
+WRITE_BYTE 0x53 8												// APR was 1
+WRITE_BYTE 0x238 19												// STR was 14
+WRITE_BYTE 0x23c 17												// DEX was 9
+REPLACE_CRE_ITEM ~CHAN07~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was CHAN01
+REPLACE_CRE_ITEM ~SW1H06~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was SW1H04
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~GUARD2.CRE~ ~override~
+REPLACE_CRE_ITEM ~CHAN03~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was CHAN01
+REPLACE_CRE_ITEM ~BOW04~  #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was BOW03
+REPLACE_CRE_ITEM ~AROW10~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~		// INV was AROW01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~GUARD3.CRE~ ~override~
+WRITE_LONG 0x1c 60												// GOLD was 0
+WRITE_SHORT 0x24 26												// HP1 was 16
+WRITE_SHORT 0x26 26												// HP2 was 16
+WRITE_BYTE 0x52 9												// THAC0 was 19
+WRITE_BYTE 0x23c 13												// DEX was 10
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~HAEGAN.CRE~ ~override~
+WRITE_LONG 0x14 3580											// XPVAL was 580
+WRITE_LONG 0x1c 310												// GOLD was 31
+WRITE_BYTE 0x52 2												// THAC0 was 12
+REPLACE_CRE_ITEM ~HELMGR01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~		// INV was HELM13
+REPLACE_CRE_ITEM ~SW2H02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was SW2H01
+REPLACE_CRE_ITEM ~AX1H06~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~		// INV was AX1H04
+REPLACE_CRE_ITEM ~AX1H08~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON3~		// INV was AX1H04
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~HLOLAF.CRE~ ~override~
+WRITE_SHORT 0x24 126											// HP1 was 116
+WRITE_SHORT 0x26 126											// HP2 was 116
+WRITE_BYTE 0x53 4												// APR was 1
+WRITE_BYTE 0x23c 17												// DEX was 13
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~HLSION.CRE~ ~override~
+WRITE_LONG 0x14 7000											// XPVAL was 6000
+WRITE_SHORT 0x24 66												// HP1 was 46
+WRITE_SHORT 0x26 66												// HP2 was 46
+WRITE_SHORT 0x46 4												// NATAC was 10
+WRITE_SHORT 0x48 4												// EFFAC was 10
+WRITE_BYTE 0x52 6												// THAC0 was 16
+WRITE_BYTE 0x53 8												// APR was 1
+ADD_CRE_ITEM ~DAGG04~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP
+ADD_MEMORIZED_SPELL ~SPWI615~ #5 ~wizard~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~HLSTAL.CRE~ ~override~
+WRITE_BYTE 0x52 4												// THAC0 was 10
+WRITE_BYTE 0x53 3												// APR was 1
+ADD_MEMORIZED_SPELL ~SPPR503~ #4 ~priest~
+ADD_MEMORIZED_SPELL ~SPPR698~ #5 ~priest~
+ADD_MEMORIZED_SPELL ~SPPR709~ #6 ~priest~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~HOBELI01.CRE~ ~override~
+WRITE_LONG 0x14 950												// XPVAL was 95
+WRITE_SHORT 0x24 50												// HP1 was 30
+WRITE_SHORT 0x26 50												// HP2 was 30
+WRITE_BYTE 0x52 11												// THAC0 was 14
+WRITE_BYTE 0x23c 16												// DEX was 9
+REPLACE_CRE_ITEM ~LEAT11~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was LEAT01
+REPLACE_CRE_ITEM ~BOW26~  #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was BOW05
+REPLACE_CRE_ITEM ~SW1H42~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~ 		// INV was SW1H01
+REPLACE_CRE_ITEM ~AROW15~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER2~		// INV was AROW01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~KOBCAP01.CRE~ ~override~
+REPLACE_CRE_ITEM ~AROW06~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~		// INV was AROW01
+ADD_CRE_ITEM ~AROW10~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~KOBCOM01.CRE~ ~override~
+WRITE_LONG 0x14 50												// XPVAL was 35
+WRITE_SHORT 0x24 20												// HP1 was 7
+WRITE_SHORT 0x26 20												// HP2 was 7
+WRITE_BYTE 0x52 9												// THAC0 was 15
+WRITE_BYTE 0x53 5												// APR was 7
+REPLACE_CRE_ITEM ~AROW04~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER2~		// INV was AROW01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~KOBKAM01.CRE~ ~override~
+WRITE_LONG 0x14 550												// XPVAL was 150
+WRITE_SHORT 0x24 33												// HP1 was 11
+WRITE_SHORT 0x26 33												// HP2 was 11
+WRITE_BYTE 0x52 5												// THAC0 was 20
+WRITE_BYTE 0x53 3												// APR was 1
+REPLACE_CRE_ITEM ~SW1H09~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was SW1H07
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~LOUTCAPT.CRE~ ~override~
+WRITE_LONG 0x14 11500											// XPVAL was 9500
+WRITE_LONG 0x1c 200												// GOLD was 20
+WRITE_SHORT 0x24 140											// HP1 was 120
+WRITE_SHORT 0x26 140											// HP2 was 120
+WRITE_BYTE 0x53 9												// APR was 8
+REPLACE_CRE_ITEM ~PLAT05~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was PLAT05
+REPLACE_CRE_ITEM ~SW2H03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was SW2H01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~KPGLAI01.CRE~ ~override~
+WRITE_LONG 0x14 9300											// XPVAL was 7300
+WRITE_SHORT 0x24 151											// HP1 was 101
+WRITE_SHORT 0x26 151											// HP2 was 101
+REPLACE_CRE_ITEM ~CMXB02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was XBOW01
+REPLACE_CRE_ITEM ~HALB07~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~		// INV was HALB01
+REPLACE_CRE_ITEM ~BOLT03~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER1~		// INV was BOLT01
+REPLACE_CRE_ITEM ~BOLT04~ #20 #0 #0 ~IDENTIFIED~ ~QUIVER2~		// INV was BOLT01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~LOUTM01.CRE~ ~override~
+WRITE_LONG 0x14 4200											// XPVAL was 3200
+REPLACE_CRE_ITEM ~CM2H06~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was SW2H01
+REPLACE_CRE_ITEM ~BOW17~  #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~		// INV was BOW03
+REPLACE_CRE_ITEM ~AROW10~ #40 #0 #0 ~IDENTIFIED~ ~QUIVER1~		// INV was AROW01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~LOUTM02.CRE~ ~override~
+WRITE_SHORT 0x24 48												// HP1 was 28
+WRITE_SHORT 0x26 48												// HP2 was 28
+WRITE_BYTE 0x52 10												// THAC0 was 16
+REPLACE_CRE_ITEM ~STAF02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was STAF01
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~LOUTM03.CRE~ ~override~
+WRITE_LONG 0x14 8300											// XPVAL was 7300
+WRITE_LONG 0x1c 200												// GOLD was 0
+WRITE_SHORT 0x24 82												// HP1 was 72
+WRITE_SHORT 0x26 82												// HP2 was 72
+WRITE_BYTE 0x52 6												// THAC0 was 16
+WRITE_BYTE 0x53 8												// APR was 1
+REPLACE_CRE_ITEM ~HAMM03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was STAF01
+ADD_CRE_ITEM ~CHAN07~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~RAKMAH01.CRE~ ~override~
+ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI325~ #2 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI404~ #3 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI502~ #4 ~wizard~
+REMOVE_MEMORIZED_SPELL ~SPWI899~
+ADD_MEMORIZED_SPELL ~SPWI899~ #0 ~innate~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~RETI.CRE~ ~override~
+WRITE_LONG 0x14 3250											// XPVAL was 1250
+WRITE_LONG 0x1c 100												// GOLD was 10
+REPLACE_CRE_ITEM ~CHAN08~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was CHAN01
+REPLACE_CRE_ITEM ~SW1H73~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was SW1H04
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SAMIA.CRE~ ~override~
+WRITE_LONG 0x14 11000											// XPVAL was 9000
+WRITE_SHORT 0x24 126											// HP1 was 86
+WRITE_SHORT 0x26 126											// HP2 was 86
+WRITE_BYTE 0x53 8												// APR was 1
+REPLACE_CRE_ITEM ~SHLD29~ #0 #0 #0 ~IDENTIFIED~ ~SHIELD~ 		// INV was SHLD04
+REPLACE_CRE_ITEM ~SW1H52~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was SW1H20
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SENGUA03.CRE~ ~override~
+WRITE_SHORT 0x24 150											// HP1 was 130
+WRITE_SHORT 0x26 150											// HP2 was 130
+WRITE_BYTE 0x53 3												// APR was 1
+REMOVE_KNOWN_SPELL ~SPWI701~
+ADD_KNOWN_SPELL ~SPWI701~ #6 ~wizard~
+REMOVE_MEMORIZED_SPELL ~SPWI212~ ~SPWI217~ ~SPWI304~ ~SPWI305~ ~SPWI308~
+ADD_MEMORIZED_SPELL ~SPWI212~ #0 ~innate~
+ADD_MEMORIZED_SPELL ~SPWI217~ #0 ~innate~
+ADD_MEMORIZED_SPELL ~SPWI304~ #0 ~innate~
+ADD_MEMORIZED_SPELL ~SPWI305~ #0 ~innate~
+ADD_MEMORIZED_SPELL ~SPWI308~ #0 ~innate~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SENLICH.CRE~ ~override~
+WRITE_SHORT 0x24 157											// HP1 was 137
+WRITE_SHORT 0x26 157											// HP2 was 137
+WRITE_SHORT 0x46 "-6"											// NATAC was -2
+WRITE_SHORT 0x48 "-6"											// EFFAC was -2
+WRITE_BYTE 0x52 4												// THAC0 was 7
+WRITE_BYTE 0x53 8												// APR was 1
+REMOVE_KNOWN_SPELL ~SPWI701~
+ADD_KNOWN_SPELL ~SPWI701~ #6 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI523~ #4 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI605~ #5 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI616~ #5 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI713~ #6 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI812~ #7 ~wizard~ ( 2 )
+ADD_MEMORIZED_SPELL ~SPWI898~ #7 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI899~ #7 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI909~ #8 ~wizard~ ( 2 )
+ADD_MEMORIZED_SPELL ~SPWI910~ #8 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI913~ #8 ~wizard~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SEVPAT01.CRE~ ~override~
+WRITE_SHORT 0x24 175											// HP1 was 155
+WRITE_SHORT 0x26 175											// HP2 was 155
+WRITE_SHORT 0x46 6												// NATAC was 10
+WRITE_SHORT 0x48 6												// EFFAC was 10
+WRITE_BYTE 0x52 4												// THAC0 was 9
+WRITE_BYTE 0x53 9												// APR was 8
+ADD_CRE_ITEM ~CMAX02~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SEVPAT02.CRE~ ~override~
+WRITE_LONG 0x14 7500											// XPVAL was 6000
+WRITE_SHORT 0x24 46												// HP1 was 36
+WRITE_SHORT 0x26 46												// HP2 was 36
+WRITE_BYTE 0x52 7												// THAC0 was 17
+WRITE_BYTE 0x53 2												// APR was 1
+REPLACE_CRE_ITEM ~BRAC15~ #0 #0 #0 ~IDENTIFIED~ ~GLOVES~ 		// INV was BRAC13
+ADD_CRE_ITEM ~STAF18~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON~ EQUIP
+ADD_CRE_ITEM ~CLCK11~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~
+ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI217~ #1 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI503~ #4 ~wizard~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SEVPAT04.CRE~ ~override~
+WRITE_LONG 0x14 6000											// XPVAL was 4000
+WRITE_SHORT 0x24 133											// HP1 was 113
+WRITE_SHORT 0x26 133											// HP2 was 113
+WRITE_BYTE 0x52 5												// THAC0 was 11
+WRITE_BYTE 0x53 3												// APR was 2
+REPLACE_CRE_ITEM ~LEAT12~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was LEAT10
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SEVPAT05.CRE~ ~override~
+WRITE_LONG 0x14 6000											// XPVAL was 4000
+WRITE_LONG 0x1c 320												// GOLD was 32
+WRITE_SHORT 0x24 88												// HP1 was 68
+WRITE_SHORT 0x26 88												// HP2 was 68
+WRITE_BYTE 0x52 8												// THAC0 was 14
+WRITE_BYTE 0x53 8												// APR was 7
+REPLACE_CRE_ITEM ~SHLD02~ #0 #0 #0 ~IDENTIFIED~ ~SHIELD~ 		// INV was SHLD01
+REPLACE_CRE_ITEM ~SW1H10~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was SW1H08
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SLGUARD1.CRE~ ~override~
+WRITE_BYTE 0x53 3												// APR was 1
+REPLACE_CRE_ITEM ~CHAN05~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was CHAN04
+REPLACE_CRE_ITEM ~BLUN03~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was BLUN02
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SLGUARD2.CRE~ ~override~
+WRITE_LONG 0x1c 64												// GOLD was 14
+WRITE_SHORT 0x24 49												// HP1 was 41
+WRITE_SHORT 0x26 49												// HP2 was 41
+WRITE_BYTE 0x52 6												// THAC0 was 16
+WRITE_BYTE 0x53 3												// APR was 1
+REPLACE_CRE_ITEM ~PLAT08~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~			// INV was CHAN04
+REPLACE_CRE_ITEM ~SW1H52~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was SW1H20
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SLMAGE1.CRE~ ~override~
+WRITE_SHORT 0x24 38												// HP1 was 28
+WRITE_SHORT 0x26 38												// HP2 was 28
+WRITE_BYTE 0x52 8												// THAC0 was 18
+REPLACE_CRE_ITEM ~STAF02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was STAF01
+ADD_MEMORIZED_SPELL ~SPWI308~ #2 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI401~ #3 ~wizard~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~SURAAM.CRE~ ~override~
+WRITE_SHORT 0x24 86												// HP1 was 56
+WRITE_SHORT 0x26 86												// HP2 was 56
+WRITE_BYTE 0x52 9												// THAC0 was 11
+WRITE_BYTE 0x53 2												// APR was 1
+REPLACE_CRE_ITEM ~STAF24~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was STAF02
+ADD_MEMORIZED_SPELL ~SPWI304~ #2 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI523~ #4 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI616~ #5 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI713~ #6 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI812~ #7 ~wizard~
+ADD_MEMORIZED_SPELL ~SPWI909~ #8 ~wizard~
+REMOVE_MEMORIZED_SPELL ~SPWI112~ ~SPWI423~ ~SPWI501~
+ADD_MEMORIZED_SPELL ~SPWI112~ #0 ~innate~ ( 3 )
+ADD_MEMORIZED_SPELL ~SPWI423~ #0 ~innate~ ( 2 )
+ADD_MEMORIZED_SPELL ~SPWI501~ #0 ~innate~
+BUT_ONLY_IF_IT_CHANGES
+
+COPY_EXISTING ~TAZOK.CRE~ ~override~
+WRITE_SHORT 0x24 156											// HP1 was 136
+WRITE_SHORT 0x26 156											// HP2 was 136
+WRITE_BYTE 0x53 2												// APR was 1
+REPLACE_CRE_ITEM ~CM2H05~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was SW2H11
+BUT_ONLY_IF_IT_CHANGES
+
+AT_INTERACTIVE_EXIT ~VIEW TheUndying/readme-ctu.htm~

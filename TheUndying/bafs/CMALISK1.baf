@@ -1,0 +1,16 @@
+IF
+	AttackedBy([GOODCUTOFF],DEFAULT)
+THEN
+	RESPONSE #100
+		SetGlobal("CmAliskaAttack","GLOBAL",1)
+		Enemy()
+END
+
+IF
+	Global("CmAliskaAttack","GLOBAL",1)
+	Allegiance(Myself,NEUTRAL)
+THEN
+	RESPONSE #100
+		Enemy()
+END
+
