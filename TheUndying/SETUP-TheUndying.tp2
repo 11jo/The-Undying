@@ -10,6 +10,11 @@ LANGUAGE ~english~
 LANGUAGE ~german~
          ~german~
          ~TheUndying/tra/german/SETUP.tra~
+		 
+LANGUAGE ~French~
+         ~french~
+		 ~TheUndying/tra/english/SETUP.tra~
+         ~TheUndying/tra/french/SETUP.tra~
 
 BEGIN @0
 
