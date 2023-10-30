@@ -1,20 +1,58 @@
 BACKUP ~TheUndying/backup~
 AUTHOR ~"http://www.teambg.net"~
 
-AUTO_TRA ~TheUndying/tra/%s/d~
+ALWAYS
+
+ACTION_IF GAME_IS ~eet~ BEGIN
+			OUTER_SET bg2_chapter = 12
+		END ELSE BEGIN
+			OUTER_SET bg2_chapter = 0
+		END
+		OUTER_FOR (i = 1 ; i <= 10 ; ++i) BEGIN
+			OUTER_SET bg2_chapter = bg2_chapter + 1
+			OUTER_SPRINT name_source ~bg2_chapter_%i%~
+			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
+		END
+  
+    //Copies tra files into the autotra-folder (to leave the originals untouched)
+    DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
+      COPY ~TheUndying/tra/english~  ~TheUndying/tra/autotra/%LANGUAGE%~
+	  COPY ~TheUndying/tra/english/D~  ~TheUndying/tra/autotra/%LANGUAGE%/D~
+      COPY ~TheUndying/tra/%LANGUAGE%~  ~TheUndying/tra/autotra/%LANGUAGE%~
+	  COPY ~TheUndying/tra/%LANGUAGE%/D~  ~TheUndying/tra/autotra/%LANGUAGE%/D~
+    END
+
+    LAF autotra_workaround END
+
+
+//  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
+
+ ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
+
+    LAF HANDLE_CHARSETS
+      INT_VAR
+        infer_charsets = 1
+      STR_VAR
+        tra_path = EVAL ~TheUndying/tra/autotra~
+//        noconvert_array = fl#noconvert
+        reload_array = fl#reload
+ END
+END
+
+AUTO_TRA ~TheUndying/tra/autotra/%s/d~
 
 LANGUAGE ~english~
          ~english~
-         ~TheUndying/tra/english/SETUP.tra~
+         ~TheUndying/tra/english/setup.tra~
 
 LANGUAGE ~german~
          ~german~
-         ~TheUndying/tra/german/SETUP.tra~
+         ~TheUndying/tra/german/setup.tra~
 		 
 LANGUAGE ~French~
          ~french~
-		 ~TheUndying/tra/english/SETUP.tra~
-         ~TheUndying/tra/french/SETUP.tra~
+		 ~TheUndying/tra/english/setup.tra~
+         ~TheUndying/tra/french/setup.tra~
 
 BEGIN @0
 
@@ -44,8 +82,9 @@ COPY ~TheUndying\sounds~ ~override~
 
 COPY ~TheUndying\eff~ ~override~
 
-ACTION_IF GAME_IS ~bg2ee~ BEGIN
+ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
   COPY ~TheUndying/portraitsEE~ ~override~
+  COPY ~TheUndying/PVRZ~ ~override~   // PVRZ for EE
 END ELSE BEGIN
 COPY ~TheUndying/portraits~ ~override~
 END
@@ -427,8 +466,8 @@ COPY ~TheUndying/2da/cmniand1.2da~ ~override\cmniand1.2da~
 /*  Items  */
 
 // load up ee-specific tra files on BG2EE
-ACTION_IF GAME_IS BG2EE THEN BEGIN
-  LOAD_TRA ~TheUndying/tra/%LANGUAGE%/setup_ee.tra~
+ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
+  LOAD_TRA ~TheUndying/tra/autotra/%LANGUAGE%/setup_ee.tra~
 END
 
 COPY ~TheUndying/Items/CALLAR.itm~ ~Override~
@@ -1686,7 +1725,7 @@ COMPILE ~TheUndying/bafs/cm7000.baf~
 
 // COMPILE ~TheUndying/dialogs/cmshar1.d~
 
-COMPILE ~TheUndying/dialogs/bcmninaf.d~
+COMPILE EVALUATE_BUFFER ~TheUndying/dialogs/bcmninaf.d~
 
 COMPILE ~TheUndying/dialogs/bcmnin25.d~
 
@@ -1696,7 +1735,7 @@ COMPILE ~TheUndying/dialogs/cmnina25.d~
 
 COMPILE ~TheUndying/dialogs/cmninaf.d~
 
-COMPILE ~TheUndying/dialogs/cmninafj.d~
+COMPILE EVALUATE_BUFFER ~TheUndying/dialogs/cmninafj.d~
 
 COMPILE ~TheUndying/dialogs/cmninafp.d~
 

@@ -704,7 +704,7 @@ EXIT    */
 IF ~
 AreaCheck("AR0300")
 InParty("cmninaf")
-GlobalLT("Chapter","GLOBAL",4)
+GlobalLT("Chapter","GLOBAL","%bg2_chapter_4%")
 Global("AnomenIsNotKnight","GLOBAL",1)
 Global("NinaAnomenTalk1b","GLOBAL",1)
 See("cmninaf")
@@ -729,7 +729,7 @@ EXIT */
 /* IF  
 ~See(Player1)
 !StateCheck(Player1,STATE_SLEEPING)
-GlobalGT("Chapter","GLOBAL",3)
+GlobalGT("Chapter","GLOBAL","%bg2_chapter_3%")
 Global("NinaHomeChat","GLOBAL", 0)
 ~ THEN BEGIN NinaHome
   SAY ~Hey <CHARNAME> I was wondering if I could ask you a personal question about Gorion.~

@@ -787,9 +787,12 @@ INTERJECT_COPY_TRANS UDSOLA01 162 NinaMistrustSola
 END
 
 I_C_T UHMAY01 18 NinaImnesProblem
-== CMNINAFJ IF ~GlobalGT("Chapter","GLOBAL",5)
+== CMNINAFJ IF ~GlobalGT("Chapter","GLOBAL","%bg2_chapter_5%")
 InParty("cmninaf")~ THEN @209
-== CMNINAFJ IF ~!GlobalGT("Chapter","GLOBAL",5)
+END
+
+I_C_T UHMAY01 18 NinaImnesProblem1
+== CMNINAFJ IF ~!GlobalGT("Chapter","GLOBAL","%bg2_chapter_5%")
 InParty("cmninaf")~ THEN @210
 END
 
