@@ -5,7 +5,8 @@ IF
 THEN
     RESPONSE #100
         SetGlobal("CMNinaBio","GLOBAL",1)
-        TextScreen("CMNINA1")
+		// TextScreen("CMNINA1")
+        TextScreen("CMNIAND1") // BWP fix
         SetGlobal("CMNinaBio","GLOBAL",1)
         SmallWait(1)
         SetGlobal("CMNinaBio","GLOBAL",1)

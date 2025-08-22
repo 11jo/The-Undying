@@ -284,6 +284,8 @@ END
 IF
 	InParty(Myself)
 	AreaCheck("AR2807")
+	Dead("dragblac")
+	// StateCheck("dragblac",STATE_REALLY_DEAD)
 	CombatCounter(0)
 	Global("NinaDragon1","GLOBAL",0)
 THEN

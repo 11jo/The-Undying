@@ -20,8 +20,8 @@ END
 CHAIN CMMORIA DragonHunt
 @10
 == CMNINAFJ @11
-DO ~AddexperienceParty(20000)~
-EXIT
+DO ~AddexperienceParty(20000) ActionOverride("cmmoria",EscapeArea())~
+EXIT // BWP fix
 
 
 CHAIN CMMORIA NoDragonHunt

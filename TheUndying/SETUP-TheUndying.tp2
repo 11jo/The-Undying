@@ -1,5 +1,10 @@
-BACKUP ~TheUndying/backup~
+BACKUP ~weidu_external/TheUndying/backup~
+
 AUTHOR ~"http://www.teambg.net"~
+
+README ~TheUndying/readme-ctu.htm~
+
+VERSION ~~
 
 ALWAYS
 
@@ -16,43 +21,51 @@ ACTION_IF GAME_IS ~eet~ BEGIN
   
     //Copies tra files into the autotra-folder (to leave the originals untouched)
     DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
-      COPY ~TheUndying/tra/english~  ~TheUndying/tra/autotra/%LANGUAGE%~
-	  COPY ~TheUndying/tra/english/D~  ~TheUndying/tra/autotra/%LANGUAGE%/D~
-      COPY ~TheUndying/tra/%LANGUAGE%~  ~TheUndying/tra/autotra/%LANGUAGE%~
-	  COPY ~TheUndying/tra/%LANGUAGE%/D~  ~TheUndying/tra/autotra/%LANGUAGE%/D~
+      COPY ~TheUndying/Languages/english~  ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%~
+	  COPY ~TheUndying/Languages/english/D~  ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/D~
+      COPY ~TheUndying/Languages/%LANGUAGE%~  ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%~
+	  COPY ~TheUndying/Languages/%LANGUAGE%/D~  ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/D~
     END
 
     LAF autotra_workaround END
 
+	ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
 
-//  ACTION_DEFINE_ARRAY fl#noconvert BEGIN END
+  ACTION_DEFINE_ARRAY Undying_noconvert BEGIN setup_ee END
 
- ACTION_DEFINE_ARRAY fl#reload BEGIN setup END
+ ACTION_DEFINE_ARRAY Undying_reload BEGIN setup setup_EE END
 
     LAF HANDLE_CHARSETS
       INT_VAR
         infer_charsets = 1
       STR_VAR
-        tra_path = EVAL ~TheUndying/tra/autotra~
-//        noconvert_array = fl#noconvert
-        reload_array = fl#reload
- END
+        tra_path = EVAL ~weidu_external/TheUndying/Languages/autotra~
+		out_path = EVAL ~weidu_external/TheUndying/Languages/autotra/UTF8~
+		iconv_path = ~TheUndying/Languages/autotra/iconv~
+        noconvert_array = Undying_noconvert
+        reload_array = Undying_reload
+	END
+	
+	// UTF8 only
+	COPY ~weidu_external/TheUndying/Languages/autotra/UTF8/%LANGUAGE%~			~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%~
+	COPY ~weidu_external/TheUndying/Languages/autotra/UTF8/%LANGUAGE%/D~			~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/D~
+	END
 END
 
-AUTO_TRA ~TheUndying/tra/autotra/%s/d~
+AUTO_TRA ~weidu_external/TheUndying/Languages/autotra/%s/d~
 
 LANGUAGE ~english~
          ~english~
-         ~TheUndying/tra/english/setup.tra~
+         ~TheUndying/Languages/english/setup.tra~
 
 LANGUAGE ~german~
          ~german~
-         ~TheUndying/tra/german/setup.tra~
+         ~TheUndying/Languages/german/setup.tra~
 		 
 LANGUAGE ~French~
          ~french~
-		 ~TheUndying/tra/english/setup.tra~
-         ~TheUndying/tra/french/setup.tra~
+		 ~TheUndying/Languages/english/setup.tra~
+         ~TheUndying/Languages/french/setup.tra~
 
 BEGIN @0
 
@@ -467,7 +480,7 @@ COPY ~TheUndying/2da/cmniand1.2da~ ~override\cmniand1.2da~
 
 // load up ee-specific tra files on BG2EE
 ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
-  LOAD_TRA ~TheUndying/tra/autotra/%LANGUAGE%/setup_ee.tra~
+  LOAD_TRA ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/setup_ee.tra~
 END
 
 COPY ~TheUndying/Items/CALLAR.itm~ ~Override~
@@ -2234,4 +2247,4 @@ WRITE_BYTE 0x53 2												// APR was 1
 REPLACE_CRE_ITEM ~CM2H05~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was SW2H11
 BUT_ONLY_IF_IT_CHANGES
 
-AT_INTERACTIVE_EXIT ~VIEW TheUndying/readme-ctu.htm~
+// AT_INTERACTIVE_EXIT ~VIEW TheUndying/readme-ctu.htm~

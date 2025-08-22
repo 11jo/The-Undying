@@ -1,0 +1,295 @@
+IF
+	See(NearestEnemyOf(Myself))
+	Global("Prep","LOCALS",0)
+THEN
+	RESPONSE #100
+		ApplySpell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Peau de pierre)
+		ApplySpell(Myself,WIZARD_SPELL_TRAP)  // SPWI902.SPL (Piège à sorts)
+		SetGlobal("Prep","LOCALS",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	StateCheck(Myself,STATE_SILENCED)
+	HaveSpell(WIZARD_VOCALIZE)  // SPWI219.SPL (Vocaliser)
+THEN
+	RESPONSE #100
+		Spell(Myself,WIZARD_VOCALIZE)  // SPWI219.SPL (Vocaliser)
+END
+
+IF
+	Allegiance(Myself,ENEMY)
+	Detect([PC])
+	!See(LastSeenBy(Myself))
+	HaveSpell(WIZARD_TRUE_SIGHT)  // SPWI609.SPL (Vision véritable)
+THEN
+	RESPONSE #100
+		Spell(Myself,WIZARD_TRUE_SIGHT)  // SPWI609.SPL (Vision véritable)
+END
+
+IF
+	Allegiance(Myself,ENEMY)
+	!HasBounceEffects(Myself)
+	!HasImmunityEffects(Myself)
+	Global("spellTurn","LOCALS",0)
+THEN
+	RESPONSE #100
+		ForceSpell(Myself,BEHOLDER_SPELL_TURNING)  // SPIN920.SPL (Renvoi des sorts mineurs)
+		SetGlobal("spellTurn","LOCALS",1)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	CheckStatLT(Myself,1,STONESKINS)
+	HitBy([ANYONE],CRUSHING)
+	Global("Prep2","LOCALS",0)
+	// !Dead("Myself")
+	!StateCheck(Myself,STATE_REALLY_DEAD) // BWP fix
+THEN
+	RESPONSE #100
+		ApplySpell(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Peau de pierre)
+		SetGlobal("Prep2","LOCALS",1)
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See([GOODCUTOFF.0.0.0.0.SUMMONED])
+	Global("summon","LOCALS",0)
+THEN
+	RESPONSE #100
+		FaceObject(LastSeenBy(Myself))
+		ForceSpell(LastSeenBy(Myself),BEHOLDER_PARALYZATION)  // SPIN990.SPL (Paralysie)
+		ReallyForceSpell(LastSeenBy(Myself),WIZARD_DEATH_SPELL)  // SPWI605.SPL (Sort de mort)
+		SetGlobal("summon","LOCALS",1)
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See([PC])
+	HPGT(Myself,65)
+	!HasBounceEffects([PC])
+THEN
+	RESPONSE #100
+		FaceObject([PC])
+		ForceSpell([PC],BEHOLDER_CAUSE_SERIOUS_WOUNDS)  // SPIN986.SPL (Blessures graves)
+		Wait(1)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See([PC])
+	HPGT(Myself,55)
+	!HasBounceEffects(SecondNearest([PC]))
+THEN
+	RESPONSE #100
+		FaceObject(SecondNearest([PC]))
+		ForceSpell(SecondNearest([PC]),BEHOLDER_DEATH_RAY)  // SPIN991.SPL (Rayon de mort)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See(LeastDamagedOf(Myself))
+	HPGT(Myself,45)
+	!HasBounceEffects(LeastDamagedOf(Myself))
+THEN
+	RESPONSE #100
+		FaceObject(LeastDamagedOf(Myself))
+		ForceSpell(LeastDamagedOf(Myself),BEHOLDER_CAUSE_SERIOUS_WOUNDS)  // SPIN986.SPL (Blessures graves)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See([PC])
+	!See(LeastDamagedOf(Myself))
+	HPGT(Myself,45)
+	!HasBounceEffects([PC])
+THEN
+	RESPONSE #100
+		FaceObject([PC])
+		ForceSpell([PC],BEHOLDER_CAUSE_SERIOUS_WOUNDS)  // SPIN986.SPL (Blessures graves)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See([PC])
+	HPGT(Myself,25)
+	!HasBounceEffects(ThirdNearest([PC]))
+THEN
+	RESPONSE #100
+		FaceObject(ThirdNearest([PC]))
+		ForceSpell(ThirdNearest([PC]),BEHOLDER_FLESH_TO_STONE)  // SPIN984.SPL (Transmutation de la chair en pierre)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	See([PC])
+	See([PC.0.0.MAGE])
+	!HasBounceEffects([PC.0.0.MAGE])
+THEN
+	RESPONSE #100
+		FaceObject(LastSeenBy(Myself))
+		ForceSpell(LastSeenBy(Myself),BEHOLDER_ANTIMAGIC_RAY)  // SPIN992.SPL (Rayon antimagie)
+		SetGlobal("BeholderBehavior","LOCALS",1)
+		Wait(2)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("SpellTrigger","LOCALS",0)
+THEN
+	RESPONSE #100
+		DisplayString(Myself,39968)  // Déclencheur de sorts lancé
+		DisplayString(Myself,40248)  // Déclencheur de sorts : Vision véritable
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_TRUE_SIGHT)  // SPWI609.SPL (Vision véritable)
+		DisplayString(Myself,40249)  // Déclencheur de sorts : Dissipation de la magie
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_REMOVE_MAGIC)  // SPWI302.SPL (Délivrance de la magie)
+		DisplayString(Myself,40250)  // Déclencheur de sorts : Boule de feu
+		ReallyForceSpell(NearestEnemyOf(Myself),WIZARD_FIREBALL)  // SPWI304.SPL (Boule de feu)
+		SetGlobal("SpellTrigger","LOCALS",1)
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",0)
+	!See([PC.0.0.MAGE])
+	!HasBounceEffects([PC.0.0.MAGE])
+THEN
+	RESPONSE #100
+		FaceObject(LastSeenBy(Myself))
+		ForceSpell(LastSeenBy(Myself),BEHOLDER_ANTIMAGIC_RAY)  // SPIN992.SPL (Rayon antimagie)
+		SetGlobal("BeholderBehavior","LOCALS",1)
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See([GOODCUTOFF.0.0.0.0.SUMMONED])
+	Global("summon2","LOCALS",0)
+	!HasBounceEffects([GOODCUTOFF.0.0.0.0.SUMMONED])
+THEN
+	RESPONSE #100
+		FaceObject(LastSeenBy(Myself))
+		ForceSpell(LastSeenBy(Myself),BEHOLDER_PARALYZATION)  // SPIN990.SPL (Paralysie)
+		ForceSpell(LastSeenBy(Myself),WIZARD_MELF_ACID_ARROW)  // SPWI211.SPL (Flèche acide de Melf)
+		SetGlobal("summon2","LOCALS",1)
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See([PC])
+	HPGT(Myself,15)
+	!HasBounceEffects([PC])
+THEN
+	RESPONSE #100
+		FaceObject([PC])
+		ForceSpell([PC],BEHOLDER_DOMINATION)  // SPIN985.SPL (Domination)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See([PC])
+	HPGT(Myself,35)
+	!HasBounceEffects(SecondNearest([PC]))
+THEN
+	RESPONSE #100
+		FaceObject(SecondNearest([PC]))
+		ForceSpell(SecondNearest([PC]),BEHOLDER_SLOW)  // SPIN983.SPL (Lenteur)
+		Wait(2)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See([PC])
+	HPGT(Myself,5)
+	!HasBounceEffects(ThirdNearest([PC]))
+THEN
+	RESPONSE #100
+		FaceObject(ThirdNearest([PC]))
+		ForceSpell(ThirdNearest([PC]),BEHOLDER_CAUSE_SERIOUS_WOUNDS)  // SPIN986.SPL (Blessures graves)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See(LeastDamagedOf(Myself))
+	!HasBounceEffects(LeastDamagedOf(Myself))
+THEN
+	RESPONSE #100
+		FaceObject(LeastDamagedOf(Myself))
+		ForceSpell(LeastDamagedOf(Myself),BEHOLDER_DEATH_RAY)  // SPIN991.SPL (Rayon de mort)
+		Continue()
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See([PC])
+	!See(LeastDamagedOf(Myself))
+	!HasBounceEffects([PC])
+THEN
+	RESPONSE #100
+		FaceObject([PC])
+		ForceSpell([PC],BEHOLDER_DEATH_RAY)  // SPIN991.SPL (Rayon de mort)
+		Continue()
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_IMPRISONMENT)  // SPWI910.SPL (Emprisonnement)
+THEN
+	RESPONSE #100
+		Spell(NearestEnemyOf(Myself),WIZARD_IMPRISONMENT)  // SPWI910.SPL (Emprisonnement)
+END
+
+IF
+	Global("BeholderBehavior","LOCALS",1)
+	See([PC.0.0.MAGE])
+	!StateCheck(LastSeenBy(Myself),STATE_STUNNED)
+	!HasBounceEffects([PC.0.0.MAGE])
+THEN
+	RESPONSE #100
+		FaceObject(LastSeenBy(Myself))
+		ForceSpell(LastSeenBy(Myself),BEHOLDER_ANTIMAGIC_RAY)  // SPIN992.SPL (Rayon antimagie)
+		AttackReevaluate(LastSeenBy(Myself),15)
+		SetGlobal("BeholderBehavior","LOCALS",0)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_MAZE)  // SPWI813.SPL (Labyrinthe)
+THEN
+	RESPONSE #100
+		Spell(NearestEnemyOf(Myself),WIZARD_MAZE)  // SPWI813.SPL (Labyrinthe)
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	HaveSpell(WIZARD_POWER_WORD_KILL)  // SPWI912.SPL (Mot de pouvoir : mort)
+	HPLT(LastSeenBy(Myself),60)
+THEN
+	RESPONSE #100
+		Spell(NearestEnemyOf(Myself),WIZARD_POWER_WORD_KILL)  // SPWI912.SPL (Mot de pouvoir : mort)
+END
+
+IF
+	See([PC])
+	HasBounceEffects([PC])
+	Global("KRBEHELD","LOCALS",0)
+THEN
+	RESPONSE #100
+		IncrementGlobal("KRBEHELD","LOCALS",1)
+		ForceSpell(Myself,WIZARD_INVISIBLE_STALKER)  // SPWI601.SPL (Rôdeur invisible)
+		SetGlobalTimer("KRTIMER","GLOBAL",TEN_ROUNDS)
+END
+
+IF
+	GlobalTimerExpired("KRTIMER","GLOBAL")
+THEN
+	RESPONSE #100
+		SetGlobal("KRBEHELD","LOCALS",0)
+END
+
