@@ -68,6 +68,8 @@ LANGUAGE ~French~
          ~TheUndying/Languages/french/setup.tra~
 
 BEGIN @0
+DESIGNATED 0
+LABEL ~CoM_Solaufein-The-Undying~
 
 PRINT @1
 PRINT @2
@@ -520,7 +522,7 @@ COPY ~TheUndying/Items/CM2H07.ITM~ ~Override~
   SAY 0x50 @146
   SAY 0x54 @147
 
-COPY ~TheUndying/Items/CMAX03.ITM~ ~Override~
+COPY ~TheUndying/Items/CMAX03.ITM~ ~Override/CMUDAX03.ITM~ // Changed to CMUDAX03
   SAY 0x8 @148
   SAY 0xC @149
   SAY 0x50 @150
@@ -827,7 +829,7 @@ COPY ~TheUndying/Items/CMAR01.ITM~         ~override~
   SAY NAME2 @310
   SAY DESC @311
 
-COPY ~TheUndying/Items/CMAX02.ITM~         ~override~         
+COPY ~TheUndying/Items/CMAX02.ITM~         ~override~ // Changed to CMUDAX02
   SAY NAME2 @312
   SAY DESC @313
 
@@ -1774,8 +1776,9 @@ COMPILE ~TheUndying/dialogs/QUEST.d~
 
 COMPILE ~TheUndying/dialogs/CMAVAT1.d~
 
+INCLUDE ~TheUndying/lib/ToB_component.tpa~
 
-  
+
 // COMPILE ~TheUndying/dialogs/cmdmerc.d~
 
 
@@ -1853,11 +1856,14 @@ UNLESS ~CMNINAF~
 
 /* PRINT @409
 BEGIN @410
+DESIGNATED 2
 
 COPY ~TheUndying/crescripts~ ~override~   */
 
 PRINT @411
 BEGIN @412
+DESIGNATED 3
+LABEL ~CoM_Solaufein-The-Undying_Harder-Enemies~
 
 COPY_EXISTING ~AR18ARCH.CRE~ ~override~
 WRITE_BYTE 0x53 8												// APR was 7
@@ -2160,7 +2166,7 @@ WRITE_SHORT 0x46 6												// NATAC was 10
 WRITE_SHORT 0x48 6												// EFFAC was 10
 WRITE_BYTE 0x52 4												// THAC0 was 9
 WRITE_BYTE 0x53 9												// APR was 8
-ADD_CRE_ITEM ~CMAX02~ #0 #0 #0 ~IDENTIFIED~ ~INV~
+ADD_CRE_ITEM ~CMUDAX02~ #0 #0 #0 ~IDENTIFIED~ ~INV~
 BUT_ONLY_IF_IT_CHANGES
 
 COPY_EXISTING ~SEVPAT02.CRE~ ~override~

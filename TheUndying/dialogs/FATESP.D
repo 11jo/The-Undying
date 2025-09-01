@@ -1,9 +1,3 @@
-BEGIN ~CMAVAT1~
-
-BEGIN ~CMNIN25J~
-
-// Moved to FATESP.d
-/*
 EXTEND_TOP FATESP %fatesp_state_ninafer% #%fatesp_transition_ninafer%
 	IF ~!Dead("cmninaf")
 		!InMyArea("cmninaf")
@@ -12,7 +6,7 @@ EXTEND_TOP FATESP %fatesp_state_ninafer% #%fatesp_transition_ninafer%
 																CreateCreature("CMNINA25",[2000.1230],0)
 																SetGlobal("NinaferSummoned","GLOBAL",1)~ GOTO 8
 	END
-*/
+
 /* CHAIN IF ~True()~
 THEN MYSTAVCM MystraAvatar
 ~Greetings my faithful follower, Ninafer. I wish a word with you.~
@@ -29,28 +23,3 @@ EXIT */
 
 IF ~GlobalGT("NinaGifted","GLOBAL",0)~ 
 SAY ~ */
-
-
-CHAIN
-IF ~Detect("cmninaf")
-	InParty("cmninaf")
-	Global("CmCalliNinafer1","GLOBAL",0)~ THEN CMAVAT1 CalliReturns
-@1 DO ~SetGlobal("CmCalliNinafer1","GLOBAL",1)~
-== CMNIN25J @2
-= @3
-== CMAVAT1 @4
-= @5
-== CMNIN25J @6
-== CMAVAT1 @7
-== CMNIN25J @8
-== CMAVAT1 @9
-= @10
-== CMNIN25J @11
-= @12
-== CMAVAT1 @13
-== CMNIN25J @14
-== CMAVAT1 @15
-== CMNIN25J @16
-== CMAVAT1 @17 DO ~ReallyForceSpell(Myself,CLERIC_DRAW_UPON_HOLY_MIGHT)
-					Wait(1)
-					Kill(Myself)~ EXIT
