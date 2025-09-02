@@ -1,102 +1,102 @@
 IF
- See(Player1)
- NumTimesTalkedTo(0)
+	See(Player1)
+	NumTimesTalkedTo(0)
 THEN
- RESPONSE #100
- Dialogue(Player1)
+	RESPONSE #100
+		Dialogue(Player1)
 END
 
 
 // Leaving AR0700
 
 IF
-InParty(Myself)
-!AreaCheck("AR0700")
-See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID) 
-!StateCheck(Myself,CD_STATE_NOTVALID)
-CombatCounter(0)
-!See([ENEMY])
-Global("CallistoJoinTalk","GLOBAL",0)
+	InParty(Myself)
+	!AreaCheck("AR0700")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID) 
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	Global("CallistoJoinTalk","GLOBAL",0)
 THEN
-RESPONSE #100
-SetGlobal("CallistoJoinTalk","GLOBAL",1)
+	RESPONSE #100
+		SetGlobal("CallistoJoinTalk","GLOBAL",1)
 END
 
 IF
-InParty(Myself)
-See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID) 
-!StateCheck(Myself,CD_STATE_NOTVALID)
-CombatCounter(0)
-!See([ENEMY])
-Global("CallistoJoinTalk","GLOBAL",1)
+	InParty(Myself)
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID) 
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	Global("CallistoJoinTalk","GLOBAL",1)
 THEN
-RESPONSE #100
-Interact(Player1)
+	RESPONSE #100
+		Interact(Player1)
 END
 
 
 // First friend talk
 IF 
-InParty(Myself)
-Global("CallistoTalk","GLOBAL",0)
+	InParty(Myself)
+	Global("CallistoTalk","GLOBAL",0)
 THEN
-RESPONSE #100
-RealSetGlobalTimer("CallistoTalkTimer","GLOBAL",2000)
-SetGlobal("CallistoTalk","GLOBAL",1)
+	RESPONSE #100
+		RealSetGlobalTimer("CallistoTalkTimer","GLOBAL",2000)
+		SetGlobal("CallistoTalk","GLOBAL",1)
 END
 
 // Friend talks, sequential
 
 IF
-InParty(Myself)
-RealGlobalTimerExpired("CallistoTalkTimer","GLOBAL")
-See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID) 
-!StateCheck(Myself,CD_STATE_NOTVALID)
-CombatCounter(0)
-!See([ENEMY])
-OR(9)
-Global("CallistoTalk","GLOBAL",1)
-Global("CallistoTalk","GLOBAL",3)
-Global("CallistoTalk","GLOBAL",5)
-Global("CallistoTalk","GLOBAL",7)
-Global("CallistoTalk","GLOBAL",9)
-Global("CallistoTalk","GLOBAL",11)
-Global("CallistoTalk","GLOBAL",13)
-Global("CallistoTalk","GLOBAL",15)
-Global("CallistoTalk","GLOBAL",17)
+	InParty(Myself)
+	RealGlobalTimerExpired("CallistoTalkTimer","GLOBAL")
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID) 
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	OR(9)
+	Global("CallistoTalk","GLOBAL",1)
+	Global("CallistoTalk","GLOBAL",3)
+	Global("CallistoTalk","GLOBAL",5)
+	Global("CallistoTalk","GLOBAL",7)
+	Global("CallistoTalk","GLOBAL",9)
+	Global("CallistoTalk","GLOBAL",11)
+	Global("CallistoTalk","GLOBAL",13)
+	Global("CallistoTalk","GLOBAL",15)
+	Global("CallistoTalk","GLOBAL",17)
 THEN
-RESPONSE #100
-IncrementGlobal("CallistoTalk","GLOBAL",1)
-SetGlobal("CallistoTalkCheck","GLOBAL",1)
-Interact(Player1)
+	RESPONSE #100
+		IncrementGlobal("CallistoTalk","GLOBAL",1)
+		SetGlobal("CallistoTalkCheck","GLOBAL",1)
+		Interact(Player1)
 END
 
 IF
-InParty(Myself)
-Global("CallistoTalkCheck","GLOBAL",1)
-!AreaType(DUNGEON)
-See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID) 
-!StateCheck(Myself,CD_STATE_NOTVALID)
-CombatCounter(0)
-!See([ENEMY])
-OR(9)
-Global("CallistoTalk","GLOBAL",2)
-Global("CallistoTalk","GLOBAL",4)
-Global("CallistoTalk","GLOBAL",6)
-Global("CallistoTalk","GLOBAL",8)
-Global("CallistoTalk","GLOBAL",10)
-Global("CallistoTalk","GLOBAL",12)
-Global("CallistoTalk","GLOBAL",14)
-Global("CallistoTalk","GLOBAL",16)
-Global("CallistoTalk","GLOBAL",18)
+	InParty(Myself)
+	Global("CallistoTalkCheck","GLOBAL",1)
+	!AreaType(DUNGEON)
+	See(Player1)
+	!StateCheck(Player1,CD_STATE_NOTVALID) 
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	CombatCounter(0)
+	!See([ENEMY])
+	OR(9)
+	Global("CallistoTalk","GLOBAL",2)
+	Global("CallistoTalk","GLOBAL",4)
+	Global("CallistoTalk","GLOBAL",6)
+	Global("CallistoTalk","GLOBAL",8)
+	Global("CallistoTalk","GLOBAL",10)
+	Global("CallistoTalk","GLOBAL",12)
+	Global("CallistoTalk","GLOBAL",14)
+	Global("CallistoTalk","GLOBAL",16)
+	Global("CallistoTalk","GLOBAL",18)
 THEN
-RESPONSE #100
-SetGlobalTimer("CallistoTalkTimer","GLOBAL",3600)
-Interact(Player1)
+	RESPONSE #100
+		SetGlobalTimer("CallistoTalkTimer","GLOBAL",3600)
+		Interact(Player1)
 END
 
 IF
@@ -113,7 +113,7 @@ IF
 	AreaCheck("AR1602")
 	InParty("cmninaf")
 	See("cmninaf")
-	!StateCheck("cmninaf",STATE_SLEEPING)
+	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 	!Dead("cmninaf")
 	CombatCounter(0)
 	Global("BCalliNina3","GLOBAL",0)
@@ -124,7 +124,7 @@ END
 
 IF
 	AreaCheck("AR2600")
-        InParty(Myself)
+	InParty(Myself)
 	Global("CmCalliEndGameS","AR2600",0)
 THEN
 	RESPONSE #100

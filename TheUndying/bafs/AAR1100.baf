@@ -37,5 +37,4 @@ THEN
       CreateCreature("CMSORA2",[2239.3136],8)
       CreateCreature("CMSORA1",[2210.3210],4)
       CreateCreature("CMSORA2",[2019.3184],6)
-
 END

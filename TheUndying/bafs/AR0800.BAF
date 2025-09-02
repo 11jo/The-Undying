@@ -9,7 +9,7 @@ THEN
 END
 
 IF
-  EXISTS("CMGHOST1")
+  Exists("CMGHOST1")
   TimeGT(DAWN_START)
   Global("DoSGhost1Bed","AR0800",0)
 THEN
@@ -19,7 +19,7 @@ THEN
 END
 
 IF
-  EXISTS("CMGHOST2")
+  Exists("CMGHOST2")
   TimeGT(DAWN_START)
   Global("DoSGhost2Bed","AR0800",0)
 THEN
@@ -29,7 +29,7 @@ THEN
 END
 
 IF
-  EXISTS("CMGHOST3")
+  Exists("CMGHOST3")
   TimeGT(DAWN_START)
   Global("DoSGhost3Bed","AR0800",0)
 THEN
@@ -39,7 +39,7 @@ THEN
 END
 
 IF
-  EXISTS("CMGHOST1")
+  Exists("CMGHOST1")
   TimeGT(DUSK_START)
   Global("DoSGhost1Bed","AR0800",1)
 THEN
@@ -49,7 +49,7 @@ THEN
 END
 
 IF
-  EXISTS("CMGHOST2")
+  Exists("CMGHOST2")
   TimeGT(DUSK_START)
   Global("DoSGhost2Bed","AR0800",1)
 THEN
@@ -59,7 +59,7 @@ THEN
 END
 
 IF
-  EXISTS("CMGHOST3")
+  Exists("CMGHOST3")
   TimeGT(DUSK_START)
   Global("DoSGhost3Bed","AR0800",1)
 THEN

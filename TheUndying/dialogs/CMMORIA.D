@@ -3,7 +3,7 @@ BEGIN CMMORIA
 CHAIN
 IF ~Detect("cmninaf")
 InParty("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)~
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~
 THEN CMMORIA FathersDeath
 @0
 == CMNINAFJ @1 

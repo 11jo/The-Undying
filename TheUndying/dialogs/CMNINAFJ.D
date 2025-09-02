@@ -233,7 +233,7 @@ END
 */
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("NinaKnowsElhan","GLOBAL",1)~ THEN BEGIN NinaElhanRemark
  SAY @81
 ++ @82 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",2)~ + NER1
@@ -258,7 +258,7 @@ IF ~~ EXIT
 END
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR2800")
 Global("NinaHomeAttack","GLOBAL",0)~ THEN BEGIN NinaHomeAttack
   SAY @90
@@ -291,7 +291,7 @@ IF ~~ EXIT
 END
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR2807")
 Dead("dragblac")
 CombatCounter(0)
@@ -345,7 +345,7 @@ END
 CHAIN IF
 ~See("cmninaf")
 InParty("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("BelminNina","AR0700",0)~ THEN BELMIN NinaBelminNut
 @116
 DO ~SetGlobal("BelminNina","AR0700",1)~
@@ -359,7 +359,7 @@ END
 
 /* CHAIN IF WEIGHT #-1
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 THEN salvanas NinaSalvanas
 ~Well, well what do we have here? Such a lovely looking elf you are my lady. Such fine golden blond hair that I would love to run my hands through. My name is Salvanas. Mayhaps we can get to know each other in a very personal way.~
 == CMNINAFJ ~Ugh. You are quite the forward one yes? I really don't..~
@@ -372,7 +372,7 @@ EXIT  */
 
 CHAIN IF WEIGHT #-1
 ~See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaSalvanas","LOCALS",0)~
  THEN SALVANAS NinSalvanas
 @122
@@ -393,7 +393,7 @@ EXIT
 /* CHAIN IF WEIGHT #-1
 ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaCragmoon","GLOBAL",0)~
 THEN MURCRAG NinaCrag
 ~Ninafer bless be, it's so nice to see you again child. How are you doing these days?~ DO ~SetGlobal("NinaCragmoon","GLOBAL",1)~
@@ -408,7 +408,7 @@ EXIT */
 
 CHAIN IF WEIGHT #-1 ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaTown7","GLOBAL",0)~ THEN FTOWN7 NinaTown7
 @133
 DO ~SetGlobal("NinaTown7","GLOBAL",1)~
@@ -417,7 +417,7 @@ EXIT
 
 CHAIN  IF WEIGHT #-1 ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaUrchin1","GLOBAL",0)~ THEN URCHIN1 NinaUrchin1
 @135
 DO ~SetGlobal("NinaUrchin1","GLOBAL",1)~
@@ -426,7 +426,7 @@ EXIT
 
 CHAIN IF WEIGHT #-1 ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaUrchin2","GLOBAL",0)~ THEN URCHIN2 NinaUrchin2
 @137
 DO ~SetGlobal("NinaUrchin2","GLOBAL",1)~
@@ -436,7 +436,7 @@ EXIT
 
 CHAIN IF WEIGHT #-1 ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaUrchin3","GLOBAL",0)~ THEN URCHIN3 NinaUrchin3
 @140
 DO ~SetGlobal("NinaUrchin3","GLOBAL",1)~

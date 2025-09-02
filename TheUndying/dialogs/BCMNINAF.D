@@ -4,7 +4,7 @@ BEGIN ~BCMNINAF~
 /*
 IF WEIGHT #-1 
 ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("NinaChats1","GLOBAL",0)
 TimeGT(5)
 TimeLT(9)
@@ -32,7 +32,7 @@ END  */
 
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR2100")
 Global("NinaBackground","GLOBAL",1)~ THEN BEGIN NinaJonBackground
   SAY @0
@@ -63,7 +63,7 @@ END
 
 IF  
 ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("NinaDrowChat","GLOBAL", 0)
 Global("PlayerLooksLikeDrow","GLOBAL",1)~ THEN BEGIN NinaHatesDrow
   SAY @8
@@ -80,7 +80,7 @@ IF ~~ THEN BEGIN F_U
 END
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR2200")
 Global("NinaDrowCity","GLOBAL",0)~ THEN BEGIN NinaUstNatha
   SAY @13
@@ -105,7 +105,7 @@ IF WEIGHT #-1
 ~See(Player1)
 Class(Player1,MAGE_ALL)
 CombatCounter(0)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("NinaChatMage","GLOBAL",0)~ THEN BEGIN FellowMage
 SAY @18
 ++ @19 DO ~SetGlobal("NinaChatMage","GLOBAL",1)~ + M_Gorion
@@ -144,7 +144,7 @@ IF WEIGHT #-1
 ~See(Player1)
 Class(Player1,FIGHTER_ALL)
 CombatCounter(0)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("NinaChatFighter","GLOBAL",0)~ THEN BEGIN FellowFighter
 SAY @31
 ++ @32 DO ~SetGlobal("NinaChatFighter","GLOBAL",1)~ + F_Taught
@@ -186,7 +186,7 @@ IF ~~ EXIT
 END
 
 /* IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Class(Player1,PALADIN_ALL)
 Global("NinaChatPaladin","GLOBAL",0)~ THEN BEGIN NinaPaladin
  SAY ~~
@@ -198,7 +198,7 @@ END */
 /* Happiness & Reputation */
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 ReputationGT(Player1,4)
 ReputationLT(Player1,8)
 Global("NinaRep1","GLOBAL",0)~ THEN BEGIN NinaRep1
@@ -261,7 +261,7 @@ END
 CHAIN IF ~InParty("Aerie")
 See("Aerie")
 CombatCounter(0)
-!StateCheck("Aerie",STATE_SLEEPING)
+!StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("NinaAerie1","GLOBAL",0)~ THEN BCMNINAF AerieMagic
 @63 DO ~SetGlobal("NinaAerie1","GLOBAL",1)~
 == BAERIE @64
@@ -276,7 +276,7 @@ CHAIN IF ~InParty("cmninaf")
 See("cmninaf")
 AreaType(FOREST)
 Global("NinaCernd1","GLOBAL",0)
-!StateCheck("cmninaf",STATE_SLEEPING)~ THEN BCERND Herbal
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN BCERND Herbal
 @70 DO ~SetGlobal("NinaCernd1","GLOBAL",1)~
 == BCMNINAF @71
 == BCERND @72
@@ -287,7 +287,7 @@ EXIT
 
 CHAIN IF ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaEdwin1","GLOBAL",0)~ THEN BEDWIN EdwinDislike
 @76
 == BCMNINAF @77 DO ~SetGlobal("NinaEdwin1","GLOBAL",1)~
@@ -300,7 +300,7 @@ END
 
 CHAIN IF ~InParty("Haerdalis")
 See("Haerdalis")
-!StateCheck("Haerdalis",STATE_SLEEPING)
+!StateCheck("Haerdalis",CD_STATE_NOTVALID)
 Global("NinaHaer1","GLOBAL",0)~ THEN BCMNINAF NinaHaerChat1
 @83
 DO ~SetGlobal("NinaHaer1","GLOBAL",1)~
@@ -313,7 +313,7 @@ EXIT
 
 CHAIN IF ~InParty("Imoen2")
 See("Imoen2")
-!StateCheck("Imoen2",STATE_SLEEPING)
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
 Global("NinaImoen1","GLOBAL",0)~ THEN BCMNINAF ImoenChat
 @89 DO ~SetGlobal("NinaImoen1","GLOBAL",1)~
 == IMOEN2J @90 
@@ -335,7 +335,7 @@ CHAIN
 IF ~InParty("cmninaf")
 AreaType("Outdoor")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaJaheira1","GLOBAL",0)~ THEN BJAHEIR TreeHugging
 @103 DO ~SetGlobal("NinaJaheira1","GLOBAL",1)~
 == BCMNINAF
@@ -349,7 +349,7 @@ EXIT
 CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")
-!StateCheck("Jaheira",STATE_SLEEPING)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("NinaJaheira2","GLOBAL",0)~ THEN BCMNINAF KnowPc
 @108 DO ~SetGlobal("NinaJaheira2","GLOBAL",1)~
 == BJAHEIR @109
@@ -366,7 +366,7 @@ EXIT
 CHAIN
 IF ~InParty("Jaheira")
 See("Jaheira")
-!StateCheck("Jaheira",STATE_SLEEPING)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("NinaJaheira3","GLOBAL",0)~ THEN BCMNINAF KhalidTalk
 @118 DO ~SetGlobal("NinaJaheira3","GLOBAL",1)~
 == BJAHEIR @119
@@ -378,7 +378,7 @@ CHAIN IF
 ~InParty("cmninaf")
 See("cmninaf")
 CombatCounter(0)
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaKeldornTalk1","GLOBAL",0)~ THEN BKELDOR Fighters
 @122 DO ~SetGlobal("NinaKeldornTalk1","GLOBAL",1)~
 == BCMNINAF @123 
@@ -394,7 +394,7 @@ EXIT
 CHAIN
 IF ~InParty("Korgan")
 See("Korgan")
-!StateCheck("Korgan",STATE_SLEEPING)
+!StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("NinaKorgan1","GLOBAL",0)~ THEN BCMNINAF VileDwarf
 @131
 DO ~SetGlobal("NinaKorgan1","GLOBAL",1)~
@@ -417,7 +417,7 @@ See("cmninaf")
 CombatCounter(0)
 HPPercentLT("Korgan",30)
 !HP("Korgan",1)
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaKorgan1","GLOBAL",1)
 Global("NinaKorganBitch","GLOBAL",0)~ THEN BKORGAN KorganWhine
 @138 DO ~SetGlobal("NinaKorganBitch","GLOBAL",1)~
@@ -432,7 +432,7 @@ CHAIN
 IF ~InParty("cmninaf")
 See("cmninaf")
 AreaCheck("AR2000")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaMazzy1","GLOBAL",0)~ THEN BMAZZY Gods
 @144 DO ~SetGlobal("NinaMazzy1","GLOBAL",1)~
 == BCMNINAF
@@ -453,7 +453,7 @@ EXIT
 
 CHAIN IF ~InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",STATE_SLEEPING)
+!StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("NinaMinsc1","GLOBAL",0)~ THEN BCMNINAF Minsc_BooFood
 @152 DO ~SetGlobal("NinaMinsc1","GLOBAL",1)~
 == BMINSC @153
@@ -477,7 +477,7 @@ See("Minsc")
 CombatCounter(0)
 HPPercentLT("Minsc",20)
 !HP("Minsc",1)
-!StateCheck("Minsc",STATE_SLEEPING)
+!StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("NinaMinsc2","GLOBAL",0)~ THEN BCMNINAF MinscWounded
 @167 DO ~SetGlobal("NinaMinsc2","GLOBAL",1)~
 == BMINSC @168
@@ -490,7 +490,7 @@ EXIT
 
 CHAIN IF ~InParty("Nalia")
 See("Nalia")
-!StateCheck("Nalia",STATE_SLEEPING)
+!StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("NinaNalia1","GLOBAL",0)~ THEN BCMNINAF NaliaChat1
 @174 DO ~SetGlobal("NinaNalia1","GLOBAL",1)~
 == BNALIA @175
@@ -505,7 +505,7 @@ EXIT
 
 CHAIN IF ~InParty("Valygar")
 See("Valygar")
-!StateCheck("Valygar",STATE_SLEEPING)
+!StateCheck("Valygar",CD_STATE_NOTVALID)
 Global("NinaValygar1","GLOBAL",0)~ THEN BCMNINAF FoulMagic
 @183
 DO ~SetGlobal("NinaValygar1","GLOBAL",1)~
@@ -520,7 +520,7 @@ EXIT
 
 CHAIN IF ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaViconia1","GLOBAL",0)~ THEN BVICONI Dislike
 @191 DO ~SetGlobal("NinaViconia1","GLOBAL",1)~
 == BCMNINAF @192
@@ -676,7 +676,7 @@ AreaCheck("AR0300")
 InParty("cmninaf")
 Global("AnomenIsNotKnight","GLOBAL",1)
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaAnomenTalk1b","GLOBAL",1)~ THEN BANOMEN AnomenNotKnight_1
 ~Ninafer, I would like to apologize for how I acted to you before. The disappointment of not becoming a knight with the Radiant Heart got the best of me. I acted in a very childish manner to you and I am sorry.~
 DO ~SetGlobal("NinaAnomenTalk1b","GLOBAL",2)~
@@ -708,7 +708,7 @@ GlobalLT("Chapter","GLOBAL","%bg2_chapter_4%")
 Global("AnomenIsNotKnight","GLOBAL",1)
 Global("NinaAnomenTalk1b","GLOBAL",1)
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 OR(2)
 Global("AnomenRomanceActive","GLOBAL",1)
 Global("AnomenRomanceActive","GLOBAL",2)
@@ -728,7 +728,7 @@ EXIT */
 
 /* IF  
 ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 GlobalGT("Chapter","GLOBAL","%bg2_chapter_3%")
 Global("NinaHomeChat","GLOBAL", 0)
 ~ THEN BEGIN NinaHome

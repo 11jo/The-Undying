@@ -1019,7 +1019,7 @@ END
 
 CHAIN IF WEIGHT #-1 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("callistosalvanas","LOCALS",0)~ THEN SALVANAS CalliSal
 @303
 DO ~SetGlobal("callistosalvanas","LOCALS",1)~
@@ -1055,7 +1055,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliWaylane","LOCALS",0)~ THEN WAYLANE CalliWaylaneSell
 @320
 DO ~SetGlobal("CalliWaylane","LOCALS",1)~
@@ -1069,7 +1069,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliUrchin1","LOCALS",0)~ THEN URCHIN1 CalliUrchin1
 @326
 DO ~SetGlobal("CalliUrchin1","LOCALS",1)~
@@ -1080,7 +1080,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliUrchin2","LOCALS",0)~ THEN URCHIN2 CalliUrchin2
 @329
 DO ~SetGlobal("CalliUrchin2","LOCALS",1)~
@@ -1091,7 +1091,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliUrchin3","LOCALS",0)~ THEN URCHIN3 CalliUrchin3
 @332
 DO ~SetGlobal("CalliUrchin3","LOCALS",1)~
@@ -1104,7 +1104,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliSlumm1","LOCALS",0)~ THEN SLUMM1 CalliSlumm1
 @337
 DO ~SetGlobal("CalliSlumm1","LOCALS",1)~
@@ -1114,7 +1114,7 @@ EXIT
 CHAIN IF WEIGHT #-1
 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliSlumm2","LOCALS",0)~ THEN SLUMM2 CalliSlumm2
 @339
 DO ~SetGlobal("CalliSlum2","LOCALS",1)~
@@ -1125,7 +1125,7 @@ EXIT
 CHAIN
 IF WEIGHT #-1 ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliThumb","LOCALS",0)~ THEN THUMB CalliThumb
 @342 DO ~SetGlobal("CalliThumb","LOCALS",1)~
 == CMCALLIJ @343

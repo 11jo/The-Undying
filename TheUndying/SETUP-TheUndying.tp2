@@ -328,16 +328,19 @@ COPY ~TheUndying/cre/CMSOLA.CRE~ ~override~
 COPY ~TheUndying/cre/CMGHOST1.CRE~ ~override~
   SAY NAME1 @59
   SAY NAME2 @59
+  WRITE_ASCII DEATHVAR ~CMGHOST1~ (32)
   
 
 COPY ~TheUndying/cre/CMGHOST2.CRE~ ~override~
   SAY NAME1 @59
   SAY NAME2 @59
+  WRITE_ASCII DEATHVAR ~CMGHOST2~ (32)
 
 
 COPY ~TheUndying/cre/CMGHOST3.CRE~ ~override~
   SAY NAME1 @59
   SAY NAME2 @59
+  WRITE_ASCII DEATHVAR ~CMGHOST3~ (32)
 
 
 COPY ~TheUndying/cre/CMGABBY.CRE~ ~override~         
@@ -716,6 +719,12 @@ COPY ~TheUndying/Items/CMTUSW04.ITM~ ~Override~
   SAY 0xC @252
   SAY 0x50 @253
   SAY 0x54 @254
+	LPF ALTER_ITEM_HEADER 
+		INT_VAR
+			check_headers = 1
+		STR_VAR 
+			icon = ~xswd010~
+	END
 
 COPY ~TheUndying/Items/CMTUSW05.ITM~ ~Override~
   SAY 0x8 @255
@@ -782,6 +791,7 @@ COPY ~TheUndying/Items/amulgr01.itm~       ~override~
   SAY NAME1 @287
   SAY NAME2 @288
   SAY DESC @289
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/CM1H08.ITM~         ~override~         
   SAY NAME2 @290
@@ -829,7 +839,7 @@ COPY ~TheUndying/Items/CMAR01.ITM~         ~override~
   SAY NAME2 @310
   SAY DESC @311
 
-COPY ~TheUndying/Items/CMAX02.ITM~         ~override~ // Changed to CMUDAX02
+COPY ~TheUndying/Items/CMAX02.ITM~         ~override/CMUDAX02.ITM~ // Changed to CMUDAX02 (CMSTOR01.cre not implementd)
   SAY NAME2 @312
   SAY DESC @313
 
@@ -932,36 +942,43 @@ COPY ~TheUndying/Items/helmgr01.itm~       ~override~
   SAY NAME1 @168
   SAY NAME2 @362
   SAY DESC @363
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/macegr01.itm~       ~override~       
   SAY NAME1 @176
   SAY NAME2 @364
   SAY DESC @365
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/PLATGR01.ITM~       ~override~       
   SAY NAME1 @234
   SAY NAME2 @366
   SAY DESC @367
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/ringgr06.itm~       ~override~       
   SAY NAME1 @368
   SAY NAME2 @369
   SAY DESC @370
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/ringgr02.itm~       ~override~       
   SAY NAME1 @368
   SAY NAME2 @371
   SAY DESC @372
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/sackgr04.itm~       ~override~       
   SAY NAME1 @373
   SAY NAME2 @374
   SAY DESC @375
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/sw2hgr01.itm~       ~override~       
   SAY NAME1 @255
   SAY NAME2 @376
   SAY DESC @377
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/COMTHOR.itm~        ~override~        
   SAY NAME2 @378
@@ -973,6 +990,7 @@ COPY ~TheUndying/Items/bracgr01.itm~       ~override~
   SAY NAME1 @192
   SAY NAME2 @380
   SAY DESC @381
+  WRITE_ASCII 0x10 ~~ (8)
 
 COPY ~TheUndying/Items/CMCAND01.itm~   ~override~       
   SAY NAME1 @382
@@ -1027,27 +1045,117 @@ COPY ~TheUndying/Items/CMBOOK01.itm~   ~override~
 COPY ~TheUndying/stores/CMTUS01.STO~ ~Override~
   SAY 0xC @401
 
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~CONC11~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~COMC11~ position=~AFTER CMTULE03~ flags=~identified~
+      END
+
 COPY ~TheUndying/stores/CMTUS02.sto~ ~Override~
   SAY 0xC @402
 
+COPY_EXISTING ~BAG02.STO~ ~Override/CMBAG02.STO~
+
+COPY_EXISTING ~BAG02.ITM~ ~Override/CMBAG02.ITM~
+
+COPY_EXISTING ~BAG03B.STO~ ~Override/CMBAG03.STO~
+
+COPY_EXISTING ~BAG03B.ITM~ ~Override/CMBAG03.ITM~
+
 COPY ~TheUndying/stores/CMTUS03.sto~ ~Override~
   SAY 0xC @403
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~BAG02~
+    END
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~BAG03B~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~CMBAG02~ position=~AFTER RESTORE~ flags=~identified~
+      END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~CMBAG03~ position=~AFTER RESTORE~ flags=~identified~
+      END
   
 /* Nina stores */
+
+COPY_EXISTING ~BAG02D.STO~ ~Override/COMBAG02.STO~
+
+COPY_EXISTING ~BAG02D.ITM~ ~Override/COMBAG02.ITM~
 
 COPY ~TheUndying/stores/CMNINAST.STO~     ~override\CMNINAST.STO~
   SAY NAME2 @404 
 
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~BAG02J~
+    END
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~BAG02D~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~COMBAG02~ position=~AFTER RESTORE~ flags=~identified~
+      END
+
+COPY_EXISTING ~BAG03B.STO~ ~Override/CMBAG03B.STO~
+
+COPY_EXISTING ~BAG03B.ITM~ ~Override/CMBAG03B.ITM~
+
 COPY ~TheUndying/stores/CMNINAMY.sto~     ~override\CMNINAMY.sto~
   SAY NAME2 @405
   
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~BAG03B~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~CMBAG03B~ position=~AFTER RESTORE~ flags=~identified~
+      END
+  
 /* DoS Stores */
+
+COPY_EXISTING ~BAG03.STO~ ~Override/COMBAG03.STO~
+
+COPY_EXISTING ~BAG03.ITM~ ~Override/COMBAG03.ITM~
   
 COPY ~TheUndying/stores/cmmagin1.sto~     ~override~
   SAY 0xc @406
 
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~BAG03~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~COMBAG032~ position=~AFTER SW1H53~ flags=~identified~
+      END
+
 COPY ~TheUndying/stores/tempeil.sto~     ~override~
   SAY 0xc @407
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~CMGR01~
+    END // Not existing in mod
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~CMGR02~
+    END // Not existing in mod
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~CMGR03~
+    END // Not existing in mod
 
 COPY_EXISTING ~TEMHELM.STO~ ~override~
   ADD_STORE_ITEM ~CMBO01~ #0 #0 #0 ~IDENTIFIED~ #1 

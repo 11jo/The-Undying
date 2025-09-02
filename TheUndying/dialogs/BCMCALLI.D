@@ -6,7 +6,7 @@ BEGIN ~BCMCALLI~
 
 IF WEIGHT #-1
 ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("CallistoFighterTalk1","GLOBAL",0)
 Class(Player1,FIGHTER_ALL)~ THEN BEGIN FighterChat
  SAY @0
@@ -72,7 +72,7 @@ END
 
 IF WEIGHT #-1
 ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 Global("CallistoFighterTalk2","GLOBAL",0)
 !Class(Player1,FIGHTER_ALL)~ THEN BEGIN FighterChatb
  SAY @27
@@ -144,7 +144,7 @@ History revelations with PC. Must have confronted and killed Belmin the elf hate
 */
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR0400")
 Global("CalliHistory1","GLOBAL",1)
 OR(4)
@@ -195,7 +195,7 @@ ChangeAIScript("CALLIX",OVERRIDE)
 END
 
 IF ~See(Player1)
-!StateCheck(Player1,STATE_SLEEPING)
+!StateCheck(Player1,CD_STATE_NOTVALID)
 AreaCheck("AR0400")
 Global("CalliHistory1","GLOBAL",1)
 Alignment(Player1,MASK_EVIL)
@@ -245,7 +245,7 @@ NPC Banters
 
 CHAIN IF ~InParty("Korgan")
 See("Korgan")
-!StateCheck("Korgan",STATE_SLEEPING)
+!StateCheck("Korgan",CD_STATE_NOTVALID)
 Global("BCalliKorgan1","GLOBAL",0)~ THEN BCMCALLI CalliKorgan1
 @54 
 DO ~SetGlobal("BCalliKorgan1","GLOBAL",1)~
@@ -262,7 +262,7 @@ CHAIN
 IF ~InParty("callisto")
 See("callisto")
 CombatCounter(0)
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliKorgan2","GLOBAL",0)~ THEN BKORGAN CalliKorgan2
 @62
 DO ~SetGlobal("BCalliKorgan2","GLOBAL",1)~
@@ -277,7 +277,7 @@ EXIT
 CHAIN
 IF ~InParty("Anomen")
 See("Anomen")
-!StateCheck("Anomen",STATE_SLEEPING)
+!StateCheck("Anomen",CD_STATE_NOTVALID)
 Global("BCalliAnomen1","GLOBAL",0)
 Global("AnomenIsKnight","GLOBAL",0)
 Global("AnomenIsNotKnight","GLOBAL",0)~ THEN BCMCALLI Knightquestion
@@ -294,7 +294,7 @@ EXIT
 CHAIN
 IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliJan1","GLOBAL",0)~ THEN BJAN Annoy1
 @76
 DO ~SetGlobal("BCalliJan1","GLOBAL",1)~
@@ -311,7 +311,7 @@ EXIT
 CHAIN
 IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliJan2","GLOBAL",0)~ THEN BJAN Annoy2
 @85
 DO ~SetGlobal("BCalliJan2","GLOBAL",1)~
@@ -330,7 +330,7 @@ EXIT
 
 CHAIN IF ~InParty("Aerie")
 See("Aerie")
-!StateCheck("Aerie",STATE_SLEEPING)
+!StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("BCalliAerie1","GLOBAL",0)~ THEN BCMCALLI CalliAerieTorture1
 @97
 DO ~SetGlobal("BCalliAerie1","GLOBAL",1)~
@@ -349,7 +349,7 @@ See("Aerie")
 CombatCounter(0)
 HPPercentLT("Aerie",20)
 !HP("Aerie",1)
-!StateCheck("Aerie",STATE_SLEEPING)
+!StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("BCalliAerie2","GLOBAL",0)~ THEN BCMCALLI CalliAerieCombat1
 @106 
 DO ~SetGlobal("BCalliAerie2","GLOBAL",1)~
@@ -375,7 +375,7 @@ EXIT
 
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")
-!StateCheck("Jaheira",STATE_SLEEPING)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("BCalliJaheira1","GLOBAL",0)~ THEN BCMCALLI CalliJaheira1
 @117 
 DO ~SetGlobal("BCalliJaheira1","GLOBAL",1)~
@@ -391,7 +391,7 @@ EXIT
 
 CHAIN IF ~InParty("Jaheira")
 See("Jaheira")
-!StateCheck("Jaheira",STATE_SLEEPING)
+!StateCheck("Jaheira",CD_STATE_NOTVALID)
 Global("BCalliJaheira2","GLOBAL",0)~ THEN BCMCALLI CalliJaheira2
 @126
 DO ~SetGlobal("BCalliJaheira2","GLOBAL",1)~
@@ -408,7 +408,7 @@ EXIT
 CHAIN
 IF ~InParty("Mazzy")
 See("Mazzy")
-!StateCheck("Mazzy",STATE_SLEEPING)
+!StateCheck("Mazzy",CD_STATE_NOTVALID)
 Global("BCalliMazzy1","GLOBAL",0)~ THEN BCMCALLI CalliMazzy1
 @135
 DO ~SetGlobal("BCalliMazzy1","GLOBAL",1)~
@@ -425,7 +425,7 @@ EXIT
 CHAIN
 IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliMazzy2","GLOBAL",0)~ THEN BMAZZY CalliMazzy2
 @144
 DO ~SetGlobal("BCalliMazzy2","GLOBAL",1)~
@@ -443,7 +443,7 @@ EXIT
 CHAIN
 IF ~InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",STATE_SLEEPING)
+!StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("BCalliMinsc1","GLOBAL",0)~ THEN BCMCALLI CalliMinsc1
 @154
 DO ~SetGlobal("BCalliMinsc1","GLOBAL",1)~
@@ -457,7 +457,7 @@ EXIT
 CHAIN
 IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliMinsc2","GLOBAL",0)~ THEN BMINSC CalliMinsc2
 @160
 DO ~SetGlobal("BCalliMinsc2","GLOBAL",1)~
@@ -473,7 +473,7 @@ EXIT
 CHAIN
 IF ~InParty("Nalia")
 See("Nalia")
-!StateCheck("Nalia",STATE_SLEEPING)
+!StateCheck("Nalia",CD_STATE_NOTVALID)
 Global("BCalliNalia1","GLOBAL",0)~ THEN BCMCALLI CalliNalia1
 @168
 DO ~SetGlobal("BCalliNalia1","GLOBAL",1)~
@@ -487,7 +487,7 @@ EXIT
 CHAIN
 IF ~InParty("Keldorn")
 See("Keldorn")
-!StateCheck("Keldorn",STATE_SLEEPING)
+!StateCheck("Keldorn",CD_STATE_NOTVALID)
 Global("BCalliKeldorn1","GLOBAL",0)~ THEN BCMCALLI CalliKel1
 @174
 DO ~SetGlobal("BCalliKeldorn1","GLOBAL",1)~
@@ -504,7 +504,7 @@ EXIT
 CHAIN
 IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliKeldorn2","GLOBAL",0)~ THEN BKELDOR CalliKel2
 @182
 DO ~SetGlobal("BCalliKeldorn2","GLOBAL",1)~
@@ -519,7 +519,7 @@ EXIT
 
 CHAIN IF ~InParty("Cernd")
 See("Cernd")
-!StateCheck("Cernd",STATE_SLEEPING)
+!StateCheck("Cernd",CD_STATE_NOTVALID)
 TimeOfDay(DAY)
 AreaType(OUTDOOR)
 Global("BCalliCernd1","GLOBAL",0)~ THEN BCMCALLI CalliCernd
@@ -538,7 +538,7 @@ EXIT
 CHAIN
 IF ~InParty("Haerdalis")
 See("Haerdalis")
-!StateCheck("Haerdalis",STATE_SLEEPING)
+!StateCheck("Haerdalis",CD_STATE_NOTVALID)
 Global("BCalliHaer1","GLOBAL",0)~ THEN BCMCALLI CalliHaer1
 @198 
 DO ~SetGlobal("BCalliHaer1","GLOBAL",1)~
@@ -553,7 +553,7 @@ EXIT
 CHAIN
 IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliHaer2","GLOBAL",0)~ THEN BHAERDA CalliHaer2
 @205
 DO ~SetGlobal("BCalliHaer2","GLOBAL",1)~
@@ -570,7 +570,7 @@ EXIT
 CHAIN
 IF ~InParty("Edwin")
 See("Edwin")
-!StateCheck("Edwin",STATE_SLEEPING)
+!StateCheck("Edwin",CD_STATE_NOTVALID)
 Global("BCalliEdwin1","GLOBAL",0)~ THEN BCMCALLI CalliEdwin1
 @214
 DO ~SetGlobal("BCalliEdwin1","GLOBAL",1)~
@@ -586,7 +586,7 @@ EXIT
 CHAIN
 IF ~InParty("Edwin")
 Gender("Edwin",FEMALE)
-!StateCheck("Edwin",STATE_SLEEPING)
+!StateCheck("Edwin",CD_STATE_NOTVALID)
 Global("BCalliEdwin2","GLOBAL",0)~ THEN BCMCALLI CalliEdwin2
 @222  DO ~SetGlobal("BCalliEdwin2","GLOBAL",1)~
 == BEDWIN @223
@@ -602,7 +602,7 @@ EXIT
 CHAIN
 IF ~InParty("Valygar")
 See("Valygar")
-!StateCheck("Valygar",STATE_SLEEPING)
+!StateCheck("Valygar",CD_STATE_NOTVALID)
 AreaType(FOREST)
 Global("BCalliValygar1","GLOBAL",0)~ THEN BCMCALLI CalliValygar1
 @231
@@ -617,7 +617,7 @@ EXIT
 CHAIN
 IF ~InParty("Valygar")
 See("Valygar")
-!StateCheck("Valygar",STATE_SLEEPING)
+!StateCheck("Valygar",CD_STATE_NOTVALID)
 Global("BCalliValygar2","GLOBAL",0)~ THEN BCMCALLI CalliValygar2
 @237
 DO ~SetGlobal("BCalliValygar2","GLOBAL",1)~
@@ -635,7 +635,7 @@ EXIT
 CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
-!StateCheck("Yoshimo",STATE_SLEEPING)
+!StateCheck("Yoshimo",CD_STATE_NOTVALID)
 Global("BCalliYoshimo1","GLOBAL",0)~ THEN BCMCALLI CalliYoshimo1
 @247
 DO ~SetGlobal("BCalliYoshimo1","GLOBAL",1)~
@@ -651,7 +651,7 @@ EXIT
 CHAIN
 IF ~InParty("Yoshimo")
 See("Yoshimo")
-!StateCheck("Yoshimo",STATE_SLEEPING)
+!StateCheck("Yoshimo",CD_STATE_NOTVALID)
 Global("BCalliYoshimo2","GLOBAL",0)~ THEN BCMCALLI CalliYoshimo2
 @254
 DO ~SetGlobal("BCalliYoshimo2","GLOBAL",1)~
@@ -668,10 +668,10 @@ EXIT
 CHAIN
 IF ~InParty("Haerdalis")
 See("Haerdalis")
-!StateCheck("Haerdalis",STATE_SLEEPING)
+!StateCheck("Haerdalis",CD_STATE_NOTVALID)
 InParty("Aerie")
 See("Aerie")
-!StateCheck("Aerie",STATE_SLEEPING)
+!StateCheck("Aerie",CD_STATE_NOTVALID)
 Global("BCalliHaerAerie1","GLOBAL",0)~ THEN BCMCALLI CalliHaerAerie1
 @261
 DO ~SetGlobal("BCalliHaerAerie1","GLOBAL",1)~
@@ -690,10 +690,10 @@ EXIT
 
 CHAIN IF ~InParty("Korgan")
 See("Korgan")
-!StateCheck("Korgan",STATE_SLEEPING)
+!StateCheck("Korgan",CD_STATE_NOTVALID)
 InParty("Minsc")
 See("Minsc")
-!StateCheck("Minsc",STATE_SLEEPING)
+!StateCheck("Minsc",CD_STATE_NOTVALID)
 Global("BCalliKorganMinsc1","GLOBAL",0)~ THEN BCMCALLI CalliKorganMinsc1
 @273
 DO ~SetGlobal("BCalliKorganMinsc1","GLOBAL",1)~
@@ -710,7 +710,7 @@ EXIT
 
 CHAIN IF ~InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("BCalliNina1","GLOBAL",0)~ THEN BCMCALLI CalliNina1
 @280
 DO ~SetGlobal("BCalliNina1","GLOBAL",1)~
@@ -723,7 +723,7 @@ EXIT
 
 CHAIN IF ~InParty("callisto")
 See("callisto")
-!StateCheck("callisto",STATE_SLEEPING)
+!StateCheck("callisto",CD_STATE_NOTVALID)
 Global("BCalliNina2","GLOBAL",0)~ THEN BCMNINAF CalliNina2
 @286
 DO ~SetGlobal("BCalliNina2","GLOBAL",1)~
@@ -738,7 +738,7 @@ EXIT
 CHAIN IF ~AreaCheck("AR1602")
 InParty("cmninaf")
 See("cmninaf")
-!StateCheck("cmninaf",STATE_SLEEPING)
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("BCalliNina3","GLOBAL",0)~ THEN BCMCALLI CalliNina3
 @293
 DO ~SetGlobal("BCalliNina3","GLOBAL",1)~
