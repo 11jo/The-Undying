@@ -1,0 +1,99 @@
+//Weenug
+
+@0    = ~Hé toi ! Qu'est-ce que tu fais hors de la cage ? Retourne dedans tout de suite !~
+@1    = ~Éloigne-toi ou je je te passe sur le corps.~
+@2    = ~Meurs !~
+@3    = ~Ne parle pas comme ça au grand Weenug ! Weenug est réputé pour être un grand combattant. Maintenant retourne dans la cage avant que je te botte le cul !~
+@4    = ~Toi un grand combattant ? Ha ha ha ! Et qu'est-ce qui te rend si doué ?~
+@5    = ~Oh génial, encore un nabot avec des illusions de grandeur. Si je peux me permettre, pourquoi pense-tu être un si grand combattant ?~
+@6    = ~Parce que mon grand-père était un grand sorcier. Il pouvait jeter des sorts puissants et même enseigner l'art de la magie à de stupides humains. J'ai hérité de son intelligence, mais pas de ses connaissances en magie. Par contre je connais le combat. Alors, retourne dans la cage !~
+@7    = ~Ouais, bien sûr ! L'intelligence d'un navet. Allez, dégage avant que je te fasse du mal.~
+@8    = ~Alors, montre-nous ces talents de *combattant*.~
+@9    = ~Tu as bu <PRO_RACE> ! Je suis aussi intelligent que bon guerrier ! Tu ne retourneras plus dans la cage. Tu vas mourir et je me ferai un collier avec tes oreilles !~
+
+// DOS
+
+@0     = ~Eh toi ! Qu'est-ce que tu fais hors de ta cage ? Retournes-y tout de suite !~
+@1     = ~File avant que je m'occupe de toi.~
+@2     = ~Meurs !~
+@3     = ~Tu parles pas comme ça au grand Weenug ! Weenug est reconnu comme un grand guerrier. Maintenant retourne en cage avant que je te botte le cul !~
+@4     = ~Toi, un grand guerrier ? Ah ha ha ! Et en quoi es-tu si exceptionnel au combat ?~
+@5     = ~Pfff, fabuleux ! Encore un autre nabot bercé d'illusions de grandeur. Si je puis me permettre, pourquoi penses-tu être un si terrible guerrier ?~
+@6     = ~Je suis extraordinaire, car mon grand-père était un mage exceptionnel. Il pouvait lancer des sorts puissants aussi bien que former d'imbéciles humains aux arts magiques. J'ai hérité de son talent. Je m'y connais peu en magie mais j'en sais bien davantage sur le combat. Maintenant, retourne dans ta cage !~
+@7     = ~Ouais, c'est ça ! Même un navet a plus d'intelligence que toi. Maintenant, pousse-toi avant que je ne te fasse mal.~
+@8     = ~Eh bien, voyons voir tes talents de "combattant".~
+@9     = ~<PRO_RACE> dégénéré ! Je suis très malin et je sais me battre ! Puisque tu ne retournes pas dans ta cage, tu vas mourir et je me ferai un collier avec tes oreilles !~
+
+// Hamm1
+
+@10   = ~Oh oui, Thorïn, laisse-moi les étriper. Mon marteau réclame leur sang !~
+@11   = ~Je viens de penser à cet autre groupe qui erre dans les parages. Ils pourraient bien nous entendre éliminer ces minables.~
+@12   = ~Tor, écoute moi bien. Nous tuons d'abord les crétins qui sont là, puis nous irons tuer les crétins qui sont là-bas... Compris ?~
+
+// DOS
+
+@0     = ~Dis Thorin, laisse-moi que j'les étripe. Y'a mon marteau qu'a soif d'sang !~
+@1     = ~Je pensais juste à l'aut' bande qui se balade ici-bas. Il se pourrait qu'ils nous entendent éliminer ces pauvres bougres.~
+@2     = ~Tor, écoute-moi bien. On tue d'abord ces imbéciles, ensuite on ira s'occuper des autres bougres, tu comprends ?~
+
+
+// Hamm2
+@13   = ~Ughhhhhhhhhhhh...~
+@14   = ~Ughhh hehehehehehe ughhhh...~
+@15   = ~Arggghhhh huhhhhhh?~
+@16   = ~Urgghhh yeahhhhhh!~
+
+// DOS
+
+@0     = ~Grrrrrrrrrrrr~
+@1     = ~Grrrrrr hahahaha arghhh~
+@2     = ~Arggghhhh heinnnnn ?~
+@3     = ~Arggghhhhh ouaisss !~
+
+
+// Hamm3
+
+@17   = ~Eh, qu'est-ce que c'est ? Qui êtes-vous ? Vous osez déranger les trois frères Marteau. Pour la peine donnez-nous tout votre or et vite avant qu'on vous écrase comme des fourmis.~
+@18   = ~Qui vous a laissé sortir de vos cages ? Je pense que vous êtes restés trop longtemps ici à inhaler la fumée. Nous ne vous donnerons rien.~
+@19   = ~Har ! har ! har  ! Mourrez, bande d'imbéciles !~
+@20   = ~Je suis Thorin, le plus puissant de tous les nains, voici Thurm et Tor. Tor ne parle pas beaucoup, il a reçu un bloc de granit sur la tête quand il était bébé.~
+@21   = ~Ferme ta bouche, Tor, je ne t'ai pas demandé ton avis. Tu as probablement raison, Thurm. Personne ne les entendra crier ici.~
+
+@22   = ~Je ne m'inquiète pas pour ces misérables, on les exterminera juste après.~
+@23   = ~Maintenant que tout est clair, il est temps d'en faire de la bouillie !~
+
+// DOS
+
+@0     = ~Ohh, c'est quoi ça ? T'es qui toi ? T'oses déranger l'trio des frères Marteau. Alors, on va t'alléger d'ton or. Donne-le vite fait, ou on va t'écrabouiller comme un cafard.~
+@1     = ~Qui vous a donc laissé sortir de votre cage ? Je crois que vous êtes restés bien trop longtemps ici à respirer les émanations. On ne vous donnera pas une seule pièce d'or.~
+@2     = ~Hah hah, crevez espèces d'imbéciles !~
+@3     = ~Moi, j'suis Thorin, le plus fort de tous les nains. Lui, c'est Thurm et l'autre là-bas, c'est Tor. Tor parle pas beaucoup, une plaque de granite lui est tombée sur la tête quand il était bébé.~
+@4     = ~Ferme-là, Tor, j't'ai pas demandé ton avis. C'est p't-être une bonne idée, Thurm. Personne pourra les entendr' crier ici en bas.~
+@5     = ~J'm'inquiète pas pour ces misérables, on peut les exterminer après.~
+@6     = ~Maintenant que not' plan est réglé, c'est l'heure de donner ces avortons à bouffer aux rats !~
+
+////////////////
+
+@24   = ~Eh ? Qu'est-ce que vous-voulez ?~
+@25   = ~On veut le livre magique que vous avez pris au prêtre de Mystra.~
+@26   = ~Rien.~
+@27   = ~Ce minable prêtre d'un dieu pitoyable t'a recruté ? Tu n'y gagneras que nos lames dans tes tripes !~
+@28   = ~C'est bon, casse-toi.~
+@29   = ~Les moutons n'ont pas été sortis ces derniers temps.~ [FARME04]
+@30   = ~J'aime mes moutons. On dit que le chien est le meilleur ami de l'homme. Faux ! C'est le mouton.~
+@31   = ~Les moutons sont si gentils et délicats. J'adore leur douceur, elle est  tellement agréable.~
+@32   = ~Ce que je fais dans ma grange c'est mon affaire. N'écoutez pas les rumeurs qui circulent à mon sujet.~
+@33   = ~Je pense que mon voisin a besoin de vos services. Allez lui parler et laissez-moi caresser mes moutons en paix.~
+@34   = ~Salut ! Je me demandais si tu pouvais m'aider.~
+@35   = ~Nous pourrions peut-être vous aider, quel est la nature du problème ?~
+@36   = ~Désolé, nous n'avons pas le temps.~
+@37   = ~Il y a un bon livre que je voudrais lire, c'est le Journal du Projet de la Sorcière d'Umar. Mais je ne peux pas entrer, je dois à l'aubergiste une grosse somme d'argent. Pouvez-vous m'aider ?~
+@38   = ~Bien sûr, mais combien cela va t-il nous coûter ?~
+@39   = ~Et bien, Merci quand même, revenez si vous changez d'avis.~
+@40   = ~Non. Il sont dans la réserve. Prenez-en juste un et amenez-le moi.~
+@41   = ~Alors allons chercher ce livre et ramenons-le pour vous.~
+@42   = ~Je vois que vous êtes de retour. Vous avez pu récupérer le livre ?~
+@43   = ~Non, pas encore. On y va maintenant.~
+@44   = ~S'il vous plaît, récupérez-le et amenez-le moi.~
+@45   = ~Vous revenez avec le livre ! Je vous en suis très reconnaissant. Je vous donnerai 10 pièces d'or pour la course. C'est beaucoup moins que les 800 pièces que je dois a l'aubergiste.~
+@46   = ~Ravi de vous revoir, mon bon monsieur. Je vous remercie encore une fois pour le livre.~ ~Ravi de vous revoir, ma bonne dame. Je vous remercie encore une fois pour le livre.~

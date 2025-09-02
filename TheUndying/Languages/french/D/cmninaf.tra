@@ -1,0 +1,13 @@
+@0    = ~Oui ? Hmm il me semble avoir entendu parler de vous. Vous êtes, <CHARNAME>, correct ?~ [NINA02]
+@1    = ~Oui mon nom est, <CHARNAME> Pourquoi ?~
+@2    = ~J'ai entendu à quel point vous êtes mauvais. Si nous n'étions pas dans un lieu public. Je vous tuerai sur-le-champ. maintenant partez, votre puanteur maléfique n'est pas la bienvenue.~ ~J'ai entendu à quel point vous êtes mauvaise. Si nous n'étions pas dans un lieu public. Je vous tuerai sur-le-champ. maintenant partez, votre puanteur maléfique n'est pas la bienvenue.~
+@3    = ~J'ai entendu parler de vos exploits héroique à travers la côte des épée et à la Porte de Baldur. J'ai ausssi entendu parler de la perte d'Imoen lors de son arrestation avec Irenicus à la promenade de Waukeen. Je voudrais offrir mes services et vous aidez dans votre quête pour la secourir.~
+@4    = ~Vous en savez clairement beaucoup à mon sujet. Comment savoir que vous n'êtes pas une chasseuse de prime ou pire ?~
+@5    = ~Je suis ravi de voir que vous ne laissez personne rejoindre votre groupe sans connaître leurs motivations. Très sage de votre part, <CHARNAME>. Eh bien, je suis moi même à la recherche d'Irenicus. C'est un mage maléfique et tout mage maléfique se doit de rencontrer la justice. Je peux être d'une grande aide pour vous, <CHARNAME> étant forte en combat et très compétente dans les arts magiques. Ensemble nous pouvons stopper Irenicus et tout mal se dressant sur notre chemin.~
+@6    = ~Très bien tu peux venir avec nous. Avec toi dans le groupe nous pouvons accélérer le sauvetage d'Imoen.~
+@7    = ~Vous n'êtes pas la personne dont j'ai besoin pour le moment. peut être plus tard.~
+@8    = ~Allons-y alors, <CHARNAME>. J'ai le sentiment qu'il y aura beaucoup à faire entre notre traque d'Irenicus et la liberation de ton amie Imoen.~
+@9    = ~Ok, en avant.~
+@10   = ~C'est votre choix, Je serais toujours là si vous changez d'avis.~
+@11   = ~Vous êtes de retour. Avez vous changé d'opinion à propos de ma venue dans votre groupe ?~
+

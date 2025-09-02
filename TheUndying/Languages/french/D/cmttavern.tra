@@ -1,0 +1,201 @@
+// Cmwolf
+
+@0    = ~Muppets!! Them bloody muppets are everywhere!! Every wheres I say, every where! ARGGHH!!~
+@1    = ~Ye muppet are ye not? If ye are I'll bloody thrash ye!~
+@2    = ~Everywhere I go muppets! But beware of the muppet master he will get ye he will. Everywhere I say everywhere!!~
+@3    = ~Off with ye little one I am far better then the likes of ye... Ye is a muppet yes? ARGHHH! ~
+
+// DOS
+
+@0     = ~Des pantins !! Ces fichus pantins sont partout !! Partout, je vous dis, partout ! ARGGHH !!~
+@1     = ~T'es une marionnette, pas vrai ? Si t'en es une, j'vais t'écrabouiller, bon sang !~
+@2     = ~Où que j'aille, y'a ces pantins ! Mais prends garde au Maître des Marionnettes, il va t'attraper, pour sûr. Partout, je te dis, partout !!~
+@3     = ~Du vent minus, je vaux bien plus que tes semblables... T'es une marionnette, hein ? ARGHHH !~
+
+// cmsola
+
+@4    = ~Do not touch me, I am super important!~
+@5    = ~Wanna swig? Burrp!! I am really the elven god Corellon but I decided to visit you little people in elven form. Ughhh where's me elven wine?~
+@6    = ~What? You again? Can't ya see I am like totally blizt?~
+@7    = ~Now in all seriousness young Bhaalspawn, we will watch your career with great interest.~
+
+// DOS
+
+@0     = ~Ne me touche pas ! Je suis quelqu'un de très important !~
+@1     = ~Une ch'tite lampée ? Roh !! En réalité je suis Corellon, le dieu des elfes, mais j'ai décidé de faire un séjour parmi le bas peuple sous forme elfique. Oh, où est mon vin elfique ?~
+@2     = ~Quoi ? Encore toi ? Ne vois-tu pas que je suis complètement fait ?~
+@3     = ~Sérieusement maintenant, nous suivrons ta carrière avec grand intérêt, jeune enfant de Bhaal.~
+
+// DOS
+
+@8    = ~Vel'uss? Plynn dosst iblith akh lueth z'bin!~
+@9    = ~I do not understand you. Do you speak common?~
+@10   = ~Opps sorry to bother you.~
+@11   = ~Sarn waela iblith! Lit waela lueth waela ragar brorna lueth wund nind, kyorlin elghinn. Very well then. What is it you want <PRO_RACE> hmmm?~
+@12   = ~What are two drow doing on the surface? Isn't it dangerous to be seen in the open like this?~
+@13   = ~I just wanted to see if you could speak the common tongue besides that foul drow tongue.~
+@14   = ~I would hardly call surfacers a threat wael. Perhaps they fear us more, which is why we were left alone until you came here and rudely interrupted our dinner. And our business here is that, *our* business. Well let me lay down a hint just for you, plus I will try and make it simple for you to comprehend. We are here observing someone and events that are unfolding as we speak. I will say nothing more. *Maybe* we will meet again. Now to use a quote you surfacers enjoy saying "Make like a bee and buzz off"!~
+@15   = ~Ah yes, quite the response I would expect from surface trash. I would like to see you try and speak drow, but that matters not now. I will enjoy draining than consuming your blood! Lets dance shall we?~
+@16   = ~By the Mistress of the Dead go away!~
+@17   = ~Sorry about that.~
+@18   = ~Die you drow bitch!~
+@19   = ~May The Goddess of Death consume your soul!~
+
+// cmnina
+
+@0     = ~Vel'uss ? Plynn dosst iblith akh lueth z'bin !~
+@1     = ~Je ne vous comprends pas. Parlez-vous le commun ?~
+@2     = ~Oups, désolé de vous embêter.~ ~Oups, désolée de vous embêter.~
+@3     = ~Sarn waela iblith ! Lit waela lueth waela ragar brorna lueth wund nind, kyorlin elghinn. Très bien. Que veux-tu au juste, <PRO_RACE>, hmmm ?~
+@4     = ~Qu'est-ce que deux drows font à la surface ? N'est-ce pas dangereux de se montrer ainsi à découvert ?~
+@5     = ~Je voulais simplement voir si vous saviez parler le commun en plus de cette sale langue drow.~
+@6     = ~Je ne qualifierais guère de menace les habitants de la surface. Peut-être nous craignent-ils davantage, ce qui expliquerait qu'on nous ait laissés tranquille jusqu'à ce que vous veniez interrompre de manière grossière notre diner. Nos affaires ici ne regardent que *nous*. Laissez-moi vous donner un conseil personnel, en plus je tâcherai de le rendre simple pour vous permettre de comprendre. Nous sommes ici pour observer quelqu'un et des événements qui se déroulent à l'heure où nous parlons. Je ne dirai rien de plus. Il se peut que nous nous croisions à nouveau. Mais maintenant, pour reprendre une expression que vous, à la surface, aimez bien employer, "cassez-vous, pauvres cons" !~
+@7     = ~Hum, je n'attendais pas moins que ce genre de réponse dans la bouche d'un déchet de la surface. J'aurais bien aimé vous entendre essayer de parler un seul mot drow, mais peu importe désormais. Je me régalerai bien plus de votre sang ! En garde ?~
+@8     = ~Au nom de la Maîtresse des Morts, fichez le camp !~
+@9     = ~Je suis désolé de vous avoir dérangés.~ ~Je suis désolée de vous avoir dérangés.~
+@10    = ~Meurs, drow de malheur !~
+@11    = ~Que la Déesse de la Mort se repaisse de votre âme !~
+
+// cmlordas
+
+@20   = ~Greetings good, <SIRMAAM>. You have the appearance of an adventurer and I was wondering if you could help me out.~
+@21   = ~We might be able to help you, what is the problem?~
+@22   = ~Sorry, we do not have the time.~
+@23   = ~Well it would seem I lost a valuable bust of the goddess of Mystra. I am so lost without her, she is my precious. Can you help me out in trying to find it?~
+@24   = ~Sure we can. Do you have any details on how it disappeared?~
+@25   = ~Well thanks anyway, return if you change your mind.~
+@26   = ~I was traveling in the Temple District last night when suddenly out of no where, these thugs jumped me and knocked me out. Later I awoke with a nasty bump on my head and my bust missing. I will pay handsomely for its return if you find it.~
+@27   = ~We'll start from there and return if we find out anything new.~
+@28   = ~I see you have returned. Did you find my bust?~
+@29   = ~No we did not. We'll continue searching now.~
+@30   = ~Please find it and return when you have it.~
+@31   = ~You return and have my bust of Mystra! I am most grateful for this. I shall give you 2000 gold for its safe return.~
+@32   = ~Glad to see you again good <SIRMAAM>. I thank you once again in recovering my bust of Mystra for me.~
+
+// DOS
+
+@0 = ~Bonjour mon bon monsieur. Vous avez l'air d'être un aventurier et je me demandais si vous pouviez m'aider.~
+     ~Bonjour ma bonne dame. Vous avez l'air d'être une aventurière et je me demandais si vous pouviez m'aider.~
+@1 = ~Peut-être bien, quel est le problème ?~ 
+@2 = ~Désolé, nous n'avons pas le temps.~ ~Désolée, nous n'avons pas le temps.~ 
+@3 = ~Eh bien il se trouve que j'ai égaré un précieux buste de la déesse Mystra. Je me sens tellement perdu sans elle, elle est mon trésor. Pourriez-vous m'aider à la retrouver ?~
+@4 = ~Bien sûr, c'est dans nos cordes. Savez-vous dans quelles circonstances ce buste a disparu ?~ 
+@5 = ~Eh bien, merci quand même. Revenez me voir, si toutefois vous changez d'avis.~ 
+@6 = ~La nuit dernière, je traversais le quartier du Temple lorsque, soudain, des brutes surgies de nulle part me sont tombées dessus et m'ont assommé. Je me suis réveillé un peu plus tard avec une vilaine bosse, mais sans mon buste. Je paierai généreusement pour le récupérer si vous le retrouvez.~
+@7 = ~Nous commencerons par chercher là-bas, et nous reviendrons vous voir si nous découvrons du nouveau.~ 
+@8 = ~Je vois que vous êtes de retour. Avez-vous trouvé mon buste ?~
+@9 = ~Non, pas encore. Nous sommes toujours à sa recherche.~ 
+@10 = ~Je vous en prie, trouvez-le, et revenez me voir dès que vous l'aurez.~ 
+@11 = ~Vous voilà de retour, et avec mon buste de Mystra ! Je vous en suis extrêmement reconnaissant. Voici 2000 pièces d'or pour me l'avoir rapporté intact.~ 
+@12 = ~Je suis heureux de vous revoir mon bon monsieur. Je vous remercie une fois de plus pour avoir retrouvé mon buste de Mystra.~
+      ~Je suis heureux de vous revoir ma bonne dame. Je vous remercie une fois de plus pour avoir retrouvé mon buste de Mystra.~
+
+////////////////
+
+@33   = ~I used to be like, a world renown bard. Yep...everyone knew me across the globe. You like, want an autograph or something? Please?~
+@34   = ~You ever get this like, sudden intense craving for something? I've gotta have like, something sweet. Maybe a banana?~
+@35   = ~The current dialogue state will never end because the banter hasn't finished loading yet.~
+@36   = ~I'm totally famous. You've probably heard of me. There's like, giant posters of me everywhere in town. I'm like, your role model aren't I?~
+
+////////////////
+
+
+// CMGORC
+
+@37   = ~Me just guard, bother someone else little one.~
+@38   = ~Me will crush, crush you to goo!~
+@39   = ~You wish a short life?~
+
+// DOS
+
+@0     = ~Moi juste garde, toi aller embêter quelqu'un d'autre, petit.~
+         ~Moi juste garde, toi aller embêter quelqu'un d'autre, petite.~
+@1     = ~Moi écraser, moi réduire vous en pâté !~
+@2     = ~Tu veux que j'écourte ta vie ?~
+
+// CMGABB
+
+@40   = ~Greetings mercenary! My name is Raven and I was wondering if you could do something for me. I promise a decent reward if you accept.~
+@41   = ~What do you wish of us fair lady?~
+@42   = ~Not right now, some other time perhaps.~
+@43   = ~Something very dreadful has happen to me. I had a very nice old book that has been in my family for generations which has been stolen from my room. I want my book back and I will pay handsomely for its return. Will you help me?~
+@44   = ~That is an atrocious thing indeed dear lady, what foul thief would do a thing like that?~
+@45   = ~Very well I will be waiting here in case you change your mind.~
+@46   = ~I could not really tell in the dark but I think it was either a group of dwarves or halflings judging by their size. All three of them were short and smelled of sewer. They also had a strange accent which is why I think they were either dwarves or halflings. They said something about robbing another group some where in the Temple District. Thats all I know.~
+@47   = ~Very well we shall hunt down these thieves and return your book.~
+@48   = ~You return and without my book I see. I have nothing further to say to you until my book is recovered. Now go!~
+@49   = ~I see you have my book. Thank you very much for returning it to me.~
+@50   = ~I did promise you a reward for returning my book. Here take this, I have little use for gold.~
+@51   = ~I do thank you for getting my book back but I can not be disturbed while I am studying the secrets in the book. Please leave me to my reading.~
+
+// DOS
+
+@0     = ~Bonjour mercenaire ! Je m'appelle Raven et je me demandais si vous pourriez faire quelque chose pour moi. Je vous promets une récompense raisonnable si vous acceptez.~
+@1     = ~Qu'attendez-vous de nous, gente dame ?~
+@2     = ~Pas pour l'instant, une autre fois peut-être.~
+@3     = ~Il m'est arrivé quelque chose d'épouvantable. On m'a volé chez moi un très beau livre ancien qui appartient à ma famille depuis des générations. Je veux recouvrer mon livre et je paierai généreusement pour cela. M'aiderez-vous ?~
+@4     = ~C'est une chose atroce en effet, ma chère dame. Quel immonde voleur pourrait faire une chose pareille ?~
+@5     = ~Très bien, j'attendrai ici au cas où vous changeriez d'avis.~
+@6     = ~Je ne peux pas vraiment dire, à cause de l'obscurité, mais je crois qu'il s'agissait d'un groupe de nains ou de petites-personnes d'après leur taille. Tous les trois étaient petits et empestaient les égouts. Et ils parlaient avec un accent étrange, c'est pour cela que j'ai conclu à des nains ou des petites-personnes. Ils ont parlé de voler un autre groupe quelque part dans le district du temple. C'est tout ce je sais.~
+@7     = ~Très bien. Nous allons débusquer ces voleurs et ramener votre livre.~
+@8     = ~Vous revenez mais sans mon livre à ce que je vois. Je n'ai rien de plus à vous dire tant que je n'aurai pas récupéré mon livre. Allez donc !~
+@9     = ~Je vois que vous avez mon livre. Mille mercis de me l'avoir ramené.~
+@10    = ~Je vous avais promis une récompense pour la récupération de mon livre. Tenez, voici, cet or ne me sert pas à grand chose.~
+@11    = ~Je vous remercie d'avoir rapporté mon livre mais il ne faut pas me déranger pendant que j'étudie les secrets de ce livre. Veuillez me laisser à ma lecture s'il vous plaît.~
+
+
+////////////////
+
+@52   = ~Hey don't click me I don't want any trouble! Uh I know you, you're that bastard that killed Marl.~ [DUNKN02]
+@53   = ~Dunkin what are you doing here?~
+@54   = ~None of your business killer. Just leave me to my drink or I'll call the guard.~
+@55   = ~I'm ignoring you. Go away.~
+
+////////////////
+
+// CMDMERC
+
+@56   = ~Yes? Is there something that I can do for you? Not to be rude, but you and your friends do not look like the kind of patronage who could afford the rates in my fine tavern. Only the wealthy and high standing citizens can afford to socialize here.~
+@57   = ~For a dwarf you seem rather educated and rude at that.~
+@58   = ~I would not even give you a half copper to stay in this dump.~
+@59   = ~Dump you say? I will have you know that King Azoun IV and his entourage stayed here. When you have acquired some manners you may return.~
+@60   = ~Have it your way. Sorry to offend you.~
+@61   = ~Why don't we teach you some manners instead.~
+@62   = ~Ah yes yes, off with you!~
+@63   = ~Ah yes, quite the typical response from one who is of a lowly birth status. I will suffer your foul manners no more. Guards remove this filth from my sight!~
+@64   = ~Of course I am educated and why wouldn't I be? You assume that because *I* being a dwarf, that I would be an uneducated neanderthal, who drinks down barrels of swill like it was going out of style and hacks and chops anything that gets in his way correct?~
+@65   = ~But...~
+@66   = ~I come from a very prominent family and was tutored by the best that gold could buy. I run a very successful business and have plans on branching out, perhaps even adventure in a different form of business that is unrelated to tavern management.~
+@67   = ~Then we have you, the typical "adventurer". You are poorly dressed, have not bathed in months judging by your foul stench, you will do any kind of mundane quest like fetch some trinket and recieve a little reward like a good dog. Perhaps kill a barn full of rats and get 5 gold pieces for your efforts? Do not stand there with your mouth open, you will let the flies in.~
+@68   = ~(You are lost for words.)~
+@69   = ~The "mighty" noble adventurer has returned and what do I owe this "honor"?~
+@70   = ~We need a room and do be quick about showing it to us.~
+@71   = ~I had enough of your arrogant ilk. It's time to show you some manners!~
+@72   = ~Ahh nothing at the moment. Perhaps some other time.~
+@73   = ~Watch that tongue of yours before I have Bruno here take it from you. Now here is what I have.~
+@74   = ~Why me Moradin, why me? Boys time to take out the rubbish.~
+
+// DOS
+
+@0     = ~Oui ? Puis-je faire quelque chose pour vous ? Je ne voudrais pas manquer de tact mais vous et votre groupe ne semblez pas être le genre de clientèle pouvant s'offrir les tarifs de mon excellente taverne. Seuls les citoyens riches et de haut rang peuvent se permettre de fréquenter cet endroit.~
+@1     = ~Pour un nain, vous semblez être bien instruit mais ça ne vous empêche pas d'être mal élevé.~
+@2     = ~Je ne vous donnerais même pas une piécette pour rester dans ce bouge.~
+@3     = ~Vous osez parler d'un bouge ? Laissez-moi vous dire que le Roi Azoun IV, en personne, ainsi que sa suite, ont séjourné ici. Peut-être pourrez-vous revenir une fois que vous aurez acquis quelques manières.~
+@4     = ~Faites comme vous voulez. Désolé de vous avoir offensé.~
+         ~Faites comme vous voulez. Désolée de vous avoir offensé.~
+@5     = ~Nous pourrions vous apprendre la politesse, bien au contraire.~
+@6     = ~Bien sûr, oui, allez, décampez !~
+@7     = ~Ah oui, tout à fait la réaction habituelle d'une personne d'origine modeste. Je ne supporterai pas davantage vos manières grossières. Gardes ! Débarrassez-moi de ces immondices !~
+@8     = ~Bien sûr que je suis bien éduqué, pourquoi ne le serais-je pas ? Parce que je suis un nain, vous présumez que je ne suis qu'un arriéré sans instruction qui avale des tonneaux de saloperies comme un rustre et qui hache et tranche tout ce qui se dresse en travers de sa route, n'est-ce pas ?~
+@9     = ~Mais...~
+@10    = ~Je viens d'une famille éminente et j'ai reçu l'enseignement des meilleurs tuteurs que l'on puisse s'offrir. Je dirige un commerce très florissant et je projette d'étendre mes activités, peut-être même de m'aventurer dans une forme d'affaire différente et sans rapport avec la direction d'une taverne.~
+@11    = ~Nous voici donc "l'aventurier" ordinaire. Vous êtes chichement vêtu, vous n'avez pas pris de bain depuis des mois à en juger par votre puanteur fétide, vous êtes prêt à accomplir n'importe quelle quête ordinaire, comme récupérer une babiole quelconque, pour recevoir une petite récompense tel un bon chien. Ou qui sait, à exterminer les rats ayant envahi une grange pour obtenir 5 pièces d'or pour vos efforts ? Allez, ne restez pas là la bouche ouverte, vous allez gober les mouches.~
+         ~Nous voici donc "l'aventurière" ordinaire. Vous êtes chichement vêtue, vous n'avez pas pris de bain depuis des mois à en juger par votre puanteur fétide, vous êtes prête à accomplir n'importe quelle quête ordinaire, comme récupérer une babiole quelconque, pour recevoir une petite récompense tel un bon chien. Ou qui sait, à exterminer les rats ayant envahi une grange pour obtenir 5 pièces d'or pour vos efforts? Allez, ne restez pas là la bouche ouverte, vous allez gober les mouches.~
+@12    = ~(Vous restez sans voix.) Eeuuhh...~
+@13    = ~Le "grand" et noble aventurier est de retour. Qu'est ce qui me vaut cet "honneur" ?~
+         ~La "grande" et noble aventurière est de retour. Qu'est ce qui me vaut cet "honneur" ?~
+@14    = ~Il nous faut une chambre, et dépêchez-vous de nous y conduire.~
+@15    = ~J'en ai plus qu'assez de votre arrogance. Il est grand temps de vous montrer un peu de savoir-vivre !~
+@16    = ~Euh, pour rien. Peut-être une autre fois.~
+@17    = ~Prenez garde à votre langue avant que je n'ordonne à Bruno de vous l'arracher. Bien, voici ce que j'ai à disposition.~
+@18    = ~Pourquoi moi Moradin, pourquoi ? Les garçons, il est temps de sortir les ordures.~

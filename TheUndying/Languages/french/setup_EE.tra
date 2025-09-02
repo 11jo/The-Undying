@@ -1,0 +1,1640 @@
+@127  = ~Cotte de mailles~
+@128  = ~Cotte de mailles +4 "Vengeance"~
+@129  = ~Une cotte de mailles façonnée à partir d'un metal brillant. Elle est toujours portée par dessus une couche de tissu rembourré ou de cuir souple pour éviter les frottements et atténuer l’impact des coups.
+
+PARAMETRES:
+
+Classe d'Armure: 5
+Poids: 40
+Force nécessaire: 8~
+
+@130  = ~C'est l'armure personnelle de Callisto. Son origine n'est pas connue, mais elle semble très ancienne au vu des runes gravées dessus. 
+
+PARAMETRES:
+
+20% de résistance au feu
+
+Classe d'Armure: 0
+Poids: 18
+Force nécessaire: 8~
+@131  = ~Épée longue~
+@132  = ~Epée longue +4 "Hellfire"~
+@133  = ~Cette arme reçoit parfois le nom d'épée à double tranchant, épée de guerre ou épée de bataille. Souvent, l'épée longue a une lame à simple tranchant. Il n'existe pas de version type : le modèle et la longueur de l'épée varient d'un peuple à un autre et parfois même d'une époque à une autre. Une des caractéristiques principales de l'épée longue est sa taille, qui varie entre 90 cm et 1,20 m. Dans ce second cas, la lame fait un bon mètre. La plupart des épées longues ont deux tranchants et une pointe acérée. Malgré cette dernière, l'arme est conçue pour frapper de taille, et non d'estoc.
+
+PARAMETRES:
+
+Dégâts: 1D8
+Type de dégâts: tranchant
+Poids: 4
+Facteur de vitesse: 5
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 ~
+@134  = ~Cette épée a été forgé à base de mithril auquel on a lier du sang de demons.
+
+
+PARAMETRES:
+Capacités d'équipement:
+Immunité à l'absorption de niveaux.
+
+THAC0: +4 bonus
+Dégâts: 1D8 +4
++3 Dégâts de feu
+Type de dégâts: tranchant
+Poids: 2
+Facteur de vitesse: 0
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 ~
+@135  = ~Epée bâtarde~
+@136  = ~Rallos Zek~
+@137  = ~Également connue sous le nom d'épée à une main et demie, l'épée bâtarde tire son nom de son aspect intermédiaire entre l'épée à deux mains et l'épée longue. Elle possède une lame à double tranchant et une longue poignée, qui peut éventuellement accueillir les deux mains. La longueur de l'épée bâtarde varie entre 1,20 m et 1,50 m..
+
+PARAMETRES:
+
+Dégâts: 2D4
+Type de dégâts: tranchant
+Poids: 10
+Facteur de vitesse: 8
+Type de compétence : Epée bâtarde
+Type: arme à une main
+Force nécessaire: 11 ~
+
+@138  = ~Rallos Zek, Le Seigneur de guerre
+
+"Les fort survivent, les faibles meurent." Le coeur de la bataille est la seul place pour cette épée et son porteur. Aucune illumination ne peut être acquise en dehors du champ de bataille. Leurs possesseurs croient que l'univers est né du conflit et finiras dans le conflit. Les vainqueurs festoyant sur les os de leurs ennemis. Pas de respect ou d'attention n'est donné au morts, si ils en valaient la peine leurs coeurs battrais toujours dans leurs poitrines et non sur le sol.
+
+PARAMETRES:
+
+Capacités:
+Accorde au porteur une force de 25
++1 attaque supplementaire
+
+Désavantages:
+-2 Classe d'Armure
+-3 charisme
+-2 intelligence
+-2 sagesse
+
+THACO: +6
+Dégâts: 2D8 +6, +4 tranchant, +4 magique
+Type de dégâts: tranchant
+Poids: 12
+Facteur de vitesse: 2
+Type de compétence : Epée bâtarde
+Type: arme à une main
+Force nécessaire: 15 ~
+
+@139  = ~Mithaniel Marr~
+@140  = ~Mithaniel Marr, Le Porteur de Lumière
+
+"La bravoure est ce qui sépare les êtres civilisés des bêtes."
+
+PARAMETRES:
+
+Capacités d'équipement: Rayon de soleil (deux fois par jour):
+Dégâts: 3D6 (jet de sauvegarde contre les sorts sous peine d'être aveuglé 	pendant 10 rounds)
+
+Mort-vivant : 1D6 de dégâts supplémentaires par niveau du lanceur (jet de sauvegarde contre les sorts sous peine d'être détruit)
+Portée : 6 mètres
+Zone d'effet : 6 mètres de rayon
++1 attaque supplementaire
+
+THACO: +6, +8 contre les créatures mauvaises
+Dégâts: 1D8 +6, +8 contre les créatures mauvaises, does double Dégâts against undead
+Type de dégâts: tranchant
+Poids: 2
+Facteur de vitesse: 3
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 ~
+
+@141  = ~Epée à 2 mains~
+@142  = ~Innoruuk~
+@143  = ~Une étrange Epée à 2 mains aux propriétés inconnues.~
+@144  = ~Innoruuk, Le Prince de la Haine
+
+"La créativité naît de la destruction." est écrit sur la garde de l'épée. Cette lame de haine pure fait croire à celui qui la manie que la haine est une force créatrice. L'amour et la gentillesse sont des outils pour ceux qui sont trop ignorants pour savoir ce qu'ils veulent ou trop lâches pour faire ce qui est nécessaire pour l'obtenir. Ce n'est que par le mépris total de vos ennemis que vous pouvez acquérir un véritable pouvoir sur eux. La pitié et la miséricorde n'ont aucun pouvoir lorsqu'elles sont confrontées au mépris et à la vilenie.
+Cette lame est si infâme qu'elle s'élance au combat, attaquant les autres avec sa haine éternelle. Sa matière est étrange et n'appartient pas au plan primaire.. L'incarnation du mal en jaillit comme une source ou une force et ne permet à personne d'autre que le mal de la toucher.
+On ne sait pas grand-chose d'autre sur cette arme, si ce n'est qu'elle provient des neuf enfers, de l'un des seigneurs du dessous. Il faudrait être prudent si celui-çi venait à chercher sa possession.
+
+PARAMETRES:
+
+Capacité 1: Se déchaînera avec haine en causant des Dégâts magiques à quiconque fait du mal au porteur.
+Capacité 2: +50% de resistance magique pour le porteur.
+Capacité 3: Protection Mental 
+
+Pénalité 1: -1 charisme
+Pénalité 2: -2 sagesse
+
+THACO: +6
+Dégâts: 1D12 +6
+Type de dégâts: tranchant
+Poids: 3
+Facteur de vitesse: 4
+Type de compétence : Epée à 2 mains
+~
+@145  = ~Lame de Green Dragon +4~
+@146  = ~<No Text>~
+@147  = ~L'épée favorite du brutal Green Dragon. Il exécutait personnellement ses propres ennemis, avec cette épée, même sa famille. Cette arme a été enterrée avec lui, ainsi que d'autres objets magiques précieux.
+
+PARAMETRES:
+1D10 +4
+THAC0 +5
+15% de chance que la cible soit désintegrer. 
+double Dégâts pour morts vivants et demons. 
+Dissipation de la magie à chaque coup.
+
+Special:
+Cast: Rayon de soleil (deux fois par jour)à level 20.
+~
+@148  = ~Hache de bataille~
+@149  = ~Brell Serilis~
+@150  = ~La version la plus répandue de la Hache de bataille est une grande hampe d'environ 1,20 mètre de long comportant une lame à un seul tranchant et en forme de trompette montée sur une extrémité. Les haches d'armes sont également appelées grandes haches. 
+
+PARAMETRES:
+
+Dégâts: 1D8
+Type de dégâts: tranchant
+Poids: 7
+Facteur de vitesse: 7
+Type de compétence : Axe
+Type: arme à une main
+Force nécessaire: 10 ~
+
+@151  = ~Brell Serilis, Le Duc d'En-Bas
+
+"Le monde de la surface est un gaspillage d'espace." est gravé sur la tête de la hache. Elle a une étrange influence sur son utilisateur. Brell Serilis commence à posséder l'esprit de son détenteur en changeant sa vision des choses. Il a l'impression de trouver le vrai bonheur dans les grottes, cavernes et tunnels.
+Brell Serilis est construit à partir d'un métal anormal ne venant pas du plan primaire. Il semble presque faire un trou dans le tissu même de l'air à chaque coup.
+
+PARAMETRES:
+
+Capacité 1: 
+30% de chance de tuer les demons,
+instantly slays all elementals,
+40% de chance de tuer les morts vivants.
+
+Pénalité 1: -2 charisme
+Pénalité 2: -1 dextérité
+
+THAC0: +6
+Dégâts: 1D8 +6
+Type de dégâts:  tranchant
+Poids: 2
+Facteur de vitesse: 1
+Type de compétence : Hache
+Type: arme à une main
+Force nécessaire: 10 ~
+
+@152  = ~Gourdin~
+@153  = ~Quellios~
+@154  = ~La plupart des gourdins sont de gros bâtons résistants, étroits à une extrémité et plus large à l'autre. Cette arme simple est utilisée depuis que l'on a découvert les outils. N'importe qui peut trouver un gros morceau de bois et le brandir, d'où l'utilisation très répandue du gourdin.
+
+PARAMETRES:
+
+Dégâts: 1D6
+Type de dégâts: contondant
+Poids: 3
+Facteur de vitesse: 4
+Type de compétence :Gourdin
+Type: arme à une main
+Force nécessaire: 5 ~
+
+@155  = ~Quellious, Le Calme
+
+"La paix se trouve à l'intérieur" est gravé sur la poignée du Gourdin.
+Ceux qui manient ce Gourdin sont ceux qui recherchent la paix intérieure sans devenir pacifistes.
+
+PARAMETRES:
+
+Capacités:
+sagesse +4
+Action libre
+
+Désavantages:
+dextérité -1
+Strength -1
+Constitution -1
+
+Classe d'Armure: +3
+THAC0: +6
+Dégâts: 1D6 +6
+Type de dégâts: contondant
+Poids: 1
+Facteur de vitesse: 1
+Type de compétence : Gourdin
+Type: arme à une main
+Force nécessaire: 5 ~
+
+@156  = ~Arc court~
+@157  = ~Erolissi Marr~
+@158  = ~Les arcs courts ont été fabriqués avant les autres, même s'ils ne s'appelaient pas encore ainsi. Ce terme est utilisé par défaut pour désigner tout ce qui n'est pas un arc long. Les branches d'arc court mesurent 1,50 m en moyenne. Avec les années, on s'est efforcé d'améliorer la portée de l'arc. Tantôt on augmentait la longueur des branches, tantôt on améliorait leur flexibilité sans modifier leur longueur. La première expérience a engendré ce qui s'appelle aujourd'hui l'arc long.
+
+PARAMETRES:
+
+Poids: 2
+Facteur de vitesse: 6
+Type de compétence : Arc court
+Type: arme à deux mains
+Force nécessaire: 3 ~
+
+@159  = ~Erolissi Marr, La Reine de l'Amour
+
+"L'Amour prévot." est gravé sur l'arc.  
+L'arc ne rend pas son utilisateur un pacifiste, mais il aimerait vivre dans un monde d'amour où la violence n'existe pas. Cependant, l'arme ne rend pas son utilisateur naïf au fait que ce qu'il aimerait que le monde soit n'est pas la réalité. Au contraire, elle leur inspire un amour passionné des gens, des lieux et des idées et ils deviennent ainsi plus disposés à se battre et à mourir pour préserver ces vertus.
+
+PARAMETRES:
+
+Capacités: 
+Permet 2 attaque supplémentaire par round
+Permet de mémoriser un sort profane supplémentaire du niveau 1 à 3
++2 sagesse
+
+Désavantages: 
+-2 force
+
+Capacités:
+THAC0: +6
+Poids: 1
+Facteur de vitesse: 1
+Type de compétence : Arc court
+Type: arme à 2 mains
+Force nécessaire: 6 ~
+
+@160  = ~Dague des voleurs de l'Ombre~
+@161  = ~Bristlebane~
+@162  = ~Dague des voleurs de l'Ombre
+Cette dague est utilisé par  les voleurs de l'Ombre.
+
+PARAMETRES:
+
+Dégâts: 1D4
+Type de dégâts: perforant
+Poids: 1
+Facteur de vitesse: 1
+Type de compétence : Dague
+Type: arme à une main
+Force nécessaire: 3 ~
+
+@163  = ~Bristlebane, Le Roi des Voleurs
+
+"S'amuser aux dépens des autres." est gravé sur la lame. Le porteur de cette Dague se sent charmant, intelligent et plein d'esprit. Il rend également son propriétaire plutôt espiègle.
+
+PARAMETRES
+
+Capacité 1: 50% de chance d'attaque sournoise à chaque coup.
+Capacité 2: +1 intelligence, sagesse, & charisme
+
+Pénalité 1: -2 force, -1 constitution
+Pénalité 2: 15% de chance de changer le genre du porteur.
+
+Classe d'Armure: +3
+THAC0: +6
+Off Hand THAC0: +2
+Dégâts: 1d4+6
+Type de dégâts: perforant
+Poids: 1
+Facteur de vitesse: 1
+Type de compétence : Dague
+Type: arme à une main
+Force nécessaire: 3 ~
+
+@164  = ~Hallebarde~
+@165  = ~Cazic Thule~
+@166  = ~De loin l'arme d'hast la plus ancienne et la plus répandue, la hallebarde se compose d'une hache en forme de couperet montée sur un bâton de 1,80 m de long. La hache est équilibrée à l'arrière par un barbillon et surmontée d'une pointe acérée, généralement de forme quadrangulaire. Le barbillon est parfois remplacé par un crochet utilisé pour faire tomber l'ennemi de cheval. La hallebarde est en réalité un croisement entre la lance et la hache.
+
+PARAMETRES:
+
+Dégâts: 1D10
+Type de dégâts: perforant
+Poids: 15
+Facteur de vitesse: 9
+Type de compétence : Hallebarde
+Type: arme à 2 mains
+Force nécessaire: 13 ~
+
+@167  = ~Cazic Thule, Le Sans-Visage
+
+"Ce n'est qu'en répandant la terreur chez les autres que tu seras épargné."  C'est ce qui est gravé sur le manche..
+En tenant l'arme, il/elle s'efforce de faire disparaître tout espoir.. La peur gouverne leur vie et, à travers la peur, ils contrôlent la vie des autres. Douleur, misère, violence, torture, sacrifice vivant tous sont des instruments de celui qui possède cette arme.
+
+PARAMETRES:
+
+Capacité 1: 30% de chance que la cible touchée doivent faire une sauvegarde contre la mort à -5 ou perdre 2 niveaux d'expérience.
+Capacité 2: Réfléchit certaines attaques à distance
+Capacité 3: 60% de chance peur avec un jet de sauvegarde contre les sorts à -5, Confusion à 10% sans sauvegarde, Pensée rigide à 5% sans sauvegarde.
+
+Pénalité 1: -3 intelligence, -2 sagesse
+
+THAC0: +6
+Dégâts: 1D10 +6
+Type de dégâts: perforant
+Poids: 5
+Facteur de vitesse: 3
+Type de compétence : Hallebarde
+Type: arme à 2 mains
+Force nécessaire: 13 ~
+
+@168  = ~Casque~
+@169  = ~Visière de Baldurien~
+@170  = ~Ce type de casque d'apparat, fait de cuir ou de métal renforcé, couvre le visage et le crâne. Les trous pour les yeux et le nez ne sont pas de trop.  
+
+PARAMETRES:
+
+Classe d'Armure Bonus: None
+Special: protège contre les coups critiques
+Poids: 2 ~
+
+@171  = ~La Visière de Baldurien est le résultat d'une tentative d'amélioration du Heaume de Baldurien. Cependant, il s'avère que le résultat ne fut pas celui qui était attendu.
+
+PARAMETRES:
+
+Points de vie +35
+Immunité aux charmes
+Infravision
+
+Classe d'Armure: +2 bonus
+Special: protège contre les coups critiques
+Poids: 2 ~
+
+@172  = ~Bandeau d'or~
+@173  = ~Bandeau de l'Union Astrale~
+@174  = ~Ce fin cercle d'or paraît trop simple et ordinaire pour être une couronne. Bien qu'il ne soit pas orné de pierres précieuses, des symboles obscurs et mystérieux sont gravés sur sa surface, laissant entrevoir un pouvoir caché.~
+@175  = ~Bandeau de l'Union Astrale
+
+Ce bandeau est le produit de l'association de métal et du sang de démon, crée lors de son sacrifice à une sombre divinité. Au cours du procédé, un être du plan astral a été attiré et piégé dans le cercle.
+
+PARAMETRES:
+
+Capacité 1: 1 sort supplémentaire pour les niveaux 5-7
+
+Classe d'Armure: +3 bonus
+~
+@176  = ~Masse~
+@177  = ~Rodcet Nife~
+@178  = ~The Masse is a direct descendant of the basic Gourdin, being nothing more than a wooden shaft with a stone or iron head mounted on the end. The head design varies; some being spiked, others flanged, and still others have pyramidal knobs.
+
+PARAMETRES:
+
+Dégâts: 1D6 +1
+Type de dégâts: contondant
+Poids: 8
+Facteur de vitesse: 7
+Type de compétence : Masse
+Type: arme à une main
+Force nécessaire: 10 force
+~
+@179  = ~Rodcet Nife, The Prime Healer
+
+"Be generous and humble" is wrote into the weapon's handgrip.
+The need to fight disease and death until one or the other claims them is strong in the weilder's mind.  
+
+PARAMETRES:
+
+Capacités:
+Grants 3 extra priest spells for levels 1-3, 2 extra for levels 4-5, and 1 extra for levels 6-7
++3 charisme
+Instantly slays most undead
+
+THACO: +6
+Dégâts: 1D6 +7
+Type de dégâts:  contondant
+Poids: 8
+Facteur de vitesse: 5
+Type de compétence : Masse
+Type: arme à une main
+Force nécessaire: 10 force
+~
+@180  = ~Épée courte~
+@181  = ~Bertoxxulous~
+@182  = ~The Épée courte is the first type of sword to come into existence. In the simplest of terms, a Épée courte can be considered a Dague with a blade so long that it can no longer be called a Dague. The term Épée courte does not exist in sword classifications. However, it has come to be used to describe a double-edged blade about two feet in length. The sword tip is usually pointed, ideal for thrusting.
+
+PARAMETRES:
+
+Dégâts: 1D6
+Type de dégâts: perforant
+Poids: 3
+Facteur de vitesse: 3
+Type de compétence : Épée courte
+Type: arme à une main
+Force nécessaire: 5 force
+~
+@183  = ~Bertoxxulous, The Plaguebringer
+
+"The only truth is that everyone dies." is printed upon the blade near the hilt in a demonic tongue. While holding this sword the weilder views the decay of flesh as a thing of ultimate beauty. The subtle purples of a fresh bruise, the almost iridescent yellow green of infested pustule, are but a few of the things the weilder begins to relish.
+The sword glows with a black icor when magic is used to reveal it's nature. Necromancy's evil infests every part of the weapon. Those who would use such a foul sword, for them there is nothing more desirable than to be surrounded by beings who, even in unlife, continue to rot and decay.
+Not much else can be learned about this sword other than it's origins come from the Nine Hells.
+
+PARAMETRES:
+
+Capacité 1: Target struck suffers a -3 to their movement for 60 seconds if a save vs. wands is not made.
+Capacité 2: Target struck suffers a -2 to their dextérité for 30 seconds with no jet de sauvegarde.
+Capacité 3: Target struck suffers 5 poison Dégâts over 2 secs unless a save vs. poison/death magic is made.
+
+Pénalité 1: -1 Constitution.
+Pénalité 2: Cursed.
+
+THAC0: +6
+Dégâts: 1D6 +6
+Type de dégâts: perforant
+Poids: 2
+Facteur de vitesse: 1
+Type de compétence : Épée courte
+Type: arme à une main
+~
+@184  = ~Lance~
+@185  = ~Prexus~
+@186  = ~One of man's earliest weapons, dating back to the most primitive of times, the first Lances were simply wooden poles or sticks sharpened at one end. When man mastered metals, Lanceheads were made from iron and steel. Having reached this end, weaponers began experimenting with different types of Lance heads, thus leading to the development of certain polearm types.
+
+PARAMETRES:
+
+Dégâts: 1D6
+Type de dégâts: perforant
+Poids: 5
+Facteur de vitesse: 6
+Type de compétence : Lance 
+Type: arme à 2 mains
+Force nécessaire: 5 force
+~
+@187  = ~Prexus, The Oceanlord
+
+"Power lies in the vast depths" is burnt into the head of Lance.
+
+
+PARAMETRES
+
+Capacités: 
+Immunity to charm and hold person
++3 to all saves vs. death
+Grants an extra 3 priest spells levels 1-3, an extra 2 for levels 4-5, and 1 extra for levels 6-7
+Weilder is granted an extra 2 attacks.
+
+THAC0: +6
+Dégâts: 1D6 +6
+Type de dégâts: perforant
+Poids: 1
+Facteur de vitesse: 1
+Type de compétence : Lance
+Type: arme à 2 mains
+Force nécessaire: 5 force
+~
+@188  = ~Boots~
+@189  = ~Boots of the Frozen North~
+@190  = ~Boots are normally hand-made by cobblers. Common boots are made by using a form, but good boots are designed for the foot of an individual.
+
+PARAMETRES:
+
+Poids:  4~
+@191  = ~Boots of the Frozen North:
+These boots are made by the hairs of a frost giant which may be the reason why it gives protection against the cold. It is believed these boots came from the frozen wastes of the north. The history of these boots is lost to time. 
+
+PARAMETRES:
+
+Cold resistance: +75%
+de resistance magique +10%
+Poids: 4~
+@192  = ~Gauntlets~
+@193  = ~Mage Gauntlets~
+@194  = ~Gauntlets are armored gloves. They can be made of leather, metal plates, or chain mail. Every suit of armor is assumed to include gauntlets of an appropriate type. magique gauntlets tend to be finer, lighter, and more easily worn than normal varieties.~
+@195  = ~This pair of gauntlets was likely developed in ancient Netheril to aid masters of the magique arts. These gloves enable the mage to cast spells quicker and offer protection.
+
+PARAMETRES:
+Spell casting speed lowered by 2
++1 to AC
+Poids: 2
+~
+@196  = ~Mage Gloves~
+@197  = ~These gem-studded leather gloves are enchanted so as to augment the skills of any mage.  
+
+PARAMETRES:
+   +1 Bonus to AC
+   Bonus 2nd, 3rd and 4th level spell
+Poids:  1
+~
+@198  = ~Bracers~
+@199  = ~Fighter's Bracers~
+@200  = ~Bracers are thick bands of metal or leather that are strapped, belted, or tied to a character's forearm. 
+~
+@201  = ~Fighter's Bracers are highly sought after by the practitioners of combat.
+
+PARAMETRES:
+   +10 to maximum Hit Point total
+   +1 Bonus to AC
+   +1 THAC0
+    Poids: 1 ~
+@202  = ~Arc court +4 "Arcanum"~
+@203  = ~Through arcane sorcery, the contradictory elements of fire and ice have been combined within this magnificent Arc court. It has the Capacité to fire magic missiles. 
+
+PARAMETRES:
+
+Equipped Capacités:
+   5% bonus to Fire and Cold resistance
+  
+THAC0: +4
+Poids: 1
+Facteur de vitesse: 2
+Type de compétence : Arc court
+Type: arme à 2 mains
+Force nécessaire: 3 force
+~
+@204  = ~Elven Chain +2~
+@205  = ~The delicate yet sturdy craftsmanship of the Elven races allows them to design many beautiful yet utilitarian goods. Among these is Elven chain mail, which is so finely wrought that it can be worn under normal clothing without revealing its presence. This and its lightness allows it to be worn by thieves and fighter/mages with few restrictions.
+
+PARAMETRES:
+
+Classe d'Armure: 5
+Poids: 7
+Force nécessaire: 5 force
+~
+@206  = ~This mail feels more akin to cloth than to metal, and may be worn by thieves with few Désavantages and by fighter-mages without removing their spellcasting Capacité. This variety of mail is woven by masters in almost exactly the same form by both elves and the Drow; it has changed little since the Drow's elven past and is used for surface forays where Adamantine Drow chain would decay.
+
+The light-coloured Elven variety of this armor has no restrictions other than class-inherent, but the dark Drow variety is magiquely attuned to its owner, and thus may only be worn by those of evil alignments.
+
+PARAMETRES:
+
+Classe d'Armure: 3
+Poids: 8
+Force nécessaire: 5 force
+~
+@207  = ~Splint Mail~
+@208  = ~Splint Mail +4 "Vengeance"~
+@209  = ~Splint Mail is a variant of banded mail in which the metal strips are applied vertically to the backing of chain, leather, or cloth rather than horizontally as in banded mail.  Since the human body does not swivel in mid-torso as much as it flexes back to front, splint mail is more restrictive in battle.
+
+PARAMETRES:
+
+Classe d'Armure: 4
+Poids: 40
+Force nécessaire: 8 force
+~
+@210  = ~Mage Robe~
+@211  = ~Arch Magi Robe "Memento Mori"~
+@212  = ~Since the age of Netheril, mages have learned to bestow a wide variety of magique properties upon the everyday objects that surround them. A favorite item of such enchantment is the common robe. It is lightPoids, affordable, and holds its enchantment well, thereby making it ideal equipment for a mage. Due to their magique heritage, however, only single-, dual-, and multi-class mages may wear these enchanted robes.~
+@213  = ~One of the few powerful Arch Magi Robes from Netheril. This one happens to give the wearer a bonus in spells and protection from magic. 
+
+PARAMETRES:
+
+Bonus: Level two spells = 2
+Level three spells = 1
+Classe d'Armure:  3
+de resistance magique: 15%
+jet de sauvegarde:  +3 bonus
+Poids:  6
+~
+@214  = ~Robe of the Apprentice~
+@215  = ~Robe of the Apprentice
+
+Romor has it that this robe belonged to Melicamp an apprentice to the mage Thalantyr.
+
+PARAMETRES
+
+Bonus one level one spell.
+AC: 3
+~
+@216  = ~Marteau de guerre~
+@217  = ~Marteau de guerre +3 "Thunderstrike"~
+@218  = ~Mounted knights cannot effectively use long pole weapons while on horseback, and as a result, many weapons have been fitted with shorter shafts so they may be wielded with just one hand. Masses and flails are two previous examples of this - the Marteau de guerre is another. The horseman's Marteau de guerre is a descendant of the Lucerne hammer. It is made entirely of steel, with rondels protecting and forceening the grip. Rondels are small disks of metal, often shaped into decorative designs. The shaft is about 18 inches long.'
+
+PARAMETRES:
+
+Dégâts: 1D4 +1
+Type de dégâts: contondant
+Poids: 6
+Facteur de vitesse: 4
+Type de compétence : Marteau de guerre
+Type: arme à une main
+Force nécessaire: 9 force
+~
+@219  = ~The Thunderstrike Hammer has been enchanted to harness the power of the heavens. 
+
+PARAMETRES:
+
+Does additional +3 electrical Dégâts.
+20% chance of target being stunned.
+THAC0: +3 bonus
+Dégâts: 2D4 + 3
+Type de dégâts: contondant
+Poids: 4
+Facteur de vitesse: 1
+Type de compétence : Marteau de guerre
+Type: arme à une main
+Force nécessaire: 18 force
+~
+@220  = ~Studded Leather~
+@221  = ~Shadow Armor +4~
+@222  = ~Studded leather armor has little in common with normal leather armor. Instead of a hardened shell, studded leather offers hundreds of metal rivets affixed to a supple backing. The numerous studs form a flexible coat of metal that helps to turn aside tranchant and cutting attacks, while the leather is little more than a means of securing the rivets in place.
+
+PARAMETRES:
+
+Classe d'Armure: 7
+Poids: 25
+Force nécessaire: 6 force
+~
+@223  = ~Shadow armor is studded leather armor created for use by the Shadowmasters of Amn. The Shadowmasters are of the highest order within the Shadow Thief hierarchy. It is +4 studded leather armor that melds into shadows.
+
+PARAMETRES:
+
+Classe d'Armure: 3
+Special: +15% Hide in Shadows
++15% Pick Pockets
+Poids: 8
+Force nécessaire: 6 force
+~
+@224  = ~Armor of Locks +4~
+@225  = ~Enchanted ebony rivets adorn the black leather of this armor. Hebron the Black was a well known lock picker and trap expert. There was no trap he could not disable nor any lock he could not pick. Years later it was found out that this armor had a lending hand in his activities. On the collar it is writen in his blood "Bless Mask".
+
+PARAMETRES:
+
+Special: +20% Find Traps
++20% Open Locks
+Classe d'Armure: 3
+Poids: 7
+Force nécessaire: 6 force
+~
+@226  = ~Studded Leather of the Forest +3~
+@227  = ~A gift to those who defend nature in the name of Mielikki. Only druids and rangers can wear this blessed armor.
+
+PARAMETRES:
+Thorn Dégâts - each successful hit on the wearer inflicts 1D4 points of Dégâts de feu to the attacker
+
+Bonus level 1 spells = 2
+Classe d'Armure: 3
+Poids: 5
+Force nécessaire: 6 force
+~
+@228  = ~Masse +2 "Ordo Mundi"~
+@229  = ~The Masse is a direct descendant of the basic Gourdin, being nothing more than a wooden shaft with an iron head mounted on the end. The shaft of this magique Masse seems to guide the wielder, becoming an extension of his hand.
+
+PARAMETRES:
+
++2 Electrical Dégâts
+THAC0: +2 bonus
+Dégâts: 1D6 +3
+Type de dégâts: contondant
+Poids: 7
+Facteur de vitesse: 5
+Type de compétence : Masse
+Type: arme à une main
+Force nécessaire: 10 force
+~
+@230  = ~Etoile du matin~
+@231  = ~Etoile du matin +3~
+@232  = ~The Etoile du matin is a wooden shaft topped with a metal head made up of a spiked iron sheath. Etoile du matins have an overall length of about four feet. Some such weapons have a round, oval, or cylindrical shaped head studded with spikes. Extending from most Etoile du matin heads, regardless of design, is a long point for thrusting.
+
+PARAMETRES:
+
+Dégâts: 2D4
+Type de dégâts: contondant
+Poids: 12
+Facteur de vitesse: 7
+Type de compétence : Fléau/Etoile du matin
+Type: arme à une main
+Force nécessaire: 11 force
+~
+@233  = ~The Etoile du matin is a wooden shaft topped with a metal head made up of a spiked iron sheath. Etoile du matins have an overall length of about four feet. This particular one is mounted with a golden head that has been magiquely enhanced so as to improve performance and escape the malleCapacité of gold.  
+
+PARAMETRES:
+
+THAC0: +3
+Dégâts: 2D4 +3
+Type de dégâts: contondant
+Poids:10
+Facteur de vitesse: 6
+Type de compétence : Fléau/Etoile du matin
+Type: arme à une main
+Force nécessaire: 11 force
+~
+@234  = ~Plate Mail Armor~
+@235  = ~Callisto's Plate Mail +3~
+@236  = ~Plate mail is a combination of chain armor with metal plates covering the vital areas such as the chest, abdomen and groin. Similar in construction to bronze plate mail, true plate mail comprises of chain and leather.
+
+PARAMETRES:
+
+Classe d'Armure: 3
+Poids: 50
+Force nécessaire: 12 force
+~
+@237  = ~This is Callisto's personal armor. She had it magiquely enhanced to withstand the effects of fire.
+
+PARAMETRES:
+
+Capacité spéciale:
+40% de résistance au feu
+Cast Fireball 3 times/day
+
+Classe d'Armure: 0
+Poids: 27
+Force nécessaire: 12 force
+~
+@238  = ~Full Plate Mail~
+@239  = ~Durlag's Full Plate +2~
+@240  = ~Full plate armor is the best armor a warrior can buy, both in appearance and protection. The perfectly fitted interlocking plates are specially angled to deflect arrows and blows, and the entire suit is carefully adorned with rich engraving and embossed detail.
+
+PARAMETRES:
+
+Classe d'Armure: 1
+Poids: 70
+Force nécessaire: 15 force
+~
+@241  = ~This is the plate armor that belonged to Durlag the famous dwarf who built a tower full of treasure and traps. Some how some body survived those traps since this armor no longer rests in Durlag's Tower.
+
+PARAMETRES:
+
++1 à la constitution
+Protection from: Confusion/Rigid Thinking/Fear
+Classe d'Armure: -1
+Poids: 50
+Force nécessaire: 15 force
+~
+@242  = ~Small Shield~
+@243  = ~Waukeen's Defender~
+@244  = ~A small shield is usually round and is carried on the forearm, gripped with the shield hand. Its light Poids as compared to a medium shield permits the user to carry other items in that hand, although he cannot wield or carry another weapon.
+
+PARAMETRES:
+
+Classe d'Armure Bonus: 1
+Special: No Missile Weapon Protection
+Poids: 3
+Force nécessaire: 4 force
+~
+@245  = ~A number of these shields can be found in Waukeen's temples throughout Faerûn. The Church crafts these shields to sell to enterprising adventurers. In exchange for the powers of the device, the bearer is required to keep the front of the shield uncovered and in its original state. If the owner does not comply, the shield's powers fail. In this way, dozens of adventurers walk the Realms bearing the golden face of Waukeen on their arm.
+
+PARAMETRES:
+
+Classe d'Armure Bonus: +3
+jet de sauvegarde Bonus: +2
+resistance magique: +10%
+Poids: 4
+~
+@246  = ~Epée longue +2 "Vampire's Revenge"~
+@247  = ~These swords are usually referred to as doubled-edged swords, war swords, or military swords. In many cases, the Epée longue has a single-edged blade. There is no single version of the Epée longue; the design and length vary from culture to culture, and may vary within the same culture depending on the era.  Among the most common characteristics of all Epée longues is their length, which ranges from 35 inches to 47 inches. In the latter case, the blade is known to take up 40 inches of the total length. Most Epée longues have a double-edged blade and a sharp point at the tip. Despite the tip, the Epée longue is designed for tranchant, not thrusting.
+
+PARAMETRES:
+
+Dégâts: 1D8
+Type de dégâts: tranchant
+Poids: 4
+Facteur de vitesse: 5
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 force
+~
+@248  = ~Vampire's Revenge, Epée longue +3
+This blade belonged to Lilith, a long dead servant of Velshroon. In addition to forceening the mind against the guile of others, the sword absorbs life energy from an opponent with each successful hit, healing the user. Lilith was formally a paladin of Torm until she was attacked by a group of vampires. Her life was cursed after that day to become one of the hungry undead. Her holy sword became corrupted as well and has become like its master. 
+
+PARAMETRES:
+
+Capacités d'équipement:
+Immunité aux charmes et à la domination
+Each hit heals the wielder of 1 hit-point Dégâts
+THAC0: +3 bonus
+Dégâts: 1D8 +3
+Type de dégâts: tranchant
+Poids: 3
+Facteur de vitesse: 3
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 force
+~
+@249  = ~Healed~
+@250  = ~Moonblade~
+@251  = ~This potent weapon was created by the smiths of ancient Myth Drannor. Moonblades are used in the long process of selecting a ruler for the isle of Evermeet. A Moonblade chooses its owner. Only an elf can use this blade; anyone else attempting to unsheath it will find themselves horribly burned, possibly resulting in death. This particular Moonblade gives its user a bonus to his Classe d'Armure, allows the wielder to use the blade with mastery of the sword proficiency, as well as provides a number of specific resistances to cetain Type de dégâtss.
+
+PARAMETRES:
+
+Dégâts: 1D10 +4
+Type de dégâts: tranchant
+Bonus to hit: +4
+Special:
+ +2 bonus to Classe d'Armure
+ 25% de résistance au feu
+ 25% Cold Resistance
+Poids: 3
+Facteur de vitesse: 4
+Type de compétence :  Epée longue
+Type:  arme à une main
+~
+@252  = ~Snow Maiden's Reaver~
+@253  = ~Also known as the hand-and-a-half sword, the Epée bâtarde derives its name from the fact that it is halfway between the Épée à deux mains and the Epée longue. The Epée bâtarde has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the Epée bâtarde ranges between four feet and four feet ten inches.   
+
+PARAMETRES:
+
+Dégâts: 2D4
+Type de dégâts: tranchant
+Poids: 10
+Facteur de vitesse: 8
+Type de compétence : Epée bâtarde
+Type: arme à une main
+Force nécessaire: 11 force
+~
+@254  = ~The only material parts of this icy weapon are the hilt, grip, and pommel, wrought from shining silver and steel. It was created in 1099 DR by the chosen of Auril, Ihanora the Merciful.  Ihanora roamed the north, leading ruthless attacks against all those who attempted to find solace from the cold or fight its effects. She traveled with a motley crew of yetis, polar worms, frost giants, and a white dragon, freezing everything in her wake. Ihanora was defeated in 1108 by the notorious Red Mask Brigade, headed by the ruthless killer known as Bitter Harley.
+
+PARAMETRES:
+
+Dégâts: 2d4 +2
+THAC0: +2
+Special: 2% chance of turning the target to solid ice.
+Type de dégâts: Cold
+Poids:10
+Facteur de vitesse: 6
+Type de compétence : Epée bâtarde
+Type: arme à 1 main
+~
+@255  = ~Épée à deux mains~
+@256  = ~Bonesaw~
+@257  = ~The Épée à deux mains is a derivative of the Epée longue. Weaponsmiths have always looked for ways to improve existing weapons. In an effort to improve the Epée longue, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of Épée à deux mainss is cleaving mounted knights and breaking up pike formations.
+
+PARAMETRES:
+
+Dégâts: 1D10
+Type de dégâts: tranchant
+Poids: 15
+Facteur de vitesse: 10
+Type de compétence : Epée à 2 mains
+Type: arme à 2 mains
+Force nécessaire: 14 force
+~
+@258  = ~Swords made from bone are a common weapon with orcs. This weapon happens to be magique thanks to an orc shaman who cast a spell on it. This weapon was called Bonesaw because of the jagged edges and the nasty habit of its previous owner who would saw his victims in half.
+
+PARAMETRES:
+
+THAC0: +3 bonus
+Dégâts: 1D10 +3
++3 perforant Dégâts
+Type de dégâts: tranchant
+Poids: 15
+Facteur de vitesse: 10
+Type de compétence : Epée à 2 mains
+Type: arme à 2 mains
+Force nécessaire: 14 force
+~
+@259  = ~Light Crossbow~
+@260  = ~Luciferi~
+@261  = ~A crossbow is a bow mounted crosswise on a wooden or metal shaft, the latter called a tiller. The bow is usually made of ash or yew. The crossbow fires a quarrel (also called a bolt). Light crossbows not only weigh less than their heavy counterparts, they fire faster as well.
+
+PARAMETRES:
+
+Poids: 7
+Facteur de vitesse: 5
+Type de compétence : Crossbow
+Type: arme à 2 mains
+Force nécessaire: 8 force
+~
+@262  = ~Luciferi was orignally a drow constructed crossbow that later lost it's power in the world of the surface dwellers. Normally drow equipment is destroyed up contact with the sun's rays. However, this crossbow did not for some strange unknown reason. It was found by a black knight in the service of Cyric who reconized it's craftsmanship and brought it to his wizard companion. She then in turn re-enchanted it to a new, more powerful evil. The black knight named it Luciferi.
+
+PARAMETRES:
+
+Capacités:
+Grants the owner an attaque supplementaire.
+15% chance it will automatically slay a target with fewer than 60hp unless a save vs. death is made at a -2.
+
+Désavantages: 
+1% chance the evil will turn on the user and kill him/her unless a save vs. death is made.
+
+THAC0: +5 bonus
+Dégâts: +5 (missile)
+Poids: 3
+Facteur de vitesse: 1
+Type de compétence : Crossbow
+Type: arme à 2 mains
+Force nécessaire: 8 force
+~
+@263  = ~Plate Mail~
+@264  = ~Green Dragon's Plate~
+@265  = ~This armor comes from the Far East that used to belong to an emperor known only as The Green Dragon. He ruled his country with an iron fist until he met his demise at the hands of a female warlord.
+
+PARAMETRES:
+AC -4
+Dex +1
+Negative Plane Protection
+Regeneration of 2 hit Points Per Round
+
+Special:
+Summon 1 Undead Guardian 1 Time Per Day (Bone Golem)
+Cast Regeneration 1 time per day
+Cast Ethereal 1 Time Per Day
+~
+@266  = ~Cloak~
+@267  = ~Balduran's Mantle~
+@268  = ~The cloak can be made in every possible shape with just about every type of fabric. The most common forms are a circular piece of fabric with a hole in the center for the head, and fabric draped from neck, connected by a chain, brooch, cord, or pins.~
+@269  = ~Balduran's Mantle is the improved version of the Cloak of Balduran. A great deal of magic went into enchanting this fabric further and a number of people died as a result.
+
+PARAMETRES:
+
+Immunity to backstab & imprisonment
+
+Classe d'Armure: +1 bonus
+jet de sauvegardes: +1 bonus
+de resistance magique: 30%
+Poids: 1
+~
+@270  = ~Flail~
+@271  = ~Veeshan~
+@272  = ~The flail is a sturdy wooden handle attached to an iron rod, a wooden rod with spikes, or a spiked iron ball. Between the handle and its implement is either a hinge or chain link. The weapon was originally used as a tool for threshing grain.
+
+PARAMETRES:
+
+Dégâts: 1D6 +1
+Type de dégâts: contondant
+Poids: 15
+Facteur de vitesse: 7
+Type de compétence : Fléau/Etoile du matin
+Type: arme à une main
+Force nécessaire: 13 force
+~
+@273  = ~Veeshan, The Wyrmqueen
+
+"Dragonkind are superior to all forms of life" is enlaid into the handle of the weapon.
+The one possessed by Veeshan will often sacrifice themselves or their loved ones to the Mother of Dragons or one of her children. Many humanoids have gained great riches and acient knowledge by serving the spirit inside, but these gifts came with a high price.
+
+PARAMETRES:
+
+Capacités:
+30% chance of 2d4 Dégâts de feu, save vs. breath
+20% chance of 2d4 cold Dégâts, save vs. breath
+10% chance of 3d3 poison Dégâts, save vs. breath
+5% chance of 2d10 electrical Dégâts, save vs. breath
+5% chance of 1d12 acid Dégâts, save vs. breath
+Immune to wing buffet attack and stun.
++4 bonus to saves vs. breath weapon
+
+Désavantages:
+Classe d'Armure Pénalité of -3
+Veeshan does not care for non-dragonkin so there's a 3% chance it will lash out the own by entraping him/her in a maze spell.
+
+THACO: +6
+Dégâts: 1D6 +7
+Type de dégâts: contondant
+Poids: 8
+Facteur de vitesse: 3
+Type de compétence : Fléau/Etoile du matin
+Type: arme à une main
+Force nécessaire: 13 force
+~
+@274  = ~The Tribunal~
+@275  = ~Mounted knights cannot effectively use long pole weapons while on horseback, and as a result, many weapons have been fitted with shorter shafts so they may be wielded with just one hand.  Masses and flails are two previous examples of this - the Marteau de guerre is another.  The horseman's Marteau de guerre is a descendant of the Lucerne hammer.  It is made entirely of steel, with rondels protecting and forceening the grip.  Rondels are small disks of metal, often shaped into decorative designs.  The shaft is about 18 inches long.'
+
+PARAMETRES:
+
+Dégâts: 1D4 +1
+Type de dégâts: contondant
+Poids: 6
+Facteur de vitesse: 4
+Type de compétence : Marteau de guerre
+Type: arme à une main
+Force nécessaire: 9 force
+~
+@276  = ~The Tribunal, The Six Hammers
+
+"Justice" is the only word inscribed upon the hammer and it seems as if no runes or other magique writings or on it either. Retribution, vengeance, and punishment are sacred duties burning the heart and mind of the hammer's weilder. He/she believes they are methodical, patient and just.
+The Tribunal, The Six Hammers is duely named for a reason. This is because the forces aligned within it branch inward from 6 elements. Fire, cold, electricity, acid, magique and the physical.
+The Tribunal's reach is such that the guilty is bound it be affected by atleast 1 of the 6 factions withint the weapon.
+
+PARAMETRES:
+
+Capacités: 
++1d4 cold Dégâts, save vs. spell
++1d4 Dégâts de feu, save vs. breath
++1d4 acid Dégâts, save vs. petrification
+
+Désavantages:
+Classe d'Armure -2 Pénalité
+-3 intelligence
+
+THACO: +6
+Dégâts: 1D4 +7, +5 electrical, +2 magique
+Type de dégâts: contondant
+Poids: 5
+Facteur de vitesse: 2
+Type de compétence : Marteau de guerre
+Type: arme à une main
+Force nécessaire: 9 force
+~
+@277  = ~Silver Amulet~
+@278  = ~Broach of Abyssal Doctrines~
+@279  = ~Amulets are usually magique devices that are commonly worn around the neck, suspended from a chain. The type of chain that comes with an amulet generally increases the item's aesthetic value, not its magique properties. Only one amulet can be dangled from the neck at a time.~
+@280  = ~Broach of Abyssal Doctrines
+
+It is said among the lower planes that such things need to be purged from the realms. There is a reason for this...
+
+PARAMETRES:
+
+Capacité 1: Protection from Charm
+Capacité 2: Protection from Poison
+Capacité 3: Protection from level drain
+Capacité 4: THAC0 +1 vs. Lycanthropes
+Capacité 5: Classe d'Armure +1 vs. Lycanthropes~
+@281  = ~Epée longue +3 "Vigilance"~
+@282  = ~Epée longue +3 "Vigilance"
+
+This is Nina's personal sword that was given to her by her mother, who was a priestess of Mystra. It was created to destroy evil especially those who would abuse magic for their own personal evil ways.
+
+PARAMETRES:
+
+Bonus Dégâts:
++2 Fire
++2 Electrical
+
+THAC0: +3 bonus, +4 contre les créatures mauvaises
+Dégâts: 1D8 +3, +4 contre les créatures mauvaises
+Type de dégâts: tranchant
+Poids: 2
+Facteur de vitesse: 3
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 force
+~
+@283  = ~Nina's Ring~
+@284  = ~This is Nina's personal ring. It was given to her by her mother upon her death. It has magiquely tightened itself around her finger so it will not come off. Upon her death the ring will destroy itself. Nina does not say much about what the ring is or what it does.~
+@285  = ~Tome of magique Spells~
+@286  = ~This is a magique book that has writing on the cover in ancient Netherese. A magique lock appears to be on the book since you can not open it up. This is some thing that is beyond your comprehension and better off given back to the Priest of Mystra.~
+@287  = ~Amulet~
+@288  = ~Amulet of the Learned~
+@289  = ~Similar gifts are often bestowed upon apprentice's that have finished or are close to finishing their apprenticeship with a mage.
+
+PARAMETRES:
+
+Spells: Adds one 1st, two 2nd, and 3rd level spells
+~
+@290  = ~Karana~
+@291  = ~Karana, The Rainkeeper
+
+"Respect the storm."
+Those who wield this blade feel compelled to worship the life-giving rain and respect the destructive force of a sandstorm or hurricane.
+
+PARAMETRES:
+
+Capacités:
++2 attaque supplementaires
++4 Off Hand THAC0
++20% resistance to cold & fire
+
+Classe d'Armure: +2
+THACO: +4
+Dégâts: 1D8 +4
+Type de dégâts: tranchant
+Poids: 1
+Facteur de vitesse: 2
+Type de compétence : cimeterre / wakizashi / ninjato
+Type: arme à une main
+Force nécessaire: 10 force
+~
+@292  = ~Vampire Hunter +5~
+@293  = ~Vampire Hunter is a very useful weapon for those who seek out vile vampires and put an end to their existence.
+
+PARAMETRES:
+Capacités d'équipement:
++4 Dégâts and +4 thac0 vs vampires
+User is immune to level drain when equipped.
+
+THAC0: +5 bonus
+Dégâts: 1D8 +5, 1d4 Dégâts de feu
+Type de dégâts: tranchant
+Poids: 2
+Facteur de vitesse: 0
+Type de compétence : Epée longue
+Type: arme à une main
+Force nécessaire: 6 force
+~
+@294  = ~Sword of Valor +5~
+@295  = ~The Sword of Valor is for those pure at heart the paladins. This great sword will help the paladin smite evil that stand in the way of goodness and righteousness.
+
+PARAMETRES
+
+Equipped Capacités: 
+    25% de resistance magique
+Combat Capacités: 
+    Additional +4 Dégâts versus chaotic evil opponents
+    
+THACO: +5 bonus
+Dégâts: 2D4 +5 +4 cold Dégâts
+Type de dégâts: tranchant
+Poids: 6
+Facteur de vitesse: 4
+Type de compétence : Epée bâtarde
+Type: arme à une main
+Force nécessaire: 12 force
+~
+@296  = ~Troll Bane +2~
+@297  = ~An excellent weapon for those who wish to eradicate the world of evil trolls. Troll Bane gives out fire and acid Dégâts just to make sure the troll does not rise up again.
+
+PARAMETRES:
+
+Equipped Capacités: 
+ 20% de résistance au feu
+ 20% acid resistance
+ Non-detection
++4 Dégâts de feu
++4 acid Dégâts
+
+Dégâts: 2D4 +2 
+THACO: +2 bonus
+Type de dégâts: tranchant
+Poids: 7
+Facteur de vitesse: 7
+Type de compétence : Epée bâtarde
+Type: arme à une main
+Force nécessaire: 11 force
+~
+@298  = ~Epée bâtarde +3: Incinerator~
+@299  = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+PARAMETRES:
+
+Dégâts: 2D4 +3
+THAC0: +3
+Type de dégâts: tranchant
+Special:
+  50% chance +1D8 Dégâts de feu
+  10% chance target is Stunned
+Poids: 10
+Facteur de vitesse: 8
+Type de compétence : Great Swords
+Type: arme à une main
+~
+@300  = ~Epée à 2 mains +4: Backbiter~
+@301  = ~The Épée à deux mains is a derivative of the Epée longue. Weapon smiths have always looked for ways to improve existing weapons. In an effort to improve the Epée longue, the blade was lengthened. Eventually, the handle had to be extended and two hands became necessary to properly swing the sword. The primary function of Épée à deux mainss is cleaving mounted knights and breaking up pike formations. This one is particularly good at its job as it has been enchanted with a few magique properties.
+
+PARAMETRES:
+
+Dégâts: 1D10 +4 (+1D6 perforant)
+THAC0: +4 bonus
+Type de dégâts: tranchant
+Special: 25% chance user takes +1D4 perforant Dégâts
+Poids: 12
+Facteur de vitesse: 9
+Type de compétence : Great Swords
+Type: arme à 2 mains
+~
+@302  = ~Everhate Vorpal Sword~
+@303  = ~The Everhate Vorpal Sword radiates a dark aura when you examine it, and the blade is so finely sharpened it could likely sever a head in a single blow. Upon getting close to the weapon you can feel the evil aura emanating from it. It repels anyone who is not evil from it.
+
+PARAMETRES:
+
+Combat Capacités:
+ 25% chance each hit that target must make a jet de sauvegarde vs death (-2 Pénalité) or die.
+
+THAC0: +4 bonus
+Dégâts: 1D12 +4
+Type de dégâts: tranchant
+Poids: 15
+Facteur de vitesse: 6
+Type de compétence : Epée à 2 mains
+Type: arme à 2 mains
+Force nécessaire: 14 force
+~
+@304  = ~Executioner's Blade +4~
+@305  = ~A favorite weapon of half-orcs the Executioner's Blade can be found any where in the realms where orcs and half-orcs dwell.
+
+PARAMETRES
+
++5 Electric Dégâts
+THAC0: +4 bonus
+Dégâts: 1D12 +4
+Type de dégâts: tranchant
+Poids: 11
+Facteur de vitesse: 6
+Type de compétence : Epée à 2 mains 
+Type: arme à 2 mains
+Force nécessaire: 14 force
+~
+@306  = ~Ancient Sword~
+@307  = ~This sword is so old that no information is available. Even identity spells fail to uncover its history.~
+@308  = ~Hammer Arrows +2~
+@309  = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+PARAMETRES:
+
+Dégâts: 1D2 (+1D10 contondant)
+THAC0: -5
+Type de dégâts: Missile (perforant)
+Special: 10% chance target is Stunned
+Poids: 0
+Launcher: Bow
+~
+@310  = ~Inferno Arrows +2~
+@311  = ~Besides its superb craftsmanship, tiny runes of power can be seen etched all along the surface. It's obvious a lot of time and effort went into its creation and although not apparent at first, a slight blue glow can be seen emanating from the runes.
+
+PARAMETRES:
+
+Dégâts: 1D6 +2 (+ 1D10 fire)
+THAC0: +2
+Type de dégâts: Missile (perforant)
+Poids: 0
+Launcher: Bow
+~
+@312  = ~Axe of the Defender +4~
+@313  = ~A fine weapon the Axe of the Defender has served only a few masters, probably because the fine weapon protected them. It was in the possession of Clan Stonebridge until betrayal from within to a band of Orcs who invaded Clan Stonebridge's Keep. All the dwarves were killed and what happened with this axe has been a mystery.
+
+PARAMETRES
+
+Equipped Capacités: 
+  Improves AC by 1
+  CON increase +2
+THAC0: +4 bonus 
+Dégâts: 1D8 +4
+Type de dégâts: tranchant
+Poids: 7
+Facteur de vitesse: 4
+Type de compétence : Axe
+Type: arme à une main
+Force nécessaire: 10 force
+~
+@314  = ~Boots of Valor~
+@315  = ~Boots of Valor give the paladin speed and defense against missile weapons.
+
+PARAMETRES
+
+Equipped Capacité : increases movement rate
+
+Bonus AC vs missile weapons~
+@316  = ~Tunare~
+@317  = ~Tunare, The Mother of All
+
+"Blossom & grow." is carved into the wooden shaft.
+The manner in which this Long Bow influences it's owner is through whispers of the forest. Only an elf would truly understand what force drives them.
+
+PARAMETRES:
+
+Capacités: 
+Grants the owner an extra 2 attacks.
++1 dextérité
++1 sagesse
+35% Target struck will be stunned as follows: Targets with 1-29hp are stunned for 4d4 rounds, 30-59hp are stunned for 2d4 rounds, and 60-89hp are stunned for 1d4 rounds.
+
+Désavantages:
+-2 force
+-2 intelligence
+
+THACO: +6
+Poids: 2
+Facteur de vitesse: 2
+Type de compétence : Long Bow
+Type: arme à 2 mains
+Force nécessaire: 6 force
+~
+@318  = ~Helm of Valor~
+@319  = ~The Helm of Valor protects those who are the greatest protectors of all the paladins. This helm signifies the virtues and nobleness of the paladin.
+
+PARAMETRES:
+
+Classe d'Armure Bonus:  none
+jet de sauvegardes: +1 bonus
+Electrical resistance:  +25%
+Cold resistance: +25%
+de résistance au feu: +25%
+Poison resistance +25%
+Special: protège contre les coups critiques
+Poids: 3
+~
+@320  = ~Golden Mask~
+@321  = ~Vlad's Golden Mask of the Arcane~
+@322  = ~Vlad's Golden Mask of the Arcane
+
+This ornate mask is constructed completely of gold yet it is light as a feather. Fire Opals are set into the eyes and smaller ones set around the edge of the mask. The red from the gems make mask look as if it is reflecting the image of an exploding fireball.
+
+PARAMETRES
+
+Unknown.~
+@323  = ~Solusek Ro~
+@324  = ~Solusek Ro, The Burning Prince
+
+"Fire birthed the world and in fire shall it be consumed."
+
+PARAMETRES
+
+Capacités: If a fire elemental is hit it must jet de sauvegarde contre les sorts or be destroyed
+Capacités: (one charge)
+Summon an 8 hit dice Fire Elemental
+ Duration: 1 hour
+Fire Shield (Red)
+ A protective shield that surrounds the wielder of the staff as per the 4th level wizard spell Fire Shield (Red).
++2 attaque supplementaires
+Extra spells: 3 1-4, 2 5-7, 1 8-9
+
+Désavantages:
+charisme -3
+Constitution -1
+
+THAC0: +3
+Dégâts: 1D6 +3
+Type de dégâts: contondant
+Poids: 3
+Facteur de vitesse: 1
+Type de compétence : Quarterstaff
+Type: arme à 2 mains
+Force nécessaire: 5 force~
+@325  = ~Black Mass~
+@326  = ~Black Mass was a crossbow used in the attempt to assassinate a high priest of Cyric during a dark ritual. The assassination failed and the assassin was killed when discovered.  
+The bow was left upon the floor while the guards drug the assassin's body off to an undisclosed location. While it sat there during the ritual, unknown to the high priest, magic rubbed off upon it and seeped into the weapon's very material construction.
+
+PARAMETRES:
+
+Capacités: 
+Grants the user an attaque supplementaire.
+Wielder regenerates 1hp per second.
+Grants the user Clairvoyance
+
+THAC0: +4
+Dégâts: +4
+Poids: 5
+Facteur de vitesse: 2
+Type de compétence : Crossbow
+Type: arme à 2 mains
+Force nécessaire: 15 force
+~
+@327  = ~Sacrifice of Kali~
+@328  = ~Kali was an evil god of an ancient people who believed in blood sacrifices. This armor was worn by a crazy, sadistic priest of Kali who worn it to every sacrifice he performed. High Lord Priest Set'thania was not immune to his crazy religion, he himself was put on the end of a sacrificial Dague.
+
+PARAMETRES:
+
+Bonuses: +20% de résistance au feu
+Save vs Death bonus 10%
+Save vs Spell bonus 10%
+Classe d'Armure: -1
+Poids: 30
+Force nécessaire: 8 force
+~
+@329  = ~Armor of Valor~
+@330  = ~A rare find this armor is. Only the truly blessed of goodness may wear this armor. The valor and true to heart paladin may wear this great armor for his duty of to serve and protect.
+
+PARAMETRES:
+
+Immunity to backstab
++1 to force
+
+Classe d'Armure: -1
+Poids: 40
+Force nécessaire: 12 force
+~
+@331  = ~Death Plate +3~
+@332  = ~This armor glows red from the blood of its wearers victims. Speculation that this was Cyric's armor before he became a god. Only he may know for certain. Only evil people may wear this vile armor.
+
+PARAMETRES:
+
+Bonus 30% Save vs Death 
+Immune to normal weapon Dégâts
+Classe d'Armure: 0
+Poids: 27
+Force nécessaire: 12 force
+~
+@333  = ~Legionnaire's Chain +5~
+@334  = ~Favored armor for guards and mercenaries in the Realms the Legionnaire's Chain protects its wearer from all sorts of Dégâts.
+
+PARAMETRES:
+
+Classe d'Armure: 0
+Poids: 17
+Force nécessaire: 10 force
+~
+@335  = ~Cloak of Mask~
+@336  = ~The Cloak of Mask is the perfect item for a thief. Joral should have put an enchantment for backstab. He his no longer breathing air and the cloak has a new owner. Such as life of a thief in a guild.
+
+PARAMETRES:
+
+Special:  Non-detectable by magique means such as detect invisibility and scrying.
+
+30% Find traps bonus
+20% Hide in shadows bonus
+20% Set trap bonus
+Poids: 3~
+@337  = ~Cloak of Sune~
+@338  = ~Cloak of Sune is for those charismetic types who want their hearts desire. They believe they will become more desirable and be able to get what they want. You be the judge.
+
+PARAMETRES
+
++2 to charisme~
+@339  = ~Flail of Venom~
+@340  = ~Each head on this flail has been dipped into a magique poison that will never wear off this weapon of destruction. Care should be taken even by the one who holds it as well. The heads of this flail seem to have a mind of their own at times.
+
+PARAMETRES
+
+Combat Capacités: Victims must make a jet de sauvegarde vs. poison or take 10 hit points of poison Dégâts
+
+10% chance of wielder being poison if fail save vs poison.
+
+THACO: +3
+Dégâts: 2D4 +3
+Type de dégâts: contondant
+Poids: 9
+Facteur de vitesse: 5
+Type de compétence : Fléau/Etoile du matin
+Type: arme à une main
+Force nécessaire: 11 force
+~
+@341  = ~Inferno Darts +4~
+@342  = ~The dart is a small, easily concealable missile weapon that is thrown rather than fired from a bow or other launcher. Tiny silver runes have been carved into the surface to enhance the performance of these darts.
+
+PARAMETRES:
+
+Dégâts: 1D3 +4
+THAC0: +4
+Type de dégâts: Missile (perforant)
+Special: 20% chance +2d6 Dégâts de feu
+Poids: 0
+Facteur de vitesse: 2
+Type de compétence : Missile Weapons
+Type: arme à une main
+~
+@343  = ~Gauntlets of Valor~
+@344  = ~The Gauntlets of Valor was made by a priest of Helm who had a problem of not being able to hit and do Dégâts to his target. Once he put these gloves on he had no trouble in his fighting skills.
+
+PARAMETRES:
+
+THACO: +2 bonus
+Dégâts: +3 bonus
+Poids: 1
+~
+@345  = ~Knee Capper +2~
+@346  = ~Knee Capper is a useful hammer for the little people. Beware tall ones for the little ones will have their revenge.
+
+PARAMETRES:
+
+Special Dégâts vs humanoids 
+
+THACO: +3 bonus
+Dégâts: 1D4 +3
+Type de dégâts: contondant
+Poids: 5
+Facteur de vitesse: 2
+Type de compétence : Marteau de guerre
+Type: arme à une main
+Force nécessaire: 9 force ~
+@347  = ~Marteau de guerre +4~
+@348  = ~Marteau de guerre +4, +1 electrical: 'Borok's Fist'
+Borok Thundercracker was a dwarven hero that led several campaigns against giants and other "tall vermin" that had plagued his people in a number of their communities.  This hammer was his blessed weapon, which his elven allies called his "little iron fist", though not to his face.
+
+PARAMETRES:
+
+Combat Capacités: +5 electricity Dégâts
++5 acid Dégâts
+THAC0: +4 bonus
+Dégâts: 1D4 + 3
+Type de dégâts: contondant
+Poids: 5
+Facteur de vitesse: 2
+Type de compétence : Marteau de guerre
+Type: arme à une main
+Force nécessaire: 9 force
+~
+@349  = ~Gold Amulet~
+@350  = ~Penta's Amulet of de resistance magique~
+@351  = ~Penta, the half-elf bard, made this necklace for her lover who was lost in a battle near Neverwinter. The foul orcs that won the battle looted the corpses of any possessions they had. This necklace has not been seen since.
+
+PARAMETRES
+
+de resistance magique: +20%~
+@352  = ~Amulet of the Magister~
+@353  = ~The Amulet of the Magister was created by Nelnfaen Sauntarae, the @only drow magister to date. It is one of the few relics of this great drow magister to exist.
+
+
+PARAMETRES:
+
+Special:  Memorize two extra 8 and 9 level spells~
+@354  = ~The One Ring~
+@355  = ~It is known that "The One Ring" came from a far off land from a long time ago. Its origins are a mystery. Some say that a bard named Tolkien made the item while others dispute a warrior named Sauron had made it. We may never know.
+
+PARAMETRES:
+
+Non-Detection when worn
+
+Special: Cast Improved Invisibility on the wearer once/day~
+@356  = ~Ring of Protection +4~
+@357  = ~This ring was crafted by the best elven metallurgist on Evermeet. It was to be a gift to a lord of Waterdeep but the ship it was on sunk off the Sword Coast.
+
+PARAMETRES:
+
+Classe d'Armure: +4 bonus
+jet de sauvegardes: +4 bonus~
+@358  = ~Menacar's Shield +3~
+@359  = ~Menacar was a very unusual halfling, he liked to adventure, fight battles and work in a forge. With his forging skills he created this shield to help him on an upcoming adventure. Poor foolish Menacar and the companions he bribed him to help them. One does not take on an ancient red dragon and live.
+
+PARAMETRES:
+
+Classe d'Armure Bonus: +3
+Poids: 7
+Force nécessaire: 12 force
+~
+@360  = ~Shield of Valor +3~
+@361  = ~Blessed by a priest of Lathander, this shield will protect its owner from those who would cast mind altering spells for evil.
+
+
+PARAMETRES:
+Special: Immune to rigid thinking, fear spells.
+
+Classe d'Armure Bonus: 4
+Poids: 5
+Force nécessaire: 12 force
+~
+@362  = ~Crystal Helm~
+@363  = ~Crafted from magique crystals from a now abandoned Dwarven Mine. The crystals have a natural resistance to heat and cold.
+
+PARAMETRES:
+
+Classe d'Armure Bonus:  +1
+Special:  protège contre les coups critiques
+          +20% de résistance au feu
+          +20% Cold Resistance
+Poids: 2 ~
+@364  = ~Masse +3~
+@365  = ~Masse +3: "Defiler"
+Personal weapon of Nirel, a powerful cleric, whom little is know about. However, history does record that he was a vile zealot whose hatred for followers of other faiths knew almost no bounds. It is said that he kept the heads of his victims as trophies. He was personally responsible for defiling over one hundred temples of other faiths; thus earning himself, and his Masse, the nickname 'Defiler'.
+
+PARAMETRES:
+
+Dégâts: 1D6 +4
+THACO: +3
+Type de dégâts: contondant
+Poids: 7
+Facteur de vitesse: 6
+Type de compétence : Blunt Weapons
+Type: arme à une main
+~
+@366  = ~Crystal Plate Mail~
+@367  = ~Forged from magique crystals mined from a now abandoned Dwarven mine. The crystals have a natural resistance to fire and cold.
+
+PARAMETRES:
+
+Classe d'Armure: 2
+Special: +20%  de résistance au feu
+         +20%  Cold Resistance
+Poids: 20
+~
+@368  = ~Ring~
+@369  = ~Bard's Ring~
+@370  = ~Ring once belonging to the famous bard Morridin. The Mage King Varashar had this ring made for Morridin after he won a seven year long contest for court bards.
+
+PARAMETRES:
+
+Spells:  Grants on extra mage spell each level from 1st through 4th.
+~
+@371  = ~Apprentice's Ring~
+@372  = ~Similar rings are often given to apprentice's that show exceptional skill or merit.
+
+PARAMETRES:
+
+Special:  adds two 1st, one 2nd, and one 3rd level spells
+~
+@373  = ~Bag~
+@374  = ~Bag of Illusionary Dust~
+@375  = ~When sprinkled over one's head the magic dust contained in this sack causes the user to appear to others to split and become 2 people where one stood before. This effect last for a short period of time and can be used as long there is dust remaining in the bag.~
+@376  = ~Crystal Sword~
+@377  = ~Crafted from magique crystals from a now abandoned Dwarven Mine. The crystals have a natural resistance to heat and cold. However, due to the forging process the crystals used to make this sword lost their natural resistances. Although it turns out that they hold enchantments quite well.
+
+PARAMETRES:
+
+THAC0: +2 bonus
+Dégâts: 1D10 +2
+Type de dégâts: tranchant
+Poids: 10
+Facteur de vitesse: 8
+Type de compétence : Épée à deux mains
+Type: arme à 2 mains
+Force nécessaire: 14 force
+~
+@378  = ~Creature Item~
+@379  = ~Does lots n' lots of Dégâts!~
+@380  = ~Gauntlets of the Faithful Warrior~
+@381  = ~Through out time, many deities have been know to grant boons to their followers in the way of blessed items. Even though the exact origins of these gauntlets are unknown that must surely be the case with this particular set.
+
+PARAMETRES:
+
+THACO: +3 bonus
+Dégâts: +3 bonus
+Poids: 1
+~
+@382  = ~A Candle~
+@383  = ~Candle of sagesse~
+@384  = ~This candle once rubbed the right way will grant the person extra sagesse. Unfortunately, this same magic causes the candle to disappear after a single use.
+
+PARAMETRES:
+
+sagesse: Raised by 1 point permanently
+Special: The candle is consumed upon use
+Usage: Place into quick item slot~
+@385  = ~This is a lucky rabbit's foot.~
+@386  = ~Bottle of Aspire Wine~
+@387  = ~Bottle of Aspire Wine:
+This wine has an eerie glow to it. When you drink deeply, memories of lost loves come rushing back and you find your eyes filling with tears.
+~
+@388  = ~Bust of Mystra~
+@389  = ~A small but exquisite bust depicting the goddess, Mystra. ~
+@390  = ~Chicken~
+@391  = ~This is KFC's finest chicken. It has 20 herbs and spices and slow roasted over a warm fire. When wholly consumed, this chicken restores 10 hit points to the person.~
+@392  = ~Grapes~
+@393  = ~A bunch of grapes:
+This fruit glows with a strange inner light.
+Once consumed heals 2 hit points.~
+@394  = ~Amn Fried Steak~
+@395  = ~This one of Amn's best tasting steaks. Flavored with special herbs and a special tasting sauce. When wholly consumed, this steak restores 5 hit points to the person.~
+@396  = ~Blood-filled Goblet~
+@397  = ~Blood of Bodily Health~
+@398  = ~The blood in this goblet is magiquely enhanced, thereby allowing an individual to raise his or her Constitution by a single point. Unfortunately, the goblet will disappear after a single use.
+
+PARAMETRES:
+
+Constitution: Raised by 1 point permanently
+Special: The goblet is destroyed upon use
+Usage: Place into quick item slot
+~
+@399  = ~Raven's Book of Spells~
+@400  = ~The writing in this text is completely indecipherable and resists any such attempts at comprehension through normal magic or any other means. It has little use for you because a powerful mage has put a magique lock on it. ~

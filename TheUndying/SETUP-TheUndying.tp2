@@ -2,7 +2,7 @@ BACKUP ~weidu_external/TheUndying/backup~
 
 AUTHOR ~"http://www.teambg.net"~
 
-README ~TheUndying/readme-ctu.htm~
+README ~TheUndying/readme/readme-ctu.htm~
 
 VERSION ~~
 
@@ -201,6 +201,7 @@ COPY ~TheUndying/cre/CMSORA4.CRE~ ~Override~
 COPY ~TheUndying/cre/CMSORA5.CRE~ ~Override~
   SAY 0x8 @31
   SAY 0xC @31
+REPLACE_CRE_ITEM ~PLAT01~ #0 #0 #0 ~NONE~ ~INV~
   
 COPY ~TheUndying/cre/CMAVAT1.CRE~ ~Override~
   SAY 0x8 @32
@@ -280,6 +281,7 @@ COPY ~TheUndying/cre/CMHAUN02.CRE~ ~override~
 COPY ~TheUndying/cre/CMHAM01.CRE~ ~override~        
   SAY NAME1 @48
   SAY NAME2 @48
+REPLACE_CRE_ITEM ~COMHAU~ #0 #0 #0 ~NONE~ ~INV~
 
 COPY ~TheUndying/cre/CMHAM02.CRE~ ~override~        
   SAY NAME1 @49
@@ -1813,7 +1815,7 @@ EXTEND_BOTTOM ~ar0405.bcs~ ~TheUndying/bafs/AR0405.baf~
 EXTEND_BOTTOM ~ar0406.bcs~ ~TheUndying/bafs/AR0406.baf~
 
 COPY_EXISTING ~AR0509.are~ ~override~
-WRITE_ASCII 0x94 ~AR0509~
+WRITE_ASCII 0x94 ~AR0509~ (8)
 EXTEND_BOTTOM ~ar0509.bcs~ ~TheUndying/bafs/AR0509.baf~
 
 EXTEND_BOTTOM ~ar0602.bcs~ ~TheUndying/bafs/AR0602.baf~
@@ -1824,7 +1826,7 @@ EXTEND_BOTTOM ~ar0802.bcs~ ~TheUndying/bafs/AR0802.baf~
 EXTEND_BOTTOM ~ar0803.bcs~ ~TheUndying/bafs/AR0803.baf~
 
 COPY_EXISTING ~AR0806.are~ ~override~
-WRITE_ASCII 0x94 ~AR0806~
+WRITE_ASCII 0x94 ~AR0806~ (8)
 EXTEND_BOTTOM ~ar0806.bcs~ ~TheUndying/bafs/AR0806.baf~
 
 // EXTEND_BOTTOM ~ar0900.bcs~ ~TheUndying/bafs/AR0900.baf~
@@ -2049,6 +2051,7 @@ REPLACE_CRE_ITEM ~SHLD04~ #0 #0 #0 ~IDENTIFIED~ ~SHIELD~		// INV was SHLD15
 REPLACE_CRE_ITEM ~AX1H17~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP	// INV was AX1H01
 BUT_ONLY_IF_IT_CHANGES
 
+/*
 COPY_EXISTING ~BEAST.CRE~ ~override~
 WRITE_LONG 0x14 1650											// XPVAL was 650
 WRITE_SHORT 0x24 52												// HP1 was 42
@@ -2056,6 +2059,7 @@ WRITE_SHORT 0x26 52												// HP2 was 42
 WRITE_BYTE 0x52 8												// THAC0 was 15
 WRITE_BYTE 0x23c 19												// DEX was 9
 BUT_ONLY_IF_IT_CHANGES
+*/
 
 COPY_EXISTING ~FIRRAK02.CRE~ ~override~
 WRITE_SHORT 0x24 100											// HP1 was 80
