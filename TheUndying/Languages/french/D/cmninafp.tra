@@ -1,15 +1,17 @@
-@0    = ~Merci, je m'efforcerais de faire de mon mieux pour le groupe.~//
-@1    = ~Eh bien, qu'avons nous là ?~
-@2    = ~As-tu décidé de me laisser rejoindre ton groupe ? Il y a encore beaucoup de mal à détruire dans ce monde.~//
-@3    = ~Je n'ai pas besoin de ton aide pour l'instant.~
-@4    = ~Nous aimerions t'avoir dans le groupe, Nina.~
-@5    = ~Améliore tes manières et je te rejoindrais peut être plus tard.~
-@6    = ~Par Mystra, puisse le mal fuir devant nous !~//
-@7    = ~Je ne peux plus voyager avec vous ! Si nous nous rencontrons de nouveau, ce seras vôtre fin !~ [NINA03]//
-@8    = ~C'est malheureux. Si jamais tu changes d'avis où veux tu que l'on se retrouve ?~//
-@9    = ~Va à la Couronne de cuivre. Nous t'y rejoindrons si nous avons besoin de toi.~
-@10   = ~Attends ici. Nous reviendrons plus tard quand nous aurons besoin de toi.~
-@11   = ~Je ne sais pas. Si tu peux nous attendre dans une taverne ou auberge populaire.~//
-@12   = ~Aimerais-tu que nous voyagions ensemble à nouveau ?~ [NINA26]//
-@13   = ~Oui, Nina. Reste où tu es.~
-@14   = ~Non, je pense que tu devrais partir.~
+// cmninafp.tra French
+
+@0    = ~Merci, je m'efforcerais de faire de mon mieux pour le groupe.~
+@1    = ~Eh bien, qui voilà ?~
+@2    = ~As-tu décidé de me laisser rejoindre ton groupe ? Les maux de ce monde sont nombreux et n'attendent que nous pour être détruits.~
+@3    = ~Je n'ai pas besoin de toi pour le moment.~
+@4    = ~Nous aimerions que tu rejoignes le groupe, Nina.~
+@5    = ~Quel manque d'éducation... J'envisagerais de te rejoindre un autre jour.~
+@6    = ~Par la grâce de Mystra, puisse le mal se dérober devant nous !~
+@7    = ~Je ne pourrais plus jamais voyager avec vous ! Si nous nous rencontrons à nouveau, ce sera pour en finir !~ [NINA03]
+@8    = ~C'est regrettable. Si jamais tu changes d'avis où veux-tu que l'on se retrouve ?~
+@9    = ~Nous te rejoindrons à la Couronne de cuivre.~
+@10   = ~Tu peux attendre ici. Nous reviendrons te chercher plus tard.~
+@11   = ~Je ne sais pas. Si tu peux nous attendre dans une taverne ou auberge populaire.~
+@12   = ~Aimerais-tu que nous voyagions de nouveau ensemble ?~ [NINA26]
+@13   = ~En effet, Nina. Reste à nos côtés.~
+@14   = ~Hum ! Non, nos chemins doivent se séparer.~
