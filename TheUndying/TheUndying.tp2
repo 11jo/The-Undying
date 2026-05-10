@@ -89,13 +89,13 @@ PRINT @9
 APPEND ~STATE.IDS~ ~0x80101FEF CD_STATE_NOTVALID~
 UNLESS ~CD_STATE_NOTVALID~
 
-COPY ~TheUndying\bams~ ~override~
+COPY ~TheUndying/bams~ ~override~
 
-COPY ~TheUndying\areas~ ~override~
+COPY ~TheUndying/areas~ ~override~
 
-COPY ~TheUndying\sounds~ ~override~
+COPY ~TheUndying/sounds~ ~override~
 
-COPY ~TheUndying\eff~ ~override~
+COPY ~TheUndying/eff~ ~override~
 
 ACTION_IF GAME_IS ~bg2ee eet~ BEGIN
   COPY ~TheUndying/portraitsEE~ ~override~
@@ -243,6 +243,7 @@ COPY ~TheUndying/cre/CMKAT.cre~    ~override~
 COPY ~TheUndying/cre/CMDUNKIN.cre~  ~override~
   SAY NAME1 @40
   SAY NAME2 @40
+WRITE_ASCII DEATHVAR ~CMDUNKIN~ (32)
   
 COPY ~TheUndying/cre/CMNIFA01.cre~  ~override~
   SAY NAME1 @41
@@ -282,14 +283,17 @@ COPY ~TheUndying/cre/CMHAM01.CRE~ ~override~
   SAY NAME1 @48
   SAY NAME2 @48
 REPLACE_CRE_ITEM ~COMHAU~ #0 #0 #0 ~NONE~ ~INV~
+		WRITE_ASCII DEATHVAR ~CMHAMM01~ (32)
 
 COPY ~TheUndying/cre/CMHAM02.CRE~ ~override~        
   SAY NAME1 @49
   SAY NAME2 @49
+		WRITE_ASCII DEATHVAR ~CMHAMM02~ (32)
 
 COPY ~TheUndying/cre/CMHAM03.CRE~ ~override~        
   SAY NAME1 @50
   SAY NAME2 @50
+		WRITE_ASCII DEATHVAR ~CMHAMM03~ (32)
 
 COPY ~TheUndying/cre/CMHAUN01.CRE~ ~override~       
   SAY NAME1 @47
@@ -479,7 +483,7 @@ SAY BIO @124
 
 // Epilogue stuff
 
-COPY ~TheUndying/2da/cmniand1.2da~ ~override\cmniand1.2da~
+COPY ~TheUndying/2da/cmniand1.2da~ ~override/cmniand1.2da~
   REPLACE ~99999~ @126
 
 
@@ -1094,7 +1098,7 @@ COPY_EXISTING ~BAG02D.STO~ ~Override/COMBAG02.STO~
 
 COPY_EXISTING ~BAG02D.ITM~ ~Override/COMBAG02.ITM~
 
-COPY ~TheUndying/stores/CMNINAST.STO~     ~override\CMNINAST.STO~
+COPY ~TheUndying/stores/CMNINAST.STO~     ~override/CMNINAST.STO~
   SAY NAME2 @404 
 
 	LPF REMOVE_STORE_ITEM_EX
@@ -1114,7 +1118,7 @@ COPY_EXISTING ~BAG03B.STO~ ~Override/CMBAG03B.STO~
 
 COPY_EXISTING ~BAG03B.ITM~ ~Override/CMBAG03B.ITM~
 
-COPY ~TheUndying/stores/CMNINAMY.sto~     ~override\CMNINAMY.sto~
+COPY ~TheUndying/stores/CMNINAMY.sto~     ~override/CMNINAMY.sto~
   SAY NAME2 @405
   
 	LPF REMOVE_STORE_ITEM_EX

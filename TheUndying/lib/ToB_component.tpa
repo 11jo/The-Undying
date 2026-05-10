@@ -16,9 +16,9 @@ ACTION_IF  GAME_IS ~eet~ BEGIN
 			// clean_ToB = 1				//cleans out existing EET code in FATESP.DLG, AR4000.BCS, AR4500.BCS for DV specified in clean_ToB_DV
 		STR_VAR
 			dv = "cmninaf"					// death variable of your NPC (must be the same in BG1/SoD/BG2/ToB)
-			// override_BG1 = "IMOEN_"		//name of the override NPC script in BG1
-			// override_SoD = "BDIMOEN"		//name of the override NPC script in SoD (use BG1 one if doesn't exist)
-			// override_SoA = "bhaalspw"		// override script of your NPC (SoA)
+			// override_BG1 = ""		//name of the override NPC script in BG1
+			// override_SoD = ""		//name of the override NPC script in SoD (use BG1 one if doesn't exist)
+			override_SoA = "CMNINAF"		// override script of your NPC (SoA)
 			override_ToB = "CMNINA25"		// override script of your NPC (ToB) //name of the override NPC script in ToB (use SoA one if doesn't exist)
 			// dialog_ToB = ""		// joining dialogue for ToB//name of the dialogue file used after spawning NPC in ToB (use SoA POST dialogue or initial SoA dialogue file if doesn't exist)
 			cre_ToB = "CMNINA25"			//if type = 4 and/or default_ToB = 1 name of the ToB CRE file is needed (used to create new CRE rather than migrating existing one from SoA)

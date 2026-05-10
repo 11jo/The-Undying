@@ -224,8 +224,7 @@ Global("MystraQuest","GLOBAL",0)
 Dead("cmlillian")
 PartyHasItem("CMBOOK99")~ THEN BEGIN HappyNina
 SAY @79
-=
-@80 IF ~~ THEN EXIT
+= @80 IF ~~ THEN DO ~SetGlobal("FoundThievesC","GLOBAL",2)~ EXIT
 END
 
 /*
@@ -331,15 +330,13 @@ IF ~ReputationLT(Player1,2)
 Global("NinaTooEvil","GLOBAL",0)
 ~ THEN BEGIN TooEvil
   SAY @114
-IF ~~ THEN DO ~LeaveParty() 
-EscapeAreaMove("AR0406",470,1490,0)~ EXIT
+IF ~~ THEN DO ~LeaveParty() EscapeAreaMove("AR0406",470,1490,0)~ EXIT
 END
 
 IF ~AreaCheck("AR0502")
-Global("EnteredTanner2","AR0502",0)~ THEN BEGIN TannerComment
+	Global("Nina_EnteredTanner2","AR0502",0)~ THEN BEGIN TannerComment
   SAY @115
-  IF ~~ THEN DO ~SetGlobal("EnteredTanner2","AR0502",1)
-~ EXIT
+  IF ~~ THEN DO ~SetGlobal("Nina_EnteredTanner2","AR0502",1)~ EXIT
 END
 
 CHAIN IF

@@ -551,9 +551,9 @@ END
 // End timed banters
 
 IF ~AreaCheck("AR0502")
-Global("EnteredTanner2","AR0502",0)~ THEN BEGIN ShopComment
+Global("Calli_EnteredTanner2","AR0502",0)~ THEN BEGIN ShopComment
   SAY @196
-  IF ~~ THEN DO ~SetGlobal("EnteredTanner2","AR0502",1)
+  IF ~~ THEN DO ~SetGlobal("Calli_EnteredTanner2","AR0502",1)
 ~ EXIT
 END
 
