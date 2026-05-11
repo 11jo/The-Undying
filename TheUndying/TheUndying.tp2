@@ -1153,15 +1153,15 @@ COPY ~TheUndying/stores/tempeil.sto~     ~override~
 
 	LPF REMOVE_STORE_ITEM_EX
       STR_VAR item_name=~CMGR01~
-    END // Not existing in mod
+    END // Not existing // See legacy spells folder
 
 	LPF REMOVE_STORE_ITEM_EX
       STR_VAR item_name=~CMGR02~
-    END // Not existing in mod
+    END // Not existing // See legacy spells folder
 
 	LPF REMOVE_STORE_ITEM_EX
       STR_VAR item_name=~CMGR03~
-    END // Not existing in mod
+    END // Not existing // See legacy spells folder
 
 COPY_EXISTING ~TEMHELM.STO~ ~override~
   ADD_STORE_ITEM ~CMBO01~ #0 #0 #0 ~IDENTIFIED~ #1 
@@ -1814,6 +1814,8 @@ COMPILE ~TheUndying/bafs/CMSHAR1.BAF~
 COMPILE ~TheUndying/bafs/CMSHAR2.BAF~
 
 COMPILE ~TheUndying/bafs/CMMORIA.BAF~
+
+COMPILE ~TheUndying/bafs/cmhamm.BAF~
 
 EXTEND_BOTTOM ~ar0405.bcs~ ~TheUndying/bafs/AR0405.baf~
 EXTEND_BOTTOM ~ar0406.bcs~ ~TheUndying/bafs/AR0406.baf~

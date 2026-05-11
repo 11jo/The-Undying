@@ -4,6 +4,7 @@ IF
 THEN
 	RESPONSE #100
 		SetGlobal("CmSharFight","GLOBAL",1)
+		Enemy()
 END
 
 IF

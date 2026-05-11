@@ -1,10 +1,10 @@
 IF
 	Global("NinaHomeAttack","GLOBAL",1)
-	Global("CMMoriaExists","AR2800",0)
+	Global("CMMoriaExists","MYAREA",0)
 THEN
 	RESPONSE #100
 		CreateCreature("CMMORIA",[261.611],5)
-		SetGlobal("CMMoriaExists","AR2800",1)
 		SetGlobal("NinaHomeAttack","AR2800",2)
+		SetGlobal("CMMoriaExists","MYAREA",1)
 		Continue()
 END

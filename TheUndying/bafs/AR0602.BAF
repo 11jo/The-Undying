@@ -1,7 +1,7 @@
 IF
-	Global("MakeWeenug","AR0602",0)
+	Global("MakeWeenug","MYAREA",0)
 THEN
 	RESPONSE #100
+		SetGlobal("MakeWeenug","MYAREA",1)
 		CreateCreature("CMWENUG",[3054.3409],0) // Weenug
-		SetGlobal("MakeWeenug","AR0602",1)
 END

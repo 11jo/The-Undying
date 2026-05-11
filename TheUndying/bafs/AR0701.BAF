@@ -1,5 +1,5 @@
 IF
-	Global("DoSSpawn","AR0701",0)
+	Global("DoSSpawn","MYAREA",0)
 THEN
 	RESPONSE #100
 		CreateCreature("CMHAM01",[2648.1969],0) // 
@@ -7,5 +7,5 @@ THEN
 		CreateCreature("CMHAM03",[2633.1901],0) // 
 		CreateCreature("CMHAUN01",[937.2338],0) // 
 		CreateCreature("CMHAUN02",[766.1498],0) // 
-		SetGlobal("DoSSpawn","AR0701",1)
+		SetGlobal("DoSSpawn","MYAREA",1)
 END

@@ -2,6 +2,7 @@ IF
 	Global("CalliFoundCormak","GLOBAL",0)
 	Detect("callisto")
 	InParty("callisto")
+	!StateCheck("callisto",CD_STATE_NOTVALID)
 THEN
 	RESPONSE #100
 		Dialogue("callisto")

@@ -1,7 +1,7 @@
 IF
-	Global("SpawnArtemis","AR0803",0)
+	Global("SpawnArtemis","MYAREA",0)
 THEN
 	RESPONSE #100
+		SetGlobal("SpawnArtemis","MYAREA",1)
 		CreateCreature("artemis",[1019.690],0) // Artemis Entreri
-		SetGlobal("SpawnArtemis","AR0803",1)
 END

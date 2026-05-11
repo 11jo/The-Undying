@@ -1,5 +1,5 @@
 IF
-	Global("MoreGuards","AR0405",0)
+	Global("MoreGuards","MYAREA",0)
 THEN
 	RESPONSE #100
 		CreateCreature("slguard2",[591.1642],6) // Slaver Guard
@@ -9,5 +9,5 @@ THEN
 		CreateCreature("icyuan01",[1534.369],0) // Yuan-Ti  - Yuan-Ti
 		CreateCreature("icyuan01",[1295.632],0) // Yuan-Ti  - Yuan-Ti
 		CreateCreature("icyuan01",[1626.408],0) // Yuan-Ti  - Yuan-Ti
-		SetGlobal("MoreGuards","AR0405",1)
+		SetGlobal("MoreGuards","MYAREA",1)
 END

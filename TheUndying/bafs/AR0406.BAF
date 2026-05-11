@@ -1,5 +1,5 @@
 IF
-	Global("CopperGuards","GLOBAL",1)
+	Global("CopperGuards","MYAREA",1)
 THEN
 	RESPONSE #100
 		CreateCreature("ccguard1",[1306.617],14) // Copper Coronet Guard
@@ -8,5 +8,5 @@ THEN
 		CreateCreature("ccguard2",[2832.728],6) // Copper Coronet Guard
 		CreateCreature("ccguard1",[2702.644],14) // Copper Coronet Guard
 		CreateCreature("ccguard2",[2303.390],6) // Copper Coronet Guard
-		SetGlobal("CopperGuards","GLOBAL",2)
+		SetGlobal("CopperGuards","MYAREA",2)
 END

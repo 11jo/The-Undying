@@ -1,9 +1,9 @@
 IF
    Global("CalliJoined","GLOBAL",1)
-   Global("CmMariusExists","AR0511",0)
+   Global("CmMariusExists","MYAREA",0)
 THEN
    RESPONSE #100
-      SetGlobal("CmMariusExists","AR0511",1)
+      SetGlobal("CmMariusExists","MYAREA",1)
       CreateCreature("CMMARIUS",[2390.1523],4)
 END
 

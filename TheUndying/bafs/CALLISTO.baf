@@ -100,8 +100,11 @@ THEN
 END
 
 IF
+	AreaCheck("AR0502")
 	InParty(Myself)
 	Global("TannerWarning2","AR0502",0)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
 THEN
 	RESPONSE #100
 		SetGlobal("TannerWarning2","AR0502",1)
@@ -114,6 +117,7 @@ IF
 	InParty("cmninaf")
 	See("cmninaf")
 	!StateCheck("cmninaf",CD_STATE_NOTVALID)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
 	!Dead("cmninaf")
 	CombatCounter(0)
 	Global("BCalliNina3","GLOBAL",0)
@@ -126,6 +130,8 @@ IF
 	AreaCheck("AR2600")
 	InParty(Myself)
 	Global("CmCalliEndGameS","AR2600",0)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	!StateCheck(Player1,CD_STATE_NOTVALID)
 THEN
 	RESPONSE #100
 		StartDialogueNoSet(Player1)

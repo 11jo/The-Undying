@@ -1,7 +1,7 @@
 IF
-	Global("DoSSpawn","AR2204",0)
+	Global("DoSSpawn","MYAREA",0)
 THEN
 	RESPONSE #100
 		ActionOverride("Container 1",CreateItem("COMF01",0,0,0)) //
-		SetGlobal("DoSSpawn","AR2204",1)
+		SetGlobal("DoSSpawn","MYAREA",1)
 END

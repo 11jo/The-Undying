@@ -623,7 +623,7 @@ IF ~InParty("Yasraena")~ THEN BEGIN CalYasLeave
   ~ EXIT
 END
 
-IF ~InParty("Sola")~ THEN BEGIN CalSolLeave
+IF ~InParty("Solaufein")~ THEN BEGIN CalSolLeave
   SAY @221
   IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0) LeaveParty() EscapeArea()
   ~ EXIT

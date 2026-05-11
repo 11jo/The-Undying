@@ -1,7 +1,7 @@
 IF
     Global("CalliJoined","GLOBAL",1)
     Global("SolaufeinJob","GLOBAL",0)
-    Global("CmTUDrowPartyExists","GLOBAL",0)
+    Global("CmTUDrowPartyExists","MYAREA",0)
 THEN
    RESPONSE #100
       CreateCreature("CMALISKA",[3814.2004],2)
@@ -13,5 +13,5 @@ THEN
       CreateCreature("CMALISK5",[3740.2100],2)
       CreateCreature("CMALISK6",[3790.2094],8)
       CreateCreature("CMALISK7",[3756.2119],2)
-      SetGlobal("CmTUDrowPartyExists","GLOBAL",1)
+      SetGlobal("CmTUDrowPartyExists","MYAREA",1)
 END

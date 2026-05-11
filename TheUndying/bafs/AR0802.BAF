@@ -1,5 +1,5 @@
 IF
-	Global("DoSSpawn","AR0802",0)
+	Global("DoSSpawn","MYAREA",0)
 THEN
 	RESPONSE #100
 		CreateCreature("CMAPOCAL",[359.1618],0) // 
@@ -9,5 +9,5 @@ THEN
 		CreateCreature("CMAPOCAL",[970.2429],0) // 
 		ActionOverride("Vase 3",CreateItem("CMAR01",40,0,0)) //
 		ActionOverride("Vase 5",CreateItem("RINGGR06",1,0,0)) //
-		SetGlobal("DoSSpawn","AR0802",1)
+		SetGlobal("DoSSpawn","MYAREA",1)
 END

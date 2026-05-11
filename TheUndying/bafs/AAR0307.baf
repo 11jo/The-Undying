@@ -1,8 +1,8 @@
 IF
-   Global("CmTUStore2Exists","GLOBAL",0)
+   Global("CmTUStore2Exists","MYAREA",0)
 THEN
    RESPONSE #100
-      SetGlobal("CmTUStore2Exists","GLOBAL",1)
+      SetGlobal("CmTUStore2Exists","MYAREA",1)
       CreateCreature("CMTUS02",[1600.1938],8)
 END
 

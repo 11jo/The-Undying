@@ -1,8 +1,8 @@
 IF
-	Global("CMNinaExists","AR0406",0)
+	Global("CMNinaExists","MYAREA",0)
 THEN
 	RESPONSE #100
-		SetGlobal("CMNinaExists","AR0406",1)
+		SetGlobal("CMNinaExists","MYAREA",1)
 		CreateCreature("CMNINAF9",[470.1490],5) // Ninafer
 		Continue()
 END

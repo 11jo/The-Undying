@@ -1,9 +1,9 @@
 IF
-	Global("DoSSpawn","AR3016",0)
+	Global("DoSSpawn","MYAREA",0)
 THEN
 	RESPONSE #100
 		ActionOverride("Shelf7",CreateItem("COMA06",0,0,0)) //
 		ActionOverride("Table1",CreateItem("CM1H08",0,0,0)) //
 		ActionOverride("Table6",CreateItem("COMR03",0,0,0)) //
-		SetGlobal("DoSSpawn","AR3016",1)
+		SetGlobal("DoSSpawn","MYAREA",1)
 END

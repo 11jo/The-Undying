@@ -1,8 +1,9 @@
 IF
-	Global("CmPriest","AR0900",0)
+	Global("CmPriest","MYAREA",0)
 	Global("NinaJoin","GLOBAL",1)
 THEN
 	RESPONSE #100
+		SetGlobal("CmPriest","MYAREA",1)
 		CreateCreature("CMNINAMY",[3725.1610],0) // Priest of Mystra
-		SetGlobal("CmPriest","AR0900",1)
+		Continue()
 END

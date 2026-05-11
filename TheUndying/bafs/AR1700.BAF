@@ -1,8 +1,8 @@
 IF
-	Global("DoSSpawn","AR1700",0)
+	Global("DoSSpawn","MYAREA",0)
 THEN
 	RESPONSE #100
+		SetGlobal("DoSSpawn","MYAREA",1)
 		CreateCreature("CMMEDUS",[3165.1919],0) // 
 		CreateCreature("CMMEDUS",[3055.1755],0) // 
-		SetGlobal("DoSSpawn","AR1700",1)
 END

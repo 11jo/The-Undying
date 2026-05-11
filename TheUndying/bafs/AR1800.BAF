@@ -1,5 +1,5 @@
 IF
-	Global("DoSSpawn","AR1800",0)
+	Global("DoSSpawn","MYAREA",0)
 THEN
 	RESPONSE #100
 		CreateCreature("CMGHOST1",[1660.692],0) // 
@@ -8,5 +8,5 @@ THEN
 		CreateCreature("CMGHOST1",[1817.1265],0) // 
 		ActionOverride("Carcass",CreateItem("COMS01",0,0,0)) //
 		ActionOverride("Carcass",CreateItem("PLAT05",0,0,0)) //
-		SetGlobal("DoSSpawn","AR1800",1)
+		SetGlobal("DoSSpawn","MYAREA",1)
 END

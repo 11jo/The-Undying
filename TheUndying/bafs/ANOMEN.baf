@@ -5,7 +5,7 @@ IF
 	See("cmninaf")
 	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 	!Dead("cmninaf")
-	CombatCounter(0)
+	!ActuallyInCombat()
 	Global("AnomenIsKnight","GLOBAL",1)
 	Global("NinaAnomenTalk1","GLOBAL",1)
 THEN
@@ -20,7 +20,7 @@ IF
 	See("cmninaf")
 	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 	!Dead("cmninaf")
-	CombatCounter(0)
+	!ActuallyInCombat()
 	Global("AnomenIsNotKnight","GLOBAL",1)
 	Global("NinaAnomenTalk1b","GLOBAL",1)
 THEN
@@ -35,7 +35,7 @@ IF
 	See("cmninaf")
 	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 	!Dead("cmninaf")
-	CombatCounter(0)
+	!ActuallyInCombat()
 	Global("NinaAnomenFlirt1","GLOBAL",0)
 	Global("NinaAnoMatch","GLOBAL",1)
 THEN

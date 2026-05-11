@@ -1,10 +1,11 @@
 IF
- See("cmninaf")
- Detect("cmninaf")
- Global("MoriaFindsNina","GLOBAL",0)
-  CombatCounter(0)
+	Global("MoriaFindsNina","LOCALS",0)
+	!ActuallyInCombat()
+	Detect("cmninaf")
+	InParty("cmninaf")
+	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 THEN
-RESPONSE #100
- SetGlobal("MoriaFindsNina","GLOBAL",1)
- Dialogue("cmninaf")
+	RESPONSE #100
+		SetGlobal("MoriaFindsNina","LOCALS",1)
+		Dialogue("cmninaf")
 END

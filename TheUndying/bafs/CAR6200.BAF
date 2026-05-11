@@ -1,15 +1,12 @@
 IF
     Global("StartEndBios","AR6200",1)
     InParty("cmninaf")
-    Global("CMNinaBio","GLOBAL",0)
+    Global("CMNinaBio","MYAREA",0)
 THEN
     RESPONSE #100
-        SetGlobal("CMNinaBio","GLOBAL",1)
+        SetGlobal("CMNinaBio","MYAREA",1)
 		// TextScreen("CMNINA1")
         TextScreen("CMNIAND1") // BWP fix
-        SetGlobal("CMNinaBio","GLOBAL",1)
         SmallWait(1)
-        SetGlobal("CMNinaBio","GLOBAL",1)
         Continue()
-        SetGlobal("CMNinaBio","GLOBAL",1)
 END

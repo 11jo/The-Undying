@@ -1,0 +1,9 @@
+IF
+	Detect([PC])
+	AreaCheck("ar0701")  // The Sewers
+	NumberOfTimesTalkedTo(0)
+THEN
+	RESPONSE #100
+		StartDialogueNoSet(LastSeenBy(Myself))
+END
+

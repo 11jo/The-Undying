@@ -1,7 +1,7 @@
 IF
-	Global("MakeKfc","AR0509",0)
+	Global("MakeKfc","MYAREA",0)
 THEN
 	RESPONSE #100
+		SetGlobal("MakeKfc","MYAREA",1)
 		CreateCreature("cmkfc01",[920.306],0) // "The Colonel"
-		SetGlobal("MakeKfc","AR0509",1)
 END
