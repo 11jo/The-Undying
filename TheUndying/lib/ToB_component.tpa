@@ -1,5 +1,5 @@
 
-		
+
 	// Variable used by FUNCTION GW_FIND_DLG_RESPONSE_STRING to find after which transition NPC will be recalled by Fate Spirit.
 			OUTER_SET fatesp_string = 83364  // Rasaad = 83364// 65018 = ~Bring me Anomen, the fighter/cleric.~ - 65010 = ~Bring me Aerie, the elven cleric/mage.~
 
@@ -24,7 +24,7 @@ ACTION_IF  GAME_IS ~eet~ BEGIN
 			cre_ToB = "CMNINA25"			//if type = 4 and/or default_ToB = 1 name of the ToB CRE file is needed (used to create new CRE rather than migrating existing one from SoA)
 			traFile = EVAL "weidu_external/TheUndying/languages/autotra/%s/D/cmavat1.tra"  //an optional TRA file that will be used for the TRA references defined in "string"
 			string = "@0"					//FATESP summon text (example: "Bring me Quayle, the gnome cleric/illusionist.") or TRA string number
-			stringPosDV = "Rasaad"			//set the DV of NPC right below your response (used for sorting FATESP responses alphabetically)
+			stringPosDV = "Minsc"			//set the DV of NPC right below your response (used for sorting FATESP responses alphabetically)
 											//Aerie, Ajantis, Alora, Anomen, Baeloth, Branwen, Cernd, Coran, Corwin, Dorn, Dynaheir, Edwin, Eldoth, Faldorn, Garrick,
 											//Glint, HaerDalis, Hexxat, Imoen2, Jaheira, Jan, Kagain, Keldorn, Khalid, Kivan, Korgan, MKhiin, Mazzy, Minsc, Montaron,
 											//Nalia, Neera, Quayle, Rasaad, Safana, SharTeel, Skie, Tiax, Valygar, Viconia, Voghiln, Wilson, Xan, Xzar, Yeslick, Yoshimo
@@ -35,5 +35,5 @@ ACTION_IF  GAME_IS ~eet~ BEGIN
 	END
 END ELSE BEGIN
 		INCLUDE ~TheUndying/lib/gw_dlg_functions.tpa~
-	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogs/FATESP.d~ USING ~weidu_external/TheUndying/languages/autotra/%s/cmavat1.tra~
+	COMPILE EVALUATE_BUFFER ~%MOD_FOLDER%/dialogs/FATESP.d~ USING ~weidu_external/TheUndying/languages/autotra/%s/D/cmavat1.tra~
 END
