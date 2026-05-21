@@ -602,7 +602,8 @@ END
 IF ~~ TheBitternessofDeath
 SAY @219
 IF ~~ THEN DO ~LeaveParty()
-Enemy() ChangeAIScript("CALLIX",OVERRIDE)
+				ChangeAIScript("CALLIX",OVERRIDE)
+				Enemy()
 ~ EXIT
 END
   
@@ -613,19 +614,29 @@ END
 
 IF ~InParty("Viconia")~ THEN BEGIN CalVicLeave
   SAY @220
-  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0) LeaveParty() EscapeArea()
+  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0)
+					LeaveParty()
+					EscapeArea()
   ~ EXIT
 END
 
 IF ~InParty("Yasraena")~ THEN BEGIN CalYasLeave
   SAY @220
-  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0) LeaveParty() EscapeArea()
+  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0)
+					LeaveParty()
+					EscapeArea()
   ~ EXIT
 END
 
-IF ~InParty("Solaufein")~ THEN BEGIN CalSolLeave
+IF ~
+OR(3)
+	InParty("C#Solaufein") // Solaufein's Rescue by Jastey
+	InParty("Sola") // Solaufein's Rescue by Westley Weimer
+	InParty("Solaufein")~ THEN BEGIN CalSolLeave
   SAY @221
-  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0) LeaveParty() EscapeArea()
+  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0)
+					LeaveParty()
+					EscapeArea()
   ~ EXIT
 END
 
@@ -633,21 +644,29 @@ END
 // Interjections //
 
 I_C_T VICONI 2 CalliVicciGreet
-== CMCALLIJ IF ~InParty("callisto")~ THEN @222
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN @222
 END
 
 I_C_T AERIEJ 5 CalliDeadComment
-== CMCALLIJ IF ~InParty("callisto")~ THEN @223
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN @223
 = @224
 END 
 
 I_C_T AERIEJ 6 CalliDeadComment
-== CMCALLIJ IF ~InParty("callisto")~ THEN @223
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN @223
 = @224
 END
 
 I_C_T ANOMENJ 52 CalliAnoSis
-== CMCALLIJ   IF ~InParty("callisto")~ THEN
+== CMCALLIJ   IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @225
 END
 
@@ -662,73 +681,105 @@ END
 // END
 
 I_C_T ANOMENJ 232 CalliCommentKel
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @226
 END
 
 I_C_T CERND 70 CalliCernd1
-== CMCALLIJ IF ~InParty("callisto")~ THEN 
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN 
 @227
 END
 
 I_C_T EDWIN 10 CalliEdwin
-== CMCALLIJ IF ~InParty("callisto")~ THEN 
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN 
 @228
 END
 
 I_C_T EDWINJ 10 CalliEdwinScroll
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @229
-== EDWIN IF ~InParty("callisto")~ THEN
+== EDWIN IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @230
 END
 
 I_C_T HAERDAJ 35 CalliHaer1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @231
 END
 
 I_C_T IMOEN2 22 CalliLeaveImoen
-== CMCALLIJ IF ~InParty("callisto")~ THEN 
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN 
 @232
 END
 
 I_C_T JAHEIRAJ 54 CalliJah1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @233
-== JAHEIRAJ IF ~InParty("callisto")~ THEN
+== JAHEIRAJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @234
 END
 
 I_C_T JAHEIRAJ 112 CalliJah2
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @235
 END
 
 I_C_T KELDORJ 23 CalliKelWife
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @236
 END
 
 I_C_T KORGANJ 34 CalliKorgan1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @237
-== KORGANJ IF ~InParty("callisto")~ THEN
+== KORGANJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @238
 END
 
 I_C_T VALYGAR 4 CalliValygarWanted
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @239
 END
 
 I_C_T YOSHJ 113 CalliYoshimoBetray
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @240
 END
 
 I_C_T BODHI 6 CalliBodhiDeal1
-== CMCALLIJ IF ~InParty("callisto")~ THEN 
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN 
 @241
 END
 
@@ -738,118 +789,170 @@ END
 // END
 
 I_C_T COHRVALE 1 CalliCohrvale
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @242
  == COHRVALE
  @243
 END
 
 I_C_T COPGREET 1 CalliPitfight
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @244
 END
 
 I_C_T DELCIA 0 CalliDelcia1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @245
 == DELCIA
  @246
 END
 
 I_C_T DELCIA 17 CalliDelcia2
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @245
 == DELCIA
  @246
 END
 
 I_C_T SURLY 17 CalliSurly
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @247
-== AERIEJ IF ~InParty("Aerie") InParty("callisto")~ THEN
+== AERIEJ IF ~InParty("Aerie")
+InMyArea("Aerie")
+!StateCheck("Aerie",CD_STATE_NOTVALID)
+ InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @248
-== CMCALLIJ IF ~InParty("callisto") InParty("Aerie")~ THEN
+== CMCALLIJ IF ~ InParty("Aerie")
+InMyArea("Aerie")
+!StateCheck("Aerie",CD_STATE_NOTVALID)
+ InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @249
 END
 
 I_C_T DFISHER 3 CalliFishy
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @250
-== DFISHER IF ~InParty("callisto")~ THEN
+== DFISHER IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @251
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @252
 END
 
 INTERJECT_COPY_TRANS FIRAMB01 2 CalliWindWerewolf
-== CMCALLIJ   IF ~InParty("callisto")~ THEN
+== CMCALLIJ   IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @253
 == FIRAMB01
  @254
 END
 
 I_C_T BHOISIG 19 CalliOisig
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @255
 END
 
 I_C_T HENDAK 17 CalliHendak
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @256
 END
 
 INTERJECT_COPY_TRANS HERVO 11 CalliHervo
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @257
 END
 
 I_C_T ISAEA 28 CalliIsaea
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @258
 =
 @259
 END
 
 INTERJECT_COPY_TRANS JUGDAR01 2 CalliDaar
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @260
 END
 
 I_C_T LYROS 24 CalliXzar
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @261
 == LYROS @262
 END
 
 I_C_T RIFTG03 7 CalliAmaunatorGod
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @263
 = @264
 END
 
 I_C_T RIFTW01 7 CalliGuardian2
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @265
 = @266
 END
 
 I_C_T RIFTG03 29 CalliGodDeath
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @267
 END
 
 I_C_T MAEVAR 16 CalliMaevarSteal1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @268
 END
 
 I_C_T MAEVAR 17 CalliMaevarSteal2
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @269
 END
 
 I_C_T MAEVAR 31 CalliMaevarTraitor
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @270
 END
 
@@ -859,102 +962,140 @@ END
 END   */
 
 I_C_T RENAL 22 CalliRenal1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @271
 END
 
 I_C_T RENAL 47 CalliRenal2
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @272
 END
 
 I_C_T RENAL 69 CalliRenal3
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @273
 END
 
 I_C_T SAMIA 24 CalliSamia
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @274
 END
 
 I_C_T SLAVERM 0 CalliSlaverMage
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @275
 END
 
 I_C_T SPPAIN 0 CalliPaina
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @276
 == SPPAIN @277
 END
 
 I_C_T TOLGER 80 CalliTolgerias
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @278
 END  
 
 INTERJECT_COPY_TRANS2 TRGRD03 9 CalliTradmeetGuard
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @279
 END
 
 I_C_T PPSAEM 59 CalliSaemonBetrays
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @280
 END
 
 I_C_T PPSAEM2 19 CalliSaemonSpellhold
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @281
 END
 
 I_C_T RAELIS 79 CalliBountyBribe
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @282
 END
 
 I_C_T DADROW18 3 CalliDadrow18
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @283
 END
 
 INTERJECT_COPY_TRANS UDDEMON 8 CalliDemonEggs
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @284
 == UDDEMON
 @285
 END
 
 I_C_T UDPHAE01 151 CalliPhaere
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @286
 END
 
 I_C_T UDSILVER 9 CalliAdalon
-== CMCALLIJ IF ~InParty("callisto")~ THEN 
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN 
 @287
 END
 
 I_C_T UDSILVER 34 CalliAdalon1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
  @288
 =
  @289
 END
 
 I_C_T UDSOLA01 117 CalliSola
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @290
 END
 
 I_C_T UDSOLA01 118 CalliSola1
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @291
 END
 
 I_C_T YUSUF 2 CalliYusuf
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @292
 END
 
@@ -985,7 +1126,9 @@ END
 END */
 
 INTERJECT PLAYER1 5 CallistoSlayer
-== CMCALLIJ IF ~InParty("callisto")~ THEN
+== CMCALLIJ IF ~InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)~ THEN
 @293
 =
 @294
@@ -1017,12 +1160,15 @@ IF ~~ THEN EXIT
 END
 END
 
-CHAIN IF WEIGHT #-1 ~InParty("callisto")
-See("callisto")
+CHAIN IF WEIGHT #-1 ~
+Global("callistosalvanas","GLOBAL",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("callistosalvanas","LOCALS",0)~ THEN SALVANAS CalliSal
+See("callisto")
+~ THEN SALVANAS CalliSal
 @303
-DO ~SetGlobal("callistosalvanas","LOCALS",1)~
+DO ~SetGlobal("callistosalvanas","GLOBAL",1)~
 == CMCALLIJ @304
 == SALVANAS @305
 == CMCALLIJ @306
@@ -1036,27 +1182,46 @@ EXIT
 
 
 CHAIN
- IF WEIGHT #-1 ~See("callisto")
-    InParty("callisto")
-    Global("CallistoBelminAttack","AR0700",0)~ THEN BELMIN CalliBelminAttack
+ IF WEIGHT #-1 ~
+Global("CallistoBelminAttack","AR0700",0)
+InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)
+See("callisto")~ THEN BELMIN CalliBelminAttack
     @313
  DO ~SetGlobal("CallistoBelminAttack","AR0700",1) SetGlobal("CalliHistory1","GLOBAL",1)~
-  == CMCALLIJ IF ~See("callisto") InParty("callisto")~ THEN
+  == CMCALLIJ IF ~
+InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)
+See("callisto")~ THEN
      @314
   == BELMIN @315
-  == CMCALLIJ IF ~See("callisto") InParty("callisto")~ THEN
+  == CMCALLIJ IF ~
+InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)
+See("callisto")~ THEN
      @316
   == BELMIN @317
-  == CMCALLIJ IF ~See("callisto") InParty("callisto")~ THEN
+  == CMCALLIJ IF ~
+InParty("callisto")
+InMyArea("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID)
+See("callisto")~ THEN
      @318
-  == BELMIN @319 DO ~SetGlobal("CalliHistory1","GLOBAL",1) Enemy() Attack("callisto")~
+  == BELMIN @319 DO ~SetGlobal("CalliHistory1","GLOBAL",1) 
+						Enemy()
+						Attack("callisto")~
 EXIT
 
 CHAIN IF WEIGHT #-1
-~InParty("callisto")
-See("callisto")
+~
+Global("CalliWaylane","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliWaylane","LOCALS",0)~ THEN WAYLANE CalliWaylaneSell
+See("callisto")~ THEN WAYLANE CalliWaylaneSell
 @320
 DO ~SetGlobal("CalliWaylane","LOCALS",1)~
 == CMCALLIJ @321
@@ -1067,10 +1232,13 @@ DO ~SetGlobal("CalliWaylane","LOCALS",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1
-~InParty("callisto")
-See("callisto")
+~
+Global("CalliUrchin1","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliUrchin1","LOCALS",0)~ THEN URCHIN1 CalliUrchin1
+See("callisto")
+~ THEN URCHIN1 CalliUrchin1
 @326
 DO ~SetGlobal("CalliUrchin1","LOCALS",1)~
 == CMCALLIJ @327
@@ -1078,10 +1246,13 @@ DO ~SetGlobal("CalliUrchin1","LOCALS",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1
-~InParty("callisto")
-See("callisto")
+~
+Global("CalliUrchin2","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliUrchin2","LOCALS",0)~ THEN URCHIN2 CalliUrchin2
+See("callisto")
+~ THEN URCHIN2 CalliUrchin2
 @329
 DO ~SetGlobal("CalliUrchin2","LOCALS",1)~
 == CMCALLIJ @330
@@ -1089,10 +1260,13 @@ DO ~SetGlobal("CalliUrchin2","LOCALS",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1
-~InParty("callisto")
-See("callisto")
+~
+Global("CalliUrchin3","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliUrchin3","LOCALS",0)~ THEN URCHIN3 CalliUrchin3
+See("callisto")
+~ THEN URCHIN3 CalliUrchin3
 @332
 DO ~SetGlobal("CalliUrchin3","LOCALS",1)~
 == CMCALLIJ @333
@@ -1102,20 +1276,26 @@ DO ~SetGlobal("CalliUrchin3","LOCALS",1)~
 EXIT
 
 CHAIN IF WEIGHT #-1
-~InParty("callisto")
-See("callisto")
+~
+Global("CalliSlumm1","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliSlumm1","LOCALS",0)~ THEN SLUMM1 CalliSlumm1
+See("callisto")
+~ THEN SLUMM1 CalliSlumm1
 @337
 DO ~SetGlobal("CalliSlumm1","LOCALS",1)~
 == CMCALLIJ @338
 EXIT
 
 CHAIN IF WEIGHT #-1
-~InParty("callisto")
-See("callisto")
+~
+Global("CalliSlumm2","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliSlumm2","LOCALS",0)~ THEN SLUMM2 CalliSlumm2
+See("callisto")
+~ THEN SLUMM2 CalliSlumm2
 @339
 DO ~SetGlobal("CalliSlum2","LOCALS",1)~
 == CMCALLIJ @340
@@ -1123,10 +1303,13 @@ DO ~SetGlobal("CalliSlum2","LOCALS",1)~
 EXIT
 
 CHAIN
-IF WEIGHT #-1 ~InParty("callisto")
-See("callisto")
+IF WEIGHT #-1 ~
+Global("CalliThumb","LOCALS",0)
+InParty("callisto")
+InMyArea("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("CalliThumb","LOCALS",0)~ THEN THUMB CalliThumb
+See("callisto")
+~ THEN THUMB CalliThumb
 @342 DO ~SetGlobal("CalliThumb","LOCALS",1)~
 == CMCALLIJ @343
 == THUMB @344

@@ -30,7 +30,7 @@ END
 BEGIN ~CMNINAMY~
 
 IF ~NumTimesTalkedTo(0)
-Global("CMMystraQuest","GLOBAL",0)~ THEN BEGIN HiThere
+Global("CM_MystraQuest_STO","GLOBAL",0)~ THEN BEGIN HiThere
   SAY @8
 IF ~~ THEN REPLY @9 GOTO PcInterested
 IF ~~ THEN REPLY @10 GOTO PcTurnedDown
@@ -53,7 +53,7 @@ END
 
 IF ~NumTimesTalkedToGT(0)
 !PartyHasItem("CMBOOK99")
-Global("CMMystraQuest","GLOBAL",0)
+Global("CM_MystraQuest_STO","GLOBAL",0)
 ~ THEN BEGIN NoBook
   SAY @16
 IF ~~ THEN REPLY @17 GOTO HurryUp
@@ -65,14 +65,16 @@ END
 
 IF ~NumTimesTalkedToGT(0)
 PartyHasItem("CMBOOK99")
-Global("CMMystraQuest","GLOBAL",0)
+Global("CM_MystraQuest_STO","GLOBAL",0)
 ~ THEN BEGIN HaveBook
   SAY @19 IF ~~ THEN DO ~TakePartyItem("CMBOOK99")
-GivePartyGold(1000) SetGlobal("CMMystraQuest","GLOBAL",1) AddexperienceParty(12500)~ EXIT
+							GivePartyGold(1000)
+							SetGlobal("CM_MystraQuest_STO","GLOBAL",1)
+							AddexperienceParty(12500)~ EXIT
 END
 
 IF ~NumTimesTalkedToGT(0)
-Global("CMMystraQuest","GLOBAL",1)
+Global("CM_MystraQuest_STO","GLOBAL",1)
 ~ THEN BEGIN Shopping
   SAY @20
 IF ~~ THEN REPLY @21 GOTO StartStore

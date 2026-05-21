@@ -9,6 +9,7 @@ BEGIN ~CMSORAN~
 CHAIN
 IF ~Detect("callisto")
 InParty("callisto")
+!StateCheck("callisto",CD_STATE_NOTVALID) 
 Global("CalliFoundValis","GLOBAL",0)~ THEN CMVALIS Confront1
 @0 DO ~SetGlobal("CalliFoundValis","GLOBAL",1)~
 == CMCALLIJ @1
@@ -27,7 +28,6 @@ EXIT
 CHAIN
 IF ~Detect("callisto")
 InParty("callisto")
-See("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliFoundValis","GLOBAL",1)
 Global("CalliFoundCormak","GLOBAL",0)~ THEN CMCORMAK Confront2
@@ -46,7 +46,6 @@ EXIT
 CHAIN
 IF ~Detect("callisto")
 InParty("callisto")
-See("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliFoundMarius","GLOBAL",0)~ THEN CMMARIUS Confront3
 @22 DO ~SetGlobal("CalliFoundMarius","GLOBAL",1)~
@@ -65,7 +64,6 @@ EXIT
 CHAIN
 IF WEIGHT #-1 ~Detect("callisto")
 InParty("callisto")
-See("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliFoundDrow","GLOBAL",0)~ THEN CMNASTOR CalliFoundDrow
 @33 DO ~SetGlobal("CalliFoundDrow","GLOBAL",1)~
@@ -98,7 +96,6 @@ EXIT
 CHAIN
 IF ~Detect("callisto")
 InParty("callisto")
-See("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
 Global("CalliFoundSoran","GLOBAL",0)~ THEN CMSORAN ConfrontOldParty
 @56 DO ~SetGlobal("CalliFoundSoran","GLOBAL",1)~

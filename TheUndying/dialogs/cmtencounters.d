@@ -4,8 +4,8 @@ IF ~NumTimesTalkedTo(0)~ THEN BEGIN 0
   SAY @0
   IF ~~ THEN REPLY @1 GOTO 1
   IF ~~ THEN REPLY @2 DO ~ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))~ EXIT
+							Enemy()
+							Attack(NearestEnemyOf(Myself))~ EXIT
 END
 
 IF ~~ THEN BEGIN 1
@@ -18,15 +18,15 @@ IF ~~ THEN BEGIN 2
   SAY @6
   IF ~~ THEN REPLY @7 GOTO 3
   IF ~~ THEN REPLY @8 DO ~ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))~ EXIT
+							Enemy()
+							Attack(NearestEnemyOf(Myself))~ EXIT
 END
 
 IF ~~ THEN BEGIN 3
   SAY @9
   IF ~~ THEN DO ~ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))~ EXIT
+					Enemy()
+					Attack(NearestEnemyOf(Myself))~ EXIT
 END
 
 
@@ -121,8 +121,8 @@ END
 IF ~~ THEN BEGIN 1
   SAY @19
   IF ~~ THEN DO ~ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))~ EXIT
+					Enemy()
+					Attack(NearestEnemyOf(Myself))~ EXIT
 END
 
 IF ~~ THEN BEGIN 2
@@ -177,7 +177,7 @@ END
 
 IF ~~ THEN BEGIN BiteMe
   SAY @27 IF ~~ THEN DO ~SetGlobal("CmSharFight","GLOBAL",1)
-Enemy()
+							Enemy()
 ~ EXIT
 END
  
@@ -261,7 +261,9 @@ PartyHasItem("MISC7H")
 Global("CmFarmQuest","GLOBAL",0)
 ~ THEN BEGIN HaveItem
   SAY @45 IF ~~ THEN DO ~TakePartyItem("MISC7H")
-GivePartyGold(10) SetGlobal("CmFarmQuest","GLOBAL",1) AddexperienceParty(6000)~ EXIT
+							GivePartyGold(10)
+							SetGlobal("CmFarmQuest","GLOBAL",1)
+							AddexperienceParty(6000)~ EXIT
 END
 
 IF ~NumTimesTalkedToGT(0)

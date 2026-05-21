@@ -1,13 +1,15 @@
 IF
-	InParty(Myself)
 	AreaCheck("AR0300")
-	InParty("cmninaf")
-	See("cmninaf")
-	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 	!Dead("cmninaf")
-	!ActuallyInCombat()
 	Global("AnomenIsKnight","GLOBAL",1)
-	Global("NinaAnomenTalk1","GLOBAL",1)
+	Global("NinaAnomenTalk1","GLOBAL",1) // TODO MISSING VARIABLE
+	ActionListEmpty()
+	!ActuallyInCombat()
+	InParty("cmninaf")
+	!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	See("cmninaf")
 THEN
 	RESPONSE #100
 		Interact("cmninaf")
@@ -22,22 +24,24 @@ IF
 	!Dead("cmninaf")
 	!ActuallyInCombat()
 	Global("AnomenIsNotKnight","GLOBAL",1)
-	Global("NinaAnomenTalk1b","GLOBAL",1)
+	Global("NinaAnomenTalk1b","GLOBAL",1) // TODO MISSING VARIABLE
 THEN
 	RESPONSE #100
 		Interact("cmninaf")
 END
 
 IF
-	InParty(Myself)
 	AreaCheck("AR0400")
-	InParty("cmninaf")
-	See("cmninaf")
-	!StateCheck("cmninaf",CD_STATE_NOTVALID)
 	!Dead("cmninaf")
-	!ActuallyInCombat()
 	Global("NinaAnomenFlirt1","GLOBAL",0)
 	Global("NinaAnoMatch","GLOBAL",1)
+	ActionListEmpty()
+	!ActuallyInCombat()
+	InParty("cmninaf")
+	!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+	InParty(Myself)
+	!StateCheck(Myself,CD_STATE_NOTVALID)
+	See("cmninaf")
 THEN
 	RESPONSE #100
 		Interact("cmninaf")

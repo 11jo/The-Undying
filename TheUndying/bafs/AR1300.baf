@@ -9,3 +9,5 @@ THEN
 		CreateCreature("CM1MANEI",[2287.3240],5)
 		SetGlobal("Cm1300New","MYAREA",1)
 END
+
+// Not implemented

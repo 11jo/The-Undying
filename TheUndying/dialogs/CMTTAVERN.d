@@ -83,8 +83,8 @@ END
 IF ~~ THEN BEGIN 3
   SAY @15
   IF ~~ THEN DO ~ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))
+					Enemy()
+					Attack(NearestEnemyOf(Myself))
 ~ EXIT
 END
 
@@ -98,8 +98,8 @@ END
 IF ~~ THEN BEGIN 5
   SAY @19
   IF ~~ THEN DO ~ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))
+					Enemy()
+					Attack(NearestEnemyOf(Myself))
 ~ EXIT
 END
 
@@ -148,7 +148,9 @@ PartyHasItem("CMMISC03")
 Global("CmMystraBustQuest","GLOBAL",0)
 ~ THEN BEGIN HaveBust
   SAY @31 IF ~~ THEN DO ~TakePartyItem("CMMISC03")
-GivePartyGold(2000) SetGlobal("CmMystraBustQuest","GLOBAL",1) AddexperienceParty(12500)~ EXIT
+							GivePartyGold(2000)
+							SetGlobal("CmMystraBustQuest","GLOBAL",1)
+							AddexperienceParty(12500)~ EXIT
 END
 
 IF ~NumTimesTalkedToGT(0)
@@ -254,8 +256,8 @@ END
 IF ~~ THEN BEGIN 6
   SAY @50
   IF ~~ THEN DO ~TakePartyItem("CMBOOK01")
-GivePartyGold(30000)
-SetGlobal("CmGotBook","GLOBAL",1)
+					GivePartyGold(30000)
+					SetGlobal("CmGotBook","GLOBAL",1)
 ~ EXIT
 END
 
@@ -312,9 +314,9 @@ END
 IF ~~ THEN BEGIN 3
   SAY @63
   IF ~~ THEN DO ~SetGlobal("CmDwarfMerchantHostile","GLOBAL",1)
-ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))~ EXIT
+					ChangeEnemyAlly(Myself,EVILCUTOFF)
+					Enemy()
+					Attack(NearestEnemyOf(Myself))~ EXIT
 END
 
 IF ~~ THEN BEGIN 4
@@ -349,8 +351,8 @@ END
 IF ~~ THEN BEGIN 9
   SAY @74
   IF ~~ THEN DO ~SetGlobal("CmDwarfMerchantHostile","GLOBAL",1)
-  ChangeEnemyAlly(Myself,EVILCUTOFF)
-Enemy()
-Attack(NearestEnemyOf(Myself))~ EXIT
+					ChangeEnemyAlly(Myself,EVILCUTOFF)
+					Enemy()
+					Attack(NearestEnemyOf(Myself))~ EXIT
 END
 

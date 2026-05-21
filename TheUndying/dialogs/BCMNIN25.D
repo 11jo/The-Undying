@@ -3,11 +3,14 @@ BEGIN ~BCMNIN25~
 // Begin Anomen Romance. Also begin Nina in depression after father's death.
 
 CHAIN IF
-~InParty("cmninaf")
-See("cmninaf")
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
+~
 Global("AnomenRomanceActive","GLOBAL",3)
-Global("25NinaAnoRomance","GLOBAL",0)~ THEN BANOME25 AnoConcerned
+Global("25NinaAnoRomance","GLOBAL",0)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")~ THEN BANOME25 AnoConcerned
 @0 DO ~SetGlobal("25NinaAnoRomance","GLOBAL",1)~
 == BCMNIN25 @1
 == BANOME25 @2
@@ -25,6 +28,8 @@ See("cmninaf")
 InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
+	InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 Global("25NinaViconia","GLOBAL",0)~ THEN BVICON25 ViccyBitch
 @8 DO ~SetGlobal("25NinaViconia","GLOBAL",1)~
 == BCMNIN25 @9
@@ -40,6 +45,8 @@ CHAIN IF
 ~InParty("Aerie")
 See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 AreaType(OUTDOOR)
 Global("25NinaAerie1","GLOBAL",0)~ THEN BCMNIN25 AerieNina1
 @16 DO ~SetGlobal("25NinaAerie1","GLOBAL",1)~
@@ -55,6 +62,8 @@ CHAIN IF
 ~InParty("cmninaf")
 See("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
+	InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 Global("25NinaMazzy1","GLOBAL",0)~ THEN BMAZZY25 MazzyNina1
 @23 DO ~SetGlobal("25NinaMazzy1","GLOBAL",1)~
 == BCMNIN25 @24
@@ -70,6 +79,8 @@ CHAIN IF
 ~InParty("cmninaf")
 See("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
+	InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 Global("25NinaMinsc","GLOBAL",0)~ THEN BMINSC25 FriendsFamily
 @30 DO ~SetGlobal("25NinaMinsc","GLOBAL",1)~
 == BCMNIN25 @31
@@ -88,6 +99,8 @@ EXIT
 CHAIN IF ~InParty("Anomen")
 See("Anomen")
 !StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("AnomenRomanceActive","GLOBAL",3)
 Global("25NinaAnoRomance","GLOBAL",1)
 Global("25NinaAnoConcern","GLOBAL",0)~ THEN BCMNIN25 NinaAnoConcerned
@@ -110,6 +123,8 @@ CHAIN IF
 ~InParty("Sarevok")
 See("Sarevok")
 !StateCheck("Sarevok",CD_STATE_NOTVALID)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("25NinaSarevok1","GLOBAL",1)~ THEN BCMNIN25 SareNina1
 @53
 == BSAREV25 @54
@@ -123,6 +138,8 @@ CHAIN IF
 ~InParty("cmninaf")
 See("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
+	InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 Global("25NinaNalia1","GLOBAL",0)~ THEN BNALIA25 NaliaNina1
 @59
 == BCMNIN25 @60
@@ -137,6 +154,8 @@ CHAIN IF
 ~InParty("Mazzy")
 See("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 TimeOfDay(DAY)
 AreaType(OUTDOOR)
 Global("25NinaMazzy1","GLOBAL",1)
@@ -152,6 +171,8 @@ CHAIN IF
 ~InParty("Cernd")
 See("Cernd")
 !StateCheck("Cernd",CD_STATE_NOTVALID)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 AreaType(OUTDOOR)
 Global("25NinaCernd1","GLOBAL",0)~
 THEN BCMNIN25 OutdoorsAgain
@@ -169,6 +190,9 @@ EXIT
 CHAIN IF
 ~InParty("Imoen2")
 See("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID)
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("25NinaImoen1","GLOBAL",0)~
 THEN BCMNIN25 SpellTalk
 @80 DO ~SetGlobal("25NinaImoen1","GLOBAL",1)~

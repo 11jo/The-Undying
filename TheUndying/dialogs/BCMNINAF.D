@@ -31,10 +31,14 @@ END  */
 /* After Spellhold   */
 
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
+IF ~
 AreaCheck("AR2100")
-Global("NinaBackground","GLOBAL",1)~ THEN BEGIN NinaJonBackground
+Global("NinaBackground","GLOBAL",1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ THEN BEGIN NinaJonBackground
   SAY @0
 IF ~~ THEN REPLY @1 DO ~SetGlobal("NinaBackground","GLOBAL",2)~ GOTO HalfTruth
 END
@@ -62,10 +66,14 @@ END
 /* After Spellhold in the Underdark      */
 
 IF  
-~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
+~
 Global("NinaDrowChat","GLOBAL", 0)
-Global("PlayerLooksLikeDrow","GLOBAL",1)~ THEN BEGIN NinaHatesDrow
+Global("PlayerLooksLikeDrow","GLOBAL",1)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ THEN BEGIN NinaHatesDrow
   SAY @8
 IF ~~ THEN REPLY @9 DO ~SetGlobal("NinaDrowChat","GLOBAL",1)~ GOTO AgreedC
 IF ~~ THEN REPLY @10 DO ~SetGlobal("NinaDrowChat","GLOBAL",1)~ GOTO F_U
@@ -79,10 +87,14 @@ IF ~~ THEN BEGIN F_U
   SAY @12 IF ~~ THEN EXIT
 END
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
+IF ~
 AreaCheck("AR2200")
-Global("NinaDrowCity","GLOBAL",0)~ THEN BEGIN NinaUstNatha
+Global("NinaDrowCity","GLOBAL",0)
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ THEN BEGIN NinaUstNatha
   SAY @13
 ++ @14 DO ~SetGlobal("NinaDrowCity","GLOBAL",1)~ + Ust1
 ++ @15 DO ~SetGlobal("NinaDrowCity","GLOBAL",1)~ + Ust2
@@ -102,11 +114,16 @@ END
 //   Nina & Class Chats
 
 IF WEIGHT #-1 
-~See(Player1)
+~
 Class(Player1,MAGE_ALL)
-CombatCounter(0)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-Global("NinaChatMage","GLOBAL",0)~ THEN BEGIN FellowMage
+Global("NinaChatMage","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ THEN BEGIN FellowMage
 SAY @18
 ++ @19 DO ~SetGlobal("NinaChatMage","GLOBAL",1)~ + M_Gorion
 ++ @20 DO ~SetGlobal("NinaChatMage","GLOBAL",1)~ + M_Taught
@@ -141,11 +158,16 @@ IF ~~ EXIT
 END
 
 IF WEIGHT #-1 
-~See(Player1)
+~
 Class(Player1,FIGHTER_ALL)
-CombatCounter(0)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-Global("NinaChatFighter","GLOBAL",0)~ THEN BEGIN FellowFighter
+Global("NinaChatFighter","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ THEN BEGIN FellowFighter
 SAY @31
 ++ @32 DO ~SetGlobal("NinaChatFighter","GLOBAL",1)~ + F_Taught
 ++ @21 DO ~SetGlobal("NinaChatFighter","GLOBAL",1)~ + F_NoChat
@@ -197,11 +219,17 @@ END */
 
 /* Happiness & Reputation */
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
+IF ~
 ReputationGT(Player1,4)
 ReputationLT(Player1,8)
-Global("NinaRep1","GLOBAL",0)~ THEN BEGIN NinaRep1
+Global("NinaRep1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ THEN BEGIN NinaRep1
   SAY @45
 ++ @46 DO ~SetGlobal("NinaRep1","GLOBAL",1)~ + PissOff
 ++ @47 DO ~SetGlobal("NinaRep1","GLOBAL",1)~  + AllWell
@@ -226,7 +254,12 @@ END
 
 // Anomen, Ninafer and PC triangle check In other words its me or else
 
-IF ~Global("Nina_MeOrElse","GLOBAL",1)~ NinaCharacterConflict
+IF ~Global("Nina_MeOrElse","GLOBAL",1) // TODO missing something
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
+~ NinaCharacterConflict
 SAY @52
 ++ @53 DO ~SetGlobal("Nina_MeOrElse","GLOBAL",2)~ + NCC1
 ++ @54 DO ~SetGlobal("Nina_MeOrElse","GLOBAL",2)~ + NCC2
@@ -258,11 +291,16 @@ END
 
 //  NPC banters
 
-CHAIN IF ~InParty("Aerie")
+CHAIN IF ~
+Global("NinaAerie1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Aerie")
+!StateCheck("Aerie",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Aerie")
-CombatCounter(0)
-!StateCheck("Aerie",CD_STATE_NOTVALID)
-Global("NinaAerie1","GLOBAL",0)~ THEN BCMNINAF AerieMagic
+~ THEN BCMNINAF AerieMagic
 @63 DO ~SetGlobal("NinaAerie1","GLOBAL",1)~
 == BAERIE @64
 == BCMNINAF @65
@@ -272,11 +310,17 @@ Global("NinaAerie1","GLOBAL",0)~ THEN BCMNINAF AerieMagic
 == BCMNINAF @69
 EXIT
 
-CHAIN IF ~InParty("cmninaf")
-See("cmninaf")
+CHAIN IF ~
 AreaType(FOREST)
 Global("NinaCernd1","GLOBAL",0)
-!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN BCERND Herbal
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")
+~ THEN BCERND Herbal
 @70 DO ~SetGlobal("NinaCernd1","GLOBAL",1)~
 == BCMNINAF @71
 == BCERND @72
@@ -285,10 +329,16 @@ Global("NinaCernd1","GLOBAL",0)
 == BCMNINAF @75
 EXIT
 
-CHAIN IF ~InParty("cmninaf")
+CHAIN IF ~
+Global("NinaEdwin1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("cmninaf")
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaEdwin1","GLOBAL",0)~ THEN BEDWIN EdwinDislike
+~ THEN BEDWIN EdwinDislike
 @76
 == BCMNINAF @77 DO ~SetGlobal("NinaEdwin1","GLOBAL",1)~
 == BEDWIN @78
@@ -298,10 +348,16 @@ Global("NinaEdwin1","GLOBAL",0)~ THEN BEDWIN EdwinDislike
 == BEDWIN @82
 END
 
-CHAIN IF ~InParty("Haerdalis")
+CHAIN IF ~
+Global("NinaHaer1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Haerdalis")
+!StateCheck("Haerdalis",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Haerdalis")
-!StateCheck("Haerdalis",CD_STATE_NOTVALID)
-Global("NinaHaer1","GLOBAL",0)~ THEN BCMNINAF NinaHaerChat1
+~ THEN BCMNINAF NinaHaerChat1
 @83
 DO ~SetGlobal("NinaHaer1","GLOBAL",1)~
 == BHAERDA @84
@@ -311,10 +367,16 @@ DO ~SetGlobal("NinaHaer1","GLOBAL",1)~
 == BHAERDA @88
 EXIT
 
-CHAIN IF ~InParty("Imoen2")
+CHAIN IF ~
+Global("NinaImoen1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Imoen2")
+!StateCheck("Imoen2",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Imoen2")
-!StateCheck("Imoen2",CD_STATE_NOTVALID)
-Global("NinaImoen1","GLOBAL",0)~ THEN BCMNINAF ImoenChat
+~ THEN BCMNINAF ImoenChat
 @89 DO ~SetGlobal("NinaImoen1","GLOBAL",1)~
 == IMOEN2J @90 
 == BCMNINAF @91
@@ -332,11 +394,17 @@ Global("NinaImoen1","GLOBAL",0)~ THEN BCMNINAF ImoenChat
 EXIT
 
 CHAIN
-IF ~InParty("cmninaf")
+IF ~
 AreaType("Outdoor")
+Global("NinaJaheira1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("cmninaf")
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaJaheira1","GLOBAL",0)~ THEN BJAHEIR TreeHugging
+~ THEN BJAHEIR TreeHugging
 @103 DO ~SetGlobal("NinaJaheira1","GLOBAL",1)~
 == BCMNINAF
 @104
@@ -347,10 +415,16 @@ Global("NinaJaheira1","GLOBAL",0)~ THEN BJAHEIR TreeHugging
 EXIT
 
 CHAIN
-IF ~InParty("Jaheira")
+IF ~
+Global("NinaJaheira2","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Jaheira")
-!StateCheck("Jaheira",CD_STATE_NOTVALID)
-Global("NinaJaheira2","GLOBAL",0)~ THEN BCMNINAF KnowPc
+~ THEN BCMNINAF KnowPc
 @108 DO ~SetGlobal("NinaJaheira2","GLOBAL",1)~
 == BJAHEIR @109
 == BCMNINAF @110
@@ -364,10 +438,16 @@ Global("NinaJaheira2","GLOBAL",0)~ THEN BCMNINAF KnowPc
 EXIT
 
 CHAIN
-IF ~InParty("Jaheira")
+IF ~
+Global("NinaJaheira3","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Jaheira")
-!StateCheck("Jaheira",CD_STATE_NOTVALID)
-Global("NinaJaheira3","GLOBAL",0)~ THEN BCMNINAF KhalidTalk
+~ THEN BCMNINAF KhalidTalk
 @118 DO ~SetGlobal("NinaJaheira3","GLOBAL",1)~
 == BJAHEIR @119
 == BCMNINAF @120
@@ -375,11 +455,16 @@ Global("NinaJaheira3","GLOBAL",0)~ THEN BCMNINAF KhalidTalk
 EXIT
 
 CHAIN IF
-~InParty("cmninaf")
+~
+Global("NinaKeldornTalk1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("cmninaf")
-CombatCounter(0)
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaKeldornTalk1","GLOBAL",0)~ THEN BKELDOR Fighters
+~ THEN BKELDOR Fighters
 @122 DO ~SetGlobal("NinaKeldornTalk1","GLOBAL",1)~
 == BCMNINAF @123 
 == BKELDOR @124
@@ -392,10 +477,16 @@ Global("NinaKeldornTalk1","GLOBAL",0)~ THEN BKELDOR Fighters
 EXIT
 
 CHAIN
-IF ~InParty("Korgan")
+IF ~
+Global("NinaKorgan1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Korgan")
+!StateCheck("Korgan",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Korgan")
-!StateCheck("Korgan",CD_STATE_NOTVALID)
-Global("NinaKorgan1","GLOBAL",0)~ THEN BCMNINAF VileDwarf
+~ THEN BCMNINAF VileDwarf
 @131
 DO ~SetGlobal("NinaKorgan1","GLOBAL",1)~
 == BKORGAN
@@ -412,14 +503,19 @@ DO ~SetGlobal("NinaKorgan1","GLOBAL",1)~
 @137
 EXIT
 
-CHAIN IF ~InParty("cmninaf")
-See("cmninaf")
-CombatCounter(0)
+CHAIN IF ~
 HPPercentLT("Korgan",30)
 !HP("Korgan",1)
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
 Global("NinaKorgan1","GLOBAL",1)
-Global("NinaKorganBitch","GLOBAL",0)~ THEN BKORGAN KorganWhine
+Global("NinaKorganBitch","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")
+~ THEN BKORGAN KorganWhine
 @138 DO ~SetGlobal("NinaKorganBitch","GLOBAL",1)~
 == BCMNINAF @139
 == BKORGAN @140
@@ -429,11 +525,16 @@ Global("NinaKorganBitch","GLOBAL",0)~ THEN BKORGAN KorganWhine
 END BKORGAN EndOfWhine
 
 CHAIN
-IF ~InParty("cmninaf")
+IF ~
+Global("NinaMazzy1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("cmninaf")
-AreaCheck("AR2000")
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaMazzy1","GLOBAL",0)~ THEN BMAZZY Gods
+~ THEN BMAZZY Gods
 @144 DO ~SetGlobal("NinaMazzy1","GLOBAL",1)~
 == BCMNINAF
 @145
@@ -451,10 +552,16 @@ Global("NinaMazzy1","GLOBAL",0)~ THEN BMAZZY Gods
 @151
 EXIT
 
-CHAIN IF ~InParty("Minsc")
+CHAIN IF ~
+Global("NinaMinsc1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Minsc")
+!StateCheck("Minsc",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Minsc")
-!StateCheck("Minsc",CD_STATE_NOTVALID)
-Global("NinaMinsc1","GLOBAL",0)~ THEN BCMNINAF Minsc_BooFood
+~ THEN BCMNINAF Minsc_BooFood
 @152 DO ~SetGlobal("NinaMinsc1","GLOBAL",1)~
 == BMINSC @153
 == BCMNINAF @154
@@ -472,13 +579,18 @@ Global("NinaMinsc1","GLOBAL",0)~ THEN BCMNINAF Minsc_BooFood
 == BCMNINAF @166
 EXIT
 
-CHAIN IF ~InParty("Minsc")
-See("Minsc")
-CombatCounter(0)
+CHAIN IF ~
 HPPercentLT("Minsc",20)
 !HP("Minsc",1)
-!StateCheck("Minsc",CD_STATE_NOTVALID)
-Global("NinaMinsc2","GLOBAL",0)~ THEN BCMNINAF MinscWounded
+Global("NinaMinsc2","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Minsc")
+!StateCheck("Minsc",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Minsc")
+~ THEN BCMNINAF MinscWounded
 @167 DO ~SetGlobal("NinaMinsc2","GLOBAL",1)~
 == BMINSC @168
 == BCMNINAF @169
@@ -488,10 +600,16 @@ Global("NinaMinsc2","GLOBAL",0)~ THEN BCMNINAF MinscWounded
 == BCMNINAF @173 // IF ~~ THEN DO ~MoveToObject("Minsc")~ //
 EXIT
 
-CHAIN IF ~InParty("Nalia")
+CHAIN IF ~
+Global("NinaNalia1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Nalia")
+!StateCheck("Nalia",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Nalia")
-!StateCheck("Nalia",CD_STATE_NOTVALID)
-Global("NinaNalia1","GLOBAL",0)~ THEN BCMNINAF NaliaChat1
+~ THEN BCMNINAF NaliaChat1
 @174 DO ~SetGlobal("NinaNalia1","GLOBAL",1)~
 == BNALIA @175
 == BCMNINAF @176
@@ -503,10 +621,16 @@ Global("NinaNalia1","GLOBAL",0)~ THEN BCMNINAF NaliaChat1
 == BCMNINAF @182
 EXIT
 
-CHAIN IF ~InParty("Valygar")
+CHAIN IF ~
+Global("NinaValygar1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("Valygar")
+!StateCheck("Valygar",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("Valygar")
-!StateCheck("Valygar",CD_STATE_NOTVALID)
-Global("NinaValygar1","GLOBAL",0)~ THEN BCMNINAF FoulMagic
+~ THEN BCMNINAF FoulMagic
 @183
 DO ~SetGlobal("NinaValygar1","GLOBAL",1)~
 == BVALYGA @184
@@ -518,10 +642,16 @@ DO ~SetGlobal("NinaValygar1","GLOBAL",1)~
 == BVALYGA @190
 EXIT
 
-CHAIN IF ~InParty("cmninaf")
+CHAIN IF ~
+Global("NinaViconia1","GLOBAL",0)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
 See("cmninaf")
-!StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaViconia1","GLOBAL",0)~ THEN BVICONI Dislike
+~ THEN BVICONI Dislike
 @191 DO ~SetGlobal("NinaViconia1","GLOBAL",1)~
 == BCMNINAF @192
 == BVICONI @193
@@ -537,9 +667,16 @@ EXIT
 // Anomen is a knight first check
 
 CHAIN
-IF ~Global("NinaAnomenKnightTalk","GLOBAL",2)~ THEN BCMNINAF AnomenIsKnight
+IF ~Global("CmT_NinaAnomenKnightTalk","GLOBAL",2)
+!ActuallyInCombat()
+!Detect([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")~ THEN BCMNINAF AnomenIsKnight
 @198
-DO ~SetGlobal("NinaAnomenKnightTalk","GLOBAL",3)~
+DO ~SetGlobal("CmT_NinaAnomenKnightTalk","GLOBAL",3)~
 == BANOMEN
 @199
 == BCMNINAF
@@ -554,7 +691,15 @@ EXIT
 // Obvious Anomen flirts with Nina
 
 CHAIN
-IF ~Global("NinaAnomenTalk1","GLOBAL",2)~ THEN BANOMEN AnomenKnight_1
+IF ~Global("NinaAnomenTalk1","GLOBAL",2)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")
+~ THEN BANOMEN AnomenKnight_1
 @203
 DO ~SetGlobal("NinaAnomenTalk1","GLOBAL",3)~
 == BCMNINAF @204
@@ -572,7 +717,15 @@ EXIT
 /*  More Anomen Nina Flirts */
 
 CHAIN
-IF ~Global("NinaAnomenFlirting","GLOBAL",2)~ THEN BANOMEN AnoNinaFlirts1
+IF ~Global("NinaAnomenFlirting","GLOBAL",2)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")
+~ THEN BANOMEN AnoNinaFlirts1
 @212
 = @213 DO ~SetGlobal("NinaAnomenFlirting","GLOBAL",3)~
 == BCMNINAF @214
@@ -582,7 +735,14 @@ IF ~Global("NinaAnomenFlirting","GLOBAL",2)~ THEN BANOMEN AnoNinaFlirts1
 == BCMNINAF @218
 EXIT
 
-CHAIN IF ~Global("NinaAnomenFlirting2","GLOBAL",2)~ THEN BCMNINAF AnoNinaFlirts2
+CHAIN IF ~Global("NinaAnomenFlirting2","GLOBAL",2)
+!ActuallyInCombat()
+!Detect([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")~ THEN BCMNINAF AnoNinaFlirts2
 @219 DO ~SetGlobal("NinaAnomenFlirting2","GLOBAL",3)~
 == BANOMEN @220
 == BCMNINAF @221
@@ -592,7 +752,14 @@ CHAIN IF ~Global("NinaAnomenFlirting2","GLOBAL",2)~ THEN BCMNINAF AnoNinaFlirts2
 == BCMNINAF @225
 EXIT
 
-CHAIN IF ~Global("NinaAnomenFlirting3","GLOBAL",2)~ THEN BCMNINAF AnoNinaFlirts3
+CHAIN IF ~Global("NinaAnomenFlirting3","GLOBAL",2)
+!ActuallyInCombat()
+!Detect([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")~ THEN BCMNINAF AnoNinaFlirts3
 @226 DO ~SetGlobal("NinaAnomenFlirting3","GLOBAL",3)~
 == BANOMEN @227
 == BCMNINAF @228
@@ -609,7 +776,14 @@ EXIT
 // New 2011
 // Nina and Anomen romance
 
-CHAIN IF ~Global("NinaAnomenRomance","GLOBAL",2)~ THEN BCMNINAF AnoNinaRomance
+CHAIN IF ~Global("NinaAnomenRomance","GLOBAL",2)
+!ActuallyInCombat()
+!Detect([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")~ THEN BCMNINAF AnoNinaRomance
 @237 DO ~SetGlobal("NinaAnomenRomance","GLOBAL",3)~
 == BANOMEN @238
 == BCMNINAF @239
@@ -629,6 +803,13 @@ EXIT
 
 CHAIN
 IF ~Global("NinaAnomenTalkR","GLOBAL",2)
+ActionListEmpty()
+!ActuallyInCombat()
+InParty("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")
 ~ THEN BANOMEN AnomenKnight_2
 @203
 DO ~SetGlobal("NinaAnomenTalkR","GLOBAL",3) SetGlobal("NinaAnomenRomanceKill","GLOBAL",1)~
@@ -642,7 +823,15 @@ EXIT
 
 //  Anomen & Nina Talk about PC
 
-CHAIN IF ~Global("NinaAnomenFriendW","GLOBAL",2)~ THEN BCMNINAF NinaAnoPc
+CHAIN IF ~Global("NinaAnomenFriendW","GLOBAL",2)
+!ActuallyInCombat()
+!Detect([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")
+~ THEN BCMNINAF NinaAnoPc
 @255 DO ~SetGlobal("NinaAnomenFriendW","GLOBAL",3)~
 == BANOMEN @256
 == BCMNINAF @257
@@ -653,9 +842,17 @@ EXIT
 // Anomen is Not a Knight Romance kill for Nina
 
 CHAIN
-IF ~Global("NinaAnomenKnightTalk2","GLOBAL",2)~ THEN BCMNINAF AnomenNotKnight
+IF ~Global("CmT_NinaAnomenKnightTalk2","GLOBAL",2)
+!ActuallyInCombat()
+!Detect([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")
+~ THEN BCMNINAF AnomenNotKnight
 @260
-DO ~SetGlobal("NinaAnomenKnightTalk2","GLOBAL",3) SetGlobal("NinaAnomenRomanceKill","GLOBAL",1)~
+DO ~SetGlobal("CmT_NinaAnomenKnightTalk2","GLOBAL",3) SetGlobal("NinaAnomenRomanceKill","GLOBAL",1)~
 == BANOMEN @261
 == BCMNINAF @262
 == BANOMEN @263

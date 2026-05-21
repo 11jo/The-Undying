@@ -220,7 +220,7 @@ END
 // Old first quest
 
 IF ~Global("FoundThievesC","GLOBAL",1)
-Global("MystraQuest","GLOBAL",0)
+// Global("CM_MystraQuest","GLOBAL",0) // Useless
 Dead("cmlillian")
 PartyHasItem("CMBOOK99")~ THEN BEGIN HappyNina
 SAY @79
@@ -231,9 +231,7 @@ END
  Truth revealed info
 */
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-Global("NinaKnowsElhan","GLOBAL",1)~ THEN BEGIN NinaElhanRemark
+IF ~Global("NinaKnowsElhan","GLOBAL",1)~ THEN BEGIN NinaElhanRemark
  SAY @81
 ++ @82 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",2)~ + NER1
 ++ @83 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",2)~ + NER2
@@ -256,9 +254,7 @@ SAY @89
 IF ~~ EXIT
 END
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-AreaCheck("AR2800")
+IF ~AreaCheck("AR2800")
 Global("NinaHomeAttack","GLOBAL",0)~ THEN BEGIN NinaHomeAttack
   SAY @90
 ++ @91 DO ~SetGlobal("NinaHomeAttack","GLOBAL",1)~ GOTO NinaHomeFlames
@@ -289,11 +285,8 @@ SAY @103
 IF ~~ EXIT
 END
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-AreaCheck("AR2807")
+IF ~AreaCheck("AR2807")
 Dead("dragblac")
-CombatCounter(0)
 Global("NinaDragon1","GLOBAL",0)~ THEN BEGIN NinaDragon
   SAY @104
 ++ @105 DO ~SetGlobal("NinaDragon1","GLOBAL",1)~ + N_D1
@@ -328,22 +321,29 @@ END
 
 IF ~ReputationLT(Player1,2)
 Global("NinaTooEvil","GLOBAL",0)
+!ActuallyInCombat()
+!See([ENEMY])
+!StateCheck(Player1,CD_STATE_NOTVALID) 
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)
 ~ THEN BEGIN TooEvil
   SAY @114
-IF ~~ THEN DO ~LeaveParty() EscapeAreaMove("AR0406",470,1490,0)~ EXIT
+IF ~~ THEN DO ~LeaveParty()
+				EscapeAreaMove("AR0406",470,1490,0)~ EXIT
 END
 
 IF ~AreaCheck("AR0502")
-	Global("Nina_EnteredTanner2","AR0502",0)~ THEN BEGIN TannerComment
+Global("Nina_EnteredTanner2","AR0502",0)~ THEN BEGIN TannerComment
   SAY @115
   IF ~~ THEN DO ~SetGlobal("Nina_EnteredTanner2","AR0502",1)~ EXIT
 END
 
 CHAIN IF
-~See("cmninaf")
+~Global("BelminNina","AR0700",0)
 InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("BelminNina","AR0700",0)~ THEN BELMIN NinaBelminNut
+See("cmninaf")~ THEN BELMIN NinaBelminNut
 @116
 DO ~SetGlobal("BelminNina","AR0700",1)~
 == CMNINAFJ @117
@@ -368,9 +368,11 @@ EXIT  */
 // Salvanas the pervert chat.
 
 CHAIN IF WEIGHT #-1
-~See("cmninaf")
+~
+Global("NinaSalvanas","LOCALS",0)
+InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaSalvanas","LOCALS",0)~
+See("cmninaf")~
  THEN SALVANAS NinSalvanas
 @122
 =
@@ -403,38 +405,46 @@ THEN MURCRAG NinaCrag
 == CMNINAFJ ~It was nice to see you again also Mrs. Cragmoon. Farwell.~
 EXIT */
 
-CHAIN IF WEIGHT #-1 ~InParty("cmninaf")
-See("cmninaf")
+CHAIN IF WEIGHT #-1 ~
+Global("NinaTown7","GLOBAL",0)
+InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaTown7","GLOBAL",0)~ THEN FTOWN7 NinaTown7
+See("cmninaf")
+~ THEN FTOWN7 NinaTown7
 @133
 DO ~SetGlobal("NinaTown7","GLOBAL",1)~
 == CMNINAFJ @134
 EXIT
 
-CHAIN  IF WEIGHT #-1 ~InParty("cmninaf")
-See("cmninaf")
+CHAIN  IF WEIGHT #-1 ~
+Global("NinaUrchin1","GLOBAL",0)
+InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaUrchin1","GLOBAL",0)~ THEN URCHIN1 NinaUrchin1
+See("cmninaf")
+~ THEN URCHIN1 NinaUrchin1
 @135
 DO ~SetGlobal("NinaUrchin1","GLOBAL",1)~
 == CMNINAFJ @136
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("cmninaf")
-See("cmninaf")
+CHAIN IF WEIGHT #-1 ~
+Global("NinaUrchin2","GLOBAL",0)
+InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaUrchin2","GLOBAL",0)~ THEN URCHIN2 NinaUrchin2
+See("cmninaf")
+~ THEN URCHIN2 NinaUrchin2
 @137
 DO ~SetGlobal("NinaUrchin2","GLOBAL",1)~
 == CMNINAFJ @138
 == URCHIN2 @139
 EXIT
 
-CHAIN IF WEIGHT #-1 ~InParty("cmninaf")
-See("cmninaf")
+CHAIN IF WEIGHT #-1 ~
+Global("NinaUrchin3","GLOBAL",0)
+InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("NinaUrchin3","GLOBAL",0)~ THEN URCHIN3 NinaUrchin3
+See("cmninaf")
+~ THEN URCHIN3 NinaUrchin3
 @140
 DO ~SetGlobal("NinaUrchin3","GLOBAL",1)~
 == CMNINAFJ
@@ -446,250 +456,354 @@ DO ~SetGlobal("NinaUrchin3","GLOBAL",1)~
 EXIT
 
 INTERJECT REEDLE 2 NinaFishMonger
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @144
-== REEDLE IF ~InParty("cmninaf")~ THEN
+== REEDLE IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @145 DO ~TakePartyGold(2)~
 END REEDLE 3
 
 I_C_T BHNALLA 16 NinaNalla
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @146
 END
 
 I_C_T BODHI 4 NinaBodhi
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @147
 END
 
 I_C_T BODHI 20 NinaBodhi2
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @148
 END
 
 I_C_T C6BODHI 4 NinaC6bodhiChat
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @149
 END
 
 I_C_T CERND 70 NinaCerndMeeting
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @150
 END
 
 I_C_T COHRVALE 1 NinaCohrvale
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @151
  == COHRVALE
  @152
 END
 
 INTERJECT_COPY_TRANS COPGREET 1 NinaFrankie
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @153
 END
 
-I_C_T2 CUSTOM 0 NinaCustom
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+I_C_T3 CUSTOM 0 NinaCustom // From I_C_T2
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @154
 END
 
 INTERJECT_COPY_TRANS DELCIA 0 NinaDelcia1
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @155
 == DELCIA
  @156
 END
 
 INTERJECT_COPY_TRANS DELCIA 17 NinaDelcia2
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @155
 END
 
 I_C_T EDWIN 3 NinaEdwin
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @157
 END
 
 I_C_T EDWINJ 10 NinaEdwinNether
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @158
-== EDWIN IF ~InParty("cmninaf")~ THEN
+== EDWIN IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
+InParty("Edwin")
+InMyArea("Edwin")
+!StateCheck("Edwin",CD_STATE_NOTVALID)~ THEN
 @159
 END
 
-I_C_T2 HAEGAN 1 NinaHaegan
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+I_C_T3 HAEGAN 1 NinaHaegan // From I_C_T2
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @160
 END
 
 I_C_T HELLJON 7 NinaFYouIrenicus
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @161
 END
 
 I_C_T HELLJON 8 NinaFYouIrenicus
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @161
 END
 
 I_C_T HELLJON 9 NinaFYouIrenicus
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @161
 END
 
 I_C_T HELLJON 10 NinaFYouIrenicus
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @161
 END
 
 I_C_T HENDAK 4 NinaHendakMeet
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @162
 END
 
 INTERJECT_COPY_TRANS HENDAK 17 NinaHendak
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @163
 END
 
 I_C_T IMOEN2 22 NinaLeaveImoen
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @164
 END
 
 INTERJECT_COPY_TRANS ISAEA 28 NinaNaliaKidnap
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @165
 END
 
 I_C_T KELDORJ 23 NinaKeldornAdultery
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @166
 END
 
 I_C_T ISAEA 29 NinaNaliaKidnap
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @167
 =
 @168
 END
 
 I_C_T JAHEIRAJ 54 NinaJaheiraPoison
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @169
-== JAHEIRAJ IF ~InParty("cmninaf")~ THEN
+== JAHEIRAJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)
+InParty("Jaheira")
+InMyArea("Jaheira")
+!StateCheck("Jaheira",CD_STATE_NOTVALID)~ THEN
 @170
 END
 
 INTERJECT_COPY_TRANS KELDORJ 23 NinaMariaAdultery
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @171
 =
 @172
 END
 
 I_C_T LEHTIN 10 NinaLehtin
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @173
 END
 
 INTERJECT_COPY_TRANS LYROS 24 NinaXzar
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @174
 == LYROS
  @175
 END
 
 I_C_T MAEVAR 17 NinaMaevarSteal
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @176
 END
 
 I_C_T MAZZYJ 115 KetoMazzyPoison
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @177
 END
 
 I_C_T NALIAJ 79 NinaNaliaFuneral
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @178
 END
 
 I_C_T NALIAJ 169 HeirComment
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @179
 END
 
 
 I_C_T pircor03 0 NinaMalePros
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @180
 END
 
 
 I_C_T pircor03 1 NinaMalePros
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @180
 END
 
 
 I_C_T pircor03 2 NinaMalePros
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @180
 END
 
 I_C_T PLAYER1 5 NinaSeesSlayer
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @181
 END
 
 I_C_T PLAYER1 15 NinaLonkTheMad
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @182
 END
 
 I_C_T PLAYER1 16 NinaIrenicusDead
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @183
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @184
 END
 
 INTERJECT_COPY_TRANS PLAYER1 25 NinaInHell
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @185
 =
 @186
 END
 
 I_C_T PPAPHRIL 4 NinaAphril
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @187
 END
 
 I_C_T PPIRENI2 0 NinaJon
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @188
 END
 
 I_C_T PPIRENI2 35 NinaJon2
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @189 DO ~SetGlobal("NinaBackground","GLOBAL",1)~
 END
 
 I_C_T PPSAEM3 51 NinaSaemonGith
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @190
 END
 
 INTERJECT_COPY_TRANS PPSAEM 58 NinaSaemon
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @191
 END
 
 I_C_T RENAL 22 NinaRenal
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @192
 END
 
@@ -701,115 +815,159 @@ END
 END */
 
 I_C_T RIFTG03 29 NinaGodDeath
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @193
 END
 
 I_C_T SAHKNG01 36 NinaSahking
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @194
 END
 
 I_C_T SAMIA 24 NinaSamia
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @195
 END
 
 INTERJECT_COPY_TRANS SLAVERM 0 NinaSlaverMage
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @196
 END
 
 I_C_T SURLY 17 NinaSurly
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @197
 END
 
 I_C_T TOLGER 80 NinaTolgerias
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @198
 END
 
 INTERJECT_COPY_TRANS TRGRD03 9 NinaTradmeetGuard
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @199
 END
 
 I_C_T UDDEMON 9 NinaDemon
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @200 DO ~LeaveParty() Enemy()~
 END
 
 I_C_T UDDEMON 11 NinaDemon
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @200 DO ~LeaveParty() Enemy()~
 END
 
 I_C_T UDPHAE01 61 NinaPhaereGnomes
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @201
 END
 
 INTERJECT_COPY_TRANS UDPHAE01 151 NinaDeceivePhaere
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @202
 END
 
 
 I_C_T UDSILVER 26 NinaSilver
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @203
 END
 
 I_C_T UDSIMYAZ 5 NinaSimyaz
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @204
 END
 
 I_C_T UDSIMYAZ 17 NinaSimyaz
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @205
 END
 
 INTERJECT_COPY_TRANS UDSOLA01 117 NinaKillSola
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @206
 ==UDSOLA01
 @207
 END
 
 INTERJECT_COPY_TRANS UDSOLA01 162 NinaMistrustSola
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @208
 END
 
 I_C_T UHMAY01 18 NinaImnesProblem
 == CMNINAFJ IF ~GlobalGT("Chapter","GLOBAL","%bg2_chapter_5%")
-InParty("cmninaf")~ THEN @209
+InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @209
 END
 
 I_C_T UHMAY01 18 NinaImnesProblem1
 == CMNINAFJ IF ~!GlobalGT("Chapter","GLOBAL","%bg2_chapter_5%")
-InParty("cmninaf")~ THEN @210
+InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @210
 END
 
 I_C_T VALYGAR 4 NinaValygarWanted
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
  @211 
 END
 
 I_C_T VALYGAR 43 NinaValygarMeet
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @212
 END
 
 I_C_T VICONI 2 NinaVicciGreet
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN 
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN 
 @213
 END
 
 INTERJECT_COPY_TRANS YUSUF 2 NinaYusuf
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN
 @214
 END
 
@@ -817,33 +975,46 @@ END
 /* //////////////////////////// Background Information */
 
 I_C_T C6ELHAN2 1 NinaElhan
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN @215
-== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1)RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @215
+== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1) RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
 END
 
 I_C_T C6ELHAN2 2 NinaElhan
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN @215
-== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1)RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @215
+== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1) RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
 END
 
 I_C_T C6ELHAN2 3 NinaElhan
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN @215
-== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1)RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @215
+== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1) RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
 END
 
 I_C_T C6ELHAN2 4 NinaElhan
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN @215
-== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1)RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @215
+== C6ELHAN2 @216 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1) RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
 END
 
 I_C_T C6ELHAN2 5 NinaElhan
-== CMNINAFJ IF ~InParty("cmninaf")~ THEN @215
-== C6ELHAN2 @217 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1)RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
+== CMNINAFJ IF ~InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN @215
+== C6ELHAN2 @217 DO ~SetGlobal("NinaKnowsElhan","GLOBAL",1) RealSetGlobalTimer("NinaElhanTime","GLOBAL",1500)~
 END
 
 EXTEND_BOTTOM PLAYER1 33 
-IF ~InParty("cmninaf")
-Global("NinaTOLTalk","GLOBAL",0)~ THEN DO ~SetGlobal("NinaTOLTalk","GLOBAL",1)~ GOTO TreeOfLifeChat
+IF ~
+Global("NinaTOLTalk","GLOBAL",0)
+InParty("cmninaf")
+InMyArea("cmninaf")
+!StateCheck("cmninaf",CD_STATE_NOTVALID)~ THEN DO ~SetGlobal("NinaTOLTalk","GLOBAL",1)~ GOTO TreeOfLifeChat
 END
 
 APPEND PLAYER1

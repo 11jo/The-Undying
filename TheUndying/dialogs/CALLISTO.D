@@ -25,7 +25,10 @@ END
 
 IF ~~ Perfect
 SAY @9
- IF ~~ THEN DO ~AddJournalEntry(@2000,QUEST) SetGlobal("CalliJoined","GLOBAL",1) SetGlobal("CallistoBA","GLOBAL",1) JoinParty()~
+ IF ~~ THEN DO ~AddJournalEntry(@2000,QUEST)
+				SetGlobal("CalliJoined","GLOBAL",1)
+				SetGlobal("CallistoBA","GLOBAL",1)
+				JoinParty()~
 EXIT
 END
 

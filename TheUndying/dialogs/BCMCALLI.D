@@ -5,10 +5,15 @@ BEGIN ~BCMCALLI~
 // Fighter talks
 
 IF WEIGHT #-1
-~See(Player1)
+~
+Class(Player1,FIGHTER_ALL)
+Global("CallistoFighterTalk1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
 !StateCheck(Player1,CD_STATE_NOTVALID)
-Global("CallistoFighterTalk1","GLOBAL",0)
-Class(Player1,FIGHTER_ALL)~ THEN BEGIN FighterChat
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)~ THEN BEGIN FighterChat
  SAY @0
  ++ @1 DO ~SetGlobal("CallistoFighterTalk1","GLOBAL",1)~ + fc1
  ++ @2 DO ~SetGlobal("CallistoFighterTalk1","GLOBAL",1)~ + fc2
@@ -71,10 +76,15 @@ IF ~~ fcCalLrnFight3
 END
 
 IF WEIGHT #-1
-~See(Player1)
+~
+!Class(Player1,FIGHTER_ALL)
+Global("CallistoFighterTalk2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
 !StateCheck(Player1,CD_STATE_NOTVALID)
-Global("CallistoFighterTalk2","GLOBAL",0)
-!Class(Player1,FIGHTER_ALL)~ THEN BEGIN FighterChatb
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)~ THEN BEGIN FighterChatb
  SAY @27
  ++ @1 DO ~SetGlobal("CallistoFighterTalk2","GLOBAL",1)~ + fc1b
  ++ @2 DO ~SetGlobal("CallistoFighterTalk2","GLOBAL",1)~ + fc2b
@@ -143,16 +153,21 @@ History revelations with PC. Must have confronted and killed Belmin the elf hate
 /////////////
 */
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-AreaCheck("AR0400")
-Global("CalliHistory1","GLOBAL",1)
+IF ~
 OR(4)
-Alignment(Player1,MASK_GOOD) 
-Alignment(Player1,LAWFUL_NEUTRAL)
-Alignment(Player1,NEUTRAL)
-Alignment(Player1,CHAOTIC_NEUTRAL)
-Global("CalHistReveal1","GLOBAL",0)~ THEN BEGIN reveal1
+	Alignment(Player1,MASK_GOOD) 
+	Alignment(Player1,LAWFUL_NEUTRAL)
+	Alignment(Player1,NEUTRAL)
+	Alignment(Player1,CHAOTIC_NEUTRAL)
+AreaCheck("AR0400")
+Global("CalliHistory1","GLOBAL",1) // Need to be GLOBAL
+Global("CalHistReveal1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+!StateCheck(Player1,CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)~ THEN BEGIN reveal1
 SAY @34
 ++ @35 DO ~SetGlobal("CalHistReveal1","GLOBAL",1)~ + chr1
 ++ @36 DO ~SetGlobal("CalHistReveal1","GLOBAL",1)~ + chrLeave
@@ -194,12 +209,17 @@ ChangeAIScript("CALLIX",OVERRIDE)
 ~ EXIT
 END
 
-IF ~See(Player1)
-!StateCheck(Player1,CD_STATE_NOTVALID)
-AreaCheck("AR0400")
-Global("CalliHistory1","GLOBAL",1)
+IF ~
 Alignment(Player1,MASK_EVIL)
-Global("CalHistReveal1","GLOBAL",0)~ THEN BEGIN reveal2
+AreaCheck("AR0400")
+Global("CalliHistory1","GLOBAL",1) // Need to be GLOBAL
+Global("CalHistReveal1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+!StateCheck(Player1,CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See(Player1)~ THEN BEGIN reveal2
 SAY @49
 ++ @35 DO ~SetGlobal("CalHistReveal1","GLOBAL",1)~ + chrE1
 ++ @50 DO ~SetGlobal("CalHistReveal1","GLOBAL",1)~ + chrenjoy
@@ -243,10 +263,16 @@ NPC Banters
 //////////////////////////////
 */
 
-CHAIN IF ~InParty("Korgan")
-See("Korgan")
+CHAIN IF ~
+Global("BCalliKorgan1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
-Global("BCalliKorgan1","GLOBAL",0)~ THEN BCMCALLI CalliKorgan1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Korgan")
+~ THEN BCMCALLI CalliKorgan1
 @54 
 DO ~SetGlobal("BCalliKorgan1","GLOBAL",1)~
 == BKORGAN @55
@@ -259,11 +285,16 @@ DO ~SetGlobal("BCalliKorgan1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
-CombatCounter(0)
+IF ~
+Global("BCalliKorgan2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliKorgan2","GLOBAL",0)~ THEN BKORGAN CalliKorgan2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BKORGAN CalliKorgan2
 @62
 DO ~SetGlobal("BCalliKorgan2","GLOBAL",1)~
 == BCMCALLI @63
@@ -275,12 +306,18 @@ DO ~SetGlobal("BCalliKorgan2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Anomen")
-See("Anomen")
-!StateCheck("Anomen",CD_STATE_NOTVALID)
-Global("BCalliAnomen1","GLOBAL",0)
+IF ~
 Global("AnomenIsKnight","GLOBAL",0)
-Global("AnomenIsNotKnight","GLOBAL",0)~ THEN BCMCALLI Knightquestion
+Global("AnomenIsNotKnight","GLOBAL",0)
+Global("BCalliAnomen1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Anomen")
+!StateCheck("Anomen",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Anomen")
+~ THEN BCMCALLI Knightquestion
 @69
 DO ~SetGlobal("BCalliAnomen1","GLOBAL",1)~
 == BANOMEN @70
@@ -292,10 +329,16 @@ DO ~SetGlobal("BCalliAnomen1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliJan1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliJan1","GLOBAL",0)~ THEN BJAN Annoy1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BJAN Annoy1
 @76
 DO ~SetGlobal("BCalliJan1","GLOBAL",1)~
 == BCMCALLI @77
@@ -309,10 +352,16 @@ DO ~SetGlobal("BCalliJan1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliJan2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliJan2","GLOBAL",0)~ THEN BJAN Annoy2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BJAN Annoy2
 @85
 DO ~SetGlobal("BCalliJan2","GLOBAL",1)~
 == BCMCALLI @86
@@ -328,10 +377,16 @@ DO ~SetGlobal("BCalliJan2","GLOBAL",1)~
 == BCMCALLI @96
 EXIT
 
-CHAIN IF ~InParty("Aerie")
-See("Aerie")
+CHAIN IF ~
+Global("BCalliAerie1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-Global("BCalliAerie1","GLOBAL",0)~ THEN BCMCALLI CalliAerieTorture1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Aerie")
+~ THEN BCMCALLI CalliAerieTorture1
 @97
 DO ~SetGlobal("BCalliAerie1","GLOBAL",1)~
 == BAERIE @98
@@ -344,13 +399,18 @@ DO ~SetGlobal("BCalliAerie1","GLOBAL",1)~
 == BCMCALLI @105
 EXIT
 
-CHAIN IF ~InParty("Aerie")
-See("Aerie")
-CombatCounter(0)
+CHAIN IF ~
 HPPercentLT("Aerie",20)
 !HP("Aerie",1)
+Global("BCalliAerie2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-Global("BCalliAerie2","GLOBAL",0)~ THEN BCMCALLI CalliAerieCombat1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Aerie")
+~ THEN BCMCALLI CalliAerieCombat1
 @106 
 DO ~SetGlobal("BCalliAerie2","GLOBAL",1)~
 == BAERIE @107
@@ -362,10 +422,16 @@ DO ~SetGlobal("BCalliAerie2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliAerie3","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",STATE_SLEEPING)
-Global("BCalliAerie3","GLOBAL",0)~ THEN BAERIE CalliAerie3
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BAERIE CalliAerie3
 @113
 DO ~SetGlobal("BCalliAerie3","GLOBAL",1)~
 == BCMCALLI @114
@@ -373,10 +439,16 @@ DO ~SetGlobal("BCalliAerie3","GLOBAL",1)~
 == BCMCALLI @116
 EXIT
 
-CHAIN IF ~InParty("Jaheira")
-See("Jaheira")
+CHAIN IF ~
+Global("BCalliJaheira1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
-Global("BCalliJaheira1","GLOBAL",0)~ THEN BCMCALLI CalliJaheira1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Jaheira")
+~ THEN BCMCALLI CalliJaheira1
 @117 
 DO ~SetGlobal("BCalliJaheira1","GLOBAL",1)~
 == BJAHEIR @118
@@ -389,10 +461,16 @@ DO ~SetGlobal("BCalliJaheira1","GLOBAL",1)~
 == BCMCALLI @125
 EXIT
 
-CHAIN IF ~InParty("Jaheira")
-See("Jaheira")
+CHAIN IF ~
+Global("BCalliJaheira2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Jaheira")
 !StateCheck("Jaheira",CD_STATE_NOTVALID)
-Global("BCalliJaheira2","GLOBAL",0)~ THEN BCMCALLI CalliJaheira2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Jaheira")
+~ THEN BCMCALLI CalliJaheira2
 @126
 DO ~SetGlobal("BCalliJaheira2","GLOBAL",1)~
 == BJAHEIR @127
@@ -406,10 +484,16 @@ DO ~SetGlobal("BCalliJaheira2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Mazzy")
-See("Mazzy")
+IF ~
+Global("BCalliMazzy1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Mazzy")
 !StateCheck("Mazzy",CD_STATE_NOTVALID)
-Global("BCalliMazzy1","GLOBAL",0)~ THEN BCMCALLI CalliMazzy1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Mazzy")
+~ THEN BCMCALLI CalliMazzy1
 @135
 DO ~SetGlobal("BCalliMazzy1","GLOBAL",1)~
 == BMAZZY @136
@@ -423,10 +507,16 @@ DO ~SetGlobal("BCalliMazzy1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliMazzy2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliMazzy2","GLOBAL",0)~ THEN BMAZZY CalliMazzy2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BMAZZY CalliMazzy2
 @144
 DO ~SetGlobal("BCalliMazzy2","GLOBAL",1)~
 == BCMCALLI @145
@@ -441,10 +531,16 @@ DO ~SetGlobal("BCalliMazzy2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Minsc")
-See("Minsc")
+IF ~
+Global("BCalliMinsc1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-Global("BCalliMinsc1","GLOBAL",0)~ THEN BCMCALLI CalliMinsc1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Minsc")
+~ THEN BCMCALLI CalliMinsc1
 @154
 DO ~SetGlobal("BCalliMinsc1","GLOBAL",1)~
 == BMINSC @155
@@ -455,10 +551,16 @@ DO ~SetGlobal("BCalliMinsc1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliMinsc2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliMinsc2","GLOBAL",0)~ THEN BMINSC CalliMinsc2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BMINSC CalliMinsc2
 @160
 DO ~SetGlobal("BCalliMinsc2","GLOBAL",1)~
 == BCMCALLI @161
@@ -471,10 +573,16 @@ DO ~SetGlobal("BCalliMinsc2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Nalia")
-See("Nalia")
+IF ~
+Global("BCalliNalia1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Nalia")
 !StateCheck("Nalia",CD_STATE_NOTVALID)
-Global("BCalliNalia1","GLOBAL",0)~ THEN BCMCALLI CalliNalia1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Nalia")
+~ THEN BCMCALLI CalliNalia1
 @168
 DO ~SetGlobal("BCalliNalia1","GLOBAL",1)~
 == BNALIA @169
@@ -485,10 +593,16 @@ DO ~SetGlobal("BCalliNalia1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Keldorn")
-See("Keldorn")
+IF ~
+Global("BCalliKeldorn1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Keldorn")
 !StateCheck("Keldorn",CD_STATE_NOTVALID)
-Global("BCalliKeldorn1","GLOBAL",0)~ THEN BCMCALLI CalliKel1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Keldorn")
+~ THEN BCMCALLI CalliKel1
 @174
 DO ~SetGlobal("BCalliKeldorn1","GLOBAL",1)~
 == BKELDOR @175
@@ -502,10 +616,16 @@ DO ~SetGlobal("BCalliKeldorn1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliKeldorn2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliKeldorn2","GLOBAL",0)~ THEN BKELDOR CalliKel2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")
+~ THEN BKELDOR CalliKel2
 @182
 DO ~SetGlobal("BCalliKeldorn2","GLOBAL",1)~
 == BCMCALLI @183
@@ -517,12 +637,17 @@ DO ~SetGlobal("BCalliKeldorn2","GLOBAL",1)~
 == BKELDOR @189
 EXIT
 
-CHAIN IF ~InParty("Cernd")
-See("Cernd")
-!StateCheck("Cernd",CD_STATE_NOTVALID)
+CHAIN IF ~
 TimeOfDay(DAY)
 AreaType(OUTDOOR)
-Global("BCalliCernd1","GLOBAL",0)~ THEN BCMCALLI CalliCernd
+Global("BCalliCernd1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Cernd")
+!StateCheck("Cernd",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Cernd")~ THEN BCMCALLI CalliCernd
 @190
 DO ~SetGlobal("BCalliCernd1","GLOBAL",1)~
 == BCERND @191
@@ -536,10 +661,16 @@ EXIT
 
 
 CHAIN
-IF ~InParty("Haerdalis")
-See("Haerdalis")
+IF ~
+Global("BCalliHaer1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
-Global("BCalliHaer1","GLOBAL",0)~ THEN BCMCALLI CalliHaer1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Haerdalis")
+~ THEN BCMCALLI CalliHaer1
 @198 
 DO ~SetGlobal("BCalliHaer1","GLOBAL",1)~
 == BHAERDA @199
@@ -551,10 +682,15 @@ DO ~SetGlobal("BCalliHaer1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("callisto")
-See("callisto")
+IF ~
+Global("BCalliHaer2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliHaer2","GLOBAL",0)~ THEN BHAERDA CalliHaer2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")~ THEN BHAERDA CalliHaer2
 @205
 DO ~SetGlobal("BCalliHaer2","GLOBAL",1)~
 == BCMCALLI @206
@@ -568,10 +704,16 @@ DO ~SetGlobal("BCalliHaer2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Edwin")
-See("Edwin")
+IF ~
+Global("BCalliEdwin1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Edwin")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
-Global("BCalliEdwin1","GLOBAL",0)~ THEN BCMCALLI CalliEdwin1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Edwin")
+~ THEN BCMCALLI CalliEdwin1
 @214
 DO ~SetGlobal("BCalliEdwin1","GLOBAL",1)~
 == BEDWIN @215
@@ -584,11 +726,18 @@ DO ~SetGlobal("BCalliEdwin1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Edwin")
+IF ~
 Gender("Edwin",FEMALE)
+Global("BCalliEdwin2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Edwin")
 !StateCheck("Edwin",CD_STATE_NOTVALID)
-Global("BCalliEdwin2","GLOBAL",0)~ THEN BCMCALLI CalliEdwin2
-@222  DO ~SetGlobal("BCalliEdwin2","GLOBAL",1)~
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Edwin")~ THEN BCMCALLI CalliEdwin2
+@222
+DO ~SetGlobal("BCalliEdwin2","GLOBAL",1)~
 == BEDWIN @223
 == BCMCALLI @224
 == BEDWIN @225
@@ -600,11 +749,16 @@ Global("BCalliEdwin2","GLOBAL",0)~ THEN BCMCALLI CalliEdwin2
 EXIT
 
 CHAIN
-IF ~InParty("Valygar")
-See("Valygar")
-!StateCheck("Valygar",CD_STATE_NOTVALID)
+IF ~
 AreaType(FOREST)
-Global("BCalliValygar1","GLOBAL",0)~ THEN BCMCALLI CalliValygar1
+Global("BCalliValygar1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Valygar")
+!StateCheck("Valygar",CD_STATE_NOTVALID)
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Valygar")~ THEN BCMCALLI CalliValygar1
 @231
 DO ~SetGlobal("BCalliValygar1","GLOBAL",1)~
 == BVALYGA @232
@@ -615,10 +769,15 @@ DO ~SetGlobal("BCalliValygar1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Valygar")
-See("Valygar")
+IF ~
+Global("BCalliValygar2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Valygar")
 !StateCheck("Valygar",CD_STATE_NOTVALID)
-Global("BCalliValygar2","GLOBAL",0)~ THEN BCMCALLI CalliValygar2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Valygar")~ THEN BCMCALLI CalliValygar2
 @237
 DO ~SetGlobal("BCalliValygar2","GLOBAL",1)~
 == BVALYGA @238
@@ -633,10 +792,15 @@ DO ~SetGlobal("BCalliValygar2","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Yoshimo")
-See("Yoshimo")
+IF ~
+Global("BCalliYoshimo1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-Global("BCalliYoshimo1","GLOBAL",0)~ THEN BCMCALLI CalliYoshimo1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Yoshimo")~ THEN BCMCALLI CalliYoshimo1
 @247
 DO ~SetGlobal("BCalliYoshimo1","GLOBAL",1)~
 == BYOSHIM @146
@@ -649,10 +813,15 @@ DO ~SetGlobal("BCalliYoshimo1","GLOBAL",1)~
 EXIT
 
 CHAIN
-IF ~InParty("Yoshimo")
-See("Yoshimo")
+IF ~
+Global("BCalliYoshimo2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Yoshimo")
 !StateCheck("Yoshimo",CD_STATE_NOTVALID)
-Global("BCalliYoshimo2","GLOBAL",0)~ THEN BCMCALLI CalliYoshimo2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Yoshimo")~ THEN BCMCALLI CalliYoshimo2
 @254
 DO ~SetGlobal("BCalliYoshimo2","GLOBAL",1)~
 == BYOSHIM @255
@@ -666,13 +835,18 @@ EXIT
 // Multiple NPC banters 
 
 CHAIN
-IF ~InParty("Haerdalis")
-See("Haerdalis")
+IF ~
+Global("BCalliHaerAerie1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Haerdalis")
 !StateCheck("Haerdalis",CD_STATE_NOTVALID)
 InParty("Aerie")
-See("Aerie")
 !StateCheck("Aerie",CD_STATE_NOTVALID)
-Global("BCalliHaerAerie1","GLOBAL",0)~ THEN BCMCALLI CalliHaerAerie1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Haerdalis")
+See("Aerie")~ THEN BCMCALLI CalliHaerAerie1
 @261
 DO ~SetGlobal("BCalliHaerAerie1","GLOBAL",1)~
 == BHAERDA @262
@@ -688,13 +862,19 @@ DO ~SetGlobal("BCalliHaerAerie1","GLOBAL",1)~
 == BCMCALLI @272
 EXIT
 
-CHAIN IF ~InParty("Korgan")
-See("Korgan")
+CHAIN IF ~
+Global("BCalliKorganMinsc1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("Korgan")
 !StateCheck("Korgan",CD_STATE_NOTVALID)
 InParty("Minsc")
-See("Minsc")
 !StateCheck("Minsc",CD_STATE_NOTVALID)
-Global("BCalliKorganMinsc1","GLOBAL",0)~ THEN BCMCALLI CalliKorganMinsc1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("Korgan")
+See("Minsc")
+~ THEN BCMCALLI CalliKorganMinsc1
 @273
 DO ~SetGlobal("BCalliKorganMinsc1","GLOBAL",1)~
 == BKORGAN @274
@@ -708,10 +888,15 @@ EXIT
 /* ***********************  Other NPC Mod banters ***************************************** */
 
 
-CHAIN IF ~InParty("cmninaf")
-See("cmninaf")
+CHAIN IF ~
+Global("BCalliNina1","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("BCalliNina1","GLOBAL",0)~ THEN BCMCALLI CalliNina1
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")~ THEN BCMCALLI CalliNina1
 @280
 DO ~SetGlobal("BCalliNina1","GLOBAL",1)~
 == BCMNINAF @281
@@ -721,10 +906,15 @@ DO ~SetGlobal("BCalliNina1","GLOBAL",1)~
 == BCMNINAF @285
 EXIT
 
-CHAIN IF ~InParty("callisto")
-See("callisto")
+CHAIN IF ~
+Global("BCalliNina2","GLOBAL",0) // LOCALS
+!ActuallyInCombat()
+!See([ENEMY])
+InParty("callisto")
 !StateCheck("callisto",CD_STATE_NOTVALID)
-Global("BCalliNina2","GLOBAL",0)~ THEN BCMNINAF CalliNina2
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("callisto")~ THEN BCMNINAF CalliNina2
 @286
 DO ~SetGlobal("BCalliNina2","GLOBAL",1)~
 == BCMCALLI @287
@@ -735,11 +925,17 @@ DO ~SetGlobal("BCalliNina2","GLOBAL",1)~
 == BCMNINAF @292
 EXIT
 
-CHAIN IF ~AreaCheck("AR1602")
+CHAIN IF ~
+AreaCheck("AR1602")
+Global("BCalliNina3","GLOBAL",0) // Need to be GLOBAL
+!ActuallyInCombat()
+!See([ENEMY])
 InParty("cmninaf")
-See("cmninaf")
 !StateCheck("cmninaf",CD_STATE_NOTVALID)
-Global("BCalliNina3","GLOBAL",0)~ THEN BCMCALLI CalliNina3
+InParty(Myself)
+!StateCheck(Myself,CD_STATE_NOTVALID)
+See("cmninaf")
+~ THEN BCMCALLI CalliNina3
 @293
 DO ~SetGlobal("BCalliNina3","GLOBAL",1)~
 == BCMNINAF @294

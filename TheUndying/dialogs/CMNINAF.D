@@ -23,8 +23,9 @@ END
 
 IF ~~ THEN BEGIN NinaJoin
   SAY @8
-IF ~~ THEN REPLY @9 DO ~SetGlobal("NinaJoin", "GLOBAL", 1) AddexperienceParty(9500)
-JoinParty()
+IF ~~ THEN REPLY @9 DO ~SetGlobal("NinaJoin", "GLOBAL", 1)
+						AddexperienceParty(9500)
+						JoinParty()
 ~ EXIT
 END
 

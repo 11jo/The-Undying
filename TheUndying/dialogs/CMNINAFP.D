@@ -26,7 +26,7 @@ END
 IF ~~ THEN BEGIN join 
   SAY @6 
   IF ~~ THEN DO ~SetGlobal("KickedOut","LOCALS",0)
-JoinParty()
+					JoinParty()
 ~ EXIT
 END
 
@@ -35,7 +35,7 @@ IF WEIGHT #2
 ~ THEN BEGIN mad 
   SAY @7
   IF ~~ THEN DO ~SetGlobal("KickedOut","LOCALS",1)
-EscapeArea()
+					EscapeArea()
 ~ EXIT
 END
 
@@ -90,7 +90,7 @@ IF ~~ THEN BEGIN leave
 !AreaCheck("AR2905")
 !AreaCheck("AR2906")
 ~ THEN REPLY @9 DO ~SetGlobal("KickedOut","LOCALS",1)
-MoveGlobal("AR0406","cmninaf",[470.490])
+					MoveGlobal("AR0406","cmninaf",[470.490])
 ~ EXIT
   IF ~!AreaCheck("AR0301")
 !AreaCheck("AR0302")
@@ -122,7 +122,7 @@ MoveGlobal("AR0406","cmninaf",[470.490])
 AreaCheck("AR0601")
 AreaCheck("AR0602")
 AreaCheck("AR0603")~ THEN REPLY @11 DO ~SetGlobal("KickedOut","LOCALS",1)
-MoveGlobal("AR0406","cmninaf",[470.490])
+										MoveGlobal("AR0406","cmninaf",[470.490])
 ~ EXIT
 END
 

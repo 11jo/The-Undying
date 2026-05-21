@@ -8,7 +8,8 @@ END
 
 IF ~~ THEN BEGIN ko1
   SAY @3
-  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0) EscapeArea()~
+  IF ~~ THEN DO ~SetGlobal("CalliJoined","GLOBAL",0)
+					EscapeArea()~
 EXIT
 END
 
