@@ -1,4 +1,4 @@
-@0    = ~Yes? Hmm you seem familiar to me by descriptions that I have heard about. You are, <CHARNAME>, correct?~ [NINA02]
+@0    = ~Yes? Hmm you seem familiar to me by descriptions that I have heard about. You are, <CHARNAME>, correct?~ [cmni02]
 @1    = ~Yes my name is, <CHARNAME> why do you ask?~
 @2    = ~I heard about how evil you are. If we were not in a public place I would slay you where you stand. Now get out of my face, your evil stench is most unwelcome.~
 @3    = ~I have heard of your heroic exploits across the Sword Coast and Baldur's Gate. I have also heard about your loss of Imoen at Waukeen's Promenade with Irenicus. I would offer my services and help you out in this quest to rescue her.~

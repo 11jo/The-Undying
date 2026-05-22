@@ -93,7 +93,15 @@ COPY ~TheUndying/bams~ ~override~
 
 COPY ~TheUndying/areas~ ~override~
 
-COPY ~TheUndying/sounds~ ~override~
+// COPY ~TheUndying/sounds~ ~override~
+
+// LAF HANDLE_AUDIO
+
+	LAF HANDLE_AUDIO
+		STR_VAR
+		audio_path = ~TheUndying/sounds~
+		oggdec_path = ~TheUndying/sounds~
+	END
 
 COPY ~TheUndying/eff~ ~override~
 

@@ -94,7 +94,7 @@
 @93  = ~Den Göttern? Nein, die haben dem armen Großonkel Rupert nicht geholfen. Für ihn gab es keinen göttlichen Eingriff.~
 @94  = ~Schweigt, Trottel! Noch ein Wort und ich schwöre, ich werde schreien!~
 @95  = ~Aber...~
-@96  = ~ARGHHHH!~ [call11]
+@96  = ~ARGHHHH!~ [cmca11]
 @97  = ~Aerie, Ihr seid eine solch junge, unschuldige, blauäugige Elfe, ich finde das einfach... erfrischend!~
 @98  = ~W-warum sagt Ihr das?~
 @99  = ~Ich sage das, Liebes, weil Euch solch ein Wesenszug zu einem einfachen Ziel für jemanden macht, der Euch schaden will.~
@@ -188,7 +188,7 @@
 @187 = ~Ich finde Eure Einstellung bedenklich und ich werde Euch beobachten, Euch genau beobachten.~
 @188 = ~Mich beobachten? Es soll mich interessieren, dass Ihr mich beobachtet? Ha! Tötet alle!~
 @189 = ~Wenn Ihr das jemandem antut, der für das Gute und für Rechtschaffenheit eintritt, werde ich Euch ein Ende bereiten.~
-@190 = ~Welch schöner Tag für ein Blutbad, findet Ihr nicht?~ [call36]
+@190 = ~Welch schöner Tag für ein Blutbad, findet Ihr nicht?~ [cmca36]
 @191 = ~Wir sind im wundervollen Freiland und betrachten die Großartigkeit der Natur und alles, woran Ihr denken könnt, ist Tod?~
 @192 = ~Aber ja, mein kleiner Baumschmuser. Zu beobachten, wie der Wald von Flammen verschlungen wird und sich der blaue Himmel durch schwarzen Rauch verdunkelt, ist ein schöner, einfach ein schöner Vorgang!~
 @193 = ~Das meint Ihr sicherlich nicht so. Ihr gehört den Elfen an, jene die mit der Natur in Berührung stehen. Ihr solltet es lieben, die Natur zu pflegen, nicht, sie zu zerstören.~
