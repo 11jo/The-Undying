@@ -1656,7 +1656,7 @@ Not Usable By:
 STATISTICS:
 
 Damage: 1D2 (+1D10 crushing)
-THAC0: -5
+THAC0: 2
 Damage type: Missile (piercing)
 Special: 10% chance target is Stunned
 Weight: 0
@@ -1709,7 +1709,8 @@ Equipped Ability : increases movement rate
 
 Bonus AC vs missile weapons
 
-Usable by paladins only~
+Usable By:
+Paladins~
 @316  = ~Tunare~
 @317  = ~Tunare, The Mother of All
 
@@ -1885,7 +1886,8 @@ Special:  Non-detectable by magical means such as detect invisibility and scryin
 20% Set trap bonus
 Weight: 3
 
-Usable by thief single and multiclass~
+Usable By:
+Thief single and multiclass~
 @337  = ~Cloak of Sune~
 @338  = ~Cloak of Sune is for those charismatic types who want their hearts desire. They believe they will become more desirable and be able to get what they want. You be the judge.
 
