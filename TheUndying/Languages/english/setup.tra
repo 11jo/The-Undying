@@ -781,6 +781,7 @@ Equipped Abilities:
    5% bonus to Fire and Cold resistance
   
 THAC0: +4
+Damage: +2
 Weight: 1
 Speed Factor: 2
 Proficiency Type: Short Bow
@@ -1440,7 +1441,8 @@ Ability 1: Protection from Charm
 Ability 2: Protection from Poison
 Ability 3: Protection from level drain
 Ability 4: THAC0 +1 vs. Lycanthropes
-Ability 5: Armor Class +1 vs. Lycanthropes.
+Ability 5: Armor Class +2 vs. Lycanthropes
+Ability 5: Saving Throws +2 vs. Lycanthropes
 
 Weight: 3
 Usable by:
@@ -1456,8 +1458,8 @@ Bonus Damage:
 +2 Fire
 +2 Electrical
 
-THAC0: +3 bonus, +4 vs. evil creatures
-Damage: 1D8 +3, +4 vs. evil creatures
+THAC0: +3 bonus, +5 vs. evil creatures
+Damage: 1D8 +3, +5 vs. evil creatures
 Damage type: slashing
 Weight: 2
 Speed Factor: 3

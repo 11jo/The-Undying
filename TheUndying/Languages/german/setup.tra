@@ -760,7 +760,8 @@ Kann nur verwendet werden von:
 
 EIGENSCHAFTEN:
 
-ETW0-Bonus: -3
+ETW0-Bonus: -4
+Schaden: +2
 Feuerwiderstand: +5%
 Kältewiderstand: +5%
 Gewicht: 1
@@ -1429,7 +1430,8 @@ EIGENSCHAFTEN:
 Der Träger ist immun gegen Bezauberung, Gift und Stufenabzug.
 
 ETW0-Bonus: -1 (gg. Lykanthropen)
-RK-Bonus: -1 (gg. Lykanthropen)
+RK-Bonus: -2 (gg. Lykanthropen)
+RW-Bonus: -2 (gg. Lykanthropen)
 Gewicht: 3
 
 Kann nur verwendet werden von:
@@ -1443,13 +1445,13 @@ EIGENSCHAFTEN:
 
 Schaden:
  1W8 +3 (Klinge)
- 1W8 +4 (gg. böse Wesen)
+ 1W8 +5 (gg. böse Wesen)
 Schadensbonus:
  +2 (Elektrizität)
  +2 (Feuer)
 ETW0-Bonus:
  -3
- -4 (gg. böse Wesen)
+ -5 (gg. böse Wesen)
 Gewicht: 2
 Initiativefaktor: 3
 Mindeststärke: 6
