@@ -8,6 +8,6 @@ THEN
 		CreateCreature("CMAPOCAL",[1005.1974],0) // 
 		CreateCreature("CMAPOCAL",[970.2429],0) // 
 		ActionOverride("Vase 3",CreateItem("CMAR01",40,0,0)) //
-		ActionOverride("Vase 5",CreateItem("RINGGR06",1,0,0)) //
+		ActionOverride("Vase 5",CreateItem("cmrigr06",1,0,0)) //
 		SetGlobal("DoSSpawn","MYAREA",1)
 END

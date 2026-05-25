@@ -502,14 +502,14 @@ ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
   LOAD_TRA ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/setup_ee.tra~
 END
 
-COPY ~TheUndying/Items/CALLAR.itm~ ~Override~ // TODO item Use // Same as CMTUCH02.itm unused
+COPY ~TheUndying/Items/CALLAR.itm~ ~Override/cmcallar~ // TODO item Use // Same as CMTUCH02.itm unused
   SAY 0x8 #6672 // @127
   SAY 0xC @128
   SAY 0x50 #6673 // @129
   SAY 0x54 @130
 
 
-COPY ~TheUndying/Items/CALLSW.itm~ ~Override~ // TODO item Use
+COPY ~TheUndying/Items/CALLSW.itm~ ~Override/cmcallsw~ // TODO item Use //  unused
   SAY 0x8 #6741 // @131
   SAY 0xC @132
   SAY 0x50 #6742 // @133
@@ -808,7 +808,7 @@ COPY ~TheUndying/Items/CMBOOK99.ITM~      ~override/CMBOOK99.ITM~
 
 /* ****************** Former DoS Items ************************************** */
 
-COPY ~TheUndying/Items/amulgr01.itm~       ~override~
+COPY ~TheUndying/Items/amulgr01.itm~       ~override/cmamgr01.itm~
   SAY NAME1 @287
   SAY NAME2 @288
   SAY UNIDENTIFIED_DESC #6900
@@ -972,45 +972,45 @@ COPY ~TheUndying/Items/COMS01.ITM~         ~override~
   SAY NAME2 @360
   SAY DESC @361
 
-COPY ~TheUndying/Items/helmgr01.itm~       ~override~       
+COPY ~TheUndying/Items/helmgr01.itm~       ~override/cmhegr01~       
   SAY NAME1 #6346 // @168
   SAY NAME2 @362
   SAY UNIDENTIFIED_DESC #19724
   SAY DESC @363
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/macegr01.itm~       ~override~       
+COPY ~TheUndying/Items/macegr01.itm~       ~override/cmmagr01~ // Unused
   SAY NAME1 #6708 // @176
   SAY NAME2 @364
   SAY DESC @365
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/PLATGR01.ITM~       ~override~       
+COPY ~TheUndying/Items/PLATGR01.ITM~       ~override/cmplgr01~ // Unused
   SAY NAME1 #267 // @234
   SAY NAME2 @366
   SAY UNIDENTIFIED_DESC #6681
   SAY DESC @367
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/ringgr06.itm~       ~override~       
+COPY ~TheUndying/Items/ringgr06.itm~       ~override/cmrigr06~       
   SAY NAME1 @368
   SAY NAME2 @369
   SAY DESC @370
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/ringgr02.itm~       ~override~       
+COPY ~TheUndying/Items/ringgr02.itm~       ~override/cmrigr02~       
   SAY NAME1 @368
   SAY NAME2 @371
   SAY DESC @372
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/sackgr04.itm~       ~override~       
+COPY ~TheUndying/Items/sackgr04.itm~       ~override/cmsagr04~ // Unused
   SAY NAME1 @373
   SAY NAME2 @374
   SAY DESC @375
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/sw2hgr01.itm~       ~override~       
+COPY ~TheUndying/Items/sw2hgr01.itm~       ~override/cmsw2gr1~ // Unused
   SAY NAME1 #6751 // @255
   SAY NAME2 @376
   SAY UNIDENTIFIED_DESC #6752
@@ -1023,7 +1023,7 @@ COPY ~TheUndying/Items/COMTHOR.itm~        ~override~
 
 COPY ~TheUndying/Items/COMHAU.ITM~         ~override~         
 
-COPY ~TheUndying/Items/bracgr01.itm~       ~override~       
+COPY ~TheUndying/Items/bracgr01.itm~       ~override/CMbrgr01~ // Unused
   SAY NAME1 #6797 // @192
   SAY NAME2 @380
   SAY UNIDENTIFIED_DESC #6798
@@ -1186,6 +1186,24 @@ COPY ~TheUndying/stores/cmmagin1.sto~     ~override~
 
 COPY ~TheUndying/stores/tempeil.sto~     ~override~
   SAY STORE_NAME @407
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~ringgr02~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~cmrigr02~ position=~AFTER COMN01~ flags=~identified~
+      END
+
+	LPF REMOVE_STORE_ITEM_EX
+      STR_VAR item_name=~amulgr01~
+    END
+
+    LPF ADD_STORE_ITEM_EX
+      INT_VAR stack=1
+        STR_VAR item_name=~CMamgr01~ position=~AFTER COMN01~ flags=~identified~
+      END
 
 	LPF REMOVE_STORE_ITEM_EX
       STR_VAR item_name=~CMGR01~
@@ -2140,7 +2158,7 @@ COPY_EXISTING ~HAEGAN.CRE~ ~override~
 WRITE_LONG 0x14 3580											// XPVAL was 580
 WRITE_LONG 0x1c 310												// GOLD was 31
 WRITE_BYTE 0x52 2												// THAC0 was 12
-REPLACE_CRE_ITEM ~HELMGR01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~		// INV was HELM13
+REPLACE_CRE_ITEM ~CMhegr01~ #0 #0 #0 ~IDENTIFIED~ ~HELMET~		// INV was HELM13
 REPLACE_CRE_ITEM ~SW2H02~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP TWOHANDED	// INV was SW2H01
 REPLACE_CRE_ITEM ~AX1H06~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON2~		// INV was AX1H04
 REPLACE_CRE_ITEM ~AX1H08~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON3~		// INV was AX1H04
