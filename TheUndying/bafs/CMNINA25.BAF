@@ -5,3 +5,63 @@ THEN
 		StartDialogueNoSet([PC])
 		Wait(1)
 END
+
+// CM_Ninafer_Sword
+
+IF
+	!Global("CM_Ninafer_Sword","LOCALS",0)
+	InPartyAllowDead(Myself)
+	OR(2)
+		HasItem("CMNINASW",Myself)
+		PartyHasItem("CMNINASW")
+THEN
+	RESPONSE #100
+		SetGlobal("CM_Ninafer_Sword","LOCALS",0)
+		Continue()
+END
+
+IF
+	Global("CM_Ninafer_Sword","LOCALS",0)
+	!Dead(Myself)
+	!InParty(Myself)
+	!HasItem("CMNINASW",Myself)
+	PartyHasItem("CMNINASW")
+THEN
+	RESPONSE #100
+		TakePartyItem("CMNINASW")
+		SetGlobal("CM_Ninafer_Sword","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("CM_Ninafer_Sword","LOCALS",0)
+	!Dead("cmninaf")
+	!HasItem("CMNINASW",Myself)
+	!PartyHasItem("CMNINASW")
+THEN
+	RESPONSE #100
+		PickUpItem("CMNINASW")
+		SetGlobal("CM_Ninafer_Sword","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("CM_Ninafer_Sword","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("CM_Ninafer_Sword","LOCALS",2)
+		DisplayStringHead(Myself,~It's mine, I don't leave it behind !~)
+		Continue()
+END
+
+IF
+	!Dead("cmninaf")
+	!HasItem("CMNINASW",Myself)
+	!PartyHasItem("CMNINASW")
+	InventoryFull(Myself)
+THEN
+	RESPONSE #100
+		ActionOverride([PC],PickUpItem("CMNINASW"))
+		DisplayStringHead(Myself,~Carry it for me~)
+		Continue()
+END

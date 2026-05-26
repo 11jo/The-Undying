@@ -1,0 +1,39 @@
+IF
+	Dead("callisto")
+	!StateCheck("callisto","STATE_EXPLODING_DEATH")
+THEN
+	RESPONSE #100
+		SetGlobal("CM_SPYLeave","LOCALS",1)
+		MoveToOffset([0.-3])
+		CreateVisualEffectObject("SPFLADOW",Myself) 
+		DestroyItem("CMTUPL01")
+		DisplayStringHead(Myself,~As Callisto falls, her armor burn and melt within.~)
+		Wait(4)
+		DestroySelf()
+END
+
+IF
+	Dead("callisto")
+	StateCheck("callisto","STATE_EXPLODING_DEATH")
+THEN
+	RESPONSE #100
+		SetGlobal("CM_SPYLeave","LOCALS",1)
+		MoveToOffset([0.-3])
+		CreateVisualEffectObject("SPFLMSTI",LastAttackerOf("callisto"))
+		DestroyItem("CMTUPL01")
+		ApplyDamage(LastAttackerOf("callisto"),15,MAGICFIRE)
+		DisplayStringHead(Myself,~As Callisto is torn apart, her shattered armor try to immolate the executioner.~)
+		Wait(4)
+		DestroySelf()
+END
+
+
+IF
+	OR(2)
+		Global("CM_SPYLeave","LOCALS",1)
+		!Dead("callisto")
+THEN
+	RESPONSE #100
+		SetGlobal("CM_SPYLeave","LOCALS",0)
+		DestroySelf()
+END

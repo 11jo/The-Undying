@@ -114,6 +114,18 @@ END
 
 /* *********************  Creature Files ****************************** */
 
+
+COPY_EXISTING ~CUTSPY.CRE~ ~override/CM_SPY.CRE~
+	WRITE_ASCII SCRIPT_OVERRIDE ~CM_SPY~ (8)
+	WRITE_ASCII DEATHVAR ~CM_SPY~ (32)
+LPF DELETE_CRE_EFFECT INT_VAR opcode_to_delete=271 END
+LPF DELETE_CRE_EFFECT INT_VAR opcode_to_delete=268 END
+
+COPY_EXISTING ~CUTSPY.CRE~ ~override/CM_SPY2.CRE~
+	WRITE_ASCII SCRIPT_OVERRIDE ~CM_SPY2~ (8)
+	WRITE_ASCII DEATHVAR ~CM_SPY2~ (32)
+LPF DELETE_CRE_EFFECT INT_VAR opcode_to_delete=271 END
+
 COPY ~TheUndying/cre/CMALISK1.CRE~ ~Override~
   SAY 0x8 @11
   SAY 0xC @11
@@ -502,18 +514,48 @@ ACTION_IF GAME_IS ~bg2ee eet~ THEN BEGIN
   LOAD_TRA ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/setup_ee.tra~
 END
 
-COPY ~TheUndying/Items/CALLAR.itm~ ~Override/cmcallar~ // TODO item Use // Same as CMTUCH02.itm unused
+COPY ~TheUndying/Items/CALLAR.itm~ ~Override/cmcallar~ // Same as CMTUCH02.itm unused (lesser CMTUPL01.itm)
   SAY 0x8 #6672 // @127
   SAY 0xC @128
   SAY 0x50 #6673 // @129
   SAY 0x54 @130
 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 
-COPY ~TheUndying/Items/CALLSW.itm~ ~Override/cmcallsw~ // TODO item Use //  unused
+PRINT ~Item restricted to Callisto for EE~
+OUTER_SET CM_callar = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
+APPEND ~ITEM_USE.2DA~ ~cmcallar   CALLISTO      %CM_callar%      2           %use_her%~ UNLESS ~cmcallar~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Callisto for bg2~
+OUTER_SET CM_callar = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
+APPEND ~ITEM_USE.2DA~ ~cmcallar   CALLISTO      -1      2          %CM_callar%~ UNLESS ~cmcallar~
+
+END
+
+
+COPY ~TheUndying/Items/CALLSW.itm~ ~Override/cmcallsw~ //  Callisto sword unused
   SAY 0x8 #6741 // @131
   SAY 0xC @132
   SAY 0x50 #6742 // @133
   SAY 0x54 @134
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+PRINT ~Item restricted to Callisto for EE~
+OUTER_SET CM_callsw = RESOLVE_STR_REF (~This sword is meant to be wielded by Callisto and no one else.~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
+APPEND ~ITEM_USE.2DA~ ~cmcallsw   CALLISTO      %CM_callsw%      2           %use_her%~ UNLESS ~cmcallsw~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Callisto for bg2~
+OUTER_SET CM_callsw = RESOLVE_STR_REF (~This sword is meant to be wielded by Callisto and no one else.~)
+APPEND ~ITEM_USE.2DA~ ~cmcallsw   CALLISTO      -1      2          %CM_callsw%~ UNLESS ~cmcallsw~
+
+END
 
 COPY ~TheUndying/Items/CM1H06.ITM~ ~Override~
   SAY 0x8 #6737 // @135
@@ -635,11 +677,26 @@ COPY ~TheUndying/Items/CMTUCH01.ITM~ ~Override~
   SAY 0x50 #39560 // @205
   SAY 0x54 @206
 
-COPY ~TheUndying/Items/CMTUCH02.ITM~ ~Override~ // Same as Callar.itm unused
+COPY ~TheUndying/Items/CMTUCH02.ITM~ ~Override~ // Same as Callar.itm unused (lesser CMTUPL01.itm)
   SAY 0x8 #6678 // @207
   SAY 0xC @208
   SAY 0x50 #6679 // @209
   SAY 0x54 @130
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+PRINT ~Item restricted to Callisto for EE~
+OUTER_SET CM_TUCH02 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
+APPEND ~ITEM_USE.2DA~ ~CMTUCH02   CALLISTO      %CM_TUCH02%      2           %use_her%~ UNLESS ~CMTUCH02~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Callisto for bg2~
+OUTER_SET CM_TUCH02 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
+APPEND ~ITEM_USE.2DA~ ~CMTUCH02   CALLISTO      -1      2          %CM_TUCH02%~ UNLESS ~CMTUCH02~
+
+END
 
 COPY ~TheUndying/Items/CMTUCL01.ITM~ ~Override~
   SAY 0x8 #6349 // @210
@@ -695,6 +752,21 @@ COPY ~TheUndying/Items/CMTUPL01.ITM~ ~Override~
   SAY UNIDENTIFIED_DESC #6681 // @236
   SAY 0x54 @237
 
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+PRINT ~Item restricted to Callisto for EE~
+OUTER_SET CM_TUPL01 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
+APPEND ~ITEM_USE.2DA~ ~CMTUPL01   CALLISTO      %CM_TUPL01%      2           %use_her%~ UNLESS ~CMTUPL01~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Callisto for bg2~
+OUTER_SET CM_TUPL01 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
+APPEND ~ITEM_USE.2DA~ ~CMTUPL01   CALLISTO      -1      2          %CM_TUPL01%~ UNLESS ~CMTUPL01~
+
+END
+
 COPY ~TheUndying/Items/CMTUPL02.ITM~ ~Override~
   SAY 0x8 #6642 // @238
   SAY 0xC @239
@@ -713,6 +785,21 @@ COPY ~TheUndying/Items/CMTUSW01.ITM~ ~Override~
   SAY 0xC @132
   SAY 0x50 #6742 // @133
   SAY 0x54 @134
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+PRINT ~Item restricted to Callisto for EE~
+OUTER_SET CM_TUSW01  = RESOLVE_STR_REF (~This sword is meant to be wielded by Callisto and no one else.~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
+APPEND ~ITEM_USE.2DA~ ~CMTUSW01   CALLISTO      %CM_TUSW01%      2           %use_her%~ UNLESS ~CMTUSW01~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Callisto for bg2~
+OUTER_SET CM_TUSW01 = RESOLVE_STR_REF (~This sword is meant to be wielded by Callisto and no one else.~)
+APPEND ~ITEM_USE.2DA~ ~CMTUSW01   CALLISTO      -1      2          %CM_TUSW01%~ UNLESS ~CMTUSW01~
+
+END
 
 COPY ~TheUndying/Items/CMTUSW02.ITM~ ~Override~
   SAY 0x8 #6741 // @131
@@ -791,14 +878,44 @@ COPY ~TheUndying/Items/COMN04.ITM~ ~Override~
   
 /* Nina items */ 
 
-COPY ~TheUndying/Items/CMNINASW.ITM~      ~override/CMNINASW.ITM~ // TODO item Use
+COPY ~TheUndying/Items/CMNINASW.ITM~      ~override/CMNINASW.ITM~
   SAY NAME2 @281 
   SAY DESC @282 
 
-COPY ~TheUndying/Items/CMNINARI.ITM~      ~override/CMNINARI.ITM~ // TODO item Use
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+PRINT ~Item restricted to Ninafer for EE~
+OUTER_SET CM_NINASW = RESOLVE_STR_REF (~Give it back before Ninafer see you...~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Ninafer~)
+APPEND ~ITEM_USE.2DA~ ~CMNINASW   CMNINAF      %CM_NINASW%      1           %use_her%~ UNLESS ~CMNINASW~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Ninafer for bg2~
+OUTER_SET CM_NINASW = RESOLVE_STR_REF (~Give it back before Ninafer see you...~)
+APPEND ~ITEM_USE.2DA~ ~CMNINASW   CMNINAF      -1      1          %CM_NINASW%~ UNLESS ~CMNINASW~
+
+END
+
+COPY ~TheUndying/Items/CMNINARI.ITM~      ~override/CMNINARI.ITM~
   SAY NAME1 @283 
   SAY NAME2 @283
   SAY UNIDENTIFIED_DESC @284
+
+ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
+
+PRINT ~Item restricted to Ninafer for EE~
+OUTER_SET CM_NINARI = RESOLVE_STR_REF (~Ninafer looks at you, both furious and amused. "Not even over my dead body !"~)
+OUTER_SET use_her = RESOLVE_STR_REF (~Ninafer~)
+APPEND ~ITEM_USE.2DA~ ~CMNINARI   CMNINAF      %CM_NINARI%      2           %use_her%~ UNLESS ~CMNINARI~
+
+END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+
+PRINT ~Item restricted to Ninafer for bg2~
+OUTER_SET CM_NINARI = RESOLVE_STR_REF (~Ninafer looks at you, both furious and amused. "Not even over my dead body !"~)
+APPEND ~ITEM_USE.2DA~ ~CMNINARI   CMNINAF      -1      2          %CM_NINARI%~ UNLESS ~CMNINARI~
+
+END
 
 COPY ~TheUndying/Items/CMBOOK99.ITM~      ~override/CMBOOK99.ITM~
   SAY NAME1 @285 
@@ -1814,6 +1931,10 @@ EXTEND_BOTTOM ~AR0900.bcs~ ~TheUndying/bafs/AAR0900.baf~
 EXTEND_BOTTOM ~AR1100.bcs~ ~TheUndying/bafs/AAR1100.baf~
 
 EXTEND_BOTTOM ~AR2100.bcs~ ~TheUndying/bafs/AAR2100.baf~
+
+COMPILE ~TheUndying/bafs/CM_SPY.baf~
+
+COMPILE ~TheUndying/bafs/CM_SPY2.baf~
 
 COMPILE ~TheUndying/bafs/CALLISTO.baf~
 

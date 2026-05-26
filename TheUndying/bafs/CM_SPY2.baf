@@ -1,0 +1,14 @@
+IF
+	Dead("callisto")
+THEN
+	RESPONSE #100
+		PickUpItem("CMTUPL01")
+		DestroySelf()
+END
+
+IF
+	!Dead("callisto")
+THEN
+	RESPONSE #100
+		DestroySelf()
+END

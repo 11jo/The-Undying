@@ -1,8 +1,9 @@
 IF
-   Global("CmEvilOneExists","MYAREA",0)
+	Global("CmEvilOneExists","MYAREA",0)
 THEN
-   RESPONSE #100
-      SetGlobal("CmEvilOneExists","MYAREA",1)
-      CreateCreature("CMCALLI",[2390.1523],4)
+	RESPONSE #100
+		SetGlobal("CmEvilOneExists","MYAREA",1)
+		CreateCreature("CMCALLI",[2390.1523],4)
+		ActionOverride("Callisto",MakeGlobal())
 END
 

@@ -1,3 +1,215 @@
+// CM_Callisto_Armor
+
+IF
+	!InPartyAllowDead(Myself)
+	Die()
+THEN
+	RESPONSE #100
+		CreateCreatureObject("CM_SPY2",Myself,0,0,0)
+		CreateCreatureObjectOffset("CM_SPY",Myself,[0.-5])
+		Continue()
+END
+
+IF
+	!Global("CM_Callisto_Armor","LOCALS",0)
+	HasItem("CMTUPL01",Myself)
+THEN
+	RESPONSE #100
+		SetGlobal("CM_Callisto_Armor","LOCALS",0)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!InventoryFull(Myself)
+	!HasItem("CMTUPL01",Myself)
+	TriggerOverride(Player1,HasItem("CMTUPL01",Player1))
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("CMARMO",Player1)
+		TakePartyItem("CMTUPL01")
+		CreateVisualEffectObject("CMARMO",Myself)
+		ApplyDamage(Player1,4,STUNNING)
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!InventoryFull(Myself)
+	!HasItem("CMTUPL01",Myself)
+	TriggerOverride(Player2,HasItem("CMTUPL01",Player2))
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("CMARMO",Player2)
+		TakePartyItem("CMTUPL01")
+		CreateVisualEffectObject("CMARMO",Myself)
+		ApplyDamage(Player2,4,STUNNING)
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!InventoryFull(Myself)
+	!HasItem("CMTUPL01",Myself)
+	TriggerOverride(Player3,HasItem("CMTUPL01",Player3))
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("CMARMO",Player3)
+		TakePartyItem("CMTUPL01")
+		CreateVisualEffectObject("CMARMO",Myself)
+		ApplyDamage(Player3,4,STUNNING)
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!InventoryFull(Myself)
+	!HasItem("CMTUPL01",Myself)
+	TriggerOverride(Player4,HasItem("CMTUPL01",Player4))
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("CMARMO",Player4)
+		TakePartyItem("CMTUPL01")
+		CreateVisualEffectObject("CMARMO",Myself)
+		ApplyDamage(Player4,4,STUNNING)
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!InventoryFull(Myself)
+	!HasItem("CMTUPL01",Myself)
+	TriggerOverride(Player5,HasItem("CMTUPL01",Player5))
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("CMARMO",Player5)
+		TakePartyItem("CMTUPL01")
+		CreateVisualEffectObject("CMARMO",Myself)
+		ApplyDamage(Player5,4,STUNNING)
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!InventoryFull(Myself)
+	!HasItem("CMTUPL01",Myself)
+	TriggerOverride(Player6,HasItem("CMTUPL01",Player6))
+THEN
+	RESPONSE #100
+		CreateVisualEffectObject("CMARMO",Player6)
+		TakePartyItem("CMTUPL01")
+		CreateVisualEffectObject("CMARMO",Myself)
+		ApplyDamage(Player6,4,STUNNING)
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("CM_Callisto_Armor","LOCALS",0)
+	!Dead("callisto")
+	!HasItem("CMTUPL01",Myself)
+THEN
+	RESPONSE #100
+		PickUpItem("CMTUPL01")
+		SetGlobal("CM_Callisto_Armor","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("CM_Callisto_Armor","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("CM_Callisto_Armor","LOCALS",2)
+		DisplayStringHead(Myself,~It's mine, don't put your hand on it !~)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!HasItem("CMTUPL01",Myself)
+	!PartyHasItem("CMTUPL01")
+	InParty(Myself)
+	InventoryFull(Myself)
+THEN
+	RESPONSE #100
+		ActionOverride([PC],PickUpItem("CMTUPL01"))
+		DisplayStringHead(Myself,~Carry it for me, I'll take it back as soon as I can.~)
+		Continue()
+END
+
+// CM_Callisto_Sword
+
+IF
+	!Global("CM_Callisto_Sword","LOCALS",0)
+	InPartyAllowDead(Myself)
+	OR(2)
+		HasItem("CMTUSW01",Myself)
+		PartyHasItem("CMTUSW01")
+THEN
+	RESPONSE #100
+		SetGlobal("CM_Callisto_Sword","LOCALS",0)
+		Continue()
+END
+
+IF
+	Global("CM_Callisto_Sword","LOCALS",0)
+	!Dead("callisto")
+	!InParty(Myself)
+	!HasItem("CMTUSW01",Myself)
+	PartyHasItem("CMTUSW01")
+THEN
+	RESPONSE #100
+		TakePartyItem("CMTUSW01")
+		SetGlobal("CM_Callisto_Sword","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("CM_Callisto_Sword","LOCALS",0)
+	!Dead("callisto")
+	!HasItem("CMTUSW01",Myself)
+	!PartyHasItem("CMTUSW01")
+THEN
+	RESPONSE #100
+		PickUpItem("CMTUSW01")
+		SetGlobal("CM_Callisto_Sword","LOCALS",1)
+		Continue()
+END
+
+IF
+	Global("CM_Callisto_Sword","LOCALS",1)
+THEN
+	RESPONSE #100
+		SetGlobal("CM_Callisto_Sword","LOCALS",2)
+		DisplayStringHead(Myself,~It's mine, I don't leave it behind !~)
+		Continue()
+END
+
+IF
+	!Dead("callisto")
+	!HasItem("CMTUSW01",Myself)
+	!PartyHasItem("CMTUSW01")
+	InventoryFull(Myself)
+THEN
+	RESPONSE #100
+		ActionOverride([PC],PickUpItem("CMTUSW01"))
+		DisplayStringHead(Myself,~Carry it for me.~)
+		Continue()
+END
+
+// Start
+
 IF
 	NumTimesTalkedTo(0)
 	!ActuallyInCombat()
