@@ -18,7 +18,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
 			OUTER_SPRINT name_source ~bg2_chapter_%i%~
 			OUTER_SET EVAL ~%name_source%~ = bg2_chapter
 		END
-  
+
     //Copies tra files into the autotra-folder (to leave the originals untouched)
     DEFINE_ACTION_FUNCTION autotra_workaround BEGIN
       COPY ~TheUndying/Languages/english~  ~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%~
@@ -45,7 +45,7 @@ ACTION_IF GAME_IS ~eet~ BEGIN
         noconvert_array = Undying_noconvert
         reload_array = Undying_reload
 	END
-	
+
 	// UTF8 only
 	COPY ~weidu_external/TheUndying/Languages/autotra/UTF8/%LANGUAGE%~			~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%~
 	COPY ~weidu_external/TheUndying/Languages/autotra/UTF8/%LANGUAGE%/D~			~weidu_external/TheUndying/Languages/autotra/%LANGUAGE%/D~
@@ -61,7 +61,7 @@ LANGUAGE ~english~
 LANGUAGE ~german~
          ~german~
          ~TheUndying/Languages/german/setup.tra~
-		 
+
 LANGUAGE ~French~
          ~french~
 		 ~TheUndying/Languages/english/setup.tra~
@@ -197,65 +197,65 @@ COPY ~TheUndying/cre/CMTUS03.CRE~ ~Override~
 COPY ~TheUndying/cre/CMVALIS.CRE~ ~Override~
   SAY 0x8 @26
   SAY 0xC @26
-  
+
 COPY ~TheUndying/cre/CMTUSOR.CRE~ ~Override~
   SAY 0x8 @27
   SAY 0xC @27
-  
+
 COPY ~TheUndying/cre/CMSORA1.CRE~ ~Override~
   SAY 0x8 @28
   SAY 0xC @28
-  
+
 COPY ~TheUndying/cre/CMSORA2.CRE~ ~Override~
   SAY 0x8 @28
   SAY 0xC @28
-  
+
 COPY ~TheUndying/cre/CMSORA3.CRE~ ~Override~
   SAY 0x8 @29
   SAY 0xC @29
-  
+
 COPY ~TheUndying/cre/CMSORA4.CRE~ ~Override~
   SAY 0x8 @30
   SAY 0xC @30
-  
+
 COPY ~TheUndying/cre/CMSORA5.CRE~ ~Override~
   SAY 0x8 @31
   SAY 0xC @31
-REPLACE_CRE_ITEM ~PLAT01~ #0 #0 #0 ~NONE~ ~INV~
-  
+REPLACE_CRE_ITEM ~PLAT01~ #0 #0 #0 ~NONE~ ~INV1~
+
 COPY ~TheUndying/cre/CMAVAT1.CRE~ ~Override~
   SAY 0x8 @32
   SAY 0xC @32
 
 COPY ~TheUndying/cre/2CMSHAR4.cre~  ~override~
-  SAY NAME1 @33 
-  SAY NAME2 @33 
+  SAY NAME1 @33
+  SAY NAME2 @33
 
 COPY ~TheUndying/cre/2CMSHAR1.cre~  ~override~
-  SAY NAME1 @34 
-  SAY NAME2 @34 
+  SAY NAME1 @34
+  SAY NAME2 @34
 
 COPY ~TheUndying/cre/2CMSHAR2.cre~  ~override~
-  SAY NAME1 @35 
-  SAY NAME2 @35 
+  SAY NAME1 @35
+  SAY NAME2 @35
 
 COPY ~TheUndying/cre/2CMSHAR3.cre~  ~override~
-  SAY NAME1 @33 
-  SAY NAME2 @33 
+  SAY NAME1 @33
+  SAY NAME2 @33
 
 COPY ~TheUndying/cre/CMNINAST.cre~  ~override~
-  SAY NAME1 @36 
+  SAY NAME1 @36
   SAY NAME2 @36
 
 COPY ~TheUndying/cre/CMNINAMY.cre~  ~override~
-  SAY NAME1 @37 
-  SAY NAME2 @37 
-  
+  SAY NAME1 @37
+  SAY NAME2 @37
+
 COPY ~TheUndying/cre/CMMORIA.cre~  ~override~
   SAY NAME1 @38
   SAY NAME2 @38
-  
-  
+
+
 COPY ~TheUndying/cre/CMKAT.cre~    ~override~
   SAY NAME1 @39
   SAY NAME2 @39
@@ -264,15 +264,15 @@ COPY ~TheUndying/cre/CMDUNKIN.cre~  ~override~
   SAY NAME1 @40
   SAY NAME2 @40
 WRITE_ASCII DEATHVAR ~CMDUNKIN~ (32)
-  
+
 COPY ~TheUndying/cre/CMNIFA01.cre~  ~override~
   SAY NAME1 @41
   SAY NAME2 @41
-  
+
 COPY ~TheUndying/cre/CMNIFA02.cre~  ~override~
   SAY NAME1 @42
   SAY NAME2 @42
-  
+
 
 
 /* DoS additions */
@@ -280,14 +280,14 @@ COPY ~TheUndying/cre/CMNIFA02.cre~  ~override~
 
 
 COPY ~TheUndying/cre/CMLORDAS.CRE~ ~override~
-  SAY NAME1 @43 
+  SAY NAME1 @43
   SAY NAME2 @43
 
-COPY ~TheUndying/cre/CMMEDUS.CRE~ ~override~        
+COPY ~TheUndying/cre/CMMEDUS.CRE~ ~override~
   SAY NAME1 @44
   SAY NAME2 @44
 
-COPY ~TheUndying/cre/CMNINA1.CRE~ ~override~        
+COPY ~TheUndying/cre/CMNINA1.CRE~ ~override~
   SAY NAME1 @45
   SAY NAME2 @45
 
@@ -295,59 +295,59 @@ COPY ~TheUndying/cre/CMOGREGU.CRE~ ~override~
   SAY NAME1 @46
   SAY NAME2 @46
 
-COPY ~TheUndying/cre/CMHAUN02.CRE~ ~override~       
+COPY ~TheUndying/cre/CMHAUN02.CRE~ ~override~
   SAY NAME1 @47
   SAY NAME2 @47
 
-COPY ~TheUndying/cre/CMHAM01.CRE~ ~override~        
+COPY ~TheUndying/cre/CMHAM01.CRE~ ~override~
   SAY NAME1 @48
   SAY NAME2 @48
 REPLACE_CRE_ITEM ~COMHAU~ #0 #0 #0 ~NONE~ ~INV~
 		WRITE_ASCII DEATHVAR ~CMHAMM01~ (32)
 
-COPY ~TheUndying/cre/CMHAM02.CRE~ ~override~        
+COPY ~TheUndying/cre/CMHAM02.CRE~ ~override~
   SAY NAME1 @49
   SAY NAME2 @49
 		WRITE_ASCII DEATHVAR ~CMHAMM02~ (32)
 
-COPY ~TheUndying/cre/CMHAM03.CRE~ ~override~        
+COPY ~TheUndying/cre/CMHAM03.CRE~ ~override~
   SAY NAME1 @50
   SAY NAME2 @50
 		WRITE_ASCII DEATHVAR ~CMHAMM03~ (32)
 
-COPY ~TheUndying/cre/CMHAUN01.CRE~ ~override~       
+COPY ~TheUndying/cre/CMHAUN01.CRE~ ~override~
   SAY NAME1 @47
   SAY NAME2 @47
 
-COPY ~TheUndying/cre/CMWOLF.CRE~ ~override~         
+COPY ~TheUndying/cre/CMWOLF.CRE~ ~override~
   SAY NAME1 @51
   SAY NAME2 @51
 
-COPY ~TheUndying/cre/CMVAMANC.CRE~ ~override~       
+COPY ~TheUndying/cre/CMVAMANC.CRE~ ~override~
   SAY NAME1 @52
   SAY NAME2 @52
 
-COPY ~TheUndying/cre/CMVAMPAT.CRE~ ~override~       
+COPY ~TheUndying/cre/CMVAMPAT.CRE~ ~override~
   SAY NAME1 @53
   SAY NAME2 @53
 
-COPY ~TheUndying/cre/CMWENUG.CRE~ ~override~        
+COPY ~TheUndying/cre/CMWENUG.CRE~ ~override~
   SAY NAME1 @54
   SAY NAME2 @54
 
-COPY ~TheUndying/cre/CMAPOCAL.CRE~ ~override~       
+COPY ~TheUndying/cre/CMAPOCAL.CRE~ ~override~
   SAY NAME1 @55
   SAY NAME2 @55
 
-COPY ~TheUndying/cre/CMDMERC.CRE~ ~override~        
+COPY ~TheUndying/cre/CMDMERC.CRE~ ~override~
   SAY NAME1 @56
   SAY NAME2 @56
 
-COPY ~TheUndying/cre/CMDRWP.CRE~ ~override~         
+COPY ~TheUndying/cre/CMDRWP.CRE~ ~override~
   SAY NAME1 @57
   SAY NAME2 @57
 
-COPY ~TheUndying/cre/CMSOLA.CRE~ ~override~         
+COPY ~TheUndying/cre/CMSOLA.CRE~ ~override~
   SAY NAME1 @58
   SAY NAME2 @58
 
@@ -355,7 +355,7 @@ COPY ~TheUndying/cre/CMGHOST1.CRE~ ~override~
   SAY NAME1 @59
   SAY NAME2 @59
   WRITE_ASCII DEATHVAR ~CMGHOST1~ (32)
-  
+
 
 COPY ~TheUndying/cre/CMGHOST2.CRE~ ~override~
   SAY NAME1 @59
@@ -369,7 +369,7 @@ COPY ~TheUndying/cre/CMGHOST3.CRE~ ~override~
   WRITE_ASCII DEATHVAR ~CMGHOST3~ (32)
 
 
-COPY ~TheUndying/cre/CMGABBY.CRE~ ~override~         
+COPY ~TheUndying/cre/CMGABBY.CRE~ ~override~
   SAY NAME1 @60
   SAY NAME2 @60
 
@@ -385,8 +385,8 @@ COPY ~TheUndying/cre/CMCALLI.CRE~ ~Override~
   SAY 0xB0 @65
   SAY 0xB4 @66
   SAY 0xB8 @67
-  SAY 0xBC @68 
-  SAY 0xC0 @69 
+  SAY 0xBC @68
+  SAY 0xC0 @69
   SAY 0xC4 @66
   SAY 0xC8 @70
   SAY 0xCC @71
@@ -395,19 +395,19 @@ COPY ~TheUndying/cre/CMCALLI.CRE~ ~Override~
   SAY 0xD8 @74
   SAY 0xDC @70
   SAY 0xE0 @72
-  SAY 0xE4 @73 
+  SAY 0xE4 @73
   SAY 0xE8 @75
   SAY 0xEC @76
   SAY 0xF0 @77
   SAY 0xF4 @78
   SAY 0xF8 @65
   SAY 0x104 @63
-  SAY 0x108 @79 
+  SAY 0x108 @79
   SAY 0x10C @80
   SAY 0x110 @81
   SAY 0x114 @82
   SAY 0x118 @83
-  SAY 0x11C @63 
+  SAY 0x11C @63
   SAY 0x124 @82
   SAY 0x128 @84
   SAY 0x12C @85
@@ -418,7 +418,7 @@ COPY ~TheUndying/cre/CMCALLI.CRE~ ~Override~
   SAY 0x140 @90
   SAY 0x160 @91
   SAY 0x178 @92
-  SAY 0x180 @93 
+  SAY 0x180 @93
   SAY 0x184 @94
   SAY 0x198 @71
   SAY 0x1A0 @95
@@ -430,9 +430,9 @@ COPY ~TheUndying/cre/CMCALLI.CRE~ ~Override~
 SAY BIO @98
 
 COPY ~TheUndying/cre/CMNINAF9.cre~  ~override~
-  SAY NAME1 @99 
-  SAY NAME2 @99 
-  SAY 0xa4 @100 
+  SAY NAME1 @99
+  SAY NAME2 @99
+  SAY 0xa4 @100
   SAY 0xa8 @101
   SAY 0xac @101
   SAY 0xb0 @102
@@ -448,10 +448,10 @@ COPY ~TheUndying/cre/CMNINAF9.cre~  ~override~
   SAY 0xf4 @110
   SAY 0xfc @111
   SAY 0x100 @112
-  SAY 0x10c @113 
-  SAY 0x110 @100 
-  SAY 0x114 @114 
-  SAY 0x124 @115 
+  SAY 0x10c @113
+  SAY 0x110 @100
+  SAY 0x114 @114
+  SAY 0x124 @115
   SAY 0x128 @116
   SAY 0x12c @117
   SAY 0x178 @118
@@ -461,42 +461,42 @@ COPY ~TheUndying/cre/CMNINAF9.cre~  ~override~
   SAY 0x1ac @121
   SAY 0x1b0 @121
   SAY 0x1b4 @122
-  SAY 0x1c0 @123 
+  SAY 0x1c0 @123
 SAY BIO @124
 
 COPY ~TheUndying/cre/CMNINA25.cre~  ~override~
-  SAY NAME1 @99 
+  SAY NAME1 @99
   SAY NAME2 @99
-  SAY 0xa4 @100 
-  SAY 0xa8 @101 
-  SAY 0xac @101 
-  SAY 0xb0 @102 
-  SAY 0xb4 @125 
-  SAY 0xb8 @104 
-  SAY 0xbc @105 
-  SAY 0xc0 @106 
-  SAY 0xc4 @107 
-  SAY 0xc8 @105 
-  SAY 0xcc @104 
-  SAY 0xec @108 
-  SAY 0xf0 @109 
-  SAY 0xf4 @110 
-  SAY 0xfc @111 
-  SAY 0x100 @112 
-  SAY 0x10c @113 
-  SAY 0x110 @100 
-  SAY 0x114 @114 
-  SAY 0x124 @115 
+  SAY 0xa4 @100
+  SAY 0xa8 @101
+  SAY 0xac @101
+  SAY 0xb0 @102
+  SAY 0xb4 @125
+  SAY 0xb8 @104
+  SAY 0xbc @105
+  SAY 0xc0 @106
+  SAY 0xc4 @107
+  SAY 0xc8 @105
+  SAY 0xcc @104
+  SAY 0xec @108
+  SAY 0xf0 @109
+  SAY 0xf4 @110
+  SAY 0xfc @111
+  SAY 0x100 @112
+  SAY 0x10c @113
+  SAY 0x110 @100
+  SAY 0x114 @114
+  SAY 0x124 @115
   SAY 0x128 @116
-  SAY 0x12c @117 
-  SAY 0x178 @118 
-  SAY 0x1a0 @119 
-  SAY 0x1a4 @120 
-  SAY 0x1a8 @118 
-  SAY 0x1ac @121 
-  SAY 0x1b0 @121 
-  SAY 0x1b4 @122 
-  SAY 0x1c0 @123 
+  SAY 0x12c @117
+  SAY 0x178 @118
+  SAY 0x1a0 @119
+  SAY 0x1a4 @120
+  SAY 0x1a8 @118
+  SAY 0x1ac @121
+  SAY 0x1b0 @121
+  SAY 0x1b4 @122
+  SAY 0x1c0 @123
 SAY BIO @124
 
 
@@ -807,11 +807,11 @@ COPY ~TheUndying/Items/CMTUSW02.ITM~ ~Override~
   SAY 0x50 #6742 // @247
   SAY 0x54 @248
   SAY 0x2BE #14022
-	LPF ALTER_ITEM_EFFECT 
-		INT_VAR 
+	LPF ALTER_ITEM_EFFECT
+		INT_VAR
 			check_headers = 1 // 1 All headers : 0 None header
 			header_type   = 1 // 1 melee : 2 ranged : 3 magical
-			match_opcode = 139 
+			match_opcode = 139
 			parameter1 = RESOLVE_STR_REF (#14022)
 	END
 
@@ -827,10 +827,10 @@ COPY ~TheUndying/Items/CMTUSW04.ITM~ ~Override~
   SAY 0xC @252
   SAY 0x50 #6738 // @253
   SAY 0x54 @254
-	LPF ALTER_ITEM_HEADER 
+	LPF ALTER_ITEM_HEADER
 		INT_VAR
 			check_headers = 1
-		STR_VAR 
+		STR_VAR
 			icon = ~xswd010~
 	END
 
@@ -875,12 +875,12 @@ COPY ~TheUndying/Items/COMN04.ITM~ ~Override~
   SAY 0xC @278
   SAY 0x50 #6900 // @279
   SAY 0x54 @280
-  
-/* Nina items */ 
+
+/* Nina items */
 
 COPY ~TheUndying/Items/CMNINASW.ITM~      ~override/CMNINASW.ITM~
-  SAY NAME2 @281 
-  SAY DESC @282 
+  SAY NAME2 @281
+  SAY DESC @282
 
 ACTION_IF (GAME_IS ~bg2ee eet~) BEGIN
 
@@ -898,7 +898,7 @@ APPEND ~ITEM_USE.2DA~ ~CMNINASW   CMNINAF      -1      1          %CM_NINASW%~ U
 END
 
 COPY ~TheUndying/Items/CMNINARI.ITM~      ~override/CMNINARI.ITM~
-  SAY NAME1 @283 
+  SAY NAME1 @283
   SAY NAME2 @283
   SAY UNIDENTIFIED_DESC @284
 
@@ -918,9 +918,9 @@ APPEND ~ITEM_USE.2DA~ ~CMNINARI   CMNINAF      -1      2          %CM_NINARI%~ U
 END
 
 COPY ~TheUndying/Items/CMBOOK99.ITM~      ~override/CMBOOK99.ITM~
-  SAY NAME1 @285 
-  SAY NAME2 @285 
-  SAY UNIDENTIFIED_DESC @286 
+  SAY NAME1 @285
+  SAY NAME2 @285
+  SAY UNIDENTIFIED_DESC @286
 
 
 /* ****************** Former DoS Items ************************************** */
@@ -962,30 +962,30 @@ COPY ~TheUndying/Items/CM1H05.ITM~         ~override~
   SAY UNIDENTIFIED_DESC #6738
   SAY DESC @299
 
-COPY ~TheUndying/Items/CM2H06.ITM~         ~override~         
+COPY ~TheUndying/Items/CM2H06.ITM~         ~override~
   SAY NAME2 @300
   SAY DESC @301
 
-COPY ~TheUndying/Items/CM2H02.ITM~         ~override~         
+COPY ~TheUndying/Items/CM2H02.ITM~         ~override~
   SAY NAME1 #6751 // @255
   SAY NAME2 @302
   SAY UNIDENTIFIED_DESC #6752
   SAY DESC @303
 
-COPY ~TheUndying/Items/CM2H04.ITM~         ~override~         
+COPY ~TheUndying/Items/CM2H04.ITM~         ~override~
   SAY NAME2 @304
   SAY DESC @305
 
-COPY ~TheUndying/Items/CM2H05.ITM~         ~override~         
+COPY ~TheUndying/Items/CM2H05.ITM~         ~override~
   SAY NAME2 @306
   SAY DESC @307
 
 
-COPY ~TheUndying/Items/CMAR02.ITM~         ~override~         
+COPY ~TheUndying/Items/CMAR02.ITM~         ~override~
   SAY NAME2 @308
   SAY DESC @309
 
-COPY ~TheUndying/Items/CMAR01.ITM~         ~override~         
+COPY ~TheUndying/Items/CMAR01.ITM~         ~override~
   SAY NAME2 @310
   SAY DESC @311
 
@@ -993,70 +993,70 @@ COPY ~TheUndying/Items/CMAX02.ITM~         ~override/CMUDAX02.ITM~ // Changed to
   SAY NAME2 @312
   SAY DESC @313
 
-COPY ~TheUndying/Items/CMBO01.ITM~         ~override~         
+COPY ~TheUndying/Items/CMBO01.ITM~         ~override~
   SAY NAME2 @314
   SAY DESC @315
 
-COPY ~TheUndying/Items/CMBW02.ITM~         ~override~         
+COPY ~TheUndying/Items/CMBW02.ITM~         ~override~
   SAY NAME2 @316
   SAY DESC @317
 
-COPY ~TheUndying/Items/CMHE05.ITM~         ~override~         
+COPY ~TheUndying/Items/CMHE05.ITM~         ~override~
   SAY NAME2 @318
   SAY DESC @319
 
-COPY ~TheUndying/Items/CMHE02.ITM~         ~override~         
+COPY ~TheUndying/Items/CMHE02.ITM~         ~override~
   SAY NAME1 @320
   SAY NAME2 @321
   SAY DESC @322
 
-COPY ~TheUndying/Items/CMST01.ITM~         ~override~         
+COPY ~TheUndying/Items/CMST01.ITM~         ~override~
   SAY NAME2 @323
   SAY DESC @324
 
-COPY ~TheUndying/Items/CMXB02.ITM~         ~override~         
+COPY ~TheUndying/Items/CMXB02.ITM~         ~override~
   SAY NAME2 @325
   SAY DESC @326
 
-COPY ~TheUndying/Items/COMA07.ITM~         ~override~         
+COPY ~TheUndying/Items/COMA07.ITM~         ~override~
   SAY NAME1 #267 // @234
   SAY NAME2 @327
   SAY UNIDENTIFIED_DESC #6681
   SAY DESC @328
 
-COPY ~TheUndying/Items/COMA04.ITM~         ~override~         
+COPY ~TheUndying/Items/COMA04.ITM~         ~override~
   SAY NAME2 @329
   SAY DESC @330
 
-COPY ~TheUndying/Items/COMA05.ITM~         ~override~         
+COPY ~TheUndying/Items/COMA05.ITM~         ~override~
   SAY NAME2 @331
   SAY DESC @332
 
-COPY ~TheUndying/Items/COMA06.ITM~         ~override~         
+COPY ~TheUndying/Items/COMA06.ITM~         ~override~
   SAY NAME2 @333
   SAY DESC @334
 
-COPY ~TheUndying/Items/COMC03.ITM~         ~override~         
+COPY ~TheUndying/Items/COMC03.ITM~         ~override~
   SAY NAME2 @335
   SAY DESC @336
 
-COPY ~TheUndying/Items/COMC02.ITM~         ~override~         
+COPY ~TheUndying/Items/COMC02.ITM~         ~override~
   SAY NAME2 @337
   SAY DESC @338
 
-COPY ~TheUndying/Items/COMF01.ITM~         ~override~         
+COPY ~TheUndying/Items/COMF01.ITM~         ~override~
   SAY NAME2 @339
   SAY DESC @340
 
-COPY ~TheUndying/Items/COMD01.ITM~         ~override~         
+COPY ~TheUndying/Items/COMD01.ITM~         ~override~
   SAY NAME2 @341
   SAY DESC @342
 
-COPY ~TheUndying/Items/COMG01.ITM~         ~override~         
+COPY ~TheUndying/Items/COMG01.ITM~         ~override~
   SAY NAME2 @343
   SAY DESC @344
 
-COPY ~TheUndying/Items/COMH02.ITM~         ~override~         
+COPY ~TheUndying/Items/COMH02.ITM~         ~override~
   SAY NAME2 @345
   SAY DESC @346
 
@@ -1064,20 +1064,20 @@ COPY ~TheUndying/Items/COMH01.ITM~         ~override~
   SAY NAME2 @347
   SAY DESC @348
 
-COPY ~TheUndying/Items/COMN02.ITM~         ~override~         
+COPY ~TheUndying/Items/COMN02.ITM~         ~override~
   SAY NAME1 @349
   SAY NAME2 @350
   SAY DESC @351
 
-COPY ~TheUndying/Items/COMN01.ITM~         ~override~         
+COPY ~TheUndying/Items/COMN01.ITM~         ~override~
   SAY NAME2 @352
   SAY DESC @353
 
-COPY ~TheUndying/Items/COMR03.ITM~         ~override~         
+COPY ~TheUndying/Items/COMR03.ITM~         ~override~
   SAY NAME2 @354
   SAY DESC @355
 
-COPY ~TheUndying/Items/COMR01.ITM~         ~override~         
+COPY ~TheUndying/Items/COMR01.ITM~         ~override~
   SAY NAME2 @356
   SAY DESC @357
 
@@ -1085,11 +1085,11 @@ COPY ~TheUndying/Items/COMS02.ITM~         ~override~
   SAY NAME2 @358
   SAY DESC @359
 
-COPY ~TheUndying/Items/COMS01.ITM~         ~override~         
+COPY ~TheUndying/Items/COMS01.ITM~         ~override~
   SAY NAME2 @360
   SAY DESC @361
 
-COPY ~TheUndying/Items/helmgr01.itm~       ~override/cmhegr01~       
+COPY ~TheUndying/Items/helmgr01.itm~       ~override/cmhegr01~
   SAY NAME1 #6346 // @168
   SAY NAME2 @362
   SAY UNIDENTIFIED_DESC #19724
@@ -1109,13 +1109,13 @@ COPY ~TheUndying/Items/PLATGR01.ITM~       ~override/cmplgr01~ // Unused
   SAY DESC @367
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/ringgr06.itm~       ~override/cmrigr06~       
+COPY ~TheUndying/Items/ringgr06.itm~       ~override/cmrigr06~
   SAY NAME1 @368
   SAY NAME2 @369
   SAY DESC @370
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/ringgr02.itm~       ~override/cmrigr02~       
+COPY ~TheUndying/Items/ringgr02.itm~       ~override/cmrigr02~
   SAY NAME1 @368
   SAY NAME2 @371
   SAY DESC @372
@@ -1134,11 +1134,11 @@ COPY ~TheUndying/Items/sw2hgr01.itm~       ~override/cmsw2gr1~ // Unused
   SAY DESC @377
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/COMTHOR.itm~        ~override~        
+COPY ~TheUndying/Items/COMTHOR.itm~        ~override~
   SAY NAME2 @378
   SAY DESC @379
 
-COPY ~TheUndying/Items/COMHAU.ITM~         ~override~         
+COPY ~TheUndying/Items/COMHAU.ITM~         ~override~
 
 COPY ~TheUndying/Items/bracgr01.itm~       ~override/CMbrgr01~ // Unused
   SAY NAME1 #6797 // @192
@@ -1147,12 +1147,12 @@ COPY ~TheUndying/Items/bracgr01.itm~       ~override/CMbrgr01~ // Unused
   SAY DESC @381
   WRITE_ASCII 0x10 ~~ (8)
 
-COPY ~TheUndying/Items/CMCAND01.itm~   ~override~       
+COPY ~TheUndying/Items/CMCAND01.itm~   ~override~
   SAY NAME1 @382
   SAY NAME2 @383
   SAY DESC @384
 
-COPY ~TheUndying/Items/CMMISC01.itm~   ~override~       
+COPY ~TheUndying/Items/CMMISC01.itm~   ~override~
   SAY DESC @385
 
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~MISC72.ITM~) BEGIN
@@ -1161,34 +1161,34 @@ END
 
 ACTION_IF (NOT FILE_EXISTS_IN_GAME ~MISC73.ITM~) BEGIN
 COPY ~TheUndying/Items/MISC73.ITM~     ~override~
-END  
+END
 
-COPY ~TheUndying/Items/CMMISC02.itm~   ~override~       
+COPY ~TheUndying/Items/CMMISC02.itm~   ~override~
   SAY NAME2 @386
   SAY DESC @387
 
-COPY ~TheUndying/Items/CMMISC03.itm~   ~override~       
+COPY ~TheUndying/Items/CMMISC03.itm~   ~override~
   SAY NAME1 @388
   SAY NAME2 @388
   SAY DESC @389
 
-COPY ~TheUndying/Items/COMKFC01.ITM~   ~override~       
+COPY ~TheUndying/Items/COMKFC01.ITM~   ~override~
   SAY NAME1 @390
   SAY NAME2 @390
   SAY DESC @391
 
 
-COPY ~TheUndying/Items/COMKFC02.ITM~   ~override~       
+COPY ~TheUndying/Items/COMKFC02.ITM~   ~override~
   SAY NAME2 @392
   SAY DESC @393
 
-COPY ~TheUndying/Items/COMKFC03.ITM~   ~override~       
+COPY ~TheUndying/Items/COMKFC03.ITM~   ~override~
   SAY NAME1 @394
   SAY NAME2 @394
   SAY DESC @395
 
 
-COPY ~TheUndying/Items/COMGOB01.ITM~   ~override~       
+COPY ~TheUndying/Items/COMGOB01.ITM~   ~override~
   SAY NAME1 @396
   SAY NAME2 @397
   SAY DESC @398
@@ -1244,7 +1244,7 @@ COPY ~TheUndying/stores/CMTUS03.sto~ ~Override~
       INT_VAR stack=1
         STR_VAR item_name=~CMBAG03~ position=~AFTER RESTORE~ flags=~identified~
       END
-  
+
 /* Nina stores */
 
 COPY_EXISTING ~BAG02D.STO~ ~Override/COMBAG02.STO~
@@ -1252,7 +1252,7 @@ COPY_EXISTING ~BAG02D.STO~ ~Override/COMBAG02.STO~
 COPY_EXISTING ~BAG02D.ITM~ ~Override/COMBAG02.ITM~
 
 COPY ~TheUndying/stores/CMNINAST.STO~     ~override/CMNINAST.STO~
-  SAY STORE_NAME @404 
+  SAY STORE_NAME @404
 
 	LPF REMOVE_STORE_ITEM_EX
       STR_VAR item_name=~BAG02J~
@@ -1273,7 +1273,7 @@ COPY_EXISTING ~BAG03B.ITM~ ~Override/CMBAG03B.ITM~
 
 COPY ~TheUndying/stores/CMNINAMY.sto~     ~override/CMNINAMY.sto~
   SAY STORE_NAME @405
-  
+
 	LPF REMOVE_STORE_ITEM_EX
       STR_VAR item_name=~BAG03B~
     END
@@ -1282,13 +1282,13 @@ COPY ~TheUndying/stores/CMNINAMY.sto~     ~override/CMNINAMY.sto~
       INT_VAR stack=1
         STR_VAR item_name=~CMBAG03B~ position=~AFTER RESTORE~ flags=~identified~
       END
-  
+
 /* DoS Stores */
 
 COPY_EXISTING ~BAG03.STO~ ~Override/COMBAG03.STO~
 
 COPY_EXISTING ~BAG03.ITM~ ~Override/COMBAG03.ITM~
-  
+
 COPY ~TheUndying/stores/cmmagin1.sto~     ~override~
   SAY STORE_NAME @406
 
@@ -1335,13 +1335,13 @@ COPY ~TheUndying/stores/tempeil.sto~     ~override~
     END // Not existing // See legacy spells folder
 
 COPY_EXISTING ~TEMHELM.STO~ ~override~
-  ADD_STORE_ITEM ~CMBO01~ #0 #0 #0 ~IDENTIFIED~ #1 
-  ADD_STORE_ITEM ~CMHE05~ #0 #0 #0 ~IDENTIFIED~ #1 
-  ADD_STORE_ITEM ~COMA04~ #0 #0 #0 ~IDENTIFIED~ #1 
+  ADD_STORE_ITEM ~CMBO01~ #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~CMHE05~ #0 #0 #0 ~IDENTIFIED~ #1
+  ADD_STORE_ITEM ~COMA04~ #0 #0 #0 ~IDENTIFIED~ #1
 
 COPY ~TheUndying/stores/cmkfc01.sto~     ~override~
   SAY STORE_NAME @408
-  
+
 /* *************** Modify existing areas ************** */
 
 // AR0400 gets new travel region and new entrance for CM7000
@@ -1651,7 +1651,7 @@ COPY_EXISTING ~AR1800.ARE~ ~override~
    END
  END
 
- PATCH_IF (info_1=1) BEGIN       
+ PATCH_IF (info_1=1) BEGIN
    SET offset = ("%cont_offset%"+0xc0*"%cont_num%")  //adding 1 new container
    INSERT_BYTES offset 0xc0
    WRITE_ASCII offset ~Carcass~
@@ -1981,7 +1981,7 @@ EXTEND_TOP ~anomen.bcs~ ~TheUndying/bafs/anomen.BAF~
 
 COMPILE ~TheUndying/bafs/CMNINAF.BAF~
 	// REPLACE ~99990~ ~Vigilance is mine and can only be held by me.~
-	
+
 COMPILE ~TheUndying/bafs/CMNINA25.BAF~
 
 COMPILE ~TheUndying/bafs/CMSHAR1.BAF~
@@ -2046,9 +2046,9 @@ COMPILE EVALUATE_BUFFER ~TheUndying/dialogs/cmninafj.d~
 COMPILE ~TheUndying/dialogs/cmninafp.d~
 
 COMPILE ~TheUndying/dialogs/ninaf25p.d~
-  
+
 COMPILE ~TheUndying/dialogs/cmmoria.d~
-  
+
 COMPILE ~TheUndying/dialogs/BCMCALLI.d~
 
 COMPILE ~TheUndying/dialogs/CALLISTO.d~
@@ -2136,7 +2136,7 @@ UNLESS ~CALLISTO~ // we are already there, skip it
 
 APPEND ~pdialog.2da~ // TOB append
 ~CMNINAF         CMNINAFP               CMNINAFJ             CMNINAFD         CMNIN25P           CMNIN25J                 NINA25D                 CMNINA25~
-UNLESS ~CMNINAF~ 
+UNLESS ~CMNINAF~
 
 APPEND ~interdia.2da~ // TOB append
 ~CMNINAF         BCMNINAF          BCMNIN25~
