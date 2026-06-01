@@ -4,7 +4,7 @@ AUTHOR ~"http://www.teambg.net"~
 
 README ~TheUndying/readme/readme-ctu.htm~
 
-VERSION ~~
+VERSION ~3.0~
 
 ALWAYS
 
@@ -527,7 +527,7 @@ OUTER_SET CM_callar = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd be
 OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
 APPEND ~ITEM_USE.2DA~ ~cmcallar   CALLISTO      %CM_callar%      2           %use_her%~ UNLESS ~cmcallar~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Callisto for bg2~
 OUTER_SET CM_callar = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
@@ -549,7 +549,7 @@ OUTER_SET CM_callsw = RESOLVE_STR_REF (~This sword is meant to be wielded by Cal
 OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
 APPEND ~ITEM_USE.2DA~ ~cmcallsw   CALLISTO      %CM_callsw%      2           %use_her%~ UNLESS ~cmcallsw~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Callisto for bg2~
 OUTER_SET CM_callsw = RESOLVE_STR_REF (~This sword is meant to be wielded by Callisto and no one else.~)
@@ -690,7 +690,7 @@ OUTER_SET CM_TUCH02 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd be
 OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
 APPEND ~ITEM_USE.2DA~ ~CMTUCH02   CALLISTO      %CM_TUCH02%      2           %use_her%~ UNLESS ~CMTUCH02~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Callisto for bg2~
 OUTER_SET CM_TUCH02 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
@@ -759,7 +759,7 @@ OUTER_SET CM_TUPL01 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd be
 OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
 APPEND ~ITEM_USE.2DA~ ~CMTUPL01   CALLISTO      %CM_TUPL01%      2           %use_her%~ UNLESS ~CMTUPL01~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Callisto for bg2~
 OUTER_SET CM_TUPL01 = RESOLVE_STR_REF (~This armor belongs to Callisto, you'd better not push your luck.~)
@@ -793,7 +793,7 @@ OUTER_SET CM_TUSW01  = RESOLVE_STR_REF (~This sword is meant to be wielded by Ca
 OUTER_SET use_her = RESOLVE_STR_REF (~Callisto~)
 APPEND ~ITEM_USE.2DA~ ~CMTUSW01   CALLISTO      %CM_TUSW01%      2           %use_her%~ UNLESS ~CMTUSW01~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Callisto for bg2~
 OUTER_SET CM_TUSW01 = RESOLVE_STR_REF (~This sword is meant to be wielded by Callisto and no one else.~)
@@ -889,7 +889,7 @@ OUTER_SET CM_NINASW = RESOLVE_STR_REF (~Give it back before Ninafer see you...~)
 OUTER_SET use_her = RESOLVE_STR_REF (~Ninafer~)
 APPEND ~ITEM_USE.2DA~ ~CMNINASW   CMNINAF      %CM_NINASW%      1           %use_her%~ UNLESS ~CMNINASW~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Ninafer for bg2~
 OUTER_SET CM_NINASW = RESOLVE_STR_REF (~Give it back before Ninafer see you...~)
@@ -909,7 +909,7 @@ OUTER_SET CM_NINARI = RESOLVE_STR_REF (~Ninafer looks at you, both furious and a
 OUTER_SET use_her = RESOLVE_STR_REF (~Ninafer~)
 APPEND ~ITEM_USE.2DA~ ~CMNINARI   CMNINAF      %CM_NINARI%      2           %use_her%~ UNLESS ~CMNINARI~
 
-END ELSE ACTION_IF (GAME_IS ~bg2 bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
+END ELSE ACTION_IF (GAME_IS ~tob bgt~ AND MOD_IS_INSTALLED ~SETUP-TOBEX.TP2~ ~100~) BEGIN
 
 PRINT ~Item restricted to Ninafer for bg2~
 OUTER_SET CM_NINARI = RESOLVE_STR_REF (~Ninafer looks at you, both furious and amused. "Not even over my dead body !"~)
