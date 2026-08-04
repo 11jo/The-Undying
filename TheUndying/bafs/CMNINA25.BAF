@@ -22,7 +22,7 @@ END
 
 IF
 	Global("CM_Ninafer_Sword","LOCALS",0)
-	!Dead(Myself)
+	!StateCheck(Myself, STATE_DEAD)
 	!InParty(Myself)
 	!HasItem("CMNINASW",Myself)
 	PartyHasItem("CMNINASW")
